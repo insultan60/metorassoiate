@@ -1,10 +1,11 @@
 import Image from "next/image";
+import Link from "next/link";
 import { IconArrow } from "./Icons";
-import { CAREERS_URL, APPLY_URL } from "../lib/site";
+import { APPLY_URL } from "../lib/site";
 
-// The categories of roles Metro regularly recruits for. These are role TYPES —
-// not specific live postings. Actual current openings live on the Top Echelon
-// job board (CAREERS_URL), which is always up to date.
+// The categories of roles Metro regularly recruits for. These are role TYPES,
+// not specific live postings. The live ones are at /jobs, read from the Top
+// Echelon portal hourly (see lib/jobs).
 const ROLE_TYPES = [
   "Licensed Professional Engineers (PEs)",
   "CEI & Construction Inspectors",
@@ -70,15 +71,17 @@ export default function Jobs() {
           </p>
 
           <div className="mt-6 flex flex-wrap gap-4">
-            <a
-              href={CAREERS_URL}
-              target="_blank"
-              rel="noopener noreferrer"
+            {/* On-site now. This used to send the visitor straight to the
+                portal, which meant every live role's content, and the
+                engagement with it, belonged to that domain rather than this
+                one. */}
+            <Link
+              href="/jobs"
               className="group inline-flex items-center gap-2 bg-amber-500 px-7 py-4 text-sm font-bold uppercase tracking-wide text-navy-950 transition-colors hover:bg-amber-400"
             >
               Browse Open Roles
               <IconArrow className="h-4.5 w-4.5 transition-transform group-hover:translate-x-1" />
-            </a>
+            </Link>
             <a
               href={APPLY_URL}
               target="_blank"

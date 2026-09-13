@@ -19,6 +19,11 @@ const routes: Array<{
 }> = [
   { path: "/", changeFrequency: "weekly", priority: 1.0 },
   { path: "/why-us", changeFrequency: "monthly", priority: 0.8 },
+  /* The jobs index. The individual roles are not listed here: they appear and
+     disappear on the ATS's schedule rather than ours, so they get their own
+     sitemap that is generated from the live list on request. A weekly-cached
+     static sitemap would advertise roles that had already been filled. */
+  { path: "/jobs", changeFrequency: "daily", priority: 0.9 },
   // High priority: "what does <role> pay" is a query with real volume, and
   // this is the only page on the site that answers it in one place.
   { path: "/index_themall_awards", changeFrequency: "monthly", priority: 0.85 },

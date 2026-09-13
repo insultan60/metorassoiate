@@ -24,6 +24,7 @@ export default function robots(): MetadataRoute.Robots {
       `${SITE_URL}/sitemap-priority.xml`,
       `${SITE_URL}/sitemap-awards.xml`,
       `${SITE_URL}/sitemap-faq.xml`,
+      `${SITE_URL}/sitemap-jobs.xml`,
     ],
     host: SITE_URL,
   };

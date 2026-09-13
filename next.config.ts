@@ -1,6 +1,5 @@
 import type { NextConfig } from "next";
 import { CITIES } from "./app/lib/cities";
-import { CAREERS_URL } from "./app/lib/site";
 
 // 301 redirects for legacy URLs indexed by Google on the previous site, so
 // visitors and crawlers never land on a 404. Precise old->new city mappings
@@ -62,10 +61,12 @@ async function redirects() {
     { source: "/about-us", destination: "/about", permanent: true },
     { source: "/home", destination: "/", permanent: true },
 
-    // Old WordPress job listing/posting URLs -> the external careers portal,
-    // since this site no longer hosts job pages itself.
-    { source: "/jobs", destination: CAREERS_URL, permanent: true },
-    { source: "/jobs/:slug*", destination: CAREERS_URL, permanent: true },
+    /* /jobs and /jobs/* are NOT redirected any more. This site hosts its own
+       job pages again (app/jobs), so sending those URLs to the portal would
+       now redirect away from the very pages meant to receive them. An old
+       WordPress job slug that no longer matches a live role falls through to
+       a 404, which is what Google asks for on an expired posting - better
+       than a redirect that implies the role still exists somewhere. */
 
     // Orphaned old WP pages/posts with no equivalent on the new site.
     { source: "/elementor-5338", destination: "/", permanent: true },

@@ -232,3 +232,45 @@ button:focus-visible {
   outline: 2px solid var(--color-amber-500);
   outline-offset: 3px;
 }
+
+/* Job description copy.
+
+   The markup comes from the ATS and is sanitised to a small tag allowlist
+   (see lib/jobs), so it arrives as bare h3/p/ul/li with no classes. These
+   rules give it the same rhythm as the rest of the site's prose rather than
+   letting browser defaults decide. */
+.job-copy h3,
+.job-copy h4 {
+  margin-top: 2.25rem;
+  margin-bottom: 0.75rem;
+  font-weight: 700;
+  font-size: 1.125rem;
+  color: var(--color-navy-950, #0b1220);
+}
+.job-copy p {
+  margin-bottom: 1rem;
+}
+.job-copy ul,
+.job-copy ol {
+  margin: 0 0 1.25rem 1.25rem;
+  list-style: disc;
+}
+.job-copy ol {
+  list-style: decimal;
+}
+.job-copy li {
+  margin-bottom: 0.5rem;
+  padding-left: 0.25rem;
+}
+.job-copy strong {
+  font-weight: 700;
+  color: var(--color-navy-950, #0b1220);
+}
+.job-copy hr {
+  margin: 2rem 0;
+  border: 0;
+  border-top: 1px solid rgb(11 18 32 / 0.1);
+}
+.job-copy > div > :first-child {
+  margin-top: 0;
+}
