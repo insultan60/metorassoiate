@@ -38,13 +38,6 @@ export const TEAM: Member[] = [
     linkedin: PATRICK_LINKEDIN,
   },
   {
-    name: "Nick J.",
-    role: "Recruiter",
-    photo: "/team/nick.webp",
-    linkedin: FALLBACK_LINKEDIN,
-    website: "https://nickjain.org",
-  },
-  {
     name: "Cadee J.",
     role: "Recruiter",
     photo: "/team/cadee.webp",
