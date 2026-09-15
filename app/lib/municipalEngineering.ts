@@ -761,6 +761,38 @@ export const MUNICIPAL_CITIES: MunicipalCity[] = [
       "Sidewalk gap-closure & neighborhood complete streets",
       "Metro Parks greenway capital projects",
     ],
+    agencies: [
+      "Metro Nashville Department of Public Works",
+      "Nashville DOT & Multimodal Infrastructure",
+      "Metro Water Services",
+      "Metro Planning Department",
+      "Williamson County Highway Department",
+      "Rutherford County Planning",
+    ],
+    marketDetail: [
+      "Nashville operates as a consolidated city and county government, so a single metropolitan authority runs public works, water, planning and permitting across the whole of Davidson County rather than dividing them among a city and a set of townships. For a municipal engineer that means broader responsibility and fewer jurisdictional handoffs, but it also means the department carries urban core, suburban and semi-rural infrastructure in one portfolio.",
+      "The pressure comes from growth landing outside that boundary. Williamson, Rutherford and Wilson counties are absorbing much of the region's expansion, and their public works and planning departments are staffing up to handle development review, road standards and utility extension at a volume they were never structured for. That has made experienced review engineers and small-jurisdiction public works leadership genuinely scarce across the region.",
+    ],
+    hiringFocus: [
+      {
+        role: "Development review engineers",
+        why: "Suburban counties are reviewing subdivision and site plans at volumes their departments were not staffed for.",
+      },
+      {
+        role: "City & county engineers",
+        why: "Growing jurisdictions around the metro need engineers who can run a small public works program end to end.",
+      },
+      {
+        role: "Capital projects engineers",
+        why: "A consolidated metropolitan government carries urban, suburban and rural infrastructure in one capital program.",
+      },
+      {
+        role: "Stormwater program engineers",
+        why: "Karst geology and combined sewer in the core make local drainage and water quality programs technically demanding.",
+      },
+    ],
+    licensure:
+      "Tennessee licenses engineers through the Board of Architectural and Engineering Examiners, and comity on an NCEES record is the usual route for an out-of-state PE. Municipal roles typically require the license because the position seals plans and approvals, and many jurisdictions also expect familiarity with the state's stormwater permitting and local design standards, which vary between the consolidated metro and the surrounding counties.",
   },
   {
     slug: "portland-or",
@@ -778,6 +810,38 @@ export const MUNICIPAL_CITIES: MunicipalCity[] = [
       "Vision Zero complete streets corridor projects",
       "Community center capital renovation program",
     ],
+    agencies: [
+      "Portland Bureau of Transportation",
+      "Portland Bureau of Environmental Services",
+      "Portland Permitting & Development",
+      "Multnomah County Transportation Division",
+      "Metro",
+      "Washington County Land Use & Transportation",
+    ],
+    marketDetail: [
+      "Portland recently restructured its city government, moving away from a commission system in which elected officials ran individual bureaus toward a professional administrator overseeing them. For municipal engineers that changes how capital programs are prioritized and defended, and it has put a premium on people who can manage a bureau's program under a conventional management structure rather than a political one.",
+      "Regionally, Oregon's land use framework makes municipal engineering unusually planning-driven. An elected regional government administers the urban growth boundary, which determines where infrastructure can be extended at all, so capital planning, concurrency and development review are tied to land use decisions made above the city level. Engineers here spend more time in that process than their counterparts in most states.",
+    ],
+    hiringFocus: [
+      {
+        role: "Capital program managers",
+        why: "A restructured city government has increased demand for professional program management within bureaus.",
+      },
+      {
+        role: "Development review & land use engineers",
+        why: "The regional growth boundary ties infrastructure extension directly to land use decisions.",
+      },
+      {
+        role: "Stormwater program engineers",
+        why: "Green infrastructure requirements are embedded in local standards rather than offered as alternatives.",
+      },
+      {
+        role: "Transportation planning engineers",
+        why: "Multimodal and safety programs are built into the region's planning framework rather than added on.",
+      },
+    ],
+    licensure:
+      "Oregon licenses engineers through the State Board of Examiners for Engineering and Land Surveying, with comity on an NCEES record the normal route. Municipal engineering positions generally require the license, and Oregon's separate structural registration matters for anyone sealing structural work. Familiarity with the state's land use framework is checked as closely as the license in most senior public sector roles here.",
   },
   {
     slug: "las-vegas-nv",
@@ -795,6 +859,38 @@ export const MUNICIPAL_CITIES: MunicipalCity[] = [
       "Municipal water/wastewater capital improvements",
       "Municipal pool & park capital projects",
     ],
+    agencies: [
+      "City of Las Vegas Department of Public Works",
+      "Clark County Public Works",
+      "City of Henderson Public Works",
+      "City of North Las Vegas Public Works",
+      "Clark County Regional Flood Control District",
+      "Regional Transportation Commission of Southern Nevada",
+    ],
+    marketDetail: [
+      "The Las Vegas valley is not one city. The resort corridor and a large share of the population sit in unincorporated Clark County rather than inside any municipality, so county public works carries responsibilities that elsewhere would belong to a city, and several substantial cities operate alongside it. Engineers here need to know which jurisdiction's standards apply before anything else.",
+      "Two regional bodies pull the pieces together: a flood control district that sets drainage criteria and funds the channel and detention system valley-wide, and a transportation commission that funds and coordinates roadway and transit work across jurisdictions. That makes regional coordination and interlocal agreement work a real part of a municipal engineer's job here rather than an occasional task.",
+    ],
+    hiringFocus: [
+      {
+        role: "Development review engineers",
+        why: "Continuous outward growth across several jurisdictions keeps subdivision and site review volume high.",
+      },
+      {
+        role: "Drainage & flood control engineers",
+        why: "Regional drainage criteria govern design valley-wide and form their own body of local knowledge.",
+      },
+      {
+        role: "Capital projects engineers",
+        why: "Regional funding for roadway and transit work is delivered through individual jurisdictions' capital programs.",
+      },
+      {
+        role: "City & county engineers",
+        why: "Multiple substantial jurisdictions in one valley each need engineers who can run a public works program.",
+      },
+    ],
+    licensure:
+      "Nevada licenses engineers by branch through the State Board of Professional Engineers and Land Surveyors, so a municipal engineer needs the branch matching the work they seal, usually civil. Comity on an NCEES record is the usual route once the branch is settled. Regional flood control criteria and the transportation commission's design standards are the local knowledge that most often distinguishes candidates.",
   },
   {
     slug: "columbus-oh",
@@ -812,6 +908,38 @@ export const MUNICIPAL_CITIES: MunicipalCity[] = [
       "Complete streets & sidewalk program",
       "Columbus Recreation & Parks capital projects",
     ],
+    agencies: [
+      "Columbus Department of Public Service",
+      "Columbus Department of Public Utilities",
+      "Columbus Department of Building & Zoning Services",
+      "Franklin County Engineer",
+      "Delaware County Engineer",
+      "Mid-Ohio Regional Planning Commission",
+    ],
+    marketDetail: [
+      "Columbus has grown its municipal boundary steadily by tying water and sewer service to annexation, which is unusual among large American cities and makes utility extension a land use instrument as well as an engineering one. Municipal engineers here therefore work at the intersection of service capacity, annexation agreements and development timing in a way their counterparts in landlocked cities do not.",
+      "Ohio also gives counties an elected county engineer with statutory responsibility for roads and bridges outside municipalities, which creates a distinct career track and a set of offices that hire steadily. With large industrial and residential development landing in the surrounding counties, those offices and the townships around them are absorbing review and capital delivery volume well beyond their historic scale.",
+    ],
+    hiringFocus: [
+      {
+        role: "Development review engineers",
+        why: "Large-scale growth in surrounding counties is generating subdivision and site review volume beyond historic capacity.",
+      },
+      {
+        role: "Utility extension & capacity planning engineers",
+        why: "Water and sewer service drives annexation, making extension planning a strategic municipal function.",
+      },
+      {
+        role: "County highway & bridge engineers",
+        why: "Ohio's statutory county engineer offices carry road and bridge responsibility and hire on their own track.",
+      },
+      {
+        role: "Capital projects engineers",
+        why: "Public infrastructure has to be delivered on the schedule new development sets rather than the city's own.",
+      },
+    ],
+    licensure:
+      "Ohio licenses engineers through the State Board of Registration for Professional Engineers and Surveyors, with comity on an NCEES record the standard route. The elected county engineer position is statutory and requires both professional engineer and professional surveyor registration in Ohio, which is an unusual dual requirement and a real constraint on who can hold those roles.",
   },
   {
     slug: "salt-lake-city-ut",
@@ -829,6 +957,38 @@ export const MUNICIPAL_CITIES: MunicipalCity[] = [
       "Complete streets & bikeway network expansion",
       "Community center & rec-facility upgrades",
     ],
+    agencies: [
+      "Salt Lake City Engineering Division",
+      "Salt Lake County Public Works",
+      "Salt Lake City Department of Public Utilities",
+      "West Valley City Public Works",
+      "Sandy City Public Works",
+      "Wasatch Front Regional Council",
+    ],
+    marketDetail: [
+      "The valley is divided among a central city, a large county public works organization and a ring of substantial suburban cities, several of which have grown large enough to run full engineering departments of their own. That fragmentation means standards differ across short distances and a regional project touches several jurisdictions, so interlocal coordination is a standing part of municipal practice here.",
+      "Two regional pressures shape the capital programs. Water is the first: supply constraint and the lake's decline have pushed conservation, secondary water metering and system efficiency onto municipal agendas that used to be about capacity alone. Seismic risk is the second, making assessment and replacement of buried pipe, reservoirs and essential facilities a recurring line in city capital plans.",
+    ],
+    hiringFocus: [
+      {
+        role: "City engineers",
+        why: "Several substantial suburban cities each run their own engineering departments and compete for the same people.",
+      },
+      {
+        role: "Water system & conservation engineers",
+        why: "Supply constraint has moved metering, efficiency and conservation into core municipal capital work.",
+      },
+      {
+        role: "Seismic assessment & replacement engineers",
+        why: "Fault proximity makes buried infrastructure survivability a recurring item in city capital plans.",
+      },
+      {
+        role: "Development review engineers",
+        why: "Continued valley growth keeps subdivision and site review volume high across jurisdictions.",
+      },
+    ],
+    licensure:
+      "Utah licenses engineers through the Division of Professional Licensing and its Professional Engineers and Land Surveyors board, with comity on an NCEES record the normal path. Municipal roles generally require the license, and because standards differ between the county, the central city and the suburban cities, local familiarity with a specific jurisdiction's manual is often what separates candidates.",
   },
   {
     slug: "kansas-city-mo",
@@ -846,6 +1006,38 @@ export const MUNICIPAL_CITIES: MunicipalCity[] = [
       "Complete streets & sidewalk gap program",
       "KC Parks & Recreation facility projects",
     ],
+    agencies: [
+      "Kansas City Public Works",
+      "Johnson County Public Works",
+      "City of Overland Park Public Works",
+      "Jackson County Public Works",
+      "Mid-America Regional Council",
+      "Unified Government of Wyandotte County and Kansas City, Kansas",
+    ],
+    marketDetail: [
+      "This metro is unusually fragmented even by American standards: two states, several counties and well over a hundred municipalities, including one consolidated city and county government on the Kansas side. Municipal engineers here spend real time on interlocal agreements and on reconciling standards that differ between neighboring jurisdictions, and a regional planning council does the coordination work that a single authority would elsewhere.",
+      "The capital agenda is dominated by aging infrastructure. A large inherited street network, a long-running sewer overflow program and a substantial bridge inventory all compete for the same local funding, which makes asset management, condition assessment and prioritization central municipal skills rather than optional refinements. Cross-border licensure is close to a practical necessity for anyone working the whole region.",
+    ],
+    hiringFocus: [
+      {
+        role: "City engineers",
+        why: "A metro of many separate municipalities means many small engineering departments hiring from the same pool.",
+      },
+      {
+        role: "Asset management & prioritization engineers",
+        why: "Competing capital needs on limited local funding make condition assessment and prioritization central.",
+      },
+      {
+        role: "Dual-licensed municipal engineers",
+        why: "A bi-state metro means an engineer sealing work across the region needs registration in both states.",
+      },
+      {
+        role: "Stormwater program engineers",
+        why: "A long-running sewer overflow program puts local drainage and water quality work on every jurisdiction's agenda.",
+      },
+    ],
+    licensure:
+      "Missouri licenses through the Board for Architects, Professional Engineers, Professional Land Surveyors and Professional Landscape Architects and Kansas through its Board of Technical Professions, and comity registration in both is close to a practical requirement for municipal engineers working across the state line. Both states also require corporate authorization for firms providing engineering services to local governments.",
   },
   {
     slug: "indianapolis-in",
@@ -863,6 +1055,38 @@ export const MUNICIPAL_CITIES: MunicipalCity[] = [
       "Complete streets & sidewalk expansion program",
       "Municipal facility ADA upgrade program",
     ],
+    agencies: [
+      "Indianapolis Department of Public Works",
+      "Indianapolis Department of Metropolitan Development",
+      "Citizens Energy Group",
+      "Hamilton County Highway Department",
+      "City of Fishers Engineering",
+      "Indianapolis Metropolitan Planning Organization",
+    ],
+    marketDetail: [
+      "Indianapolis consolidated its city and county governments decades ago, so a single public works department covers almost all of Marion County while a handful of separately incorporated towns retain their own. That scale gives municipal engineers here a large and varied portfolio, and it means the department is effectively a county-sized organization with a city's political structure.",
+      "The suburban ring is where the growth and the hiring pressure are. Hamilton County and the fast-growing cities within it have built substantial engineering departments in a short time, and they compete directly with each other and with consultants for people who can run development review, manage capital delivery and hold the standards. Flat terrain makes drainage review unusually consequential in that work.",
+    ],
+    hiringFocus: [
+      {
+        role: "Development review engineers",
+        why: "Fast-growing suburban cities are reviewing subdivision and site plans at high and sustained volume.",
+      },
+      {
+        role: "City engineers",
+        why: "Newly substantial suburban municipalities have built engineering departments and compete for the same people.",
+      },
+      {
+        role: "Stormwater & drainage engineers",
+        why: "Flat terrain with minimal fall makes local drainage review and detention design consequential.",
+      },
+      {
+        role: "Capital projects engineers",
+        why: "A consolidated city and county carries a large, varied capital program across urban and suburban infrastructure.",
+      },
+    ],
+    licensure:
+      "Indiana licenses engineers through the State Board of Registration for Professional Engineers, administered by the Professional Licensing Agency, with comity on an NCEES record the usual route. Municipal positions generally require the license, and county surveyor and drainage board processes in Indiana give local drainage law a role in review that engineers new to the state are often unfamiliar with.",
   },
   {
     slug: "milwaukee-wi",
@@ -880,6 +1104,38 @@ export const MUNICIPAL_CITIES: MunicipalCity[] = [
       "Milwaukee Water Works main replacement program",
       "Regional parks facility coordination projects",
     ],
+    agencies: [
+      "Milwaukee Department of Public Works",
+      "Milwaukee County Department of Transportation",
+      "Milwaukee Metropolitan Sewerage District",
+      "City of Wauwatosa Engineering",
+      "Waukesha County Department of Public Works",
+      "Southeastern Wisconsin Regional Planning Commission",
+    ],
+    marketDetail: [
+      "Wisconsin's strong home rule tradition has left southeastern Wisconsin with many small, long-established municipalities each running its own public works department, so the region has an unusual number of city and village engineer positions relative to its population. Standards vary between them, and a regional planning commission provides the coordination that no single authority does.",
+      "The infrastructure itself is old and the climate is hard on it. Streets, water mains and sewers laid generations ago are reaching replacement together, freeze-thaw accelerates deterioration, and a regional sewerage district sets stormwater and wet weather expectations that member communities have to meet locally. Asset management and prioritized replacement are therefore the core of most municipal capital programs here.",
+    ],
+    hiringFocus: [
+      {
+        role: "City & village engineers",
+        why: "Strong home rule leaves many small municipalities each running their own engineering department.",
+      },
+      {
+        role: "Asset management & replacement engineers",
+        why: "Infrastructure laid in one era is reaching replacement together under freeze-thaw deterioration.",
+      },
+      {
+        role: "Stormwater program engineers",
+        why: "Regional wet weather expectations have to be met through local ordinances and capital work.",
+      },
+      {
+        role: "Development review engineers",
+        why: "Growth in the western suburbs sustains subdivision and site plan review volume.",
+      },
+    ],
+    licensure:
+      "Wisconsin licenses engineers through the Department of Safety and Professional Services, with comity on an NCEES record the standard route. Municipal roles generally require the license, and because state-level plan review applies to many water and sewer works, familiarity with that submission process is a practical requirement alongside registration in most city engineer positions.",
   },
   {
     slug: "richmond-va",
@@ -897,6 +1153,38 @@ export const MUNICIPAL_CITIES: MunicipalCity[] = [
       "Complete streets & sidewalk program",
       "Recreation center & library renovation program",
     ],
+    agencies: [
+      "Richmond Department of Public Works",
+      "Richmond Department of Public Utilities",
+      "Henrico County Department of Public Works",
+      "Chesterfield County Transportation",
+      "Richmond Department of Planning and Development Review",
+      "Richmond Regional Transportation Planning Organization",
+    ],
+    marketDetail: [
+      "Virginia is one of the few states where cities are legally independent of the counties around them, so Richmond and the surrounding counties are peer jurisdictions rather than parts of a hierarchy. Each runs its own public works, utilities and review functions with no county layer above the city, which makes regional coordination a matter of negotiation between equals and gives each jurisdiction a complete engineering organization.",
+      "Virginia is also unusual in that the state maintains most secondary roads in its counties rather than leaving them to local government, which shifts what a county engineer here actually does toward utilities, drainage, site development review and capital facilities. Chesapeake Bay obligations put stormwater quality and erosion control at the center of local regulatory work across every jurisdiction.",
+    ],
+    hiringFocus: [
+      {
+        role: "Development review engineers",
+        why: "Independent cities and counties each run complete review functions, and suburban growth keeps volume high.",
+      },
+      {
+        role: "Stormwater & erosion control program engineers",
+        why: "Bay watershed obligations make local water quality regulation a substantial ongoing municipal function.",
+      },
+      {
+        role: "Utility engineers",
+        why: "With the state maintaining most secondary roads, local departments are weighted toward water, sewer and drainage.",
+      },
+      {
+        role: "Capital projects engineers",
+        why: "Each independent jurisdiction delivers its own facilities and infrastructure program.",
+      },
+    ],
+    licensure:
+      "Virginia licenses engineers through the Board for Architects, Professional Engineers, Land Surveyors, Certified Interior Designers and Landscape Architects, with comity on an NCEES record the usual route. Municipal roles generally require the license, and the state's stormwater and erosion control programs carry their own certifications that local government engineers are commonly expected to hold alongside it.",
   },
   {
     slug: "baltimore-md",
@@ -914,6 +1202,38 @@ export const MUNICIPAL_CITIES: MunicipalCity[] = [
       "Complete streets & sidewalk program",
       "Playground & neighborhood park renovation program",
     ],
+    agencies: [
+      "Baltimore City Department of Public Works",
+      "Baltimore City Department of Transportation",
+      "Baltimore County Department of Public Works",
+      "Howard County Department of Public Works",
+      "Anne Arundel County Department of Public Works",
+      "Baltimore Metropolitan Council",
+    ],
+    marketDetail: [
+      "Baltimore City sits outside any county, so it carries the full range of municipal responsibility on its own while the surrounding counties operate as large, separate public works organizations. The city's infrastructure is also much older than theirs, which means its engineering agenda is dominated by renewal, condition assessment and managing failure risk in systems that predate modern records.",
+      "The surrounding counties face a different problem: sustained suburban growth, development review at volume, and watershed obligations that apply to every acre. Chesapeake Bay nutrient and sediment requirements give local stormwater programs measurable targets, which has made municipal water quality work a technical function with reporting obligations rather than an administrative one.",
+    ],
+    hiringFocus: [
+      {
+        role: "Asset renewal & condition assessment engineers",
+        why: "An exceptionally old city network makes prioritized renewal and failure risk management the core agenda.",
+      },
+      {
+        role: "Stormwater program engineers",
+        why: "Bay watershed obligations give local water quality programs measurable targets and reporting duties.",
+      },
+      {
+        role: "Development review engineers",
+        why: "Suburban county growth sustains subdivision and site plan review volume across the region.",
+      },
+      {
+        role: "Capital projects engineers",
+        why: "The city and each surrounding county run separate, substantial capital delivery programs.",
+      },
+    ],
+    licensure:
+      "Maryland licenses engineers through the State Board for Professional Engineers under the Department of Labor, with comity on an NCEES record the standard route. Municipal positions generally require the license, and the state's sediment control and stormwater management programs carry their own approval processes that local government engineers administer and are expected to know in detail.",
   },
   {
     slug: "new-orleans-la",
@@ -931,6 +1251,38 @@ export const MUNICIPAL_CITIES: MunicipalCity[] = [
       "Resiliency-corridor complete streets projects",
       "NORD park & playground renovation program",
     ],
+    agencies: [
+      "New Orleans Department of Public Works",
+      "Sewerage and Water Board of New Orleans",
+      "Jefferson Parish Department of Public Works",
+      "New Orleans Office of Resilience and Sustainability",
+      "Regional Planning Commission",
+      "St. Tammany Parish Department of Engineering",
+    ],
+    marketDetail: [
+      "New Orleans is a consolidated city and parish, and it splits municipal engineering between a public works department responsible for streets and a separate board responsible for water, sewer and drainage. That division is unusual and consequential: street reconstruction and underground utility renewal have to be coordinated across two organizations with different governance, and the interaction between them shapes how projects are actually delivered.",
+      "Subsidence makes ordinary municipal work extraordinary. Streets settle unevenly, buried pipe breaks and moves, and drainage that was designed to fall in one direction may no longer do so, which means survey, grade and condition information ages quickly and has to be re-established rather than assumed. Resilience funding has made adaptation a standing category in the capital program.",
+    ],
+    hiringFocus: [
+      {
+        role: "Street & utility coordination engineers",
+        why: "Splitting streets and underground utilities between two organizations makes coordination a delivery-critical skill.",
+      },
+      {
+        role: "Drainage & subsidence-aware design engineers",
+        why: "Ground movement invalidates existing grade and drainage assumptions, requiring them to be re-established.",
+      },
+      {
+        role: "Resilience & adaptation program engineers",
+        why: "Flood and subsidence adaptation is a standing capital category rather than an occasional project.",
+      },
+      {
+        role: "Capital projects engineers",
+        why: "Large recovery and renewal programs need delivery capacity across streets, drainage and facilities.",
+      },
+    ],
+    licensure:
+      "Louisiana licenses engineers through the Professional Engineering and Land Surveying Board, with comity on an NCEES record the usual route for an individual, and firms providing services to local government need a certificate of authorization with a resident professional in responsible charge. Municipal roles generally require the license, and familiarity with the split of responsibility between the city and the water board is essential local knowledge.",
   },
   {
     slug: "louisville-ky",
@@ -948,6 +1300,38 @@ export const MUNICIPAL_CITIES: MunicipalCity[] = [
       "Street resurfacing capital program",
       "Louisville Metro Parks facility renovations",
     ],
+    agencies: [
+      "Louisville Metro Public Works and Assets",
+      "Louisville and Jefferson County Metropolitan Sewer District",
+      "Louisville Metro Develop Louisville",
+      "Oldham County Fiscal Court",
+      "Bullitt County Planning",
+      "Kentuckiana Regional Planning and Development Agency",
+    ],
+    marketDetail: [
+      "Louisville merged its city and county governments into a single metro government, so one organization now carries public works and asset responsibility across the whole of Jefferson County while a number of small incorporated cities within it retain limited functions. Municipal engineers here therefore work at county scale with urban, suburban and rural infrastructure in the same portfolio.",
+      "Water, sewer and drainage sit with a separate metropolitan sewer district rather than with the metro government, which splits responsibility for what happens in the same street between two organizations. Coordinating street reconstruction with the district's consent decree work is a permanent feature of capital delivery here, and karst conditions make drainage and excavation locally unpredictable.",
+    ],
+    hiringFocus: [
+      {
+        role: "Capital projects engineers",
+        why: "A merged metro government delivers a county-scale program spanning urban, suburban and rural infrastructure.",
+      },
+      {
+        role: "Street & utility coordination engineers",
+        why: "Splitting roads and sewers between two organizations makes coordinated delivery a core competence.",
+      },
+      {
+        role: "Stormwater & drainage engineers",
+        why: "Karst conditions make local drainage behavior unpredictable and design judgment locally specific.",
+      },
+      {
+        role: "Development review engineers",
+        why: "Growth in the surrounding counties sustains subdivision and site plan review volume.",
+      },
+    ],
+    licensure:
+      "Kentucky licenses engineers through the State Board of Licensure for Professional Engineers and Land Surveyors, with comity on an NCEES record the normal route, and engineers working the wider metro frequently hold Indiana registration as well. Municipal roles generally require the license, and understanding the division of responsibility between the metro government and the sewer district is essential local knowledge.",
   },
   {
     slug: "oklahoma-city-ok",
@@ -965,6 +1349,38 @@ export const MUNICIPAL_CITIES: MunicipalCity[] = [
       "Site plan & plat review for suburban growth",
       "MAPS 4-funded library & senior-center projects",
     ],
+    agencies: [
+      "Oklahoma City Public Works Department",
+      "Oklahoma City Water Utilities Trust",
+      "Oklahoma City Planning Department",
+      "Association of Central Oklahoma Governments",
+      "Cleveland County",
+      "City of Edmond Engineering",
+    ],
+    marketDetail: [
+      "Oklahoma City funds much of its public infrastructure through temporary voter-approved sales taxes spent as the money arrives rather than through long-term borrowing. That changes how municipal engineering works here: programs are scoped to a defined revenue stream with a defined end date, delivery schedules are tied to collections, and engineers are expected to manage scope against money in a way debt-funded programs do not require.",
+      "The city also covers an enormous land area, much of it low density, which stretches the street, drainage and utility network over far more miles per resident than a compact city of similar population. Maintenance obligations, pavement management and the cost of extending service are correspondingly larger, and expansive clay subgrades shorten the life of everything built on them.",
+    ],
+    hiringFocus: [
+      {
+        role: "Capital program managers",
+        why: "Pay-as-you-go voter-approved programs require scope managed against a defined revenue stream and deadline.",
+      },
+      {
+        role: "Pavement & asset management engineers",
+        why: "An unusually large street network per resident makes maintenance prioritization a central municipal function.",
+      },
+      {
+        role: "Development review engineers",
+        why: "Continued outward growth across the metro sustains subdivision and site plan review volume.",
+      },
+      {
+        role: "Drainage & stormwater engineers",
+        why: "Flat terrain and clay soils make local drainage design and detention review consequential.",
+      },
+    ],
+    licensure:
+      "Oklahoma licenses engineers through the State Board of Licensure for Professional Engineers and Land Surveyors, with comity on an NCEES record the standard route and a certificate of authorization required for firms serving local government. Municipal roles generally require the license, and familiarity with the city's own design standards and the state's stormwater permitting is expected alongside it.",
   },
   {
     slug: "charleston-sc",
@@ -982,6 +1398,38 @@ export const MUNICIPAL_CITIES: MunicipalCity[] = [
       "Site plan review for coastal growth corridor",
       "Waterfront park & marina facility upgrades",
     ],
+    agencies: [
+      "City of Charleston Department of Public Service",
+      "Charleston County Public Works",
+      "Town of Mount Pleasant Engineering",
+      "City of North Charleston Public Works",
+      "Charleston Water System",
+      "Berkeley-Charleston-Dorchester Council of Governments",
+    ],
+    marketDetail: [
+      "The Charleston region is governed by several substantial and separate jurisdictions across three counties, each running its own public works and review functions, which means regional problems have to be solved by agreement rather than by authority. A council of governments does the coordinating, and municipal engineers here spend real time in interlocal work that a single-jurisdiction metro would not require.",
+      "Sea level and tidal flooding have reorganized municipal priorities. Drainage, pumping, road raising and the long-horizon question of which areas can be defended have moved from the engineering department's routine work to the center of local political debate, which means municipal engineers are expected to explain and defend technical judgments in public far more than is typical. Historic district review constrains what can be built in the old city.",
+    ],
+    hiringFocus: [
+      {
+        role: "Drainage & flood resilience engineers",
+        why: "Tidal flooding has made drainage and adaptation the central municipal engineering question in the region.",
+      },
+      {
+        role: "City & town engineers",
+        why: "Several separate substantial jurisdictions each run their own engineering departments.",
+      },
+      {
+        role: "Development review engineers",
+        why: "Rapid suburban growth across three counties sustains high subdivision and site plan volume.",
+      },
+      {
+        role: "Capital program managers",
+        why: "Adaptation and drainage programs require scope, funding and public explanation managed together.",
+      },
+    ],
+    licensure:
+      "South Carolina licenses engineers through the Board of Registration for Professional Engineers and Surveyors within the Department of Labor, Licensing and Regulation, with comity on an NCEES record the usual route. Municipal roles generally require the license, and the state's coastal zone program and stormwater permitting add approval processes local government engineers administer directly.",
   },
   {
     slug: "newark-nj",
@@ -999,6 +1447,38 @@ export const MUNICIPAL_CITIES: MunicipalCity[] = [
       "Complete streets & sidewalk improvement program",
       "Recreation center capital renovation program",
     ],
+    agencies: [
+      "Newark Department of Engineering",
+      "Newark Department of Water and Sewer Utilities",
+      "Essex County Department of Public Works",
+      "City of Jersey City Division of Engineering",
+      "North Jersey Transportation Planning Authority",
+      "New Jersey Department of Community Affairs",
+    ],
+    marketDetail: [
+      "New Jersey has more separate municipalities than almost any state its size, and each one is expected to have a municipal engineer, which creates an unusual number of small public engineering appointments alongside a handful of large city departments. Many are held by consultants serving several towns at once, so the career path here runs through consulting as often as through direct employment.",
+      "The legal framework is unusually prescriptive. Local public contracting rules, a state-administered uniform construction code and formal municipal land use procedures govern how work is bid, reviewed and approved, so a municipal engineer here is as much an administrator of statutory process as a technical designer. Old infrastructure, contaminated ground and lead service line obligations dominate the technical agenda.",
+    ],
+    hiringFocus: [
+      {
+        role: "Municipal engineers",
+        why: "A very large number of separate municipalities each require an appointed engineer, often serving several at once.",
+      },
+      {
+        role: "Water & sewer renewal engineers",
+        why: "Old buried networks and lead service line obligations dominate the local capital agenda.",
+      },
+      {
+        role: "Development review engineers",
+        why: "Formal municipal land use procedures make site plan and subdivision review a statutory function.",
+      },
+      {
+        role: "Capital program & procurement specialists",
+        why: "Prescriptive local public contracting rules make bidding and administration a specialist competence.",
+      },
+    ],
+    licensure:
+      "New Jersey licenses engineers through the State Board of Professional Engineers and Land Surveyors within the Division of Consumer Affairs, with comity on an NCEES record the normal route. Municipal engineer appointments require the license, and familiarity with the state's local public contracts law, municipal land use law and uniform construction code is what most distinguishes candidates for these roles.",
   },
   {
     slug: "san-francisco-ca",
@@ -1016,6 +1496,38 @@ export const MUNICIPAL_CITIES: MunicipalCity[] = [
       "Street resurfacing & paving capital program",
       "SF Rec & Park facility renovation program",
     ],
+    agencies: [
+      "San Francisco Public Works",
+      "San Francisco Municipal Transportation Agency",
+      "San Francisco Public Utilities Commission",
+      "San Francisco Planning Department",
+      "Port of San Francisco",
+      "San Francisco Department of Building Inspection",
+    ],
+    marketDetail: [
+      "San Francisco is a consolidated city and county and a charter city, and it keeps an unusually large engineering organization in house, designing and managing much of its own capital work rather than contracting all of it out. That makes the public sector itself a major employer of municipal engineers here, with career structures and specialisms that exist inside government rather than in consultancies.",
+      "The constraints are regulatory and political rather than technical. Environmental review, public engagement and design approval processes are lengthy and contested, voter-approved bonds fund much of the capital program, and a project's schedule is usually determined by approvals rather than construction. Engineers who can carry a project through that process are valued at least as highly as those who can design it.",
+    ],
+    hiringFocus: [
+      {
+        role: "Municipal capital project engineers",
+        why: "An unusually large in-house engineering organization designs and delivers much of the city's own work.",
+      },
+      {
+        role: "Environmental review & entitlement engineers",
+        why: "Approval processes rather than construction typically determine project schedules here.",
+      },
+      {
+        role: "Seismic & resilience engineers",
+        why: "An old building and infrastructure stock in an active seismic region drives continuing assessment and retrofit.",
+      },
+      {
+        role: "Public engagement-capable engineers",
+        why: "Contested projects require technical judgments to be explained and defended publicly.",
+      },
+    ],
+    licensure:
+      "California licenses engineers through the Board for Professional Engineers, Land Surveyors and Geologists and does not grant straightforward comity, so an out-of-state PE must satisfy California-specific examination requirements before holding a position that seals work. Municipal roles also expect familiarity with the state's environmental review statute, which governs how public projects are approved.",
   },
   {
     slug: "san-diego-ca",
@@ -1033,6 +1545,38 @@ export const MUNICIPAL_CITIES: MunicipalCity[] = [
       "Complete streets & mobility corridor projects",
       "Library & park facility capital projects",
     ],
+    agencies: [
+      "San Diego Engineering & Capital Projects Department",
+      "San Diego County Department of Public Works",
+      "City of Chula Vista Engineering",
+      "San Diego Association of Governments",
+      "San Diego Development Services Department",
+      "Port of San Diego",
+    ],
+    marketDetail: [
+      "San Diego runs an unusually formalized community planning structure, with dozens of recognized neighborhood groups that review projects and infrastructure proposals before they reach the council. For municipal engineers that means public process is a scheduled part of nearly every project rather than an occasional hurdle, and the ability to present and defend a design outside a technical setting is a working requirement.",
+      "The physical work is shaped by terrain and by deferred maintenance. Canyon topography makes street, drainage and retaining infrastructure more complex and more expensive than in a flat city, and a substantial backlog of street and storm drain renewal has made asset management and prioritization a central municipal function rather than a background one.",
+    ],
+    hiringFocus: [
+      {
+        role: "Capital projects engineers",
+        why: "A large city capital program with a maintenance backlog needs sustained delivery capacity.",
+      },
+      {
+        role: "Asset management & prioritization engineers",
+        why: "A substantial street and storm drain renewal backlog makes prioritization a central municipal function.",
+      },
+      {
+        role: "Development review engineers",
+        why: "Formal community planning review makes site and infrastructure review a structured, public process.",
+      },
+      {
+        role: "Drainage & slope infrastructure engineers",
+        why: "Canyon terrain makes storm drain, retaining and slope infrastructure unusually complex.",
+      },
+    ],
+    licensure:
+      "California licenses engineers through the Board for Professional Engineers, Land Surveyors and Geologists without straightforward comity, so an out-of-state PE faces California-specific examination requirements before sealing work. Municipal roles also require working knowledge of the state environmental review statute and, given local terrain, often the separate geotechnical authority.",
   },
   {
     slug: "san-antonio-tx",
@@ -1050,6 +1594,38 @@ export const MUNICIPAL_CITIES: MunicipalCity[] = [
       "Complete streets & sidewalk program",
       "Library & recreation bond-funded projects",
     ],
+    agencies: [
+      "San Antonio Public Works Department",
+      "San Antonio Water System",
+      "Bexar County Public Works",
+      "San Antonio Development Services Department",
+      "Alamo Area Metropolitan Planning Organization",
+      "City of New Braunfels Engineering",
+    ],
+    marketDetail: [
+      "San Antonio is the largest American city run under a council and professional city manager arrangement, and it owns both its water utility and its electric utility. That concentration means municipal engineering, utility engineering and capital planning sit closer together here than in cities that depend on investor-owned utilities, and coordination between street work and utility work is an internal matter rather than a negotiation.",
+      "Voter-approved bond programs fund much of the capital work on a recurring cycle, which gives the department a predictable rhythm of scoping, design and delivery. Aquifer recharge zone rules constrain development over a large part of the metro, so municipal review here includes a regulatory layer that does not exist in most Texas jurisdictions.",
+    ],
+    hiringFocus: [
+      {
+        role: "Capital program & bond delivery engineers",
+        why: "Recurring voter-approved bond cycles create a predictable rhythm of scoping, design and delivery.",
+      },
+      {
+        role: "Development review engineers with recharge zone knowledge",
+        why: "Aquifer protection rules add a regulatory layer to review that most Texas jurisdictions lack.",
+      },
+      {
+        role: "Drainage & flood control engineers",
+        why: "Extreme rainfall intensity makes local drainage design and floodplain review consequential.",
+      },
+      {
+        role: "Utility coordination engineers",
+        why: "City ownership of water and electric utilities makes integrated street and utility delivery an internal function.",
+      },
+    ],
+    licensure:
+      "Texas licenses engineers through the Board of Professional Engineers and Land Surveyors, with comity on an NCEES record the usual individual route and separate registration required for firms serving local government. Municipal roles generally require the license, and familiarity with the aquifer protection plan requirements and the city's own design manual is expected alongside it.",
   },
   {
     slug: "austin-tx",
@@ -1067,6 +1643,38 @@ export const MUNICIPAL_CITIES: MunicipalCity[] = [
       "Complete streets & urban trail program",
       "Austin Parks & Recreation facility capital program",
     ],
+    agencies: [
+      "Austin Public Works Department",
+      "Austin Water",
+      "Austin Transportation and Public Works",
+      "Austin Development Services Department",
+      "Travis County Transportation and Natural Resources",
+      "Capital Area Metropolitan Planning Organization",
+    ],
+    marketDetail: [
+      "Austin has among the most prescriptive local development rules in Texas, covering water quality, impervious cover, tree protection and critical environmental features, and those rules are administered through a review process that is slower and more detailed than the state norm. Municipal review engineers here carry genuine regulatory authority, and their judgments shape what gets built more than in most Texas cities.",
+      "The city also owns its water and electric utilities and runs a council and city manager government, so capital planning, utility extension and land use decisions are made within one organization. Growth has outrun infrastructure for years, which puts constant pressure on review timelines and on the capital program to catch up with development that has already happened.",
+    ],
+    hiringFocus: [
+      {
+        role: "Development review engineers",
+        why: "Prescriptive local environmental rules give municipal reviewers real regulatory authority over what gets built.",
+      },
+      {
+        role: "Capital program managers",
+        why: "Infrastructure lagging behind growth puts sustained pressure on capital delivery capacity.",
+      },
+      {
+        role: "Drainage & floodplain engineers",
+        why: "Flash flood exposure on the region's creeks makes local floodplain regulation technically demanding.",
+      },
+      {
+        role: "Utility planning engineers",
+        why: "City ownership of water and electric utilities ties service extension directly to land use decisions.",
+      },
+    ],
+    licensure:
+      "Texas licenses engineers through the Board of Professional Engineers and Land Surveyors, with firm registration required separately for consultants serving local government. Municipal roles generally require the license, but the differentiator in Austin is practical familiarity with the city's watershed regulations and site development review, which is more prescriptive than anywhere else in the state.",
   },
   {
     slug: "jacksonville-fl",
@@ -1084,6 +1692,38 @@ export const MUNICIPAL_CITIES: MunicipalCity[] = [
       "Complete streets & sidewalk build-out program",
       "Community center & aquatic facility upgrades",
     ],
+    agencies: [
+      "Jacksonville Public Works Department",
+      "JEA",
+      "City of Jacksonville Planning and Development Department",
+      "Jacksonville Transportation Authority",
+      "St. Johns River Water Management District",
+      "City of Jacksonville Beach Public Works",
+    ],
+    marketDetail: [
+      "Jacksonville consolidated with its county decades ago and covers an exceptionally large land area, so one municipal organization is responsible for urban core streets, suburban subdivisions, rural roads and a coastline. That breadth makes the department's portfolio unusually varied and stretches maintenance obligations over far more centerline miles per resident than a compact city carries.",
+      "Two programs dominate the capital agenda. Converting neighborhoods from septic systems onto public sewer is a long-running, expensive commitment driven by water quality, and drainage improvement in a low, flat city with a high water table is continuous. Both are delivered street by street in existing neighborhoods, which makes public communication and construction impact management part of the engineering job.",
+    ],
+    hiringFocus: [
+      {
+        role: "Capital projects engineers",
+        why: "Septic conversion and drainage programs are delivered street by street across an enormous service area.",
+      },
+      {
+        role: "Drainage & stormwater engineers",
+        why: "Low elevation, flat terrain and a high water table make local drainage improvement continuous.",
+      },
+      {
+        role: "Development review engineers",
+        why: "A consolidated government reviews everything from urban infill to rural subdivision in one organization.",
+      },
+      {
+        role: "Pavement & asset management engineers",
+        why: "An exceptionally large street network per resident makes maintenance prioritization central.",
+      },
+    ],
+    licensure:
+      "Florida licenses engineers through the Board of Professional Engineers, with comity on an NCEES record the standard route. Municipal roles generally require the license, and local government engineers here are expected to know the Florida Building Code's wind provisions, the regional water management district's permitting, and state stormwater rules, all of which they administer or apply directly.",
   },
   {
     slug: "orlando-fl",
@@ -1101,6 +1741,38 @@ export const MUNICIPAL_CITIES: MunicipalCity[] = [
       "Complete streets & sidewalk investment program",
       "Recreation & aquatic facility capital projects",
     ],
+    agencies: [
+      "Orlando Public Works Department",
+      "Orange County Public Works",
+      "City of Orlando Transportation Engineering",
+      "Central Florida Tourism Oversight District",
+      "Osceola County Public Works",
+      "Orlando Utilities Commission",
+    ],
+    marketDetail: [
+      "Central Florida's municipal landscape includes something almost unique: a special district covering the main tourism area that has historically exercised many of the powers of a local government, including its own infrastructure standards and permitting. Alongside it sit a large county public works organization, several cities and a municipally owned utility, so which rules apply depends on precisely where a site sits.",
+      "Growth is the constant. Subdivision and commercial review volumes are among the highest in the country, impact fee programs fund much of the infrastructure that follows, and utility and roadway extension has to be planned ahead of development rather than in response to it. Karst geology and a high water table make local drainage review technically demanding on every site.",
+    ],
+    hiringFocus: [
+      {
+        role: "Development review engineers",
+        why: "Sustained growth keeps subdivision and commercial site review volume among the highest in the country.",
+      },
+      {
+        role: "Stormwater & drainage review engineers",
+        why: "Karst geology and a high water table make pond and conveyance review technically demanding.",
+      },
+      {
+        role: "Capital & impact fee program engineers",
+        why: "Growth-funded infrastructure requires programs planned and financed ahead of the development they serve.",
+      },
+      {
+        role: "Roadway & mobility engineers",
+        why: "Arterial capacity and connectivity have to be extended continuously across several jurisdictions.",
+      },
+    ],
+    licensure:
+      "Florida licenses engineers through the Board of Professional Engineers, with comity on an NCEES record the normal route. Municipal roles generally require the license, and because standards differ between the county, the cities and the special district, knowing which jurisdiction's manual governs a given site is essential working knowledge here.",
   },
   {
     slug: "pittsburgh-pa",
@@ -1118,6 +1790,38 @@ export const MUNICIPAL_CITIES: MunicipalCity[] = [
       "Complete streets & paving program",
       "Neighborhood park & rec-facility upgrades",
     ],
+    agencies: [
+      "Pittsburgh Department of Mobility and Infrastructure",
+      "Allegheny County Department of Public Works",
+      "Pittsburgh Water",
+      "ALCOSAN",
+      "Southwestern Pennsylvania Commission",
+      "Pittsburgh Department of Permits, Licenses and Inspections",
+    ],
+    marketDetail: [
+      "Allegheny County contains well over a hundred separate municipalities, most of them small, and each is responsible for its own streets, stormwater and sewage planning. That fragmentation creates a large number of part-time and shared municipal engineer appointments, usually held by consultants serving several boroughs at once, and it makes regional problems difficult to solve without councils of governments doing the coordination.",
+      "Pennsylvania also requires municipalities to maintain official sewage facilities plans and to update them when development is proposed, which gives municipal engineers a statutory planning role that does not exist in most states. Combined with steep terrain, landslide-prone slopes and a regional wet weather program every municipality must contribute to, the local engineering agenda is unusually regulatory.",
+    ],
+    hiringFocus: [
+      {
+        role: "Municipal engineers serving multiple boroughs",
+        why: "Extreme fragmentation creates many small appointments typically held by consultants covering several at once.",
+      },
+      {
+        role: "Sewage facilities planning engineers",
+        why: "State law requires official sewage plans and updates, giving municipal engineers a statutory planning duty.",
+      },
+      {
+        role: "Stormwater program engineers",
+        why: "Every municipality must contribute to a regional wet weather program through local ordinances and projects.",
+      },
+      {
+        role: "Geotechnical & slope-aware municipal engineers",
+        why: "Landslide-prone hillsides make slope stability a recurring municipal liability and design concern.",
+      },
+    ],
+    licensure:
+      "Pennsylvania licenses engineers through the State Registration Board for Professional Engineers, Land Surveyors and Geologists, with comity on an NCEES record the normal route. Municipal engineer appointments require the license, and familiarity with the state's sewage facilities planning process and municipalities planning code is what most distinguishes candidates for these roles.",
   },
   {
     slug: "cincinnati-oh",
@@ -1135,6 +1839,38 @@ export const MUNICIPAL_CITIES: MunicipalCity[] = [
       "Site plan & subdivision review for urban infill",
       "Park & recreation center renovation program",
     ],
+    agencies: [
+      "Cincinnati Department of Transportation and Engineering",
+      "Hamilton County Engineer",
+      "Metropolitan Sewer District of Greater Cincinnati",
+      "Cincinnati Buildings and Inspections",
+      "Ohio-Kentucky-Indiana Regional Council of Governments",
+      "Cincinnati Stormwater Management Utility",
+    ],
+    marketDetail: [
+      "Hamilton County is divided among dozens of separate political subdivisions, and Ohio's elected county engineer holds statutory responsibility for roads and bridges outside the municipalities. That combination produces a distinctive institutional map: a large city department, a statutory county office and many small village and township organizations, all with their own standards and all hiring from the same regional pool.",
+      "Hillside terrain gives municipal engineering here a liability dimension that flatter cities do not face. Landslides affect public streets and private property alike, retaining structures are part of the ordinary street inventory, and slope stability is a recurring call on the capital budget. The regional sewer program adds obligations that individual municipalities have to meet through local work.",
+    ],
+    hiringFocus: [
+      {
+        role: "Municipal & township engineers",
+        why: "Dozens of separate subdivisions each need engineering support and hire from the same regional pool.",
+      },
+      {
+        role: "Geotechnical & slope-aware municipal engineers",
+        why: "Landslide risk affecting public streets makes slope stability a recurring municipal responsibility.",
+      },
+      {
+        role: "County highway & bridge engineers",
+        why: "Ohio's statutory county engineer office carries road and bridge responsibility outside municipalities.",
+      },
+      {
+        role: "Stormwater program engineers",
+        why: "Regional sewer obligations have to be met through local ordinances and municipal projects.",
+      },
+    ],
+    licensure:
+      "Ohio licenses engineers through the State Board of Registration for Professional Engineers and Surveyors, with comity on an NCEES record the standard route. The elected county engineer position is statutory and requires registration as both a professional engineer and a professional surveyor in Ohio, an unusual dual requirement that materially limits who is eligible.",
   },
   {
     slug: "cleveland-oh",
@@ -1152,6 +1888,38 @@ export const MUNICIPAL_CITIES: MunicipalCity[] = [
       "Bridge & culvert rehabilitation program",
       "Cleveland lakefront park & marina upgrades",
     ],
+    agencies: [
+      "Cleveland Department of Public Works",
+      "Cuyahoga County Department of Public Works",
+      "Northeast Ohio Regional Sewer District",
+      "City of Cleveland Division of Engineering and Construction",
+      "Northeast Ohio Areawide Coordinating Agency",
+      "Cuyahoga County Engineer",
+    ],
+    marketDetail: [
+      "Cuyahoga County is divided among dozens of separate municipalities, and many of them serve fewer residents than the infrastructure they inherited was built for. That gives municipal engineering here an unusual character: the central question is often how to maintain, consolidate or decommission assets sized for a larger population rather than how to extend the network.",
+      "The climate compounds it. Freeze-thaw and heavy salt use destroy pavements, joints and buried pipe faster than in milder regions, and the construction season is short, so maintenance programs have to be prioritized carefully against a narrow annual window. A regional sewer district sets stormwater and wet weather obligations that each community has to deliver locally.",
+    ],
+    hiringFocus: [
+      {
+        role: "Asset management & right-sizing engineers",
+        why: "Infrastructure built for a larger population makes maintenance, consolidation and decommissioning the core question.",
+      },
+      {
+        role: "Municipal & city engineers",
+        why: "Many separate communities each need engineering leadership and draw from the same regional pool.",
+      },
+      {
+        role: "Pavement & maintenance program engineers",
+        why: "Freeze-thaw damage and a short season make prioritization within a narrow annual window critical.",
+      },
+      {
+        role: "Stormwater program engineers",
+        why: "Regional wet weather obligations must be delivered through local ordinances and community projects.",
+      },
+    ],
+    licensure:
+      "Ohio licenses engineers through the State Board of Registration for Professional Engineers and Surveyors, with comity on an NCEES record the standard route. The statutory county engineer role requires dual registration as a professional engineer and professional surveyor, and municipal positions generally require the engineering license plus familiarity with Ohio EPA plan approval for water and sewer works.",
   },
   {
     slug: "st-louis-mo",
@@ -1169,6 +1937,38 @@ export const MUNICIPAL_CITIES: MunicipalCity[] = [
       "Complete streets & bikeway expansion",
       "Recreation facility renovation & ADA upgrades",
     ],
+    agencies: [
+      "City of St. Louis Board of Public Service",
+      "St. Louis County Department of Transportation",
+      "Metropolitan St. Louis Sewer District",
+      "St. Louis City Street Department",
+      "East-West Gateway Council of Governments",
+      "St. Charles County Highway Department",
+    ],
+    marketDetail: [
+      "St. Louis City separated from St. Louis County more than a century ago and has been independent of it ever since, while the county itself is divided among dozens of separate municipalities, many of them small. The result is one of the most fragmented local government landscapes in the country: a city with no county above it, and a county full of towns each running or contracting its own engineering function.",
+      "The infrastructure question is not growth but decline. Streets, sewers and water mains were built for a considerably larger population, and much of the municipal engineering agenda is about maintaining, consolidating or retiring assets rather than extending them. A single regional sewer district covering city and county provides the one genuinely unified piece of the picture.",
+    ],
+    hiringFocus: [
+      {
+        role: "Municipal & city engineers",
+        why: "A county divided among dozens of small municipalities creates many separate engineering appointments.",
+      },
+      {
+        role: "Asset management & consolidation engineers",
+        why: "Infrastructure built for a larger population makes maintenance and retirement decisions the core agenda.",
+      },
+      {
+        role: "Stormwater program engineers",
+        why: "Regional sewer obligations have to be delivered through local ordinances and municipal projects.",
+      },
+      {
+        role: "Development review engineers",
+        why: "Growth in the outer counties sustains subdivision and site plan review volume there.",
+      },
+    ],
+    licensure:
+      "Missouri licenses engineers through the Board for Architects, Professional Engineers, Professional Land Surveyors and Professional Landscape Architects, with comity on an NCEES record the usual route and corporate authorization required for firms serving local government. Because the metro extends into Illinois, engineers working the full region often hold both registrations.",
   },
   {
     slug: "raleigh-nc",
@@ -1186,6 +1986,38 @@ export const MUNICIPAL_CITIES: MunicipalCity[] = [
       "Stormwater capital improvement program",
       "Greenway & park capital improvement program",
     ],
+    agencies: [
+      "Raleigh Engineering Services Department",
+      "Wake County",
+      "Town of Cary Engineering",
+      "Town of Apex Engineering",
+      "NCDOT Division 5",
+      "Capital Area Metropolitan Planning Organization",
+    ],
+    marketDetail: [
+      "North Carolina is unusual in that the state maintains nearly all roads outside municipal limits rather than leaving them to counties, so county government here has no highway department in the sense most states would recognize. Municipal engineering is concentrated in the towns and cities, which maintain the streets inside their own limits and absorb new ones as they annex or as subdivisions are accepted.",
+      "That structure meets extraordinary growth. Towns around Raleigh have gone from small to substantial within a generation, building engineering departments from very little while reviewing subdivision and site plans at a rate that outpaces their staffing. Reservoir nutrient rules add measurable stormwater obligations to every one of those reviews, giving local engineers real regulatory authority.",
+    ],
+    hiringFocus: [
+      {
+        role: "Development review engineers",
+        why: "Towns are reviewing subdivision and site plans at volumes far beyond their historic staffing.",
+      },
+      {
+        role: "Town & city engineers",
+        why: "Rapidly grown municipalities are building engineering departments and competing for the same people.",
+      },
+      {
+        role: "Stormwater program engineers",
+        why: "Reservoir nutrient rules give local stormwater review measurable targets and regulatory weight.",
+      },
+      {
+        role: "Capital projects engineers",
+        why: "Infrastructure and facilities have to be delivered on the schedule growth sets rather than the town's own.",
+      },
+    ],
+    licensure:
+      "North Carolina licenses engineers through the Board of Examiners for Engineers and Surveyors, with comity on an NCEES record the usual individual route, and the state licenses firms separately. Municipal roles require the license, and because the state maintains roads outside municipal limits, local engineers deal with NCDOT encroachment and acceptance processes constantly.",
   },
   {
     slug: "washington-dc",
@@ -1203,6 +2035,38 @@ export const MUNICIPAL_CITIES: MunicipalCity[] = [
       "Streetscape & sidewalk capital program",
       "Recreation & municipal facility capital program",
     ],
+    agencies: [
+      "District Department of Transportation",
+      "DC Water",
+      "DC Department of Energy and Environment",
+      "DC Department of Buildings",
+      "Advisory Neighborhood Commissions",
+      "Metropolitan Washington Council of Governments",
+    ],
+    marketDetail: [
+      "The District is simultaneously a city and its own state transportation department, receiving federal highway funds and administering them itself with no state layer above and no county layer below. That gives its transportation agency an unusual combination of responsibilities, from residential alley reconstruction through to federal-aid highway projects, all in one organization.",
+      "Neighborhood commissions elected at very small scale have a formal advisory role in local decisions, so municipal engineers present and defend proposals to them routinely. Add federal land ownership across much of the street and park network and a regional council coordinating across three jurisdictions, and public process and interagency negotiation take up more of the job here than almost anywhere else.",
+    ],
+    hiringFocus: [
+      {
+        role: "Federal-aid program engineers",
+        why: "The District administers federal highway funds itself, combining state and city transportation functions.",
+      },
+      {
+        role: "Public engagement-capable municipal engineers",
+        why: "Formally constituted neighborhood commissions require proposals to be presented and defended routinely.",
+      },
+      {
+        role: "Capital projects engineers",
+        why: "One organization delivers everything from alley reconstruction to federal-aid highway work.",
+      },
+      {
+        role: "Interagency coordination engineers",
+        why: "Federal land ownership and a three-jurisdiction region make negotiation a standing part of delivery.",
+      },
+    ],
+    licensure:
+      "The District licenses engineers through its Board of Professional Engineering, with comity on an NCEES record the normal route, and engineers working the wider region commonly hold Maryland and Virginia registration too. Municipal roles generally require the license, and federal-aid program administration adds its own procedural requirements independent of licensure.",
   },
   {
     slug: "hartford-ct",
@@ -1220,6 +2084,38 @@ export const MUNICIPAL_CITIES: MunicipalCity[] = [
       "Water main replacement coordination",
       "Municipal building & park renovation program",
     ],
+    agencies: [
+      "Hartford Department of Public Works",
+      "Metropolitan District Commission",
+      "Capitol Region Council of Governments",
+      "Town of West Hartford Engineering",
+      "Connecticut Department of Transportation",
+      "Connecticut Department of Energy and Environmental Protection",
+    ],
+    marketDetail: [
+      "Connecticut abolished county government decades ago, so there is no layer between the state and its towns. Every municipality, however small, is responsible for its own roads, drainage, land use review and capital facilities, and regional councils of governments provide whatever coordination exists. That produces a large number of town engineer positions and a strong reliance on consultants serving several towns each.",
+      "The infrastructure is old and the population is not growing, so the agenda is renewal rather than extension. Streets, drainage and buried utilities laid generations ago are failing together under freeze-thaw, a regional water authority handles water and sewer for many communities, and towns compete for the same limited state and federal funding to address backlogs they cannot fund locally.",
+    ],
+    hiringFocus: [
+      {
+        role: "Town engineers",
+        why: "With no county layer, every municipality carries full engineering responsibility regardless of size.",
+      },
+      {
+        role: "Asset renewal & funding-application engineers",
+        why: "Aging infrastructure and limited local funding make grant-ready project development a core skill.",
+      },
+      {
+        role: "Drainage & stormwater engineers",
+        why: "Freeze-thaw damage and permit obligations make local drainage renewal a continuing program.",
+      },
+      {
+        role: "Development review engineers",
+        why: "Municipal land use review sits entirely with the towns, each applying its own regulations.",
+      },
+    ],
+    licensure:
+      "Connecticut licenses engineers through the State Board of Examiners for Professional Engineers and Land Surveyors within the Department of Consumer Protection, with comity on an NCEES record the standard route. Town engineer roles require the license, and because the state is small, engineers serving multiple municipalities frequently hold Massachusetts or Rhode Island registration as well.",
   },
   {
     slug: "albuquerque-nm",
@@ -1237,6 +2133,38 @@ export const MUNICIPAL_CITIES: MunicipalCity[] = [
       "Complete streets & multimodal corridor upgrades",
       "Community center & senior-center upgrades",
     ],
+    agencies: [
+      "City of Albuquerque Municipal Development Department",
+      "Albuquerque Metropolitan Arroyo Flood Control Authority",
+      "Albuquerque Bernalillo County Water Utility Authority",
+      "Bernalillo County Public Works",
+      "Mid-Region Council of Governments",
+      "City of Rio Rancho Public Works",
+    ],
+    marketDetail: [
+      "Albuquerque has moved several municipal functions into joint or regional bodies rather than keeping them inside the city. Water and sewer are run by an authority governed jointly by the city and county, and drainage is the responsibility of a separate regional flood control authority with its own board, staff, criteria and funding. A municipal engineer here therefore works across institutions rather than within one department.",
+      "The physical setting shapes the rest. Development spreads onto mesa land where arroyos have to be crossed or contained, water availability constrains where growth can be served at all, and long-standing land and water tenure arrangements in parts of New Mexico add a legal dimension to infrastructure projects that engineers arriving from other states do not expect.",
+    ],
+    hiringFocus: [
+      {
+        role: "Drainage & arroyo engineers",
+        why: "A separate regional flood control authority with its own criteria makes local drainage a distinct discipline.",
+      },
+      {
+        role: "Municipal capital projects engineers",
+        why: "Delivery spans city, county and joint authorities rather than sitting within a single department.",
+      },
+      {
+        role: "Development review engineers",
+        why: "Growth onto mesa land requires review of arroyo crossings, grading and service availability.",
+      },
+      {
+        role: "Water service planning engineers",
+        why: "Supply constraint makes whether growth can be served a threshold question for municipal review.",
+      },
+    ],
+    licensure:
+      "New Mexico licenses engineers through the State Board of Licensure for Professional Engineers and Professional Surveyors, and firms serving local government must register with the board as well. Municipal roles require the license, and the regional flood control authority and water utility authority each publish their own design criteria that engineers are expected to know alongside the city's.",
   },
   {
     slug: "birmingham-al",
@@ -1254,6 +2182,38 @@ export const MUNICIPAL_CITIES: MunicipalCity[] = [
       "Birmingham Water Works main replacement coordination",
       "Streetscape-adjacent park & facility upgrades",
     ],
+    agencies: [
+      "Birmingham Department of Transportation",
+      "Jefferson County Roads and Transportation",
+      "Jefferson County Department of Environmental Services",
+      "Birmingham Planning, Engineering and Permits",
+      "Regional Planning Commission of Greater Birmingham",
+      "City of Hoover Engineering",
+    ],
+    marketDetail: [
+      "Alabama grants its local governments comparatively limited home rule, so municipalities often need state legislative authorization for actions that would be routine elsewhere, including certain taxes and fees. That constrains how local infrastructure gets funded and makes municipal engineers unusually dependent on grant programs and county arrangements rather than on locally raised revenue.",
+      "The county's sewer debt legacy has left an enduring caution about large capital commitments, which pushes the region toward rehabilitation and incremental improvement. Jefferson County is divided among dozens of separate municipalities of very different sizes, each with its own standards, and hillside terrain with karst below makes local drainage, slope and excavation questions harder than the metro's size suggests.",
+    ],
+    hiringFocus: [
+      {
+        role: "Municipal engineers",
+        why: "Dozens of separate municipalities of varying size each require engineering support and standards.",
+      },
+      {
+        role: "Grant-funded capital program engineers",
+        why: "Limited local revenue authority makes grant development and administration a core municipal skill.",
+      },
+      {
+        role: "Stormwater & drainage engineers",
+        why: "Hillside terrain over karst makes local drainage and slope questions technically demanding.",
+      },
+      {
+        role: "Asset rehabilitation engineers",
+        why: "Caution about large capital commitments favors incremental rehabilitation over replacement.",
+      },
+    ],
+    licensure:
+      "Alabama licenses engineers through the Board of Licensure for Professional Engineers and Land Surveyors, with comity on an NCEES record the standard individual route and a certificate of authorization required for firms serving local government. Municipal roles require the license, and familiarity with the state's limits on local fiscal authority is practical knowledge for anyone managing a capital program here.",
   },
   {
     slug: "memphis-tn",
@@ -1271,6 +2231,38 @@ export const MUNICIPAL_CITIES: MunicipalCity[] = [
       "Complete streets & sidewalk repair program",
       "Memphis park & recreation facility renovations",
     ],
+    agencies: [
+      "City of Memphis Division of Public Works",
+      "Shelby County Department of Public Works",
+      "Memphis Light, Gas and Water",
+      "Memphis and Shelby County Division of Planning and Development",
+      "Memphis Urban Area Metropolitan Planning Organization",
+      "City of Germantown Engineering",
+    ],
+    marketDetail: [
+      "Memphis owns a utility that provides electricity, natural gas and water together, which almost no other American city does. That puts three networks under one municipal organization and makes coordination between street work and utility work an internal matter, while giving the city an unusual degree of control over service extension and, with it, over where growth can practically be served.",
+      "The city has also reversed direction on its boundary, releasing outlying areas rather than annexing, which is rare and has real engineering consequences: deciding what infrastructure to retain, transfer or abandon, and how to serve a footprint that shrank. Flat terrain and a high water table make local drainage a continuing problem, and suburban municipalities in the county run their own departments.",
+    ],
+    hiringFocus: [
+      {
+        role: "Municipal utility coordination engineers",
+        why: "City ownership of electric, gas and water together makes integrated street and utility delivery an internal function.",
+      },
+      {
+        role: "Asset management & transition engineers",
+        why: "A shrinking municipal footprint requires decisions about retaining, transferring or abandoning infrastructure.",
+      },
+      {
+        role: "Drainage & stormwater engineers",
+        why: "Flat terrain with a high water table makes local drainage a continuing municipal problem.",
+      },
+      {
+        role: "City engineers for suburban municipalities",
+        why: "Separate municipalities in the county each run their own engineering departments and standards.",
+      },
+    ],
+    licensure:
+      "Tennessee licenses engineers through the Board of Architectural and Engineering Examiners within the Department of Commerce and Insurance, with comity on an NCEES record the usual route. Municipal roles require the license, and because the metro reaches into Mississippi and Arkansas, engineers serving the wider region frequently hold more than one registration.",
   },
   {
     slug: "omaha-ne",
@@ -1288,6 +2280,38 @@ export const MUNICIPAL_CITIES: MunicipalCity[] = [
       "Complete streets & trail connectivity program",
       "Riverfront park & recreation facility upgrades",
     ],
+    agencies: [
+      "Omaha Public Works Department",
+      "Douglas County Engineer",
+      "Metropolitan Utilities District",
+      "Papio-Missouri River Natural Resources District",
+      "Metropolitan Area Planning Agency",
+      "City of Bellevue Public Works",
+    ],
+    marketDetail: [
+      "Nebraska lets developers form sanitary and improvement districts to finance and build infrastructure in unincorporated areas, which are later annexed by the city. That mechanism shapes municipal engineering across this metro: a great deal of street, sewer and water infrastructure is built to district standards by private developers and inspected, accepted and eventually absorbed by the city, so review and acceptance carry long-term consequences.",
+      "Alongside that, the city's combined sewer overflow obligations are unusually large relative to its ratepayer base, which has made affordability an explicit constraint on municipal capital planning. A natural resources district handles regional flood risk and watershed work, adding another institution municipal engineers coordinate with rather than command.",
+    ],
+    hiringFocus: [
+      {
+        role: "Development review & acceptance engineers",
+        why: "Infrastructure built by improvement districts is later absorbed by the city, making review consequential long term.",
+      },
+      {
+        role: "Capital program & affordability-focused engineers",
+        why: "A large sewer obligation on a modest ratepayer base makes cost an explicit planning constraint.",
+      },
+      {
+        role: "Stormwater & watershed engineers",
+        why: "Regional flood risk work sits with a natural resources district requiring continuous coordination.",
+      },
+      {
+        role: "Municipal engineers",
+        why: "Separate municipalities across the metro each run their own engineering and review functions.",
+      },
+    ],
+    licensure:
+      "Nebraska licenses engineers through the Board of Engineers and Architects, with comity on an NCEES record the usual individual route and a certificate of authorization required for firms serving local government. Municipal roles require the license, and familiarity with the sanitary and improvement district mechanism is essential local knowledge for anyone doing review or acceptance work here.",
   },
   {
     slug: "boise-id",
@@ -1305,6 +2329,38 @@ export const MUNICIPAL_CITIES: MunicipalCity[] = [
       "Complete streets & multimodal trail projects",
       "Greenbelt & municipal facility capital projects",
     ],
+    agencies: [
+      "City of Boise Public Works",
+      "Ada County Highway District",
+      "City of Meridian Public Works",
+      "Boise Planning and Development Services",
+      "Community Planning Association of Southwest Idaho",
+      "Idaho Department of Environmental Quality",
+    ],
+    marketDetail: [
+      "The defining fact of municipal engineering in this valley is that the cities do not own their streets. A single countywide highway district holds, designs, builds and maintains essentially all local roads across the metro, while the cities retain water, sewer, planning and land use. That division is almost unique in the United States and it means every development project is reviewed by two separate organizations with separate standards.",
+      "Growth makes that split consequential. Development review volume is high and sustained, and coordinating a subdivision's streets with its utilities means aligning two agencies' requirements and schedules. The irrigation canal network running through developing land adds a third set of interests, since the districts operating it have rights that predate the suburbs.",
+    ],
+    hiringFocus: [
+      {
+        role: "Development review engineers",
+        why: "High growth plus a split between street and utility authorities makes review coordination a constant task.",
+      },
+      {
+        role: "City engineers for water & sewer",
+        why: "Cities retain utilities while streets sit elsewhere, concentrating municipal engineering on buried infrastructure.",
+      },
+      {
+        role: "Roadway engineers at the highway district",
+        why: "A single countywide authority designs and builds all local roads, concentrating that work in one organization.",
+      },
+      {
+        role: "Irrigation coordination engineers",
+        why: "Canal districts hold rights predating development and must be engineered around in every project.",
+      },
+    ],
+    licensure:
+      "Idaho licenses engineers through the Board of Licensure of Professional Engineers and Professional Land Surveyors, with comity on an NCEES record the normal individual route and a certificate of authorization required for firms. Municipal roles require the license, and knowing which of the city or the highway district governs a given element is the first piece of local knowledge anyone needs here.",
   },
   {
     slug: "providence-ri",
@@ -1322,6 +2378,38 @@ export const MUNICIPAL_CITIES: MunicipalCity[] = [
       "Street resurfacing & sidewalk reconstruction program",
       "Narragansett waterfront recreation facility projects",
     ],
+    agencies: [
+      "Providence Department of Public Works",
+      "Narragansett Bay Commission",
+      "Rhode Island Department of Transportation",
+      "Providence Water Supply Board",
+      "Rhode Island Department of Environmental Management",
+      "City of Warwick Department of Public Works",
+    ],
+    marketDetail: [
+      "Rhode Island has no county government at all, so its cities and towns carry every local function themselves with the state directly above them. In a state this small that produces an unusually flat institutional structure: municipalities deal with state agencies directly, and regional functions such as wastewater treatment and water supply are handled by separate authorities rather than by a county.",
+      "The infrastructure is old and the tax base is limited. Streets, drainage and buried utilities date from an industrial era that has passed, mill buildings are being converted to new uses with utility demands their neighborhoods were not built for, and coastal exposure adds flooding and storm surge to the local agenda. Grant and state revolving fund applications are a routine part of getting anything built.",
+    ],
+    hiringFocus: [
+      {
+        role: "Municipal engineers",
+        why: "With no county layer, every city and town carries full engineering responsibility directly.",
+      },
+      {
+        role: "Asset renewal & funding-application engineers",
+        why: "Old infrastructure and a limited tax base make grant-ready project development a core competence.",
+      },
+      {
+        role: "Drainage & coastal flooding engineers",
+        why: "Coastal exposure adds surge and flooding to an already heavy drainage renewal agenda.",
+      },
+      {
+        role: "Development review engineers",
+        why: "Mill conversion brings utility and access demands the surrounding neighborhoods were never designed for.",
+      },
+    ],
+    licensure:
+      "Rhode Island licenses engineers through the Board of Registration for Professional Engineers, with comity on an NCEES record the standard route, and most engineers working the wider market also hold Massachusetts or Connecticut registration. Municipal roles require the license, and the state's coastal management council adds a permitting body local engineers deal with directly.",
   },
   {
     slug: "buffalo-ny",
@@ -1339,6 +2427,38 @@ export const MUNICIPAL_CITIES: MunicipalCity[] = [
       "Site plan review for infill redevelopment",
       "Waterfront & downtown facility renovation projects",
     ],
+    agencies: [
+      "City of Buffalo Department of Public Works",
+      "Erie County Department of Public Works",
+      "Buffalo Sewer Authority",
+      "Greater Buffalo Niagara Regional Transportation Council",
+      "Town of Amherst Engineering",
+      "New York State Department of Environmental Conservation",
+    ],
+    marketDetail: [
+      "Erie County is divided into a city, many towns and villages within those towns, each an independent government with its own highway and engineering responsibilities. New York's structure means a village and the town surrounding it both maintain roads, so coordination between overlapping jurisdictions is a routine feature of municipal work here rather than an exception.",
+      "The central engineering problem is infrastructure sized for a larger population in a climate that destroys it quickly. Lake-effect snow, heavy salt use and a long freeze-thaw season shorten the life of pavements and buried pipe, the construction season is short, and municipalities are maintaining networks built when the region held considerably more people. Prioritization and asset management therefore dominate capital planning.",
+    ],
+    hiringFocus: [
+      {
+        role: "Asset management & prioritization engineers",
+        why: "Networks built for a larger population in a destructive climate make prioritization the central capital question.",
+      },
+      {
+        role: "Municipal & town engineers",
+        why: "Overlapping towns and villages each carry independent highway and engineering responsibilities.",
+      },
+      {
+        role: "Stormwater program engineers",
+        why: "Regional overflow obligations and state permitting are delivered through local ordinances and projects.",
+      },
+      {
+        role: "Pavement & maintenance program engineers",
+        why: "A short season and severe freeze-thaw damage make maintenance scheduling and materials choices critical.",
+      },
+    ],
+    licensure:
+      "New York licenses engineers through the State Education Department's Office of the Professions, and most out-of-state PEs transfer by comity on an NCEES record. Municipal roles require the license, and local government engineers here administer state stormwater permitting and deal with the Department of Environmental Conservation's approval processes as a routine part of the job.",
   },
 ];
 
