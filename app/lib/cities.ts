@@ -1196,6 +1196,38 @@ export const CITIES: City[] = [
       "Stormwater and floodplain management",
       "Will Rogers airport capital projects",
     ],
+    agencies: [
+      "ODOT Division 4",
+      "Oklahoma City Public Works",
+      "Oklahoma Turnpike Authority",
+      "Oklahoma City Water Utilities Trust",
+      "EMBARK",
+      "Will Rogers International Airport",
+    ],
+    marketDetail: [
+      "Oklahoma City funds an unusual amount of its own civil infrastructure through voter-approved capital programs rather than waiting on state and federal cycles, which gives the metro a steadier stream of streets, drainage, park and utility work than its size suggests. For engineers that means municipal design volume is more predictable here, and the agencies letting it expect consultants who can carry a project from concept through construction administration.",
+      "The physical conditions are the other half. Expansive clay soils move with moisture and are hard on pavements, foundations and buried pipe, so subgrade treatment and pavement design get attention that engineers from other regions treat as routine. Severe weather adds a hardening and resilience dimension to public facilities, and the flat terrain means drainage design works with very little natural fall.",
+    ],
+    hiringFocus: [
+      {
+        role: "Municipal & streets design engineers",
+        why: "Locally funded capital programs keep street, drainage and utility design volume steadier than the state cycle alone would.",
+      },
+      {
+        role: "Geotechnical & pavement engineers",
+        why: "Expansive clay is the region's defining subsurface problem and governs pavement and foundation design.",
+      },
+      {
+        role: "Drainage & stormwater engineers",
+        why: "Flat terrain with minimal fall makes conveyance and detention design demanding on nearly every site.",
+      },
+      {
+        role: "Construction administration engineers",
+        why: "Owners here expect consultants to stay through construction, which makes field-capable engineers harder to find than designers.",
+      },
+    ],
+    licensure:
+      "Oklahoma licenses through the State Board of Licensure for Professional Engineers and Land Surveyors, and comity on an NCEES record is the standard route for an out-of-state PE. Oklahoma also requires a certificate of authorization for firms practicing engineering in the state, which is the step out-of-state consultancies most often miss when they open an office here. ODOT and the turnpike authority each maintain their own consultant prequalification.",
   },
   {
     slug: "charleston-sc",
@@ -1213,6 +1245,38 @@ export const CITIES: City[] = [
       "Port of Charleston and harbor deepening",
       "Regional roadway and mobility projects",
     ],
+    agencies: [
+      "SCDOT District 6",
+      "Charleston County Transportation Development",
+      "City of Charleston Department of Public Service",
+      "Charleston Water System",
+      "South Carolina Ports Authority",
+      "Berkeley-Charleston-Dorchester Council of Governments",
+    ],
+    marketDetail: [
+      "Charleston's civil engineering is organized around water that is rising and ground that does not drain. The peninsula floods on tides that are not storms, the response has run to deep drainage tunnels and pump stations, and every project in the older city has to reconcile modern hydraulic requirements with a historic fabric that constrains what can be dug, routed or raised. Drainage and resilience are the region's defining specialisms.",
+      "Outside the peninsula the market is growth and freight. Lowcountry soils are soft and often require ground improvement or deep foundations, the port and its inland connections generate sustained heavy-load roadway and rail work, and the suburban counties are expanding fast enough to keep land development, arterial extension and utility trunk design continuously busy.",
+    ],
+    hiringFocus: [
+      {
+        role: "Drainage & coastal resilience engineers",
+        why: "Tidal flooding and a built drainage and pumping response make hydraulics a permanent regional program.",
+      },
+      {
+        role: "Geotechnical engineers",
+        why: "Soft Lowcountry soils make ground improvement and deep foundation design a routine requirement rather than an exception.",
+      },
+      {
+        role: "Roadway & freight corridor engineers",
+        why: "Port growth drives heavy-load pavement, bridge and connector work across the region.",
+      },
+      {
+        role: "Land development engineers",
+        why: "Rapid suburban expansion in the surrounding counties keeps grading, utility and entitlement volume high.",
+      },
+    ],
+    licensure:
+      "South Carolina licenses through the Board of Registration for Professional Engineers and Surveyors within the Department of Labor, Licensing and Regulation, and comity on an NCEES record is the usual route. Coastal work adds a second layer beyond the license: the state's coastal zone program governs construction near the shoreline, and familiarity with that permitting regime is frequently what a hiring manager is actually testing for in this market.",
   },
   {
     slug: "newark-nj",
@@ -1230,6 +1294,38 @@ export const CITIES: City[] = [
       "Port and industrial corridor infrastructure",
       "Newark Liberty airport redevelopment",
     ],
+    agencies: [
+      "NJDOT",
+      "NJ TRANSIT",
+      "Port Authority of NY & NJ",
+      "Newark Department of Engineering",
+      "New Jersey Turnpike Authority",
+      "Passaic Valley Sewerage Commission",
+    ],
+    marketDetail: [
+      "Newark sits at the densest freight and transport junction in the region: an international airport, one of the busiest container ports on the east coast, the Northeast Corridor rail line and two major toll roads all inside a few miles. The civil engineering that follows is almost entirely about rebuilding and expanding capacity in a corridor that has no spare land, which puts a premium on staging, utility coordination and engineers who can work inside an operating facility.",
+      "The second characteristic is legacy. This is old industrial ground, so brownfield conditions, contaminated soils and remediation requirements attach to a large share of sites, and the buried water and sewer network is old enough that replacement rather than repair is often the honest answer. Combined sewer obligations on the Passaic and the harbor keep wet weather engineering on the program continuously.",
+    ],
+    hiringFocus: [
+      {
+        role: "Site civil engineers with brownfield experience",
+        why: "Legacy industrial contamination attaches to a large share of developable land and changes how a site is engineered.",
+      },
+      {
+        role: "Water & sewer replacement engineers",
+        why: "An old buried network and combined sewer obligations make renewal and wet weather design a standing program.",
+      },
+      {
+        role: "Construction-phase engineers for live facilities",
+        why: "Airport, port and rail work is built around operations that cannot stop, which is a distinct discipline from design.",
+      },
+      {
+        role: "Roadway & freight corridor engineers",
+        why: "Port and airport traffic loads keep heavy-duty pavement, ramp and connector work continuous in constrained right of way.",
+      },
+    ],
+    licensure:
+      "New Jersey licenses through the State Board of Professional Engineers and Land Surveyors within the Division of Consumer Affairs, and comity on an NCEES record is the normal route. In this metro the bigger practical question is usually multi-jurisdiction reach: the Port Authority is bi-state and a great deal of regional work spans the New York line, so engineers who hold both New Jersey and New York licenses can be staffed on more of the market.",
   },
   {
     slug: "san-francisco-ca",
@@ -1247,6 +1343,38 @@ export const CITIES: City[] = [
       "Regional water and seismic reliability programs",
       "SFO airport modernization",
     ],
+    agencies: [
+      "Caltrans District 4",
+      "San Francisco Municipal Transportation Agency",
+      "San Francisco Public Works",
+      "San Francisco Public Utilities Commission",
+      "BART",
+      "Port of San Francisco",
+    ],
+    marketDetail: [
+      "Seismic performance is the organizing principle of civil engineering in the Bay Area. Active faults on both sides of the bay, large areas of engineered fill that will liquefy, and an infrastructure stock that predates current standards have made assessment, retrofit and replacement a permanent program rather than a response to any single event. Geotechnical and structural judgment about existing conditions is the scarcest capability in this market.",
+      "Sea level and the waterfront are the second driver. The seawall, the low-lying fill districts and the region's wastewater and stormwater outfalls all sit at elevations that are being reconsidered, which has turned coastal engineering and drainage into long-horizon capital programs. Layered on top is a regulatory and entitlement environment slow enough that permitting fluency is itself a hiring criterion.",
+    ],
+    hiringFocus: [
+      {
+        role: "Geotechnical engineers with liquefaction experience",
+        why: "Large areas of engineered fill make ground behavior the decisive design question on waterfront and infill sites.",
+      },
+      {
+        role: "Seismic retrofit & structural assessment engineers",
+        why: "An older infrastructure stock in an active seismic region keeps evaluation and strengthening continuously funded.",
+      },
+      {
+        role: "Coastal & sea level adaptation engineers",
+        why: "Seawall and low-lying shoreline programs are long-horizon capital work with few engineers experienced in them.",
+      },
+      {
+        role: "Permitting-fluent civil engineers",
+        why: "Approval timelines here are long enough that regulatory navigation is a distinct and valued professional skill.",
+      },
+    ],
+    licensure:
+      "California licenses civil engineers through the Board for Professional Engineers, Land Surveyors and Geologists, and it is not a straightforward comity state: applicants must pass California-specific examinations in seismic principles and engineering surveying in addition to the national exams, so an out-of-state PE cannot simply transfer. California also issues separate authorities for structural and geotechnical engineering beyond the civil license, which matters for anyone expected to seal that work.",
   },
   {
     slug: "san-diego-ca",
@@ -1264,6 +1392,38 @@ export const CITIES: City[] = [
       "Coastal rail realignment and bluff stabilization",
       "San Diego International Airport redevelopment",
     ],
+    agencies: [
+      "Caltrans District 11",
+      "San Diego Engineering & Capital Projects",
+      "San Diego County Department of Public Works",
+      "San Diego Association of Governments",
+      "San Diego County Water Authority",
+      "Port of San Diego",
+    ],
+    marketDetail: [
+      "San Diego's terrain does more to shape its civil engineering than its climate does. The city is cut by canyons and mesas, which means steep slopes, retaining structures, canyon crossings and slope stability analysis attach to a large share of projects, and the coastal edge adds bluff erosion and shoreline protection as their own line of work. Grading and geotechnical design carry more weight here than in a flat metro of the same size.",
+      "Water supply is the other constant. The region imports most of what it uses, and the engineering response has been a sustained program of storage, conveyance, desalination and potable reuse that runs independently of the construction cycle. Between that and a border region generating its own cross-border infrastructure and freight work, water resources and roadway engineers both find steady demand.",
+    ],
+    hiringFocus: [
+      {
+        role: "Geotechnical & slope stability engineers",
+        why: "Canyon and mesa terrain makes slope analysis and retaining design a routine project driver rather than a specialty call.",
+      },
+      {
+        role: "Water resources & potable reuse engineers",
+        why: "Import dependence has made recycling, storage and conveyance a permanent regional program.",
+      },
+      {
+        role: "Coastal & shoreline protection engineers",
+        why: "Bluff erosion and beach management are continuing obligations with a small local pool of experienced designers.",
+      },
+      {
+        role: "Roadway & freight corridor engineers",
+        why: "Border crossings and port traffic keep heavy-load corridor and connector work on a steady cycle.",
+      },
+    ],
+    licensure:
+      "California licenses through the Board for Professional Engineers, Land Surveyors and Geologists, and the state requires its own seismic principles and engineering surveying examinations in addition to the national exams, so an out-of-state PE does not transfer by comity alone. Given how much local work is slope and foundation driven, the separate California geotechnical engineer authority is worth confirming for any candidate expected to seal that analysis.",
   },
   {
     slug: "san-antonio-tx",
@@ -1281,6 +1441,38 @@ export const CITIES: City[] = [
       "Edwards Aquifer water-resource projects",
       "San Antonio International Airport expansion",
     ],
+    agencies: [
+      "TxDOT San Antonio District",
+      "San Antonio Public Works",
+      "San Antonio Water System",
+      "VIA Metropolitan Transit",
+      "Bexar County Public Works",
+      "San Antonio River Authority",
+    ],
+    marketDetail: [
+      "The Edwards Aquifer recharge zone runs under a large part of the San Antonio metro, and it governs development in a way no other constraint here does. Work over the recharge zone carries its own state protection plan requirements, water quality controls and construction restrictions, which means site civil and stormwater engineers in this market spend real time on a regulatory regime that does not exist elsewhere in Texas.",
+      "Flooding is the second defining condition. This part of Texas produces some of the most intense rainfall in the country on ground that sheds it quickly, and the regional response has been a long program of channel improvement, detention and flood control alongside the river authority's watershed work. Add sustained growth along the corridor toward Austin and the demand runs across drainage, roadway and land development at once.",
+    ],
+    hiringFocus: [
+      {
+        role: "Stormwater engineers with recharge zone experience",
+        why: "Aquifer protection requirements make water quality design a regulated specialism unique to this part of the state.",
+      },
+      {
+        role: "Drainage & flood control engineers",
+        why: "Extreme rainfall intensity on fast-shedding ground keeps channel, detention and flood mitigation work continuous.",
+      },
+      {
+        role: "Land development engineers",
+        why: "Sustained corridor growth drives high volumes of grading, utility and entitlement work.",
+      },
+      {
+        role: "Roadway & interchange design engineers",
+        why: "Interstate capacity and arterial extension follow the same growth and stay consistently funded.",
+      },
+    ],
+    licensure:
+      "Texas licenses through the Board of Professional Engineers and Land Surveyors, and comity on an NCEES record is the normal route for an individual. Texas also registers firms: a company offering engineering services in the state needs its own registration, which is the requirement out-of-state consultancies most often overlook. TxDOT maintains separate consultant prequalification by work category on top of both.",
   },
   {
     slug: "austin-tx",
@@ -1298,6 +1490,38 @@ export const CITIES: City[] = [
       "Regional water and utility infrastructure",
       "Austin-Bergstrom airport expansion",
     ],
+    agencies: [
+      "TxDOT Austin District",
+      "City of Austin Public Works",
+      "Austin Water",
+      "Capital Metro",
+      "Central Texas Regional Mobility Authority",
+      "Travis County Transportation and Natural Resources",
+    ],
+    marketDetail: [
+      "Austin combines the fastest sustained growth of any large Texas metro with some of the most restrictive local environmental rules in the state. Development over the contributing and recharge zones of the aquifer that feeds the city's springs carries water quality requirements, impervious cover limits and a watershed ordinance regime that shapes site design from the first sketch. Civil engineers who know that framework are materially more employable here than equally qualified engineers who do not.",
+      "The second driver is capacity. A single interstate carries most of the region's north to south traffic and is being reconstructed through the center of the city, a regional mobility authority runs its own toll corridor program, and transit expansion is being built into the same constrained rights of way. Flash flooding on the Colorado and its tributaries keeps drainage design in the middle of all of it.",
+    ],
+    hiringFocus: [
+      {
+        role: "Site civil engineers with watershed ordinance experience",
+        why: "Local water quality and impervious cover rules govern site design and are specific enough to be their own expertise.",
+      },
+      {
+        role: "Drainage & floodplain engineers",
+        why: "Flash flood exposure on the region's creeks makes hydraulic modeling and floodplain work a constant requirement.",
+      },
+      {
+        role: "Roadway & corridor reconstruction engineers",
+        why: "Rebuilding the region's main north to south corridor under traffic is the largest sustained transportation program here.",
+      },
+      {
+        role: "Land development engineers",
+        why: "Growth continues to outpace infrastructure, keeping grading, utility and entitlement design in heavy demand.",
+      },
+    ],
+    licensure:
+      "Texas licenses through the Board of Professional Engineers and Land Surveyors, with comity on an NCEES record the usual individual route and a separate firm registration required for companies offering engineering services in the state. In Austin specifically, the credential hiring managers probe hardest is not the license but whether the engineer has taken projects through the city's watershed and site development review, which is slower and more prescriptive than most Texas jurisdictions.",
   },
   {
     slug: "jacksonville-fl",
@@ -1315,6 +1539,38 @@ export const CITIES: City[] = [
       "Coastal and stormwater drainage upgrades",
       "JAXPORT and marine infrastructure",
     ],
+    agencies: [
+      "FDOT District 2",
+      "City of Jacksonville Public Works",
+      "JEA",
+      "Jacksonville Transportation Authority",
+      "JAXPORT",
+      "St. Johns River Water Management District",
+    ],
+    marketDetail: [
+      "Jacksonville is a low, flat, coastal city built around a tidal river, and that combination puts drainage and storm resilience at the center of its civil engineering. Storm surge reaches well inland along the St. Johns, the water table is high, and much of the older city drains through systems sized for a different era, so conveyance upgrades, pump stations and shoreline work are continuous rather than episodic.",
+      "The port and the road network carry the rest of the market. Container and vehicle traffic drive heavy-load pavement, rail connection and interchange work, and the region's outward growth keeps arterial extension, utility trunk mains and a long-running program of converting septic areas onto the public sewer system busy. Sandy soils and high groundwater complicate every excavation that gets deep.",
+    ],
+    hiringFocus: [
+      {
+        role: "Drainage & storm resilience engineers",
+        why: "Low elevation, high water table and tidal surge make conveyance and pumping design a permanent regional need.",
+      },
+      {
+        role: "Water & sewer extension engineers",
+        why: "Converting septic areas onto public sewer is a sustained utility program with steady design volume.",
+      },
+      {
+        role: "Roadway & freight corridor engineers",
+        why: "Port traffic keeps heavy-load pavement, interchange and rail connection work continuously funded.",
+      },
+      {
+        role: "Geotechnical engineers",
+        why: "Sandy soils with shallow groundwater make dewatering and foundation design a recurring project risk.",
+      },
+    ],
+    licensure:
+      "Florida licenses through the Board of Professional Engineers, and comity on an NCEES record is the standard route for an out-of-state PE. FDOT prequalifies consultants by work type and the district here lets a large share of the regional program, so prior FDOT delivery is usually checked alongside the license. Coastal construction also falls under the state's coastal construction control line permitting, which is its own body of knowledge.",
   },
   {
     slug: "orlando-fl",
@@ -1332,6 +1588,38 @@ export const CITIES: City[] = [
       "Water and reclaimed-water capital projects",
       "Orlando International Airport (MCO) expansion",
     ],
+    agencies: [
+      "FDOT District 5",
+      "Orange County Public Works",
+      "City of Orlando Transportation Engineering",
+      "Central Florida Expressway Authority",
+      "Orlando Utilities Commission",
+      "Greater Orlando Aviation Authority",
+    ],
+    marketDetail: [
+      "Central Florida's ground is limestone under sand, which makes sinkhole risk and karst drainage a genuine design consideration rather than a regional curiosity. Combined with a high water table and almost no topographic relief, it means stormwater is managed through retention and infiltration systems on nearly every site, and geotechnical investigation carries weight on projects that would be routine elsewhere.",
+      "The transportation market is unusually layered. A state district, a regional expressway authority with its own toll program, county and city departments and an aviation authority all let work in the same metro, and the tourism corridor generates constrained, high-visibility projects that have to be staged around continuous visitor traffic. Sustained population growth keeps arterial, utility and land development volume high across all of it.",
+    ],
+    hiringFocus: [
+      {
+        role: "Stormwater & retention design engineers",
+        why: "Flat terrain, high groundwater and infiltration-based treatment put pond and conveyance design on nearly every site.",
+      },
+      {
+        role: "Geotechnical engineers with karst experience",
+        why: "Limestone and sinkhole risk make subsurface investigation a design driver rather than a formality.",
+      },
+      {
+        role: "Roadway & tolled corridor engineers",
+        why: "A regional expressway authority runs its own continuous capital program alongside the state district.",
+      },
+      {
+        role: "Land development engineers",
+        why: "Sustained growth keeps grading, utility and entitlement design volume among the highest in the state.",
+      },
+    ],
+    licensure:
+      "Florida licenses through the Board of Professional Engineers, with comity on an NCEES record the normal route for an out-of-state PE. The layered ownership in this metro makes prequalification the practical gate: the state district and the regional expressway authority each maintain their own consultant arrangements, and which of those an engineer has delivered under tends to decide hiring more than the license transfer does.",
   },
   {
     slug: "pittsburgh-pa",
@@ -1349,6 +1637,38 @@ export const CITIES: City[] = [
       "ALCOSAN combined-sewer water-quality program",
       "Pittsburgh International Airport modernization",
     ],
+    agencies: [
+      "PennDOT District 11-0",
+      "Pittsburgh Department of Mobility and Infrastructure",
+      "Allegheny County Department of Public Works",
+      "ALCOSAN",
+      "Pittsburgh Water and Sewer Authority",
+      "Pittsburgh Regional Transit",
+    ],
+    marketDetail: [
+      "Pittsburgh has more bridges than any comparable American city, spread across a state district, a county department and the city itself, and most of them are old. Inspection, load rating, rehabilitation and replacement are therefore not a project category here but the base load of the regional civil market, and engineers who can assess an existing structure and design an intervention into it are the hardest people to hire.",
+      "Terrain and legacy ground conditions supply the rest. Steep hillsides make landslide risk and retaining structure design a routine part of roadway work, historic mining beneath parts of the county raises subsidence as a real design question, and a combined sewer system across the region carries wet weather obligations that have funded a sustained conveyance and storage program.",
+    ],
+    hiringFocus: [
+      {
+        role: "Bridge inspection & rehabilitation engineers",
+        why: "An unusually large and aging structure inventory under three owners makes structural assessment the region's base workload.",
+      },
+      {
+        role: "Geotechnical engineers with slope and mine subsidence experience",
+        why: "Steep hillsides and historic mining make ground stability a recurring design driver rather than an occasional check.",
+      },
+      {
+        role: "Wastewater & conveyance engineers",
+        why: "Regional combined sewer obligations fund a long-running storage and conveyance program needing hydraulic depth.",
+      },
+      {
+        role: "Construction-phase engineers",
+        why: "Structure replacement on constrained hillside sites under traffic is a staging problem as much as a design one.",
+      },
+    ],
+    licensure:
+      "Pennsylvania licenses through the State Registration Board for Professional Engineers, Land Surveyors and Geologists, and comity on an NCEES record is the normal route. PennDOT operates its own consultant qualification process and publishes structure-specific requirements, so for bridge work in this market the questions that decide a hire are usually about inspection qualification and prior district experience rather than the license itself.",
   },
   {
     slug: "cincinnati-oh",
@@ -1366,6 +1686,38 @@ export const CITIES: City[] = [
       "MSD combined-sewer and water-quality upgrades",
       "CVG airport capital projects",
     ],
+    agencies: [
+      "ODOT District 8",
+      "Cincinnati Department of Transportation and Engineering",
+      "Metropolitan Sewer District of Greater Cincinnati",
+      "Hamilton County Engineer",
+      "Greater Cincinnati Water Works",
+      "Cincinnati/Northern Kentucky International Airport",
+    ],
+    marketDetail: [
+      "Cincinnati's civil engineering is defined by hillsides and by a sewer consent decree. The city is built on steep slopes cut by ravines, which makes landslide risk, retaining walls and slope stabilization a normal part of roadway and site work, and the regional sewer district carries one of the more demanding wet weather programs in the country, funding years of separation, storage and conveyance design.",
+      "The Ohio River adds the third element. Interstate traffic crosses here on structures carrying far more load than they were designed for, the corridor work that follows is long-running and heavily staged, and the metro reaches into Kentucky and Indiana, so regional projects routinely involve more than one state's standards and more than one DOT.",
+    ],
+    hiringFocus: [
+      {
+        role: "Geotechnical & slope stabilization engineers",
+        why: "Hillside terrain makes landslide risk and retaining design a standing requirement on roadway and site projects.",
+      },
+      {
+        role: "Wastewater & conveyance engineers",
+        why: "A major consent decree program funds sustained separation, storage and hydraulic design work.",
+      },
+      {
+        role: "Bridge design & rehabilitation engineers",
+        why: "River crossings carrying interstate traffic well beyond original design assumptions keep structural work continuous.",
+      },
+      {
+        role: "Multi-state licensed civil engineers",
+        why: "A tri-state metro means regional projects cross jurisdictions and single-state licensure limits what an engineer can seal.",
+      },
+    ],
+    licensure:
+      "Ohio licenses through the State Board of Registration for Professional Engineers and Surveyors, with comity on an NCEES record the usual route. Because this metro extends into Kentucky and Indiana, engineers working the full region frequently hold two or three licenses, and that breadth is a common differentiator in hiring here. ODOT maintains consultant prequalification by work type alongside the license.",
   },
   {
     slug: "cleveland-oh",
@@ -1383,6 +1735,38 @@ export const CITIES: City[] = [
       "Project Clean Lake stormwater program",
       "Cleveland Hopkins airport improvements",
     ],
+    agencies: [
+      "ODOT District 12",
+      "City of Cleveland Division of Engineering and Construction",
+      "Northeast Ohio Regional Sewer District",
+      "Cuyahoga County Department of Public Works",
+      "Greater Cleveland Regional Transit Authority",
+      "Cleveland Water",
+    ],
+    marketDetail: [
+      "Cleveland's largest sustained civil program is underground. The regional sewer district is delivering a long-running consent decree response built around large diameter storage tunnels and green infrastructure, which concentrates tunneling, hydraulic modeling and conveyance expertise locally and keeps a wide group of civil engineers employed across design and construction phases for years at a time.",
+      "Above ground, the region is a reconstruction market shaped by a hard climate. Freeze-thaw on a Great Lakes shoreline shortens the life of pavements and bridge decks, the Cuyahoga's crossings include movable structures with their own inspection and rehabilitation regime, and shoreline erosion along Lake Erie is a continuing obligation. Legacy industrial land adds brownfield conditions to a significant share of redevelopment sites.",
+    ],
+    hiringFocus: [
+      {
+        role: "Wastewater & tunnel conveyance engineers",
+        why: "A large consent decree program built on storage tunnels gives the region unusual depth of demand for hydraulic specialists.",
+      },
+      {
+        role: "Bridge inspection & rehabilitation engineers",
+        why: "An aging inventory including movable structures in a freeze-thaw climate keeps assessment and repair continuous.",
+      },
+      {
+        role: "Stormwater & green infrastructure engineers",
+        why: "Green infrastructure is a funded component of the regional wet weather response rather than an optional add-on.",
+      },
+      {
+        role: "Site civil engineers with brownfield experience",
+        why: "Legacy industrial ground attaches remediation and soil management requirements to much of the redevelopment market.",
+      },
+    ],
+    licensure:
+      "Ohio licenses through the State Board of Registration for Professional Engineers and Surveyors, and comity on an NCEES record is the standard route for an out-of-state PE. ODOT prequalifies consultants by work category and the regional sewer district runs its own procurement, so hiring managers generally weigh prior delivery under those two systems more heavily than the license transfer itself.",
   },
   {
     slug: "st-louis-mo",
@@ -1400,6 +1784,38 @@ export const CITIES: City[] = [
       "MSD combined-sewer and stormwater program",
       "St. Louis Lambert airport modernization",
     ],
+    agencies: [
+      "MoDOT St. Louis District",
+      "Metropolitan St. Louis Sewer District",
+      "City of St. Louis Board of Public Service",
+      "St. Louis County Department of Transportation",
+      "Bi-State Development / Metro Transit",
+      "St. Louis Lambert International Airport",
+    ],
+    marketDetail: [
+      "The regional sewer district runs one of the largest wet weather programs in the country, and it is the single most reliable source of civil engineering work in this metro. Separation, storage, treatment capacity and green infrastructure are funded over a horizon measured in decades rather than budget cycles, which gives hydraulic modelers and conveyance designers a local market that does not rise and fall with construction generally.",
+      "The rivers shape everything else. St. Louis sits at the confluence of the Mississippi and Missouri, which means levees, floodplain management and a set of major crossings with long inspection and rehabilitation obligations, and it means the metro spans into Illinois so a good deal of regional work involves two states' standards. Alluvial and loess soils add settlement and slope questions to projects near the bluffs and the floodplain alike.",
+    ],
+    hiringFocus: [
+      {
+        role: "Wastewater & conveyance engineers",
+        why: "A decades-long regional wet weather program makes hydraulic design the most durable specialism in the metro.",
+      },
+      {
+        role: "Bridge inspection & rehabilitation engineers",
+        why: "Major river crossings with long service lives keep structural assessment and repair continuously funded.",
+      },
+      {
+        role: "Floodplain & levee engineers",
+        why: "A confluence location makes flood risk management a permanent obligation rather than a project type.",
+      },
+      {
+        role: "Dual-licensed civil engineers",
+        why: "The metro reaches into Illinois, so single-state licensure limits which regional projects an engineer can seal.",
+      },
+    ],
+    licensure:
+      "Missouri licenses through the Board for Architects, Professional Engineers, Professional Land Surveyors and Professional Landscape Architects, and comity on an NCEES record is the normal route. Because the metro extends across the Mississippi, engineers covering the full region commonly carry Illinois registration as well, and both states also require a corporate authorization for firms offering engineering services, which out-of-state consultancies routinely overlook.",
   },
   {
     slug: "raleigh-nc",
@@ -1417,6 +1833,38 @@ export const CITIES: City[] = [
       "Regional water and utility expansion",
       "RDU airport capital improvements",
     ],
+    agencies: [
+      "NCDOT Division 5",
+      "City of Raleigh Engineering Services",
+      "Raleigh Water",
+      "Wake County Facilities Design & Construction",
+      "GoTriangle",
+      "Raleigh-Durham Airport Authority",
+    ],
+    marketDetail: [
+      "The Triangle has grown faster than its infrastructure for long enough that land development and roadway capacity are the region's two largest civil engineering categories, and they run together: new subdivisions and campuses need arterial connections, water and sewer trunk extension and intersection capacity that the county network was never sized for. The outer loop and the arterial network feeding it keep design and construction-phase work continuous.",
+      "Nutrient regulation is the constraint that makes this market distinctive. The reservoirs supplying the region carry nutrient management strategies that impose real limits on nitrogen and phosphorus leaving a site, so stormwater treatment is not a box-ticking exercise here but a design driver with measurable targets. Piedmont clay soils and moderate relief add their own drainage and erosion control demands on top.",
+    ],
+    hiringFocus: [
+      {
+        role: "Stormwater & nutrient management engineers",
+        why: "Reservoir nutrient strategies impose measurable treatment targets that shape site design across the region.",
+      },
+      {
+        role: "Land development engineers",
+        why: "Sustained growth makes grading, utility and entitlement design the highest-volume category in the Triangle.",
+      },
+      {
+        role: "Roadway & intersection capacity engineers",
+        why: "An arterial network built for a smaller region needs continuous widening, signalization and interchange work.",
+      },
+      {
+        role: "Water & sewer extension engineers",
+        why: "Trunk main and treatment capacity have to be extended ahead of development rather than alongside it.",
+      },
+    ],
+    licensure:
+      "North Carolina licenses through the Board of Examiners for Engineers and Surveyors, and comity on an NCEES record is the usual route for an individual. North Carolina also licenses firms, so a company offering engineering services needs its own certificate with a licensee in responsible charge. NCDOT maintains consultant prequalification by work category alongside both.",
   },
   {
     slug: "washington-dc",
@@ -1434,6 +1882,38 @@ export const CITIES: City[] = [
       "Anacostia River and Clean Rivers tunnel program",
       "Reagan National & Dulles airport projects",
     ],
+    agencies: [
+      "District Department of Transportation",
+      "DC Water",
+      "WMATA",
+      "National Park Service",
+      "Federal Highway Administration Eastern Federal Lands",
+      "DC Department of Energy and Environment",
+    ],
+    marketDetail: [
+      "Washington is the only American metro where a federal land manager is a routine project stakeholder. Large parts of the street and park network sit on National Park Service land, federal design review applies to work in the monumental core, and security requirements shape streetscape and perimeter design in ways that do not arise elsewhere. Engineers here spend real time on approvals, and fluency in that process is a hiring criterion in its own right.",
+      "Underground, the water utility is delivering a large tunnel program to control combined sewer overflows into the rivers, and the buried water network is old enough that replacement is a continuing obligation. Add a transit system in sustained rebuilding and a metro that spreads across two states, and the demand runs across tunnels, hydraulics, structures and urban roadway at the same time.",
+    ],
+    hiringFocus: [
+      {
+        role: "Wastewater & tunnel engineers",
+        why: "A large combined sewer control program built on deep tunnels concentrates hydraulic and underground expertise locally.",
+      },
+      {
+        role: "Urban roadway & streetscape engineers",
+        why: "Work in the federal core carries design review and security requirements that ordinary street design does not.",
+      },
+      {
+        role: "Permitting & federal coordination engineers",
+        why: "National Park Service land and federal review make approvals a specialist skill rather than an administrative step.",
+      },
+      {
+        role: "Multi-jurisdiction licensed engineers",
+        why: "The metro spans Maryland and Virginia, so regional work regularly needs more than a District license.",
+      },
+    ],
+    licensure:
+      "The District licenses through its Board of Professional Engineering, and comity on an NCEES record is the normal route. The practical reality here is that the District is small and the metro is not: most engineers working this market hold District, Maryland and Virginia licenses together, because a regional project will cross at least two of them. Federal work adds its own qualification requirements independent of state licensure.",
   },
   {
     slug: "hartford-ct",
@@ -1451,6 +1931,38 @@ export const CITIES: City[] = [
       "Clean Water Fund and utility upgrades",
       "Bradley International Airport improvements",
     ],
+    agencies: [
+      "CTDOT District 1",
+      "Metropolitan District Commission",
+      "Hartford Department of Public Works",
+      "CTtransit",
+      "Connecticut Airport Authority",
+      "Capitol Region Council of Governments",
+    ],
+    marketDetail: [
+      "Central Connecticut is a rebuilding market. The interstate structures carrying traffic through and around Hartford were built early, the elevated sections in particular are at the end of their intended lives, and replacing them means working in a constrained river corridor under live traffic. Bridge engineering and construction staging are the most consistently funded skills in the region.",
+      "The regional water and sewer authority supplies the second stream of work. A combined system serving the older communities carries overflow reduction obligations that have funded a long program of separation, storage and treatment upgrades, and the Connecticut River itself keeps floodplain and levee questions on the table. Freeze-thaw on New England pavements and decks shortens asset life across the board.",
+    ],
+    hiringFocus: [
+      {
+        role: "Bridge & structural rehabilitation engineers",
+        why: "Early-built elevated interstate structures at the end of their service lives make replacement design the region's core workload.",
+      },
+      {
+        role: "Wastewater & separation engineers",
+        why: "Combined sewer obligations fund a sustained program of storage, separation and treatment design.",
+      },
+      {
+        role: "Construction-phase engineers",
+        why: "Structure replacement in a constrained river corridor under live traffic is a staging discipline as much as a design one.",
+      },
+      {
+        role: "Floodplain & drainage engineers",
+        why: "A major river through the metro keeps floodplain analysis and drainage capacity work continuously relevant.",
+      },
+    ],
+    licensure:
+      "Connecticut licenses through the State Board of Examiners for Professional Engineers and Land Surveyors within the Department of Consumer Protection, and comity on an NCEES record is the standard route. Connecticut is small enough that engineers working the wider market often hold Massachusetts or New York registration alongside it, and CTDOT runs its own consultant prequalification by work category.",
   },
   {
     slug: "albuquerque-nm",
@@ -1468,6 +1980,38 @@ export const CITIES: City[] = [
       "AMAFCA arroyo flood-control systems",
       "Albuquerque International Sunport projects",
     ],
+    agencies: [
+      "NMDOT District 3",
+      "Albuquerque Metropolitan Arroyo Flood Control Authority",
+      "City of Albuquerque Municipal Development",
+      "Albuquerque Bernalillo County Water Utility Authority",
+      "ABQ RIDE",
+      "Mid-Region Council of Governments",
+    ],
+    marketDetail: [
+      "Albuquerque manages stormwater through a network of arroyos and engineered channels overseen by a dedicated regional flood control authority, and that institution shapes the local civil market. Desert hydrology produces short, violent runoff events on ground that absorbs very little, so channel capacity, grade control and sediment management are specialist concerns with local design criteria rather than generic drainage work.",
+      "Water supply is the other permanent theme. The region draws on both the Rio Grande and a groundwater aquifer under long-term management, which keeps conveyance, reuse, aquifer recharge and conservation infrastructure on the program independent of the construction cycle. Roadway work concentrates on the two interstates crossing at the center of the city and the arterial network spreading toward the mesa edges.",
+    ],
+    hiringFocus: [
+      {
+        role: "Drainage & arroyo channel engineers",
+        why: "A dedicated regional flood control authority with its own criteria makes desert hydraulics a local specialism.",
+      },
+      {
+        role: "Water resources & reuse engineers",
+        why: "Managed groundwater and river supply keep conveyance, recharge and conservation work permanently funded.",
+      },
+      {
+        role: "Roadway & interchange engineers",
+        why: "Two interstates crossing at the city center and arterial expansion toward the mesas sustain design volume.",
+      },
+      {
+        role: "Geotechnical engineers",
+        why: "Collapsible and wind-deposited soils around the valley make foundation and subgrade behavior a recurring design question.",
+      },
+    ],
+    licensure:
+      "New Mexico licenses through the State Board of Licensure for Professional Engineers and Professional Surveyors, and comity on an NCEES record is the usual route for an individual. Firms offering engineering services in the state must also be registered with the board. Because so much of the local program runs through the regional flood control authority and the water utility authority, prior work under their design standards tends to matter as much as the license.",
   },
   {
     slug: "birmingham-al",
@@ -1485,6 +2029,38 @@ export const CITIES: City[] = [
       "Regional water and sewer upgrades",
       "Birmingham-Shuttlesworth airport improvements",
     ],
+    agencies: [
+      "ALDOT East Central Region",
+      "Jefferson County Department of Environmental Services",
+      "Birmingham Department of Transportation",
+      "Birmingham Water Works Board",
+      "Birmingham-Jefferson County Transit Authority",
+      "Birmingham-Shuttlesworth International Airport",
+    ],
+    marketDetail: [
+      "Birmingham sits in the Appalachian foothills, and the ridges and valleys that gave the city its industry also give its civil engineers their hardest problems. Steep grades, rock close to the surface in places and karst limestone elsewhere make earthwork, blasting, retaining structures and sinkhole risk a routine part of roadway and site design rather than exceptional conditions.",
+      "The county sewer system is the region's other defining feature. Overflow control obligations have driven a sustained program of rehabilitation, capacity and treatment work, and the buried network is old enough that condition assessment and trenchless renewal are continuing specialisms. Interstate reconstruction through the center of the city adds heavily staged structural and roadway work on top.",
+    ],
+    hiringFocus: [
+      {
+        role: "Geotechnical engineers with karst experience",
+        why: "Limestone and sinkhole risk through the valley make subsurface investigation a design driver on many sites.",
+      },
+      {
+        role: "Wastewater & rehabilitation engineers",
+        why: "County sewer overflow obligations fund a continuing program of capacity, renewal and treatment design.",
+      },
+      {
+        role: "Roadway & structural engineers",
+        why: "Interstate reconstruction through the city center is staged, structural and long-running.",
+      },
+      {
+        role: "Site civil engineers for steep terrain",
+        why: "Foothill topography makes grading, retaining and drainage design harder here than in a flat metro of similar size.",
+      },
+    ],
+    licensure:
+      "Alabama licenses through the Board of Licensure for Professional Engineers and Land Surveyors, and comity on an NCEES record is the standard route for an individual. Alabama also requires a certificate of authorization for firms practicing engineering in the state. ALDOT maintains its own consultant prequalification, and for the county sewer program prior delivery under that owner is usually checked directly.",
   },
   {
     slug: "memphis-tn",
@@ -1502,6 +2078,38 @@ export const CITIES: City[] = [
       "Stormwater and drainage capital program",
       "Memphis International Airport modernization",
     ],
+    agencies: [
+      "TDOT Region 4",
+      "City of Memphis Division of Engineering",
+      "Memphis Light, Gas and Water",
+      "Memphis Area Transit Authority",
+      "Memphis-Shelby County Airport Authority",
+      "Shelby County Department of Public Works",
+    ],
+    marketDetail: [
+      "Memphis is the one large American city outside the west coast where seismic design genuinely governs. The New Madrid seismic zone runs nearby, the ground is deep alluvial and loess soil that amplifies shaking and is liquefaction prone, and the Mississippi River crossings are lifeline structures. That combination makes seismic assessment and geotechnical analysis a standing requirement rather than a coastal preoccupation.",
+      "The rest of the market is freight. Memphis is a national logistics hub with an air cargo operation, rail yards and interstate corridors converging on it, which drives heavy-load pavement design, intermodal site work and interchange capacity continuously. Flat terrain and a high water table make drainage and dewatering recurring complications on all of it.",
+    ],
+    hiringFocus: [
+      {
+        role: "Geotechnical engineers with liquefaction experience",
+        why: "Deep alluvial soils in a seismic zone make ground behavior a decisive design question on major structures.",
+      },
+      {
+        role: "Bridge & seismic assessment engineers",
+        why: "River crossings are lifeline structures in an active seismic zone, keeping evaluation and retrofit work funded.",
+      },
+      {
+        role: "Freight & heavy-load pavement engineers",
+        why: "A national logistics hub generates continuous intermodal, yard and corridor design at loads ordinary pavements do not see.",
+      },
+      {
+        role: "Drainage engineers",
+        why: "Flat terrain with a high water table makes conveyance, detention and dewatering a constant project constraint.",
+      },
+    ],
+    licensure:
+      "Tennessee licenses through the Board of Architectural and Engineering Examiners within the Department of Commerce and Insurance, with comity on an NCEES record the normal route. Because the metro reaches into Mississippi and Arkansas, engineers covering the full region frequently hold more than one license, and TDOT prequalifies consultants by work category alongside the license requirement.",
   },
   {
     slug: "omaha-ne",
@@ -1519,6 +2127,38 @@ export const CITIES: City[] = [
       "Combined-sewer overflow (CSO) program",
       "Eppley Airfield capital projects",
     ],
+    agencies: [
+      "Nebraska DOT District 2",
+      "Omaha Public Works",
+      "Metropolitan Utilities District",
+      "Papio-Missouri River Natural Resources District",
+      "Omaha Metro Transit",
+      "Omaha Airport Authority",
+    ],
+    marketDetail: [
+      "Omaha's largest civil program is its combined sewer overflow response, a long-running and expensive obligation that has funded separation, storage and treatment work across the older parts of the city for years and shows no sign of finishing. It gives the metro a deeper bench of hydraulic and conveyance demand than a city of this size would otherwise carry.",
+      "The Missouri River and the loess bluffs above it supply the second set of problems. Flood risk management, levee integrity and bank stabilization are permanent obligations managed with a regional natural resources district, and loess is a soil that stands vertically until it gets wet, which makes slope stability and erosion control design a real concern on the bluff sites where much of the city sits.",
+    ],
+    hiringFocus: [
+      {
+        role: "Wastewater & separation engineers",
+        why: "A long-running combined sewer program funds sustained conveyance, storage and treatment design.",
+      },
+      {
+        role: "Floodplain & levee engineers",
+        why: "Missouri River flood risk is managed continuously through a regional district rather than project by project.",
+      },
+      {
+        role: "Geotechnical engineers with loess experience",
+        why: "Loess bluffs behave unusually when saturated, making slope stability and erosion control a local specialism.",
+      },
+      {
+        role: "Roadway & arterial design engineers",
+        why: "Westward growth keeps arterial extension, interchange and utility corridor work on a steady cycle.",
+      },
+    ],
+    licensure:
+      "Nebraska licenses through the Board of Engineers and Architects, and comity on an NCEES record is the usual route for an individual. Firms must also hold a certificate of authorization to offer engineering services in the state. Because the metro crosses into Iowa, engineers working both sides of the river commonly carry Iowa registration alongside Nebraska.",
   },
   {
     slug: "boise-id",
@@ -1536,6 +2176,38 @@ export const CITIES: City[] = [
       "Regional water and utility infrastructure",
       "Boise Airport expansion projects",
     ],
+    agencies: [
+      "ITD District 3",
+      "Ada County Highway District",
+      "City of Boise Public Works",
+      "Valley Regional Transit",
+      "Boise Airport",
+      "Idaho Department of Water Resources",
+    ],
+    marketDetail: [
+      "Boise has an institutional arrangement that exists almost nowhere else: a single countywide highway district owns, designs and maintains essentially all local roads across the metro rather than each city doing its own. For engineers that concentrates local roadway work under one owner with one set of standards, and prior experience with that district's processes is worth more here than an equivalent record elsewhere would be.",
+      "Water is the other defining feature, in two forms. A dense network of irrigation canals and laterals predates the suburbs and now runs through them, so development has to be engineered around live water rights and conveyance that cannot simply be relocated. The Boise River adds floodplain management on top, and the region's growth rate keeps land development, arterial capacity and utility extension consistently busy.",
+    ],
+    hiringFocus: [
+      {
+        role: "Land development engineers",
+        why: "Sustained population growth makes grading, utility and entitlement design the highest-volume local category.",
+      },
+      {
+        role: "Roadway engineers familiar with the county highway district",
+        why: "A single countywide owner for local roads concentrates the work and makes its standards a practical credential.",
+      },
+      {
+        role: "Drainage & irrigation coordination engineers",
+        why: "A working canal network running through developing land makes water rights and conveyance a routine design constraint.",
+      },
+      {
+        role: "Floodplain & river engineers",
+        why: "Boise River flood management shapes what can be built along a large share of the valley floor.",
+      },
+    ],
+    licensure:
+      "Idaho licenses through the Board of Licensure of Professional Engineers and Professional Land Surveyors, and comity on an NCEES record is the normal route for an individual. Firms offering engineering services in the state need their own certificate of authorization. Locally, the county highway district publishes its own design standards and approval process, and familiarity with those is usually probed alongside the license.",
   },
   {
     slug: "providence-ri",
@@ -1553,6 +2225,38 @@ export const CITIES: City[] = [
       "Narragansett Bay water-quality program",
       "T.F. Green airport improvements",
     ],
+    agencies: [
+      "RIDOT",
+      "Narragansett Bay Commission",
+      "Providence Department of Public Works",
+      "Rhode Island Public Transit Authority",
+      "Rhode Island Airport Corporation",
+      "Rhode Island Infrastructure Bank",
+    ],
+    marketDetail: [
+      "Rhode Island carries one of the most deteriorated bridge inventories in the country relative to its size, and the state has organized a sustained replacement and rehabilitation program around it. For civil engineers that makes structural assessment, load rating and replacement design the most reliable work in the market, and it means construction-phase engineering on structures carrying live traffic is in continuous demand.",
+      "The bay supplies the second program. A combined sewer control effort built around deep storage tunnels has been running for years, keeping tunneling and hydraulic expertise concentrated locally, and the coastline adds storm surge, hurricane barrier maintenance and shoreline protection as permanent obligations. Old mill and industrial land across the valley attaches brownfield conditions to much of the redevelopment market.",
+    ],
+    hiringFocus: [
+      {
+        role: "Bridge inspection & replacement engineers",
+        why: "A statewide structure replacement program built on a deteriorated inventory is the most durable demand in the market.",
+      },
+      {
+        role: "Wastewater & tunnel engineers",
+        why: "A deep storage tunnel program for combined sewer control concentrates hydraulic and underground expertise locally.",
+      },
+      {
+        role: "Coastal & storm surge engineers",
+        why: "Shoreline protection and hurricane barrier obligations are continuing rather than episodic.",
+      },
+      {
+        role: "Site civil engineers with brownfield experience",
+        why: "Former mill and industrial land carries remediation requirements through much of the redevelopment market.",
+      },
+    ],
+    licensure:
+      "Rhode Island licenses through the Board of Registration for Professional Engineers, and comity on an NCEES record is the standard route. The state is small enough that most engineers working the wider market hold Massachusetts or Connecticut registration as well. RIDOT runs its own consultant prequalification, and for the bridge program inspection qualification is typically checked alongside the license.",
   },
   {
     slug: "buffalo-ny",
@@ -1570,6 +2274,38 @@ export const CITIES: City[] = [
       "Buffalo Sewer combined-sewer program",
       "Buffalo Niagara International Airport projects",
     ],
+    agencies: [
+      "NYSDOT Region 5",
+      "Buffalo Sewer Authority",
+      "City of Buffalo Department of Public Works",
+      "Niagara Frontier Transportation Authority",
+      "Erie County Department of Public Works",
+      "New York State Thruway Authority",
+    ],
+    marketDetail: [
+      "Western New York is a hard climate for infrastructure. Lake-effect snow, heavy salt use and a long freeze-thaw season shorten the life of pavements, joints and bridge decks, which makes materials durability, deck rehabilitation and drainage design a larger share of the workload than in a milder region. Much of the highway and structure inventory dates from the same era and is reaching replacement together.",
+      "The sewer authority's overflow control plan supplies the other long-running program, built around a mix of storage, separation and an unusually committed green infrastructure component that keeps stormwater designers busy year to year. Legacy industrial land along the waterfront and the river adds brownfield conditions to much of the redevelopment market, and the border crossings generate their own freight and inspection-facility work.",
+    ],
+    hiringFocus: [
+      {
+        role: "Bridge rehabilitation & deck engineers",
+        why: "Freeze-thaw and heavy salt exposure shorten structure life and keep assessment and repair continuously funded.",
+      },
+      {
+        role: "Stormwater & green infrastructure engineers",
+        why: "The regional overflow control plan leans heavily on green infrastructure, making it funded design work rather than an add-on.",
+      },
+      {
+        role: "Site civil engineers with brownfield experience",
+        why: "Waterfront and riverside industrial legacy attaches remediation requirements to much of the redevelopment market.",
+      },
+      {
+        role: "Roadway reconstruction engineers",
+        why: "A highway inventory built in one era is reaching the end of its life together, concentrating reconstruction demand.",
+      },
+    ],
+    licensure:
+      "New York licenses through the State Education Department's Office of the Professions, and most out-of-state PEs transfer by comity on an NCEES record. The gate that bites harder in practice is agency prequalification: NYSDOT and the Thruway Authority each maintain their own consultant arrangements, and for a border metro, familiarity with federal facility requirements can matter alongside the state license.",
   },
 ];
 
