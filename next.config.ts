@@ -87,25 +87,23 @@ async function redirects() {
     ...cityRedirects,
     ...stateRedirects,
 
-    // Catch-alls: any remaining old civil URL (states, topic hubs, cities we
-    // don't have a page for) -> the civil hub, so nobody hits a 404.
-    // Covers "civil-engineering-recruiter-<x>" and "1seo-...-<x>" ...
-    {
-      source: "/1seo-civil-engineering-recruiter-:slug",
-      destination: "/civil-engineering-recruiter",
-      permanent: true,
-    },
-    {
-      source: "/civil-engineering-recruiter-:slug",
-      destination: "/civil-engineering-recruiter",
-      permanent: true,
-    },
-    // ... and the "state-first" pattern, e.g. "/north-dakota-civil-engineering-recruiter".
-    {
-      source: "/:state-civil-engineering-recruiter",
-      destination: "/civil-engineering-recruiter",
-      permanent: true,
-    },
+    /* The catch-alls that used to close this list are gone. They matched
+       "/civil-engineering-recruiter-<anything>", its "1seo-" variant and the
+       state-first spelling, and sent all three to the civil hub with a 308 so
+       that nobody would hit a 404.
+
+       The cost was larger than the benefit. Because the patterns were open
+       ended, any invented URL of that shape answered with a permanent
+       redirect, which made an unbounded set of URLs permanently valid in
+       Google's eyes. Search Console showed 29% of crawl requests resolving to
+       redirects and 87% of the crawl as "Refresh", re-checking URLs already
+       known, on a site that gets roughly 41 requests a day to spend on 330
+       real pages.
+
+       They now answer 410 Gone from proxy.ts, which runs after this list, so
+       the precise mappings above still claim every old URL that names a city
+       or state we actually have a page for. Only slugs with no destination
+       reach the proxy. */
   ];
 }
 
