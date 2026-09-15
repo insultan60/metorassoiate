@@ -31,7 +31,7 @@ export const ORG = {
   name: "Metro Associates",
   url: SITE_URL,
   logo: `${SITE_URL}/logo.webp`,
-  image: `${SITE_URL}/interchange-sunset.jpg`,
+  image: `${SITE_URL}/og.jpg`,
   telephone: PHONE,
   email: EMAIL,
   /* Deliberately no `address`.

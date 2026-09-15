@@ -41,14 +41,19 @@ export const metadata: Metadata = {
     url: SITE_URL,
     siteName: "Metro Associates",
     type: "website",
-    images: [{ url: "/interchange-sunset.jpg", width: 1200, height: 630, alt: "Metro Associates, DOT & infrastructure staffing" }],
+    /* /og.jpg, not the hero photo. The hero source is a wide, tall
+       photograph; this tag used to point at it while declaring 1200x630,
+       so every crawler and social scraper that trusted the declaration
+       downloaded 9.4 MB to render a card. og.jpg is that crop, made once
+       at the size the tag promises. */
+    images: [{ url: "/og.jpg", width: 1200, height: 630, alt: "Metro Associates, DOT & infrastructure staffing" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Metro Associates | DOT & Infrastructure Staffing",
     description:
       "Specialist engineering recruiters for state DOTs and public infrastructure. We place licensed PEs, inspectors and construction leaders nationwide.",
-    images: ["/interchange-sunset.jpg"],
+    images: ["/og.jpg"],
   },
   robots: {
     index: true,
