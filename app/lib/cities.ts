@@ -608,6 +608,38 @@ export const CITIES: City[] = [
       "Roadway and mobility improvements",
       "Nashville International airport expansion",
     ],
+    agencies: [
+      "TDOT Region 3",
+      "Nashville DOT & Multimodal Infrastructure",
+      "Metro Water Services",
+      "WeGo Public Transit",
+      "Metropolitan Nashville Airport Authority",
+      "Williamson County Highway Department",
+    ],
+    marketDetail: [
+      "Nashville's civil work is driven by a road network built for a much smaller city. Three interstates converge inside the loop, and the growth that keeps arriving lands in Williamson, Rutherford and Wilson counties, which means the engineering is as much about suburban arterials, interchange capacity and utility extension as it is about anything downtown. Roadway and traffic engineers who can work a corridor study through to construction documents are the steady demand here.",
+      "The ground itself sets the second agenda. Middle Tennessee sits on limestone, so karst features, sinkholes and a fast route from surface to groundwater shape drainage design, foundations and stormwater quality treatment in a way engineers arriving from other markets consistently underestimate. Add the Cumberland River and a combined sewer system in the old core, and hydraulics and geotechnical judgment stay in demand regardless of the highway program.",
+    ],
+    hiringFocus: [
+      {
+        role: "Roadway & corridor design engineers",
+        why: "Suburban growth keeps arterial widening and interchange work continuous, which is the bulk of the region's design volume.",
+      },
+      {
+        role: "Geotechnical engineers with karst experience",
+        why: "Limestone and sinkhole risk make subsurface investigation a project-shaping activity here rather than a routine one.",
+      },
+      {
+        role: "Stormwater & drainage engineers",
+        why: "Rapid-transmission karst geology and combined sewer in the old core put water quality treatment on nearly every site.",
+      },
+      {
+        role: "Construction-phase engineers",
+        why: "Widening under live traffic on constrained corridors needs people who can sequence staging rather than only design an end state.",
+      },
+    ],
+    licensure:
+      "Tennessee licenses engineers through the Board of Architectural and Engineering Examiners within the Department of Commerce and Insurance, and out-of-state PEs generally transfer by comity on an NCEES record rather than by re-examination. The practical gate is prequalification rather than the license: TDOT maintains its own consultant prequalification by work category, and Metro Nashville runs separate on-call rosters, so which categories a candidate's firm already holds often matters more to a hiring manager than the license itself.",
   },
   {
     slug: "portland-or",
@@ -625,6 +657,38 @@ export const CITIES: City[] = [
       "Willamette River crossings and corridors",
       "Water and stormwater capital upgrades",
     ],
+    agencies: [
+      "ODOT Region 1",
+      "Portland Bureau of Transportation",
+      "Multnomah County Transportation Division",
+      "TriMet",
+      "Portland Bureau of Environmental Services",
+      "Port of Portland",
+    ],
+    marketDetail: [
+      "Portland is a seismic retrofit market as much as a transportation one. The region sits in the Cascadia subduction zone, and the older Willamette River bridges, much of the county-owned inventory among them, were designed long before current ground motion expectations. That makes structural assessment, retrofit design and lifeline route planning a standing category of work rather than a periodic one, and it rewards engineers who are comfortable evaluating existing structures rather than only designing new ones.",
+      "The second driver is water and land use. Combined sewer separation and stormwater management carry real regulatory weight here, green infrastructure is a default rather than an alternative, and Oregon's urban growth boundary pushes development inward onto constrained infill sites. Civil engineers in this market spend more of their time on site hydraulics, permitting and fitting work into existing right of way than the same engineers would in a greenfield metro.",
+    ],
+    hiringFocus: [
+      {
+        role: "Bridge & seismic retrofit engineers",
+        why: "An aging river crossing inventory in a subduction zone keeps assessment and retrofit design continuously funded.",
+      },
+      {
+        role: "Stormwater & green infrastructure designers",
+        why: "Treatment requirements and combined sewer obligations put water quality design on nearly every project.",
+      },
+      {
+        role: "Transit and multimodal corridor engineers",
+        why: "Light rail, bus priority and active transportation are built into the region's planning framework rather than treated as add-ons.",
+      },
+      {
+        role: "Land use & permitting-fluent civil engineers",
+        why: "The urban growth boundary makes entitlement and infill constraint navigation part of the engineering, not a separate step.",
+      },
+    ],
+    licensure:
+      "Oregon licenses through the State Board of Examiners for Engineering and Land Surveying, and comity on an NCEES record is the normal route for an out-of-state PE. Oregon is one of the states that maintains a separate structural engineer registration on top of the civil PE, which matters for anyone expecting to seal work on significant buildings or bridges, and ODOT keeps its own consultant prequalification by discipline, so agency-side experience is usually checked alongside the license.",
   },
   {
     slug: "las-vegas-nv",
@@ -642,6 +706,38 @@ export const CITIES: City[] = [
       "Flood-control and desert stormwater systems",
       "Harry Reid airport capital projects",
     ],
+    agencies: [
+      "NDOT District 1",
+      "Regional Transportation Commission of Southern Nevada",
+      "Clark County Public Works",
+      "Clark County Regional Flood Control District",
+      "Las Vegas Valley Water District",
+      "Southern Nevada Water Authority",
+    ],
+    marketDetail: [
+      "Flood control is the discipline that defines civil engineering in the Las Vegas valley. A desert catchment with hard ground and steep alluvial fans turns an infrequent storm into a fast, destructive flow, and the regional response has been a built system of detention basins and lined channels that has to be extended every time development moves outward. Hydrology and hydraulic design here are a specialism with local rules, not a generic skill imported from a wetter market.",
+      "The rest of the work follows growth. The valley expands outward into new master-planned areas, which means arterial extension, utility trunk mains and interchange capacity on a repeating cycle, while the resort corridor and the airport generate their own constrained, high-visibility projects where construction has to happen without interrupting an economy that runs continuously. Water scarcity sits underneath all of it and keeps conservation and reuse infrastructure permanently on the program.",
+    ],
+    hiringFocus: [
+      {
+        role: "Drainage & flood control engineers",
+        why: "The regional detention and channel system is extended with development, and its design criteria are local enough to be their own expertise.",
+      },
+      {
+        role: "Roadway & interchange design engineers",
+        why: "Outward growth keeps arterial extension and freeway capacity work on a continuous cycle.",
+      },
+      {
+        role: "Water resources & reuse engineers",
+        why: "Supply constraint makes conservation, recycling and delivery infrastructure a permanent rather than cyclical program.",
+      },
+      {
+        role: "Construction-phase engineers for live corridors",
+        why: "Resort corridor and airport work is staged around an operation that never closes, which is a scheduling skill as much as a technical one.",
+      },
+    ],
+    licensure:
+      "Nevada licenses through the State Board of Professional Engineers and Land Surveyors, and it is one of the states that licenses by branch, so a PE is registered in civil, structural or another discipline rather than generally. An engineer arriving from a state with undifferentiated licensure needs to confirm the branch matches the work they intend to seal. Comity on an NCEES record is the usual route, and NDOT and Clark County both run their own consultant prequalification alongside it.",
   },
   {
     slug: "columbus-oh",
@@ -659,6 +755,38 @@ export const CITIES: City[] = [
       "Regional roadway and mobility projects",
       "Rickenbacker & John Glenn airport infrastructure",
     ],
+    agencies: [
+      "ODOT District 6",
+      "Columbus Department of Public Service",
+      "Columbus Department of Public Utilities",
+      "Franklin County Engineer",
+      "Central Ohio Transit Authority",
+      "Columbus Regional Airport Authority",
+    ],
+    marketDetail: [
+      "Central Ohio is absorbing large-scale industrial investment on what was recently farmland, and the civil engineering that follows is unglamorous and enormous: arterial reconstruction, water and sewer trunk extension, grade separations and the interchange capacity to carry freight to sites that had none of it. Site development and public infrastructure design run together here in a way they do not in a built-out metro, and engineers who can carry both are unusually valuable.",
+      "Inside the city the work is different again. The sewer system carries a long-running wet weather program, which keeps hydraulic modeling, sewer separation and green infrastructure design continuously staffed, and the downtown freeway network is being reworked in stages under traffic. Flat terrain and heavy clay soils shape drainage and pavement design across the whole region.",
+    ],
+    hiringFocus: [
+      {
+        role: "Site development & land development engineers",
+        why: "Large industrial and residential growth on greenfield land makes grading, utility and entitlement work the region's highest-volume category.",
+      },
+      {
+        role: "Water & sewer infrastructure engineers",
+        why: "A standing wet weather program and trunk main extension to new development run in parallel and both need hydraulic depth.",
+      },
+      {
+        role: "Roadway & freight corridor engineers",
+        why: "New industrial load requires arterial reconstruction and grade separation that the existing network was never sized for.",
+      },
+      {
+        role: "Construction-phase and utility coordination engineers",
+        why: "Rebuilding urban freeway and arterial under traffic makes staging and utility conflict resolution a senior role.",
+      },
+    ],
+    licensure:
+      "Ohio licenses through the State Board of Registration for Professional Engineers and Surveyors, with comity on an NCEES record the standard route for an out-of-state PE. ODOT maintains consultant prequalification by work type and the city and county engineers keep their own on-call arrangements, so the question a hiring manager usually asks is which of those the candidate has already delivered under, rather than whether the license will transfer.",
   },
   {
     slug: "salt-lake-city-ut",
@@ -676,6 +804,38 @@ export const CITIES: City[] = [
       "Seismic and resilient-structure programs",
       "Salt Lake City International airport rebuild",
     ],
+    agencies: [
+      "UDOT Region 2",
+      "Utah Transit Authority",
+      "Salt Lake City Department of Public Utilities",
+      "Salt Lake City Engineering Division",
+      "Salt Lake City International Airport",
+      "Salt Lake County Public Works",
+    ],
+    marketDetail: [
+      "Two hazards shape this market. The Wasatch fault runs along the eastern edge of the valley, which makes seismic design and the retrofit of older structures and buried utilities a permanent line of work, and the Great Salt Lake's decline has turned water supply, conveyance and conservation into an engineering problem with political urgency behind it. Both keep specialists busy independently of the highway program.",
+      "The transportation work itself is concentrated on a narrow north to south corridor between the mountains and the lake, which means capacity has to be found within constrained right of way rather than by building outward. That favors engineers comfortable with reconstruction, transit integration and staged construction, and the airport's rebuild has kept a steady demand for landside civil and utility work alongside it.",
+    ],
+    hiringFocus: [
+      {
+        role: "Water resources & conveyance engineers",
+        why: "Supply constraint and lake decline have made water infrastructure a standing regional priority rather than a project category.",
+      },
+      {
+        role: "Seismic & structural retrofit engineers",
+        why: "An active fault along the populated edge of the valley keeps assessment and strengthening of existing assets continuously funded.",
+      },
+      {
+        role: "Roadway reconstruction engineers",
+        why: "A geographically constrained corridor means capacity comes from rebuilding what exists, under traffic.",
+      },
+      {
+        role: "Transit corridor & multimodal engineers",
+        why: "Rail and bus expansion along the same constrained corridor is the region's main answer to growth.",
+      },
+    ],
+    licensure:
+      "Utah licenses through the Division of Professional Licensing and its Professional Engineers and Land Surveyors board, and comity on an NCEES record is the normal path. UDOT runs its own consultant prequalification by work category, so for most civil roles the license transfer is straightforward and the meaningful credential is whether the candidate has delivered under UDOT or UTA processes before.",
   },
   {
     slug: "kansas-city-mo",
@@ -693,6 +853,38 @@ export const CITIES: City[] = [
       "Regional stormwater and water-quality work",
       "KCI airport terminal and airfield projects",
     ],
+    agencies: [
+      "MoDOT Kansas City District",
+      "Kansas City Public Works",
+      "KCATA",
+      "Kansas City Aviation Department",
+      "Johnson County Public Works",
+      "Mid-America Regional Council",
+    ],
+    marketDetail: [
+      "Kansas City's defining civil engineering characteristic is that it is two states. The metro spans the Missouri and Kansas line, work is let by agencies on both sides, and engineers who hold licenses in both are materially more useful than engineers who hold one. That duality runs through everything: two DOTs, two sets of design standards, two prequalification regimes and a regional planning body that has to reconcile them.",
+      "The work itself is dominated by aging river crossings, a large inherited arterial network and a long-running sewer program. The Missouri and Kansas rivers cut the metro into pieces connected by bridges that are well into their service lives, and the combined sewer system carries wet weather obligations that keep hydraulic modeling and separation design continuously staffed.",
+    ],
+    hiringFocus: [
+      {
+        role: "Dual-licensed civil engineers",
+        why: "A bi-state metro lets work from agencies on both sides, and a single-state license limits which projects an engineer can seal.",
+      },
+      {
+        role: "Bridge design & rehabilitation engineers",
+        why: "Two major rivers and an aging crossing inventory keep structural assessment and replacement work continuous.",
+      },
+      {
+        role: "Wastewater & stormwater engineers",
+        why: "A long-running wet weather program makes sewer hydraulics and separation design a standing regional need.",
+      },
+      {
+        role: "Roadway & arterial reconstruction engineers",
+        why: "A large inherited street network reaching the end of its life generates steady reconstruction volume in both states.",
+      },
+    ],
+    licensure:
+      "Missouri licenses through the Board for Architects, Professional Engineers, Professional Land Surveyors and Professional Landscape Architects, and Kansas through its Board of Technical Professions. Because the metro straddles the line, comity registration in both is close to a practical requirement for anyone sealing work across the region, and it is the single most common licensure question raised in searches here. MoDOT and KDOT each maintain separate consultant prequalification on top of the license.",
   },
   {
     slug: "indianapolis-in",
@@ -710,6 +902,38 @@ export const CITIES: City[] = [
       "DigIndy stormwater tunnel system",
       "Indianapolis International airport projects",
     ],
+    agencies: [
+      "INDOT Greenfield District",
+      "Indianapolis Department of Public Works",
+      "Citizens Energy Group",
+      "IndyGo",
+      "Indianapolis Airport Authority",
+      "Hamilton County Highway Department",
+    ],
+    marketDetail: [
+      "The largest single driver of civil engineering in Indianapolis has been the deep tunnel program built to meet the city's combined sewer overflow obligations. Work at that scale creates a local concentration of tunnel, conveyance and hydraulic expertise, and the surface restoration, sewer separation and green infrastructure that accompany it keep a much broader group of civil engineers occupied for years at a time.",
+      "Above ground, the region is flat, which sounds simple and is not: drainage design has very little natural fall to work with, detention is a constant requirement, and pavement design contends with freeze-thaw on heavy soils. The interstate network converging on the city has been rebuilt in stages under traffic, and suburban growth to the north keeps arterial and utility extension work steady.",
+    ],
+    hiringFocus: [
+      {
+        role: "Wastewater & conveyance engineers",
+        why: "A large ongoing sewer program makes hydraulic modeling and conveyance design the region's deepest specialism.",
+      },
+      {
+        role: "Stormwater & drainage engineers",
+        why: "Flat terrain with minimal fall makes detention and drainage design unusually demanding on every site.",
+      },
+      {
+        role: "Roadway & interchange engineers",
+        why: "Staged reconstruction of the interstate network under traffic keeps design and construction-phase work continuous.",
+      },
+      {
+        role: "Land development engineers",
+        why: "Suburban growth north of the city drives sustained demand for grading, utility and entitlement design.",
+      },
+    ],
+    licensure:
+      "Indiana licenses through the State Board of Registration for Professional Engineers, administered by the Professional Licensing Agency, and comity on an NCEES record is the usual route for an out-of-state PE. INDOT prequalifies consultants by work type and the city and utility run their own selection processes, so the credential that decides most hires is which of those the candidate has already worked under.",
   },
   {
     slug: "milwaukee-wi",
@@ -727,6 +951,38 @@ export const CITIES: City[] = [
       "Deep-tunnel and stormwater systems",
       "Mitchell International airport improvements",
     ],
+    agencies: [
+      "WisDOT Southeast Region",
+      "Milwaukee Department of Public Works",
+      "Milwaukee Metropolitan Sewerage District",
+      "Milwaukee County Transit System",
+      "Port Milwaukee",
+      "Milwaukee County Department of Transportation",
+    ],
+    marketDetail: [
+      "Milwaukee runs one of the more ambitious urban water programs in the country. Deep tunnel storage, aggressive green infrastructure and a watershed-scale approach to wet weather have made the region a place where stormwater and wastewater engineering are treated as a single discipline, and where engineers with modeling and green infrastructure design experience have a deeper local market than metro size alone would suggest.",
+      "The transportation side is a reconstruction market. The freeway system through the metro was built early and is being rebuilt segment by segment under traffic, the lakefront structures carry heavy maintenance obligations, and freeze-thaw on a Great Lakes climate shortens pavement and bridge deck life. Very little of this is greenfield work, so the valued skill is assessing and replacing what is already carrying load.",
+    ],
+    hiringFocus: [
+      {
+        role: "Stormwater & green infrastructure engineers",
+        why: "A watershed-scale wet weather program treats surface water design as a core discipline rather than a site detail.",
+      },
+      {
+        role: "Freeway reconstruction engineers",
+        why: "An early-built interstate system is being replaced in stages while carrying traffic, which is the region's largest transportation category.",
+      },
+      {
+        role: "Bridge inspection & rehabilitation engineers",
+        why: "Freeze-thaw and a Great Lakes climate shorten structure life and keep assessment and repair continuous.",
+      },
+      {
+        role: "Wastewater conveyance engineers",
+        why: "Deep tunnel storage and separation work require hydraulic depth that generic civil experience does not cover.",
+      },
+    ],
+    licensure:
+      "Wisconsin licenses through the Department of Safety and Professional Services, and comity on an NCEES record is standard for an out-of-state PE. WisDOT maintains its own consultant qualification by work category and the sewerage district runs separate procurement, so hiring managers tend to weigh prior delivery under those systems more heavily than the license transfer itself.",
   },
   {
     slug: "richmond-va",
@@ -744,6 +1000,38 @@ export const CITIES: City[] = [
       "James River crossings and stormwater work",
       "Richmond International airport projects",
     ],
+    agencies: [
+      "VDOT Richmond District",
+      "Richmond Department of Public Works",
+      "Richmond Department of Public Utilities",
+      "Chesterfield County Transportation",
+      "Henrico County Department of Public Works",
+      "GRTC Transit System",
+    ],
+    marketDetail: [
+      "Richmond sits at the point where two interstates cross and where the James River drops over the fall line, and both facts drive the engineering. The interchange and corridor work that comes with a major freight crossroads is continuous, while the river's geology gives the city steep banks, rock close to the surface and a combined sewer system discharging into a waterway with real regulatory attention on it.",
+      "That regulatory attention is the second driver. Chesapeake Bay nutrient and sediment obligations reach every jurisdiction in the watershed, which turns stormwater quality design, stream restoration and sewer separation into a standing program rather than a project type. Suburban Chesterfield and Henrico add a steady flow of land development and arterial work alongside it.",
+    ],
+    hiringFocus: [
+      {
+        role: "Stormwater quality & stream restoration engineers",
+        why: "Bay watershed obligations make nutrient and sediment control a continuing regulatory requirement across every jurisdiction.",
+      },
+      {
+        role: "Combined sewer & wet weather engineers",
+        why: "Separation and overflow control on a monitored river keep hydraulic modeling and conveyance design continuously funded.",
+      },
+      {
+        role: "Interchange & corridor design engineers",
+        why: "A major freight crossroads keeps freeway capacity and interchange reconstruction on a steady cycle.",
+      },
+      {
+        role: "Land development engineers",
+        why: "Suburban county growth generates consistent grading, utility and entitlement volume outside the city line.",
+      },
+    ],
+    licensure:
+      "Virginia licenses through the Board for Architects, Professional Engineers, Land Surveyors, Certified Interior Designers and Landscape Architects within the Department of Professional and Occupational Regulation, and comity on an NCEES record is the usual route. VDOT runs consultant prequalification by work category, and because so much local work is stormwater compliance driven, familiarity with Virginia's stormwater management program is often checked alongside the license.",
   },
   {
     slug: "baltimore-md",
@@ -761,6 +1049,38 @@ export const CITIES: City[] = [
       "Port of Baltimore and marine infrastructure",
       "Water and wastewater capital upgrades",
     ],
+    agencies: [
+      "MDOT State Highway Administration District 4",
+      "Baltimore City Department of Transportation",
+      "MDOT Maryland Transit Administration",
+      "Baltimore City Department of Public Works",
+      "Maryland Transportation Authority",
+      "Maryland Port Administration",
+    ],
+    marketDetail: [
+      "Baltimore's civil engineering is dominated by crossings and by buried infrastructure that is very old. The harbor is spanned and tunneled by structures that carry regional and interstate traffic, and their inspection, rehabilitation and replacement is a continuous engineering program with a toll authority, a state district and a city department all holding pieces of it. Engineers who can assess an existing structure and design an intervention into it are what this market is short of.",
+      "Below the streets, the water and sewer network includes some of the oldest mains in the country, and the city carries long-running wet weather obligations on a harbor that drains to the Chesapeake. That combination keeps conveyance design, condition assessment and rehabilitation methods such as trenchless replacement in steady demand, and it means utility conflict work sits on nearly every roadway project in the older core.",
+    ],
+    hiringFocus: [
+      {
+        role: "Bridge & tunnel rehabilitation engineers",
+        why: "Harbor crossings under multiple owners run continuous inspection and repair cycles that need engineers fluent in existing structures.",
+      },
+      {
+        role: "Water & sewer rehabilitation engineers",
+        why: "One of the oldest buried networks in the country makes condition assessment and trenchless renewal a standing specialism.",
+      },
+      {
+        role: "Stormwater & Bay compliance engineers",
+        why: "Chesapeake watershed obligations put nutrient and sediment control on projects across the region.",
+      },
+      {
+        role: "Utility coordination & construction-phase engineers",
+        why: "Dense, old and poorly recorded underground infrastructure makes conflict resolution a senior role on urban roadway work.",
+      },
+    ],
+    licensure:
+      "Maryland licenses through the State Board for Professional Engineers under the Department of Labor, and comity on an NCEES record is the standard route for an out-of-state PE. The layered ownership in this metro means prequalification matters more than usual: the state highway administration, the transportation authority, the transit administration and the city each maintain their own consultant arrangements, so prior work under a specific owner is often the decisive credential.",
   },
   {
     slug: "new-orleans-la",
@@ -778,6 +1098,38 @@ export const CITIES: City[] = [
       "Drainage and pump-station modernization",
       "Louis Armstrong airport and port projects",
     ],
+    agencies: [
+      "LADOTD District 02",
+      "Sewerage and Water Board of New Orleans",
+      "US Army Corps of Engineers New Orleans District",
+      "Coastal Protection and Restoration Authority",
+      "Port of New Orleans",
+      "New Orleans Regional Transit Authority",
+    ],
+    marketDetail: [
+      "No other American metro puts civil engineering so directly in charge of whether the city stays habitable. Flood risk reduction, levee and floodwall systems, interior drainage and pumping, and coastal restoration beyond the city are not projects here but permanent infrastructure obligations, and they are shared across a federal district, a state coastal authority and a city utility. Engineers with hydraulics, geotechnical or water resources depth have a market that does not track the general construction cycle.",
+      "The ground makes everything harder. Soft compressible soils and ongoing subsidence mean deep foundations are routine, settlement governs design in ways it does not elsewhere, and buried utilities move. That gives local geotechnical judgment unusual weight, and it is the reason engineers who have worked in this soil profile are difficult to substitute with equivalent experience from another region.",
+    ],
+    hiringFocus: [
+      {
+        role: "Geotechnical engineers",
+        why: "Soft soils and active subsidence make foundation and settlement analysis decisive on almost every project.",
+      },
+      {
+        role: "Hydraulics & drainage engineers",
+        why: "Interior drainage and pumping are permanent operating infrastructure, not periodic capital work.",
+      },
+      {
+        role: "Coastal & water resources engineers",
+        why: "Levee, floodwall and restoration programs run continuously across federal, state and local owners.",
+      },
+      {
+        role: "Construction-phase engineers for water infrastructure",
+        why: "Work built into a live flood protection and drainage system demands people who can accept and document it under operational constraints.",
+      },
+    ],
+    licensure:
+      "Louisiana licenses through the Professional Engineering and Land Surveying Board, and comity on an NCEES record is the usual route for an individual PE. Louisiana also licenses firms: a company practicing engineering in the state needs a certificate of authorization with a designated resident professional in responsible charge, which catches out-of-state firms opening an office here more often than it catches individuals.",
   },
   {
     slug: "louisville-ky",
@@ -795,6 +1147,38 @@ export const CITIES: City[] = [
       "Stormwater and combined-sewer (MSD) work",
       "Louisville airport and logistics infrastructure",
     ],
+    agencies: [
+      "KYTC District 5",
+      "Louisville Metro Public Works",
+      "Louisville and Jefferson County Metropolitan Sewer District",
+      "Transit Authority of River City",
+      "Louisville Regional Airport Authority",
+      "Kentucky Transportation Cabinet Division of Structural Design",
+    ],
+    marketDetail: [
+      "The Ohio River sets the transportation agenda. Crossings between Kentucky and Indiana carry interstate traffic on structures with long maintenance and rehabilitation obligations, and the interchange where three interstates meet downtown has been rebuilt and continues to be reworked in stages. Bridge engineering and construction-phase work under live traffic are the region's most durable demands.",
+      "Underground, the metropolitan sewer district carries a consent decree that has funded tunnel storage and a sustained program of separation and conveyance improvement, while karst geology across parts of the county complicates drainage, foundations and any excavation that gets deep. Between the two, hydraulic and geotechnical specialists hold value here well beyond what the metro's size would suggest.",
+    ],
+    hiringFocus: [
+      {
+        role: "Bridge design & rehabilitation engineers",
+        why: "Ohio River crossings and an aging structure inventory keep assessment and repair work continuous.",
+      },
+      {
+        role: "Wastewater & conveyance engineers",
+        why: "A consent decree program funds tunnel storage and separation work that needs genuine hydraulic depth.",
+      },
+      {
+        role: "Geotechnical engineers with karst experience",
+        why: "Limestone conditions across the county make subsurface risk a design driver rather than a routine check.",
+      },
+      {
+        role: "Construction-phase engineers",
+        why: "Interchange and river crossing work is staged under live interstate traffic, which is a distinct skill from design.",
+      },
+    ],
+    licensure:
+      "Kentucky licenses through the State Board of Licensure for Professional Engineers and Land Surveyors, with comity on an NCEES record the normal route. Because the metro reaches across the river into Indiana, engineers working the full region frequently carry both Kentucky and Indiana licenses, and the Transportation Cabinet maintains its own consultant prequalification by category alongside the license requirement.",
   },
   {
     slug: "oklahoma-city-ok",
