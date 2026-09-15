@@ -343,7 +343,7 @@ export default async function MunicipalCityPage({ params }: { params: Promise<{ 
               </h3>
               <p className="mt-2 text-ink-300">
                 Tell us about the role. We&apos;ll deliver a vetted shortlist of
-                licensed {c.abbr} municipal engineering talent, backed by our placement guarantee.
+                licensed {c.abbr} municipal engineering talent, screened against {c.state} licensure requirements.
               </p>
             </div>
             <div className="flex flex-wrap gap-3">

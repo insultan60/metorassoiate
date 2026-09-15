@@ -159,8 +159,8 @@ export default function WhyUsPage() {
                 Ready to build your team?
               </h3>
               <p className="mt-2 text-ink-300">
-                Tell us about the role. We&apos;ll deliver a vetted shortlist,
-                backed by our placement guarantee.
+                Tell us about the role. We&apos;ll deliver a vetted shortlist, with every
+                license and certification verified before it reaches you.
               </p>
             </div>
             <div className="flex flex-wrap gap-3">

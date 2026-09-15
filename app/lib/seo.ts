@@ -61,9 +61,24 @@ export const ORG = {
      instead, which is what it's actually worth. */
   /* No guarantee claim here. It used to end "backed by a placement
      guarantee", which put the claim into the Organization schema on every
-     page carrying it — including the homepage, where the client asked for it
+     page carrying it, including the homepage, where the client asked for it
      to be removed entirely. Structured data counts: it is what an assistant
-     reads to describe the firm. */
+     reads to describe the firm.
+
+     That removal stopped at the schema and the homepage cards, and seventeen
+     copies of the claim survived in this file's city FAQ answers and in the
+     CTA on five city templates and /why-us. They are gone now, for the same
+     reason and one more: Terms section 6 says the opposite. "Any staffing
+     guarantees, replacement terms, or fees are governed solely by a separate
+     written agreement between Metro Associates and the applicable client."
+     A page asserting a standing guarantee while the Terms deny one is a
+     claim the firm cannot stand behind if anyone holds it to it.
+
+     What replaced them describes process rather than outcome, which is the
+     same test the /why-us block was rewritten to (see components/WhyUs.tsx):
+     screening against a state's licensure requirements and verifying
+     credentials before a resume is sent are things the site already says it
+     does elsewhere and can show. Nothing now promises a result. */
   description:
     "National staffing and executive search firm for civil, transportation (DOT), MEP, water, structural and municipal engineering, placing licensed PEs, inspectors and construction leaders across fifty US metros.",
 };
@@ -221,9 +236,9 @@ export function civilFaqs(c: {
     `Our ${c.city} placements span Civil Project Manager (PE), Senior Transportation Engineer, Structural/Bridge Engineer, Water Resources Engineer, Traffic/ITS Engineer, Geotechnical Engineer, and Construction Manager roles.`,
   ]);
   const speedAnswer = pickVariant(`${c.city}:civil:3`, [
-    `Because we maintain a national pipeline of pre-vetted engineers, we typically deliver a shortlist of qualified ${c.abbr} candidates within days, and every placement is backed by our guarantee.`,
-    `Our national pipeline of pre-vetted engineers means a shortlist of qualified ${c.abbr} candidates is usually days away, not weeks, and every placement carries our guarantee.`,
-    `Most ${c.city} searches move fast: our pre-vetted national pipeline typically produces a qualified shortlist within days, backed by our placement guarantee.`,
+    `Because we maintain a national pipeline of pre-vetted engineers, we typically deliver a shortlist of qualified ${c.abbr} candidates within days rather than weeks.`,
+    `Our national pipeline of pre-vetted engineers means a shortlist of qualified ${c.abbr} candidates is usually days away, not weeks.`,
+    `Most ${c.city} searches move fast: our pre-vetted national pipeline typically produces a qualified shortlist within days of the brief.`,
   ]);
   const dotAnswer = pickVariant(`${c.city}:civil:4`, [
     `Yes. We understand NCEES comity and multi-state PE licensure, and we recruit specifically for ${c.dot}, federal agencies, and publicly funded capital programs throughout ${c.state}.`,
@@ -286,8 +301,8 @@ export function mepFaqs(c: {
     `Common ${c.city} searches include MEP Project Manager (PE), Senior Mechanical/HVAC Engineer, Electrical Engineer, Plumbing & Fire Protection Engineer, Building Automation/Controls Engineer, and Commissioning Agent.`,
   ]);
   const speedAnswer = pickVariant(`${c.city}:mep:3`, [
-    `With a national pipeline of pre-vetted MEP professionals, we typically deliver a shortlist of qualified ${c.abbr} candidates within days, every placement backed by our guarantee.`,
-    `Our pre-vetted national MEP pipeline usually means a qualified ${c.abbr} shortlist within days, not weeks, every placement backed by our guarantee.`,
+    `With a national pipeline of pre-vetted MEP professionals, we typically deliver a shortlist of qualified ${c.abbr} candidates within days of the brief.`,
+    `Our pre-vetted national MEP pipeline usually means a qualified ${c.abbr} shortlist within days, not weeks.`,
   ]);
   const authorityAnswer = pickVariant(`${c.city}:mep:4`, [
     `Yes. We recruit MEP talent for high-rise, healthcare, life-science, data center, and mission-critical facilities, engineers fluent in ASHRAE, NEC, and NFPA standards and reviewed under ${c.authority}.`,
@@ -314,8 +329,8 @@ export function waterFaqs(c: {
     `Typical ${c.city} searches include Water/Wastewater Project Engineer (PE), Senior Process Engineer, Water Resources Engineer, Utility/Pipeline Design Engineer, and SCADA/Controls Engineer.`,
   ]);
   const speedAnswer = pickVariant(`${c.city}:water:3`, [
-    `With a national pipeline of pre-vetted water and wastewater professionals, we typically deliver a shortlist of qualified ${c.abbr} candidates within days, every placement backed by our guarantee.`,
-    `Our pre-vetted national pipeline usually puts a qualified ${c.abbr} shortlist in front of you within days, every placement backed by our guarantee.`,
+    `With a national pipeline of pre-vetted water and wastewater professionals, we typically deliver a shortlist of qualified ${c.abbr} candidates within days of the brief.`,
+    `Our pre-vetted national pipeline usually puts a qualified ${c.abbr} shortlist in front of you within days, not weeks.`,
   ]);
   const authorityAnswer = pickVariant(`${c.city}:water:4`, [
     `Yes. We recruit engineers fluent in NPDES permitting, SCADA and instrumentation, and utility infrastructure rehabilitation, reviewed under ${c.authority} and ${c.state}'s regulatory requirements.`,
@@ -342,8 +357,8 @@ export function ceiFaqs(c: {
     `Common ${c.city} searches include CEI Inspector, Senior Construction Inspector, Resident Engineer, Materials Testing Technician/QA Manager, and Bridge Inspector.`,
   ]);
   const speedAnswer = pickVariant(`${c.city}:cei:3`, [
-    `With a national pipeline of pre-vetted, certification-verified inspection professionals, we typically deliver a shortlist of qualified ${c.abbr} candidates within days, every placement backed by our guarantee.`,
-    `Our pre-vetted, certification-verified national pipeline usually means a qualified ${c.abbr} shortlist within days, every placement backed by our guarantee.`,
+    `With a national pipeline of pre-vetted, certification-verified inspection professionals, we typically deliver a shortlist of qualified ${c.abbr} candidates within days of the brief.`,
+    `Our pre-vetted, certification-verified national pipeline usually means a qualified ${c.abbr} shortlist within days, not weeks.`,
   ]);
   const authorityAnswer = pickVariant(`${c.city}:cei:4`, [
     `Yes. Every candidate's NICET, ACI materials-testing, and NBIS bridge-inspection credentials are confirmed before they reach you, matched against ${c.authority}'s construction and inspection standards.`,
@@ -370,8 +385,8 @@ export function municipalFaqs(c: {
     `Common ${c.city} searches include Municipal Engineer (PE), City/Town Engineer, Public Works Director, Site/Civil Development Engineer, and Capital Projects Engineer.`,
   ]);
   const speedAnswer = pickVariant(`${c.city}:municipal:3`, [
-    `With a national pipeline of pre-vetted municipal engineering professionals, we typically deliver a shortlist of qualified ${c.abbr} candidates within days, every placement backed by our guarantee.`,
-    `Our pre-vetted national pipeline usually means a qualified ${c.abbr} shortlist within days, every placement backed by our guarantee.`,
+    `With a national pipeline of pre-vetted municipal engineering professionals, we typically deliver a shortlist of qualified ${c.abbr} candidates within days of the brief.`,
+    `Our pre-vetted national pipeline usually means a qualified ${c.abbr} shortlist within days, not weeks.`,
   ]);
   const authorityAnswer = pickVariant(`${c.city}:municipal:4`, [
     `Yes. We're fluent in public bidding and procurement processes, capital improvement plan (CIP) cycles, and grant-compliant hiring timelines (SRF, CDBG, ARPA) as administered by ${c.authority}.`,

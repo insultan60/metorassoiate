@@ -343,7 +343,7 @@ export default async function CeiCityPage({ params }: { params: Promise<{ city: 
               </h3>
               <p className="mt-2 text-ink-300">
                 Tell us about the role. We&apos;ll deliver a vetted shortlist of
-                certified {c.abbr} CEI talent, backed by our placement guarantee.
+                certified {c.abbr} CEI talent, with NICET and inspection credentials verified first.
               </p>
             </div>
             <div className="flex flex-wrap gap-3">

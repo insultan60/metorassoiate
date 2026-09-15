@@ -343,8 +343,8 @@ export default async function MepCityPage({ params }: { params: Promise<{ city: 
               </h3>
               <p className="mt-2 text-ink-300">
                 Tell us about the role. We&apos;ll deliver a vetted shortlist of
-                licensed {c.abbr} mechanical, electrical, and plumbing talent, backed by
-                our placement guarantee.
+                licensed {c.abbr} mechanical, electrical, and plumbing talent, screened
+                against {c.state} licensure requirements.
               </p>
             </div>
             <div className="flex flex-wrap gap-3">
