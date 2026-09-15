@@ -759,6 +759,38 @@ export const WATER_CITIES: WaterCity[] = [
       "Lead service line replacement",
       "Booster pump station upgrades (growth-driven)",
     ],
+    agencies: [
+      "Metro Water Services",
+      "Tennessee Department of Environment and Conservation",
+      "Harpeth Valley Utilities District",
+      "Metro Nashville Stormwater",
+      "Cumberland River Compact",
+      "Williamson County Water Treatment Authority",
+    ],
+    marketDetail: [
+      "Nashville draws its drinking water from the Cumberland and discharges back to it, which makes the river both the supply and the receiving water and keeps treatment, residuals handling and discharge permitting tightly linked. The older core is served by a combined system under a long-running overflow reduction program, so separation, storage, conveyance upsizing and treatment capacity are funded together rather than as competing priorities.",
+      "Karst geology complicates everything underground. Limestone gives surface water a fast route to groundwater, which raises source protection concerns, makes leak detection and infiltration harder to interpret, and turns any deep excavation into a geotechnical question. Rapid suburban growth in the surrounding counties adds trunk main extension and treatment capacity work on top of the compliance program.",
+    ],
+    hiringFocus: [
+      {
+        role: "Collection system & conveyance engineers",
+        why: "A long-running overflow reduction program funds continuous separation, storage and capacity design.",
+      },
+      {
+        role: "Hydraulic modelers",
+        why: "Interpreting inflow and infiltration in karst terrain requires modeling judgment that generic experience does not build.",
+      },
+      {
+        role: "Treatment process engineers",
+        why: "Drawing supply from and discharging to the same river keeps treatment and residuals work continuously funded.",
+      },
+      {
+        role: "Utility planning engineers",
+        why: "Suburban growth requires trunk main and capacity planning ahead of development rather than alongside it.",
+      },
+    ],
+    licensure:
+      "Tennessee licenses engineers through the Board of Architectural and Engineering Examiners, with comity on an NCEES record the usual route. Water and wastewater work adds a second credential track that is separate from the PE: the state environment department certifies treatment and distribution operators by grade, and utilities hiring for plant-facing roles check the operator certification directly rather than treating the engineering license as a substitute.",
   },
   {
     slug: "portland-or",
@@ -776,6 +808,38 @@ export const WATER_CITIES: WaterCity[] = [
       "Lead service line replacement",
       "Stormwater management & Willamette River resiliency",
     ],
+    agencies: [
+      "Portland Water Bureau",
+      "Portland Bureau of Environmental Services",
+      "Oregon Health Authority Drinking Water Services",
+      "Oregon Department of Environmental Quality",
+      "Clean Water Services",
+      "Port of Portland",
+    ],
+    marketDetail: [
+      "Portland is one of the few large American cities to have supplied drinking water from a protected surface watershed without filtration, and moving to a filtered supply is the largest water engineering undertaking in the region's history. Designing, building and commissioning treatment for a system that has never had it changes hydraulics, residuals handling, operator training and the distribution system's chemistry all at once.",
+      "On the wastewater side the city has already built large storage tunnels to control combined sewer overflows, so the emphasis has shifted to what remains: pump station and conveyance capacity, treatment plant upgrades, and a strongly green infrastructure approach to stormwater that is embedded in local design standards rather than offered as an alternative. Seismic resilience of buried pipe and plant is a live concern across both systems.",
+    ],
+    hiringFocus: [
+      {
+        role: "Water treatment process engineers",
+        why: "Introducing filtration to a previously unfiltered supply is a rare, large and locally concentrated program.",
+      },
+      {
+        role: "Seismic resilience engineers for buried infrastructure",
+        why: "A subduction zone makes pipe and plant survivability a design requirement rather than an aspiration.",
+      },
+      {
+        role: "Stormwater & green infrastructure designers",
+        why: "Green approaches are written into local standards, making them funded design work rather than an option.",
+      },
+      {
+        role: "Pump station & conveyance engineers",
+        why: "With storage largely built, capacity and reliability of conveyance is where the remaining program sits.",
+      },
+    ],
+    licensure:
+      "Oregon licenses through the State Board of Examiners for Engineering and Land Surveying, and comity on an NCEES record is the normal route. Treatment and distribution operators are certified separately by the state health authority and environmental quality department by grade and facility class, and utilities recruiting plant-facing engineers check that certification alongside the engineering license.",
   },
   {
     slug: "las-vegas-nv",
@@ -793,6 +857,38 @@ export const WATER_CITIES: WaterCity[] = [
       "Turf-conversion & conservation infrastructure",
       "Desert climate pipeline & valve rehabilitation",
     ],
+    agencies: [
+      "Southern Nevada Water Authority",
+      "Las Vegas Valley Water District",
+      "Clark County Water Reclamation District",
+      "City of Las Vegas Water Pollution Control",
+      "Nevada Division of Environmental Protection",
+      "Colorado River Commission of Nevada",
+    ],
+    marketDetail: [
+      "Southern Nevada operates the most consequential water reuse arrangement in the country. Treated wastewater is returned to the same reservoir the region draws from, and that return earns credit against the allocation, which means every gallon reclaimed to a high standard effectively extends the supply. Wastewater treatment here is therefore a water supply function, and the nutrient and constituent limits on that return are correspondingly strict.",
+      "Declining reservoir levels have driven the other defining work: intake and pumping infrastructure engineered to keep drawing water as the surface falls, plus conservation measures pursued harder than anywhere else in the country. For engineers this means advanced treatment, large pumping and conveyance, and distribution system design under conditions where the supply itself is the constraint.",
+    ],
+    hiringFocus: [
+      {
+        role: "Advanced treatment & reuse engineers",
+        why: "Returned flow earns supply credit, so effluent quality is a water resource decision rather than a compliance minimum.",
+      },
+      {
+        role: "Pumping & conveyance engineers",
+        why: "Falling reservoir levels make intake and lift infrastructure a continuing engineering problem.",
+      },
+      {
+        role: "Water resources & supply planning engineers",
+        why: "Allocation constraint makes long-horizon supply planning a permanent regional function.",
+      },
+      {
+        role: "Distribution system engineers",
+        why: "An outward-growing valley needs continuous transmission and storage extension under conservation constraints.",
+      },
+    ],
+    licensure:
+      "Nevada licenses through the State Board of Professional Engineers and Land Surveyors and registers by branch, so the civil or environmental branch matters for anyone sealing water or wastewater work. Comity on an NCEES record is the usual route once the branch is settled. Treatment and distribution operator certification is administered separately by the state environmental protection division and is checked independently of the PE.",
   },
   {
     slug: "columbus-oh",
@@ -810,6 +906,38 @@ export const WATER_CITIES: WaterCity[] = [
       "New growth-corridor water main extensions (Intel campus)",
       "Stormwater management & Scioto River resiliency",
     ],
+    agencies: [
+      "Columbus Division of Sewerage and Drainage",
+      "Columbus Division of Water",
+      "Ohio EPA",
+      "Franklin County Sanitary Engineering",
+      "Del-Co Water Company",
+      "Ohio Water Development Authority",
+    ],
+    marketDetail: [
+      "Columbus chose an unusual route to combined sewer compliance. Rather than building storage tunnels alone, the city committed to a program built around keeping clean water out of the sewer in the first place, using green infrastructure, sewer lining, roof and downspout redirection and voluntary work on private property at neighborhood scale. That makes the engineering distributed and construction-heavy rather than concentrated in a few large structures.",
+      "Growth has now added a second front. Large industrial and residential development in the surrounding counties requires trunk sewer, treatment capacity and water transmission extended into areas with little existing service, on a schedule set by the development rather than by the utility. Flat terrain and heavy clay soils make gravity conveyance and infiltration solutions harder than the topography suggests.",
+    ],
+    hiringFocus: [
+      {
+        role: "Green infrastructure & sewer rehabilitation engineers",
+        why: "The regional compliance strategy is built on keeping clean water out rather than storing it, at neighborhood scale.",
+      },
+      {
+        role: "Trunk sewer & treatment capacity engineers",
+        why: "Large development in outlying counties needs conveyance and capacity extended ahead of it.",
+      },
+      {
+        role: "Hydraulic modelers",
+        why: "A distributed compliance approach only works if the flow reductions can be demonstrated in a model.",
+      },
+      {
+        role: "Water transmission & distribution engineers",
+        why: "Supplying new industrial and residential load requires transmission work beyond the existing service footprint.",
+      },
+    ],
+    licensure:
+      "Ohio licenses through the State Board of Registration for Professional Engineers and Surveyors, with comity on an NCEES record the standard route. Ohio EPA certifies water and wastewater operators by class separately from the engineering license, and it also reviews and approves plans for treatment and conveyance works, so familiarity with that submission process is a practical requirement alongside registration.",
   },
   {
     slug: "salt-lake-city-ut",
@@ -827,6 +955,38 @@ export const WATER_CITIES: WaterCity[] = [
       "Lead service line inventory & replacement",
       "Central Valley Water Reclamation Facility upgrades",
     ],
+    agencies: [
+      "Salt Lake City Department of Public Utilities",
+      "Jordan Valley Water Conservancy District",
+      "Central Utah Water Conservancy District",
+      "Utah Division of Water Quality",
+      "Utah Division of Drinking Water",
+      "Utah Department of Environmental Quality",
+    ],
+    marketDetail: [
+      "Supply here is snowpack, and snowpack is no longer dependable. Canyon watersheds feed the city through conveyance built generations ago, the Great Salt Lake's decline has made every diversion politically and ecologically consequential, and conservation, reuse and aquifer management have moved from optional to central. Water resources planning in this valley now carries weight that treatment design alone never did.",
+      "The second issue is survivability. The Wasatch fault runs along the populated edge of the valley, and much of the water and sewer network crosses it or runs through liquefiable soils, so seismic assessment of pipelines, reservoirs and treatment plants is a funded program rather than a study. New treatment capacity is being built to modern standards partly because the old plants would not survive an event.",
+    ],
+    hiringFocus: [
+      {
+        role: "Water resources & supply planning engineers",
+        why: "Snowpack variability and lake decline have made long-horizon supply planning a permanent regional priority.",
+      },
+      {
+        role: "Seismic assessment engineers for buried infrastructure",
+        why: "An active fault crossing the water network makes pipeline and reservoir survivability a funded program.",
+      },
+      {
+        role: "Treatment process engineers",
+        why: "Plants are being replaced to modern standards, concentrating design and commissioning demand.",
+      },
+      {
+        role: "Reuse & conservation engineers",
+        why: "Supply constraint makes recycling and demand management infrastructure a standing capital category.",
+      },
+    ],
+    licensure:
+      "Utah licenses through the Division of Professional Licensing and its Professional Engineers and Land Surveyors board, with comity on an NCEES record the normal path. The state's drinking water and water quality divisions certify operators by grade and review plans for public water systems and treatment works, so both the operator credential and familiarity with state plan review sit alongside the engineering license in hiring.",
   },
   {
     slug: "kansas-city-mo",
@@ -844,6 +1004,38 @@ export const WATER_CITIES: WaterCity[] = [
       "Lead service line replacement",
       "Missouri River intake resiliency projects",
     ],
+    agencies: [
+      "KC Water",
+      "Missouri Department of Natural Resources",
+      "Johnson County Wastewater",
+      "Kansas Department of Health and Environment",
+      "Little Blue Valley Sewer District",
+      "Mid-America Regional Council",
+    ],
+    marketDetail: [
+      "Kansas City's water engineering is defined by a long overflow control program on an old combined system and by the fact that the metro sits across a state line. Separation, storage, treatment capacity and green infrastructure are funded over a horizon measured in decades, and the regulatory relationship differs depending on which side of the line a project falls, so engineers here work with two state environmental agencies rather than one.",
+      "The Missouri River supplies most of the drinking water, which means turbidity and seasonal variability drive treatment design, and river bank conditions matter for intake reliability. Meanwhile a large inherited distribution network with a significant main break history keeps condition assessment, renewal prioritization and trenchless rehabilitation in continuous demand.",
+    ],
+    hiringFocus: [
+      {
+        role: "Collection system & overflow control engineers",
+        why: "A decades-long combined sewer program funds continuous separation, storage and conveyance design.",
+      },
+      {
+        role: "Water treatment process engineers",
+        why: "A turbid, seasonally variable river source makes treatment design and optimization a standing requirement.",
+      },
+      {
+        role: "Pipeline condition assessment & renewal engineers",
+        why: "An aging distribution network with frequent breaks needs prioritized rehabilitation rather than reactive repair.",
+      },
+      {
+        role: "Dual-licensed water engineers",
+        why: "A bi-state metro means projects fall under two environmental agencies and two licensing boards.",
+      },
+    ],
+    licensure:
+      "Missouri licenses through the Board for Architects, Professional Engineers, Professional Land Surveyors and Professional Landscape Architects, and Kansas through its Board of Technical Professions, with comity registration in both close to a practical requirement across this metro. Operator certification is handled separately by each state's environmental agency, and both states also review and approve construction plans for public water and wastewater works.",
   },
   {
     slug: "indianapolis-in",
@@ -861,6 +1053,38 @@ export const WATER_CITIES: WaterCity[] = [
       "White River intake & source-water protection",
       "Combined sewer separation projects",
     ],
+    agencies: [
+      "Citizens Energy Group",
+      "Indiana Department of Environmental Management",
+      "Indianapolis Department of Public Works",
+      "Marion County Surveyor",
+      "Indiana Finance Authority",
+      "White River Alliance",
+    ],
+    marketDetail: [
+      "Indianapolis runs its water and wastewater utilities through a public charitable trust rather than a conventional city department, which gives the system a different governance and funding model from most American utilities and makes long-horizon capital planning more predictable than the political cycle usually allows. For engineers that translates into programs that continue rather than stop and start.",
+      "The defining technical work has been a deep tunnel system built to capture combined sewer overflows, together with the pump stations, drop shafts and consolidation sewers that feed it and the treatment capacity to handle what it delivers. Flat terrain with very little fall makes gravity conveyance genuinely difficult, and the same flatness limits how much infiltration-based stormwater management can contribute.",
+    ],
+    hiringFocus: [
+      {
+        role: "Tunnel & deep conveyance engineers",
+        why: "A large storage tunnel system concentrates drop shaft, consolidation sewer and hydraulic expertise locally.",
+      },
+      {
+        role: "Pump station & lift engineers",
+        why: "Flat terrain with minimal fall makes pumping rather than gravity the answer across much of the system.",
+      },
+      {
+        role: "Treatment process engineers",
+        why: "Captured wet weather flow has to be treated, which keeps plant capacity and process work funded.",
+      },
+      {
+        role: "Hydraulic modelers",
+        why: "Demonstrating capture performance under wet weather is a modeling exercise before it is a construction one.",
+      },
+    ],
+    licensure:
+      "Indiana licenses through the State Board of Registration for Professional Engineers, administered by the Professional Licensing Agency, with comity on an NCEES record the usual route. The state environmental management department certifies water and wastewater operators by class and issues construction permits for treatment and conveyance works, so the operator credential and permit experience are checked alongside the engineering license.",
   },
   {
     slug: "milwaukee-wi",
@@ -878,6 +1102,38 @@ export const WATER_CITIES: WaterCity[] = [
       "Lead service line replacement (Milwaukee's lead pipe legacy)",
       "Green infrastructure stormwater program",
     ],
+    agencies: [
+      "Milwaukee Metropolitan Sewerage District",
+      "Milwaukee Water Works",
+      "Wisconsin Department of Natural Resources",
+      "Milwaukee County",
+      "Great Lakes Commission",
+      "Wisconsin Clean Water Fund",
+    ],
+    marketDetail: [
+      "Milwaukee treats stormwater and wastewater as one watershed problem, and it has gone further than most regions in acting on that. Deep tunnel storage, an aggressive green infrastructure capture target and watershed-scale planning are pursued together, which means hydraulic modelers, stormwater designers and conveyance engineers work on the same programs rather than in separate practices.",
+      "The treatment side has its own distinction: biosolids here are processed into a fertilizer product that has been sold commercially for generations, which makes residuals handling a production process with quality requirements rather than a disposal problem. Lake Michigan supplies the drinking water, so source protection, intake reliability and the Great Lakes regulatory framework shape the supply side.",
+    ],
+    hiringFocus: [
+      {
+        role: "Stormwater & green infrastructure engineers",
+        why: "A regional capture target makes green infrastructure funded design work at watershed scale.",
+      },
+      {
+        role: "Hydraulic modelers",
+        why: "Integrated wet weather planning depends on modeling that links surface and sewer behavior.",
+      },
+      {
+        role: "Biosolids & residuals process engineers",
+        why: "Processing biosolids into a marketed product makes residuals a production process with quality control.",
+      },
+      {
+        role: "Tunnel & conveyance engineers",
+        why: "Deep storage and the sewers feeding it require hydraulic depth beyond ordinary collection system work.",
+      },
+    ],
+    licensure:
+      "Wisconsin licenses through the Department of Safety and Professional Services, with comity on an NCEES record the standard route. The Department of Natural Resources certifies operators by subclass and reviews plans for treatment and conveyance works, and because the drinking water source is a Great Lake, the interstate compact governing diversions is part of the regulatory context engineers here are expected to understand.",
   },
   {
     slug: "richmond-va",
@@ -895,6 +1151,38 @@ export const WATER_CITIES: WaterCity[] = [
       "Lead service line replacement",
       "Water treatment plant capacity upgrades",
     ],
+    agencies: [
+      "Richmond Department of Public Utilities",
+      "Virginia Department of Environmental Quality",
+      "Henrico County Department of Public Utilities",
+      "Virginia Department of Health Office of Drinking Water",
+      "Chesapeake Bay Program",
+      "Virginia Resources Authority",
+    ],
+    marketDetail: [
+      "Richmond is one of the few Virginia localities still operating a combined sewer system, and the state has set a schedule for ending overflows rather than merely reducing them. That converts the work from open-ended improvement into a deadline-driven program of storage, separation, conveyance and treatment capacity, which is a different engineering and delivery problem and a more demanding one.",
+      "The Chesapeake Bay supplies the second regulatory driver. Nutrient and sediment obligations reach every discharger and every developed acre in the watershed, so treatment plants operate to nitrogen and phosphorus limits with trading arrangements around them, and stormwater quality is a measured requirement rather than a design gesture. The James River sits at the center of both, as supply and as receiving water.",
+    ],
+    hiringFocus: [
+      {
+        role: "Combined sewer & storage engineers",
+        why: "A statutory schedule for ending overflows turns the program into deadline-driven design and construction.",
+      },
+      {
+        role: "Nutrient removal process engineers",
+        why: "Bay obligations impose measured nitrogen and phosphorus limits on treatment rather than general standards.",
+      },
+      {
+        role: "Stormwater quality engineers",
+        why: "Watershed nutrient and sediment requirements make treatment a quantified design outcome across the region.",
+      },
+      {
+        role: "Hydraulic modelers",
+        why: "Demonstrating overflow elimination under design storms is a modeling exercise before construction begins.",
+      },
+    ],
+    licensure:
+      "Virginia licenses through the Board for Architects, Professional Engineers, Land Surveyors, Certified Interior Designers and Landscape Architects within the Department of Professional and Occupational Regulation, with comity on an NCEES record the usual route. Waterworks and wastewater operators are licensed separately through their own state board by class, and both the environmental quality department and the health department's drinking water office review construction plans.",
   },
   {
     slug: "baltimore-md",
@@ -912,6 +1200,38 @@ export const WATER_CITIES: WaterCity[] = [
       "Combined sewer overflow consent decree program",
       "Water main rehabilitation (aging cast-iron system)",
     ],
+    agencies: [
+      "Baltimore City Department of Public Works",
+      "Maryland Department of the Environment",
+      "Baltimore County Department of Public Works",
+      "Chesapeake Bay Program",
+      "Maryland Water Quality Financing Administration",
+      "Maryland Environmental Service",
+    ],
+    marketDetail: [
+      "Baltimore owns some of the oldest buried water infrastructure in the country and supplies a region well beyond the city line, which makes it a wholesale utility as well as a retail one. Condition assessment, prioritized renewal, trenchless rehabilitation and large transmission main work are continuous, and the consequences of failure are regional rather than local, so reliability engineering carries unusual weight here.",
+      "On the wastewater side, the region's large treatment plants discharge to a watershed under nutrient obligations and have been subject to sustained regulatory attention over their performance. That keeps process engineering, capacity, and plant reliability work funded, alongside a long-running effort to reduce inflow, infiltration and overflows in an old collection system where sewers and water mains share crowded, poorly recorded corridors.",
+    ],
+    hiringFocus: [
+      {
+        role: "Pipeline condition assessment & renewal engineers",
+        why: "An exceptionally old buried network serving a whole region makes prioritized renewal a permanent program.",
+      },
+      {
+        role: "Treatment process & plant reliability engineers",
+        why: "Large plants under nutrient obligations and regulatory scrutiny keep process and capacity work continuously funded.",
+      },
+      {
+        role: "Collection system engineers",
+        why: "Reducing inflow, infiltration and overflows in an old system is a long-running, well-funded obligation.",
+      },
+      {
+        role: "Transmission main & hydraulic engineers",
+        why: "Wholesale supply beyond the city line makes large transmission design and reliability a regional responsibility.",
+      },
+    ],
+    licensure:
+      "Maryland licenses engineers through the State Board for Professional Engineers under the Department of Labor, with comity on an NCEES record the standard route. Water and wastewater operators are certified separately by the Department of the Environment, which also reviews and permits construction of treatment and conveyance works, and Bay watershed obligations add nutrient accounting that engineers here are expected to understand.",
   },
   {
     slug: "new-orleans-la",
@@ -929,6 +1249,38 @@ export const WATER_CITIES: WaterCity[] = [
       "Aging cast-iron water main replacement",
       "East Bank & West Bank WWTP upgrades",
     ],
+    agencies: [
+      "Sewerage and Water Board of New Orleans",
+      "Louisiana Department of Environmental Quality",
+      "Louisiana Department of Health",
+      "US Army Corps of Engineers New Orleans District",
+      "Coastal Protection and Restoration Authority",
+      "Jefferson Parish Water Department",
+    ],
+    marketDetail: [
+      "The utility here runs drinking water, sewerage and the city's drainage pumping, and it historically generated part of its own power at a non-standard frequency to drive the oldest pumps. That combination makes the system unlike any other in the country: power generation, pumping capacity and flood safety are the same engineering problem, and modernizing any part of it means reconciling equipment from several different eras.",
+      "The ground works against the whole system. Subsidence moves buried pipe and breaks joints, which drives very high water loss and persistent infiltration into the sewers, and soft soils make every excavation and foundation a geotechnical exercise. The Mississippi provides the drinking water supply, with seasonal saltwater intrusion upriver a recurring concern for intakes.",
+    ],
+    hiringFocus: [
+      {
+        role: "Pumping & drainage engineers",
+        why: "Interior drainage pumping is continuously operating flood protection rather than periodic capital work.",
+      },
+      {
+        role: "Power & electrical engineers for utility plant",
+        why: "Self-generation and mixed-era pumping equipment make plant electrical engineering a rare local specialism.",
+      },
+      {
+        role: "Pipeline rehabilitation engineers",
+        why: "Subsidence-driven breakage and infiltration make renewal and trenchless methods a permanent program.",
+      },
+      {
+        role: "Geotechnical engineers",
+        why: "Soft compressible soils govern every excavation, foundation and buried structure in the system.",
+      },
+    ],
+    licensure:
+      "Louisiana licenses through the Professional Engineering and Land Surveying Board, with comity on an NCEES record the usual individual route, and firms need a certificate of authorization with a resident professional in responsible charge. Operators are certified separately by the state health department for drinking water and the environmental quality department for wastewater, both by class, and both agencies review construction plans.",
   },
   {
     slug: "louisville-ky",
@@ -946,6 +1298,38 @@ export const WATER_CITIES: WaterCity[] = [
       "Lead service line replacement",
       "Flood pump station rehabilitation",
     ],
+    agencies: [
+      "Louisville and Jefferson County Metropolitan Sewer District",
+      "Louisville Water Company",
+      "Kentucky Division of Water",
+      "Kentucky Energy and Environment Cabinet",
+      "Kentucky Infrastructure Authority",
+      "Ohio River Valley Water Sanitation Commission",
+    ],
+    marketDetail: [
+      "Louisville's drinking water is drawn from the Ohio using riverbank filtration, letting the aquifer alongside the river do part of the treatment before water reaches the plant. That is an unusual approach at this scale and it makes hydrogeology part of the water supply engineering rather than a separate discipline, with collector well performance and aquifer behavior as live operational questions.",
+      "The wastewater side runs a consent decree program built around a large storage tunnel and a sustained effort on separation, conveyance and treatment capacity. Karst geology through parts of the county complicates both systems: it gives surface water fast routes underground, makes infiltration patterns hard to predict, and turns deep excavation into a subsurface risk assessment every time.",
+    ],
+    hiringFocus: [
+      {
+        role: "Tunnel & conveyance engineers",
+        why: "A large storage tunnel program concentrates deep conveyance and hydraulic expertise in the region.",
+      },
+      {
+        role: "Water supply engineers with hydrogeology experience",
+        why: "Riverbank filtration makes aquifer behavior part of the treatment train rather than a separate study.",
+      },
+      {
+        role: "Collection system & infiltration engineers",
+        why: "Karst terrain makes inflow and infiltration harder to locate and quantify than in ordinary geology.",
+      },
+      {
+        role: "Treatment process engineers",
+        why: "Captured wet weather flow and river source variability both keep plant process work continuously funded.",
+      },
+    ],
+    licensure:
+      "Kentucky licenses through the State Board of Licensure for Professional Engineers and Land Surveyors, with comity on an NCEES record the normal route, and engineers covering the full metro frequently hold Indiana registration as well. The Division of Water certifies operators by class and reviews construction plans for water and wastewater works, so the operator credential and plan approval experience sit alongside the engineering license.",
   },
   {
     slug: "oklahoma-city-ok",
@@ -963,6 +1347,38 @@ export const WATER_CITIES: WaterCity[] = [
       "Lead service line inventory & replacement",
       "Stormwater & flood control drainage design",
     ],
+    agencies: [
+      "Oklahoma City Utilities Department",
+      "Oklahoma Water Resources Board",
+      "Oklahoma Department of Environmental Quality",
+      "Central Oklahoma Master Conservancy District",
+      "Oklahoma City Water Utilities Trust",
+      "Grand River Dam Authority",
+    ],
+    marketDetail: [
+      "Oklahoma City does not have enough local water and has solved that by reaching a long way for it. Raw water is moved to the metro from reservoirs well outside the region through large transmission pipelines, which makes long-distance conveyance, pumping and storage a central part of the utility's engineering rather than an occasional project. Reliability over that distance is the design problem that defines the system.",
+      "Treatment is shaped by the sources. Surface reservoirs in this climate produce seasonal algae, taste and odor episodes and variable turbidity, so process design and optimization are ongoing concerns rather than settled decisions. On the wastewater side, a growing service area keeps trunk sewer extension and treatment capacity work steady, and flat terrain with expansive clay makes gravity conveyance and pipe bedding harder than the topography suggests.",
+    ],
+    hiringFocus: [
+      {
+        role: "Transmission & pumping engineers",
+        why: "Supply moved long distances from outside the region makes large conveyance and lift design a core utility function.",
+      },
+      {
+        role: "Water treatment process engineers",
+        why: "Reservoir sources with seasonal algae and taste and odor events require continual process attention.",
+      },
+      {
+        role: "Collection system & trunk sewer engineers",
+        why: "A growing service area needs conveyance and treatment capacity extended ahead of development.",
+      },
+      {
+        role: "Geotechnical & pipeline engineers",
+        why: "Expansive clay moves buried pipe and makes bedding and joint design a durability question.",
+      },
+    ],
+    licensure:
+      "Oklahoma licenses through the State Board of Licensure for Professional Engineers and Land Surveyors, with comity on an NCEES record the standard individual route and a certificate of authorization required for firms. The Department of Environmental Quality certifies water and wastewater operators by class and issues construction permits for public water supply and treatment works, so the operator credential and permit experience are checked separately from the license.",
   },
   {
     slug: "charleston-sc",
@@ -980,6 +1396,38 @@ export const WATER_CITIES: WaterCity[] = [
       "Hurricane-hardened lift station design",
       "Lead service line replacement",
     ],
+    agencies: [
+      "Charleston Water System",
+      "South Carolina Department of Environmental Services",
+      "Charleston County Stormwater Management",
+      "Berkeley County Water and Sanitation",
+      "South Carolina Department of Natural Resources",
+      "South Carolina Rural Infrastructure Authority",
+    ],
+    marketDetail: [
+      "Charleston's water engineering is dominated by the fact that the ground is barely above the sea and the sea is coming up. Drainage on the peninsula relies on deep tunnels and pump stations because gravity outfalls simply do not work at high tide, and the design tide rather than the design storm often governs. Groundwater sits close to the surface, which pushes infiltration into sewers and complicates every excavation.",
+      "Salt is the second constant. Intrusion is a live concern for supply and for any aquifer source, brackish conditions attack buried metal and concrete, and soft Lowcountry soils mean pipelines and structures need ground improvement or deep foundations far more often than in firmer ground. Rapid growth in the outlying counties adds trunk main and treatment capacity work on top of the resilience program.",
+    ],
+    hiringFocus: [
+      {
+        role: "Drainage & pumping engineers",
+        why: "Tidal conditions make gravity outfall unreliable, so pumped drainage is the region's defining water infrastructure.",
+      },
+      {
+        role: "Collection system & infiltration engineers",
+        why: "A shallow water table drives persistent infiltration that has to be found and reduced, not just treated.",
+      },
+      {
+        role: "Coastal resilience & sea level adaptation engineers",
+        why: "Design tide rather than design storm increasingly governs, which changes how systems are sized.",
+      },
+      {
+        role: "Geotechnical & pipeline engineers",
+        why: "Soft soils and brackish groundwater make foundations and material durability a design driver.",
+      },
+    ],
+    licensure:
+      "South Carolina licenses engineers through the Board of Registration for Professional Engineers and Surveyors within the Department of Labor, Licensing and Regulation, with comity on an NCEES record the usual route. Water and wastewater operators are certified separately by class, and the state environmental agency reviews construction plans for treatment and conveyance works. Coastal projects add the state's coastal zone permitting on top.",
   },
   {
     slug: "newark-nj",
@@ -997,6 +1445,38 @@ export const WATER_CITIES: WaterCity[] = [
       "Combined sewer overflow reduction program",
       "Port Newark-Elizabeth industrial water infrastructure",
     ],
+    agencies: [
+      "Newark Department of Water and Sewer Utilities",
+      "Passaic Valley Sewerage Commission",
+      "New Jersey Department of Environmental Protection",
+      "North Jersey District Water Supply Commission",
+      "New Jersey Infrastructure Bank",
+      "Passaic Valley Water Commission",
+    ],
+    marketDetail: [
+      "Newark ran one of the fastest large-scale lead service line replacement programs in the country, and that experience has made service line inventory, replacement logistics and corrosion control chemistry an established local competence. With federal requirements now pushing every utility toward the same work, engineers who have actually delivered a replacement program at scale are in demand well beyond this city.",
+      "The wastewater side is regional and very large. One of the biggest treatment plants in the country serves the metro and discharges to the harbor, the collection system in the older municipalities is combined, and overflow control obligations keep separation, storage and conveyance work funded. Old industrial ground means contaminated soils complicate a significant share of buried infrastructure projects.",
+    ],
+    hiringFocus: [
+      {
+        role: "Lead service line & distribution engineers",
+        why: "A delivered replacement program at scale is a rare competence now required of utilities everywhere.",
+      },
+      {
+        role: "Treatment process engineers",
+        why: "A very large regional plant under harbor discharge obligations keeps process and capacity work continuous.",
+      },
+      {
+        role: "Combined sewer & overflow control engineers",
+        why: "Older municipalities on combined systems carry funded separation and storage obligations.",
+      },
+      {
+        role: "Pipeline engineers with contaminated soil experience",
+        why: "Legacy industrial ground makes soil management part of buried infrastructure delivery.",
+      },
+    ],
+    licensure:
+      "New Jersey licenses through the State Board of Professional Engineers and Land Surveyors within the Division of Consumer Affairs, with comity on an NCEES record the normal route. The Department of Environmental Protection licenses water and wastewater operators by class and permits treatment works construction, and its rules on lead service lines and corrosion control are more prescriptive than most states, which engineers here are expected to know.",
   },
   {
     slug: "san-francisco-ca",
@@ -1014,6 +1494,38 @@ export const WATER_CITIES: WaterCity[] = [
       "Lead service line replacement",
       "Combined sewer overflow reduction projects",
     ],
+    agencies: [
+      "San Francisco Public Utilities Commission",
+      "State Water Resources Control Board Division of Drinking Water",
+      "Bay Area Water Supply and Conservation Agency",
+      "San Francisco Bay Regional Water Quality Control Board",
+      "California Department of Water Resources",
+      "US Bureau of Reclamation",
+    ],
+    marketDetail: [
+      "The regional water system delivers Sierra snowmelt to the Bay Area largely by gravity, and the pipelines and tunnels carrying it cross active faults on their way. That has driven a sustained seismic improvement program aimed at restoring service within days of a major earthquake, built around fault crossings, alternative routing, storage and hardened facilities. It is an unusual engineering brief and the people who have worked on it are few.",
+      "San Francisco also runs a combined sewer system, which is rare on the west coast, so wet weather storage, transport boxes and treatment capacity work the way they do in an eastern city rather than a Californian one. Both wastewater treatment plants sit at the waterfront and are being rebuilt with sea level rise in the design basis, which links the coastal and process engineering problems directly.",
+    ],
+    hiringFocus: [
+      {
+        role: "Seismic resilience engineers for pipelines & tunnels",
+        why: "A gravity supply crossing active faults has driven a rare, sustained survivability program.",
+      },
+      {
+        role: "Combined sewer & wet weather engineers",
+        why: "A combined system is unusual in the west and requires storage and transport expertise most local engineers lack.",
+      },
+      {
+        role: "Treatment process engineers",
+        why: "Both waterfront plants are being rebuilt, concentrating process design and commissioning demand.",
+      },
+      {
+        role: "Coastal & sea level adaptation engineers",
+        why: "Waterfront treatment facilities are being designed against rising water as a stated basis of design.",
+      },
+    ],
+    licensure:
+      "California licenses through the Board for Professional Engineers, Land Surveyors and Geologists and does not grant straightforward comity, so an out-of-state PE must satisfy California-specific examination requirements. Treatment and distribution operators are certified separately by the State Water Resources Control Board by grade, and the regional water quality control board administers discharge permitting that shapes process design.",
   },
   {
     slug: "san-diego-ca",
@@ -1031,6 +1543,38 @@ export const WATER_CITIES: WaterCity[] = [
       "Lead service line inventory & replacement",
       "Cross-border Tijuana River pollution mitigation",
     ],
+    agencies: [
+      "San Diego Public Utilities Department",
+      "San Diego County Water Authority",
+      "State Water Resources Control Board",
+      "Metropolitan Water District of Southern California",
+      "San Diego Regional Water Quality Control Board",
+      "International Boundary and Water Commission",
+    ],
+    marketDetail: [
+      "San Diego imports most of its water and has spent a generation trying to import less. The centerpiece is a large potable reuse program that takes treated wastewater through advanced purification and returns it to the supply, which is the most technically demanding water work in the region: membrane processes, advanced oxidation, monitoring and the public and regulatory case that goes with it.",
+      "The wastewater system carries its own distinctive history. The main ocean outfall plant has long operated under a discharge arrangement different from the national default, and reducing the flow it handles is part of the reuse rationale rather than a separate goal. Cross-border flows from the south add an international dimension that no other American metro has to engineer around.",
+    ],
+    hiringFocus: [
+      {
+        role: "Advanced water purification engineers",
+        why: "A large potable reuse program makes membrane and advanced oxidation process design the region's deepest specialism.",
+      },
+      {
+        role: "Water resources & supply planning engineers",
+        why: "Import dependence makes long-horizon supply diversification a permanent utility function.",
+      },
+      {
+        role: "Treatment process engineers",
+        why: "Reducing ocean discharge by recovering flow into reuse links plant process work directly to supply strategy.",
+      },
+      {
+        role: "Conveyance & pump station engineers",
+        why: "Moving purified water back into the supply requires substantial new transmission and lift infrastructure.",
+      },
+    ],
+    licensure:
+      "California licenses through the Board for Professional Engineers, Land Surveyors and Geologists and does not grant straightforward comity to out-of-state PEs. Operators are certified separately by the State Water Resources Control Board by grade, and potable reuse carries its own regulatory framework and operator qualification expectations that sit above ordinary treatment requirements.",
   },
   {
     slug: "san-antonio-tx",
@@ -1048,6 +1592,38 @@ export const WATER_CITIES: WaterCity[] = [
       "Dos Rios & Leon Creek WRC upgrades",
       "Lead service line replacement",
     ],
+    agencies: [
+      "San Antonio Water System",
+      "Edwards Aquifer Authority",
+      "Texas Commission on Environmental Quality",
+      "San Antonio River Authority",
+      "Texas Water Development Board",
+      "Bexar County",
+    ],
+    marketDetail: [
+      "San Antonio sits on a karst aquifer that is both its historic water supply and a regulated ecosystem, since the springs it feeds support protected species and carry legally significant flow requirements. Pumping is permitted and capped, recharge zone development is restricted, and the utility has had to build supply alternatives around those limits. Water resources engineering here is inseparable from aquifer science and permitting.",
+      "The response has been unusually ambitious: one of the largest aquifer storage and recovery operations in the country, a recycled water distribution system serving industrial and irrigation customers at scale, and imported supply brought in by long pipeline. Each of those is a distinct engineering specialism, and together they make this a deeper water market than metro size alone would predict.",
+    ],
+    hiringFocus: [
+      {
+        role: "Aquifer storage & recovery engineers",
+        why: "A large storage and recovery operation is a specialism with very few practitioners nationally.",
+      },
+      {
+        role: "Water reuse & distribution engineers",
+        why: "A large recycled water system serving industrial customers is engineered and operated as its own network.",
+      },
+      {
+        role: "Water resources & permitting engineers",
+        why: "Capped aquifer pumping and springflow obligations make supply planning a regulatory discipline.",
+      },
+      {
+        role: "Transmission & pumping engineers",
+        why: "Imported supply arriving by long pipeline requires sustained conveyance and lift engineering.",
+      },
+    ],
+    licensure:
+      "Texas licenses through the Board of Professional Engineers and Land Surveyors, with comity on an NCEES record the usual individual route and separate firm registration required. The Texas Commission on Environmental Quality licenses water and wastewater operators by class and reviews plans for public water systems, and work over the recharge zone requires its own approved protection plan independent of the engineering license.",
   },
   {
     slug: "austin-tx",
@@ -1065,6 +1641,38 @@ export const WATER_CITIES: WaterCity[] = [
       "New growth-corridor transmission main extensions",
       "Lead service line inventory & replacement",
     ],
+    agencies: [
+      "Austin Water",
+      "Lower Colorado River Authority",
+      "Texas Commission on Environmental Quality",
+      "Barton Springs/Edwards Aquifer Conservation District",
+      "Texas Water Development Board",
+      "Travis County",
+    ],
+    marketDetail: [
+      "Austin's supply comes from a river system managed by a regional authority whose storage is shared with agriculture, industry and downstream users, so the city's water security depends on decisions taken outside it. That has pushed the utility toward conservation, reuse and storage of its own, and toward long-horizon planning that treats drought as the design condition rather than an exception.",
+      "Locally the city has gone further than most in requiring buildings to participate. Large new developments are required to capture and reuse water on site, which turns what was a plumbing question into a distributed infrastructure program with its own permitting, water quality and monitoring requirements. Around that sits conventional growth pressure: treatment capacity, trunk mains and collection system extension into a fast-expanding service area.",
+    ],
+    hiringFocus: [
+      {
+        role: "Water reuse engineers",
+        why: "On-site reuse requirements for large developments make decentralized water systems a permitted, engineered category.",
+      },
+      {
+        role: "Water resources & drought planning engineers",
+        why: "A shared river supply makes long-horizon planning under drought conditions a core utility function.",
+      },
+      {
+        role: "Treatment process engineers",
+        why: "Capacity expansion and reuse both require process design beyond conventional surface water treatment.",
+      },
+      {
+        role: "Collection system & trunk main engineers",
+        why: "A rapidly expanding service area needs conveyance extended ahead of development.",
+      },
+    ],
+    licensure:
+      "Texas licenses through the Board of Professional Engineers and Land Surveyors, with comity on an NCEES record the usual route and firm registration required separately. The Texas Commission on Environmental Quality licenses operators and reviews public water system plans, while the city's own reuse and watershed ordinances impose requirements that are more prescriptive than state rules and are what most often catch engineers new to Austin.",
   },
   {
     slug: "jacksonville-fl",
@@ -1082,6 +1690,38 @@ export const WATER_CITIES: WaterCity[] = [
       "Coastal resiliency & storm-hardened lift stations",
       "JAXPORT industrial water infrastructure",
     ],
+    agencies: [
+      "JEA",
+      "St. Johns River Water Management District",
+      "Florida Department of Environmental Protection",
+      "Florida Department of Health",
+      "City of Jacksonville Public Works",
+      "Florida Water Resources Advisory Council",
+    ],
+    marketDetail: [
+      "Jacksonville's drinking water comes from the Floridan aquifer, and the regional constraint is how much of it can be permitted rather than how it is treated. Consumptive use permitting caps withdrawals, which pushes the utility toward conservation, reuse and alternative supply, and makes hydrogeology and permitting central to water supply engineering here rather than peripheral.",
+      "The wastewater program is dominated by a long-running effort to bring septic areas onto the public sewer. That is not a single project but thousands of connections, new trunk sewers, pump stations and treatment capacity, driven by nutrient loading to the St. Johns and the water quality obligations attached to it. Flat terrain and a high water table mean pumping rather than gravity, and dewatering on almost every excavation.",
+    ],
+    hiringFocus: [
+      {
+        role: "Collection system & septic conversion engineers",
+        why: "Bringing septic areas onto public sewer is a sustained program of trunk mains, pump stations and connections.",
+      },
+      {
+        role: "Pump station engineers",
+        why: "Flat terrain and a high water table make pumped conveyance the default rather than the exception.",
+      },
+      {
+        role: "Water supply & hydrogeology engineers",
+        why: "Permitted aquifer withdrawal makes supply a hydrogeological and regulatory problem before a treatment one.",
+      },
+      {
+        role: "Nutrient removal process engineers",
+        why: "River water quality obligations drive nitrogen and phosphorus limits on treatment across the region.",
+      },
+    ],
+    licensure:
+      "Florida licenses engineers through the Board of Professional Engineers, with comity on an NCEES record the standard route. Water and wastewater operators are licensed separately by the Department of Environmental Protection by class, the Department of Health regulates onsite systems, and the regional water management district issues the consumptive use permits that govern how much water a utility may withdraw.",
   },
   {
     slug: "orlando-fl",
@@ -1099,6 +1739,38 @@ export const WATER_CITIES: WaterCity[] = [
       "Lead service line inventory & replacement",
       "Theme-park district utility infrastructure",
     ],
+    agencies: [
+      "Orlando Utilities Commission",
+      "Orange County Utilities",
+      "St. Johns River Water Management District",
+      "Florida Department of Environmental Protection",
+      "Toho Water Authority",
+      "Central Florida Water Initiative",
+    ],
+    marketDetail: [
+      "Central Florida has reached the limit of what the aquifer can sustainably supply, and regional permitting now treats groundwater as effectively capped. Growth therefore has to be served from somewhere else, which has made alternative supply, surface water treatment and above all reuse the region's central water engineering problem rather than an efficiency measure.",
+      "Reuse here is genuinely large scale. Reclaimed water is distributed through its own separate network for irrigation and cooling across much of the metro, and rapid infiltration basins return treated flow to the ground. Designing, extending and operating a second pressurized network alongside the potable one is a distinct specialism, and karst geology means any recharge or disposal to ground has to account for how quickly water moves underground.",
+    ],
+    hiringFocus: [
+      {
+        role: "Reclaimed water system engineers",
+        why: "A large separate distribution network for reuse is engineered and operated as its own utility.",
+      },
+      {
+        role: "Water supply & alternative source engineers",
+        why: "Capped groundwater permitting forces growth onto surface water and reuse, which is a design problem.",
+      },
+      {
+        role: "Treatment process engineers",
+        why: "Alternative sources and recharge quality requirements both demand process work beyond conventional groundwater treatment.",
+      },
+      {
+        role: "Hydrogeology & recharge engineers",
+        why: "Karst geology makes the behavior of water returned to ground a design question rather than an assumption.",
+      },
+    ],
+    licensure:
+      "Florida licenses through the Board of Professional Engineers, with comity on an NCEES record the normal route. Operators are licensed by class through the Department of Environmental Protection, and the regional water management district controls consumptive use permitting, which in this part of the state is the binding constraint on any supply proposal and is where most water engineering here actually starts.",
   },
   {
     slug: "pittsburgh-pa",
@@ -1116,6 +1788,38 @@ export const WATER_CITIES: WaterCity[] = [
       "Allegheny River intake resiliency upgrades",
       "Combined sewer overflow reduction projects",
     ],
+    agencies: [
+      "Pittsburgh Water",
+      "ALCOSAN",
+      "Pennsylvania Department of Environmental Protection",
+      "Allegheny County Health Department",
+      "PENNVEST",
+      "Ohio River Valley Water Sanitation Commission",
+    ],
+    marketDetail: [
+      "Pittsburgh's water utility has spent recent years rebuilding after a long period of underinvestment, and that has made the work unusually broad: lead service line replacement, corrosion control chemistry, treatment plant upgrades, reservoir covering and a distribution network needing systematic renewal rather than reactive repair. Engineers who can plan and prioritize renewal across an entire aging system are what this market most needs.",
+      "Wastewater is regional and consent-decree driven. A single authority treats for dozens of municipalities on a combined system, which means overflow control involves aligning many separate collection systems with one regional plan, and the steep terrain that makes the city distinctive also makes conveyance, siphons and pump stations unavoidable. Historic mine workings complicate deep construction across parts of the county.",
+    ],
+    hiringFocus: [
+      {
+        role: "Distribution system renewal engineers",
+        why: "A systematic rebuild of aging network and lead service lines requires prioritization rather than reactive repair.",
+      },
+      {
+        role: "Combined sewer & regional conveyance engineers",
+        why: "One authority coordinating dozens of municipal systems makes regional hydraulic planning a specialism.",
+      },
+      {
+        role: "Treatment process engineers",
+        why: "Plant upgrades and corrosion control chemistry are both funded and technically demanding.",
+      },
+      {
+        role: "Geotechnical & tunneling engineers",
+        why: "Steep terrain and historic mine workings make deep conveyance construction a subsurface risk problem.",
+      },
+    ],
+    licensure:
+      "Pennsylvania licenses through the State Registration Board for Professional Engineers, Land Surveyors and Geologists, with comity on an NCEES record the normal route. The Department of Environmental Protection certifies water and wastewater operators by class and issues construction permits for public water supply and treatment works, and its lead and corrosion control requirements are an active area engineers here are expected to follow closely.",
   },
   {
     slug: "cincinnati-oh",
@@ -1133,6 +1837,38 @@ export const WATER_CITIES: WaterCity[] = [
       "Lead service line replacement",
       "Ohio River intake & source-water protection",
     ],
+    agencies: [
+      "Metropolitan Sewer District of Greater Cincinnati",
+      "Greater Cincinnati Water Works",
+      "Ohio EPA",
+      "Hamilton County",
+      "Ohio River Valley Water Sanitation Commission",
+      "Ohio Water Development Authority",
+    ],
+    marketDetail: [
+      "The region's drinking water utility treats a heavily used river to a standard well above the regulatory minimum, using granular activated carbon and ultraviolet disinfection to deal with organic contaminants and spills upstream. That makes advanced treatment operation and process optimization a genuine local competence, and it gives engineers here experience with contaminant removal that most surface water utilities never need.",
+      "The wastewater program is one of the most demanding consent decrees in the country, and the region has answered part of it by daylighting buried streams and separating stormwater into restored surface channels rather than storing everything underground. That approach puts hydraulics, urban design and land acquisition into the same project, and the steep hillside terrain makes both conveyance and surface solutions harder to route.",
+    ],
+    hiringFocus: [
+      {
+        role: "Advanced water treatment engineers",
+        why: "Carbon and ultraviolet treatment on a heavily used river is a competence most surface water utilities lack.",
+      },
+      {
+        role: "Stream restoration & separation engineers",
+        why: "Daylighting buried watercourses as a compliance strategy combines hydraulics with surface design.",
+      },
+      {
+        role: "Combined sewer & conveyance engineers",
+        why: "A major consent decree funds sustained storage, separation and conveyance design.",
+      },
+      {
+        role: "Hydraulic modelers",
+        why: "Demonstrating overflow reduction across a hillside combined system is a modeling problem first.",
+      },
+    ],
+    licensure:
+      "Ohio licenses through the State Board of Registration for Professional Engineers and Surveyors, with comity on an NCEES record the standard route, and engineers covering the full metro often hold Kentucky and Indiana registration too. Ohio EPA certifies operators by class and reviews plans for treatment and conveyance works, which is a required step alongside the license.",
   },
   {
     slug: "cleveland-oh",
@@ -1150,6 +1886,38 @@ export const WATER_CITIES: WaterCity[] = [
       "Lead service line replacement",
       "Green infrastructure stormwater program",
     ],
+    agencies: [
+      "Northeast Ohio Regional Sewer District",
+      "Cleveland Water",
+      "Ohio EPA",
+      "Cuyahoga County",
+      "Great Lakes Commission",
+      "Ohio Water Development Authority",
+    ],
+    marketDetail: [
+      "Cleveland draws drinking water from Lake Erie and supplies a large regional service area from it, and the lake has become a more difficult source than it used to be. Harmful algal blooms in the shallower parts of the basin, and the taste, odor and toxin risks that come with them, have pushed monitoring, intake management and treatment response into the front rank of operational concerns for every lake utility.",
+      "Wastewater is a large consent decree program built on deep storage tunnels, with a substantial committed green infrastructure component alongside it. That gives the region both tunneling and surface stormwater design work at scale, and the same freeze-thaw climate that damages roads also drives pipe breakage and infiltration in an old collection network running through legacy industrial ground.",
+    ],
+    hiringFocus: [
+      {
+        role: "Tunnel & deep conveyance engineers",
+        why: "A storage tunnel program at scale concentrates underground hydraulic expertise in the region.",
+      },
+      {
+        role: "Water treatment process engineers",
+        why: "Algal toxin and taste and odor risk on a lake source makes monitoring and treatment response continuous work.",
+      },
+      {
+        role: "Stormwater & green infrastructure engineers",
+        why: "Green infrastructure is a committed part of the compliance plan rather than an optional supplement.",
+      },
+      {
+        role: "Collection system rehabilitation engineers",
+        why: "An old network in a freeze-thaw climate makes breakage, infiltration and renewal a standing program.",
+      },
+    ],
+    licensure:
+      "Ohio licenses through the State Board of Registration for Professional Engineers and Surveyors, with comity on an NCEES record the standard route. Ohio EPA certifies water and wastewater operators by class and reviews construction plans for treatment and conveyance works. Because the source is a Great Lake, the interstate compact governing withdrawals and diversions forms part of the regulatory context here.",
   },
   {
     slug: "st-louis-mo",
@@ -1167,6 +1935,38 @@ export const WATER_CITIES: WaterCity[] = [
       "Lead service line replacement",
       "Mississippi River intake resiliency upgrades",
     ],
+    agencies: [
+      "Metropolitan St. Louis Sewer District",
+      "Missouri American Water",
+      "Missouri Department of Natural Resources",
+      "City of St. Louis Water Division",
+      "Illinois Environmental Protection Agency",
+      "US Army Corps of Engineers St. Louis District",
+    ],
+    marketDetail: [
+      "The regional sewer district serves the city and most of the county, and it operates two quite different systems at once: a combined network in the older core and separate sanitary and storm systems in the postwar suburbs. Its overflow control obligations therefore require different engineering answers in different parts of the same service area, which makes hydraulic modeling and program prioritization unusually important.",
+      "Drinking water is drawn from two great rivers just above their confluence, which means very high and variable sediment loads and treatment designed around solids handling at a scale most utilities never face. Residuals management is a major operation in its own right, and intake reliability through floods and ice is a recurring engineering concern rather than a seasonal inconvenience.",
+    ],
+    hiringFocus: [
+      {
+        role: "Collection system & overflow control engineers",
+        why: "One authority running both combined and separate systems needs different compliance engineering in each.",
+      },
+      {
+        role: "Hydraulic modelers",
+        why: "Prioritizing a very large program across two system types is a modeling and planning problem first.",
+      },
+      {
+        role: "Water treatment & residuals engineers",
+        why: "Extremely high sediment loads from two rivers make solids handling a major process operation.",
+      },
+      {
+        role: "Pump station & conveyance engineers",
+        why: "Flat floodplain service areas and river-level constraints make pumped conveyance widespread.",
+      },
+    ],
+    licensure:
+      "Missouri licenses through the Board for Architects, Professional Engineers, Professional Land Surveyors and Professional Landscape Architects, with comity on an NCEES record the usual route and corporate authorization required for firms. The Department of Natural Resources certifies operators by class and issues construction permits for water and wastewater works, and because the metro reaches into Illinois, projects there fall under a second state agency entirely.",
   },
   {
     slug: "raleigh-nc",
@@ -1184,6 +1984,38 @@ export const WATER_CITIES: WaterCity[] = [
       "Lead service line inventory & replacement",
       "Reclaimed water distribution expansion",
     ],
+    agencies: [
+      "Raleigh Water",
+      "North Carolina Department of Environmental Quality",
+      "NC Division of Water Resources",
+      "Wake County",
+      "Town of Cary",
+      "North Carolina Department of Health and Human Services",
+    ],
+    marketDetail: [
+      "The Triangle's water engineering is governed by nutrient rules written for specific reservoirs, which set numeric nitrogen and phosphorus obligations on both treatment plants and new development across whole watersheds. That is a stricter and more quantified regime than most of the country operates under, and it means stormwater design, land development and plant process engineering are all measured against the same nutrient accounting.",
+      "Growth supplies the pressure. The region's population has outrun its water and sewer infrastructure for years, so treatment capacity expansion, trunk main extension, interbasin considerations and reuse are all live at once. Reclaimed water distribution has grown accordingly, and the utility plans supply on a horizon that assumes the growth continues rather than levels off.",
+    ],
+    hiringFocus: [
+      {
+        role: "Nutrient removal process engineers",
+        why: "Reservoir nutrient rules impose numeric nitrogen and phosphorus limits that govern plant design directly.",
+      },
+      {
+        role: "Stormwater & nutrient accounting engineers",
+        why: "New development must demonstrate nutrient performance, making treatment a quantified design outcome.",
+      },
+      {
+        role: "Treatment capacity & trunk main engineers",
+        why: "Population growth outpacing infrastructure keeps capacity expansion continuously funded.",
+      },
+      {
+        role: "Water reuse engineers",
+        why: "Reclaimed water distribution is expanding as part of the region's supply strategy.",
+      },
+    ],
+    licensure:
+      "North Carolina licenses engineers through the Board of Examiners for Engineers and Surveyors, with comity on an NCEES record the usual individual route, and the state licenses firms separately. Water treatment and distribution operators are certified by their own state boards by grade, and the Department of Environmental Quality issues the permits that carry the nutrient limits shaping most design here.",
   },
   {
     slug: "washington-dc",
@@ -1201,6 +2033,38 @@ export const WATER_CITIES: WaterCity[] = [
       "Anacostia & Potomac River resiliency projects",
       "Combined sewer overflow reduction program",
     ],
+    agencies: [
+      "DC Water",
+      "Washington Aqueduct (US Army Corps of Engineers)",
+      "DC Department of Energy and Environment",
+      "Interstate Commission on the Potomac River Basin",
+      "WSSC Water",
+      "EPA Region 3",
+    ],
+    marketDetail: [
+      "The District has an arrangement found nowhere else: its drinking water is treated by a federal agency and then distributed by the local utility, so supply and distribution sit under different owners with different funding and approval processes. Engineers working the supply side deal with federal procurement and criteria, while distribution renewal and lead service line replacement run on the utility's own program.",
+      "Wastewater is engineered at exceptional scale. The regional plant is among the largest advanced treatment facilities anywhere, serving well beyond the District and operating to nutrient limits driven by Chesapeake Bay obligations, and a deep tunnel system built to capture combined sewer overflows has added major underground conveyance and pumping to the system. Both give local engineers experience at a size few other markets offer.",
+    ],
+    hiringFocus: [
+      {
+        role: "Advanced treatment process engineers",
+        why: "An exceptionally large nutrient removal plant offers process experience at a scale few markets provide.",
+      },
+      {
+        role: "Tunnel & deep conveyance engineers",
+        why: "A major storage tunnel program concentrates underground hydraulic and pumping expertise.",
+      },
+      {
+        role: "Distribution renewal & lead service line engineers",
+        why: "An old distribution network under replacement obligations makes renewal a sustained program.",
+      },
+      {
+        role: "Multi-jurisdiction water engineers",
+        why: "Federal supply, District distribution and suburban regional utilities each operate under different processes.",
+      },
+    ],
+    licensure:
+      "The District licenses through its Board of Professional Engineering, with comity on an NCEES record the normal route, and most engineers working this market also hold Maryland and Virginia registration because the regional systems cross all three. Operator certification is administered locally, while the federal supply side follows its own criteria and contracting requirements independent of licensure.",
   },
   {
     slug: "hartford-ct",
@@ -1218,6 +2082,38 @@ export const WATER_CITIES: WaterCity[] = [
       "Lead service line replacement",
       "Combined sewer overflow reduction projects",
     ],
+    agencies: [
+      "Metropolitan District Commission",
+      "Connecticut Department of Energy and Environmental Protection",
+      "Connecticut Department of Public Health Drinking Water Section",
+      "Hartford Department of Public Works",
+      "Connecticut Water Company",
+      "Connecticut Clean Water Fund",
+    ],
+    marketDetail: [
+      "A single regional authority supplies drinking water and treats wastewater for Hartford and the surrounding towns, which is an unusual degree of consolidation and means its capital program effectively is the region's water engineering market. The older member communities are served by combined sewers under a long-running overflow reduction order, so separation, storage and conveyance work is funded on a multi-decade horizon.",
+      "Supply comes from protected reservoirs west of the river, delivered largely by gravity, which keeps source protection and transmission main condition central rather than treatment complexity. The Connecticut River is the receiving water, and its floodplain and levee system constrain where plant and outfalls can sit. A long freeze-thaw season drives main breaks and infiltration across an aging network.",
+    ],
+    hiringFocus: [
+      {
+        role: "Combined sewer & separation engineers",
+        why: "A multi-decade overflow reduction order funds continuous separation, storage and conveyance design.",
+      },
+      {
+        role: "Transmission main & distribution engineers",
+        why: "Gravity supply from protected reservoirs makes large transmission condition and reliability the supply-side priority.",
+      },
+      {
+        role: "Collection system & infiltration engineers",
+        why: "Freeze-thaw damage to an aging network drives persistent infiltration that has to be located and reduced.",
+      },
+      {
+        role: "Treatment process engineers",
+        why: "Plant upgrades to meet discharge obligations on the river keep process work steadily funded.",
+      },
+    ],
+    licensure:
+      "Connecticut licenses through the State Board of Examiners for Professional Engineers and Land Surveyors within the Department of Consumer Protection, with comity on an NCEES record the standard route. The environmental protection department certifies wastewater operators and the public health department certifies drinking water operators, both by class, and both review plans for works within their remit.",
   },
   {
     slug: "albuquerque-nm",
@@ -1235,6 +2131,38 @@ export const WATER_CITIES: WaterCity[] = [
       "Lead service line inventory & replacement",
       "Drought contingency & reuse infrastructure",
     ],
+    agencies: [
+      "Albuquerque Bernalillo County Water Utility Authority",
+      "New Mexico Environment Department",
+      "New Mexico Office of the State Engineer",
+      "Middle Rio Grande Conservancy District",
+      "US Bureau of Reclamation",
+      "New Mexico Interstate Stream Commission",
+    ],
+    marketDetail: [
+      "Albuquerque spent decades drawing down its aquifer faster than it recharged, and the correction has defined the utility ever since: bringing in surface water imported through a transbasin diversion, resting the groundwater, and managing the aquifer as storage rather than as the primary supply. That makes conjunctive use, recharge and water rights administration central to water engineering here in a way treatment alone never is.",
+      "Treatment carries its own local wrinkle. Naturally occurring arsenic in the groundwater required a fleet of treatment facilities that many utilities never have to build, and the surface water plant has to handle a silty, seasonally variable river. Compact obligations on the Rio Grande sit behind everything, so how much water may be used and when is a legal question that shapes the engineering.",
+    ],
+    hiringFocus: [
+      {
+        role: "Water resources & conjunctive use engineers",
+        why: "Balancing imported surface water against aquifer storage is the utility's central long-term engineering task.",
+      },
+      {
+        role: "Treatment process engineers with arsenic removal experience",
+        why: "Naturally occurring arsenic required treatment facilities most utilities never have to design or operate.",
+      },
+      {
+        role: "Water rights & compact-aware planning engineers",
+        why: "Interstate compact obligations make legal availability a design constraint on any supply proposal.",
+      },
+      {
+        role: "Reuse & recharge engineers",
+        why: "Returning treated water to the system and to the aquifer is core to the region's supply strategy.",
+      },
+    ],
+    licensure:
+      "New Mexico licenses through the State Board of Licensure for Professional Engineers and Professional Surveyors, and firms offering engineering services must register with the board as well. Comity on an NCEES record is the usual individual route. Operators are certified by the Environment Department by class, and the Office of the State Engineer administers water rights, which is a body of law engineers working supply here are expected to understand.",
   },
   {
     slug: "birmingham-al",
@@ -1252,6 +2180,38 @@ export const WATER_CITIES: WaterCity[] = [
       "Aging cast-iron water main rehabilitation",
       "Trenchless sewer rehabilitation (CIPP) program",
     ],
+    agencies: [
+      "Jefferson County Environmental Services",
+      "Birmingham Water Works Board",
+      "Alabama Department of Environmental Management",
+      "Alabama Office of Water Resources",
+      "Cahaba River Society",
+      "Alabama Water Pollution Control Authority",
+    ],
+    marketDetail: [
+      "Jefferson County's sewer system is the cautionary tale of American water finance: an overflow control program whose cost overwhelmed the county's ability to pay for it. The engineering consequence is that this market is acutely cost conscious, and work here is judged on whether it delivers compliance at a defensible price rather than on technical ambition. Rehabilitation and capacity optimization are preferred to new construction wherever they will do.",
+      "The natural setting raises the stakes. The Cahaba is among the most biologically diverse rivers in the country, which brings species protection into discharge permitting, and karst limestone through the valley gives surface water fast routes underground while making infiltration into sewers difficult to trace. The water board supplies a large area beyond the city, so transmission and storage are regional responsibilities.",
+    ],
+    hiringFocus: [
+      {
+        role: "Collection system rehabilitation engineers",
+        why: "Cost pressure favors rehabilitation and capacity recovery over new construction wherever it will achieve compliance.",
+      },
+      {
+        role: "Treatment process engineers",
+        why: "Discharge limits shaped by a biologically sensitive receiving water require careful process design.",
+      },
+      {
+        role: "Infiltration & inflow engineers",
+        why: "Karst terrain makes locating and quantifying extraneous flow harder than in ordinary geology.",
+      },
+      {
+        role: "Transmission & distribution engineers",
+        why: "Regional water supply beyond the city line makes large transmission and storage a continuing responsibility.",
+      },
+    ],
+    licensure:
+      "Alabama licenses through the Board of Licensure for Professional Engineers and Land Surveyors, with comity on an NCEES record the standard individual route and a certificate of authorization required for firms. The Department of Environmental Management certifies operators by grade and reviews construction plans for water and wastewater works, and discharge permitting on sensitive receiving waters carries requirements engineers here are expected to anticipate.",
   },
   {
     slug: "memphis-tn",
@@ -1269,6 +2229,38 @@ export const WATER_CITIES: WaterCity[] = [
       "Lead service line inventory & replacement",
       "Stormwater & Wolf River drainage improvements",
     ],
+    agencies: [
+      "Memphis Light, Gas and Water",
+      "Tennessee Department of Environment and Conservation",
+      "Shelby County Health Department",
+      "Mississippi River Commission",
+      "Memphis and Shelby County Office of Sustainability",
+      "Tennessee Board of Water Quality",
+    ],
+    marketDetail: [
+      "Memphis sits on an artesian sand aquifer of exceptional quality, and the city has always treated it very lightly, essentially aerating and disinfecting rather than filtering. That makes protecting the clay layer confining the aquifer the single most important water engineering task in the region: where that layer is thin or breached, surface contamination can reach the supply, and locating and managing those windows is specialist hydrogeological work.",
+      "Wastewater and stormwater face the opposite problem. Flat terrain with a high water table makes gravity conveyance marginal and pumping widespread, the Mississippi's stage affects outfalls and drainage for long stretches of the year, and the old collection system takes in substantial infiltration. Seismic risk from the nearby fault zone also applies to buried pipe and plant in ways most utilities never assess.",
+    ],
+    hiringFocus: [
+      {
+        role: "Hydrogeologists & source protection engineers",
+        why: "Protecting the confining layer over the aquifer is the region's most consequential water engineering task.",
+      },
+      {
+        role: "Pump station & drainage engineers",
+        why: "Flat terrain, a high water table and river stage make pumped conveyance and drainage the default.",
+      },
+      {
+        role: "Collection system & infiltration engineers",
+        why: "An aging system in high groundwater takes in extraneous flow that has to be located and reduced.",
+      },
+      {
+        role: "Seismic assessment engineers for buried infrastructure",
+        why: "Proximity to an active seismic zone makes pipeline and plant survivability a genuine design question.",
+      },
+    ],
+    licensure:
+      "Tennessee licenses through the Board of Architectural and Engineering Examiners within the Department of Commerce and Insurance, with comity on an NCEES record the normal route, and engineers covering the wider metro often hold Mississippi or Arkansas registration too. The state environment department certifies operators by grade and reviews plans for public water systems and treatment works.",
   },
   {
     slug: "omaha-ne",
@@ -1286,6 +2278,38 @@ export const WATER_CITIES: WaterCity[] = [
       "Lead service line replacement",
       "Missouri River WTP capacity expansion",
     ],
+    agencies: [
+      "Omaha Public Works",
+      "Metropolitan Utilities District",
+      "Nebraska Department of Environment and Energy",
+      "Papio-Missouri River Natural Resources District",
+      "US EPA Region 7",
+      "Nebraska Department of Health and Human Services",
+    ],
+    marketDetail: [
+      "Omaha carries one of the largest combined sewer overflow programs in the country relative to the size of the ratepayer base paying for it, which makes affordability a design constraint rather than a political aside. Engineers here are expected to justify solutions on cost per unit of overflow reduced, and phased, adaptive approaches are favored over single large structures wherever the compliance schedule allows.",
+      "Water supply is split between river intakes and a wellfield drawing induced infiltration from the Platte alluvium, which gives the utility two quite different treatment problems: a turbid, seasonally variable surface source and a groundwater source with its own chemistry. Bitter winters drive main breaks, and the flat floodplain terrain means pumping rather than gravity through much of the service area.",
+    ],
+    hiringFocus: [
+      {
+        role: "Combined sewer & affordability-driven program engineers",
+        why: "An unusually large program on a modest ratepayer base makes cost effectiveness an explicit design criterion.",
+      },
+      {
+        role: "Water treatment process engineers",
+        why: "Two dissimilar sources, surface river and alluvial groundwater, require distinct treatment approaches.",
+      },
+      {
+        role: "Pump station & conveyance engineers",
+        why: "Flat floodplain terrain makes pumped conveyance widespread across the service area.",
+      },
+      {
+        role: "Distribution renewal engineers",
+        why: "Severe winters drive main breaks and make prioritized replacement a continuing program.",
+      },
+    ],
+    licensure:
+      "Nebraska licenses through the Board of Engineers and Architects, with comity on an NCEES record the usual individual route and a certificate of authorization required for firms. The Department of Environment and Energy certifies operators by grade and reviews construction plans for water and wastewater works, and because the metro crosses into Iowa, projects there fall under a separate state agency.",
   },
   {
     slug: "boise-id",
@@ -1303,6 +2327,38 @@ export const WATER_CITIES: WaterCity[] = [
       "Lead service line inventory & replacement",
       "Groundwater recharge & aquifer storage projects",
     ],
+    agencies: [
+      "City of Boise Public Works",
+      "Idaho Department of Environmental Quality",
+      "Idaho Department of Water Resources",
+      "Veolia Water Idaho",
+      "Boise River Enhancement Network",
+      "Idaho Water Resource Board",
+    ],
+    marketDetail: [
+      "Boise runs the largest direct-use geothermal district heating system in the country, drawing hot water from beneath the city to heat downtown buildings and returning it to the aquifer. That makes the utility a geothermal operator as well as a water and wastewater one, and it puts aquifer management, injection and thermal balance into the local engineering vocabulary in a way found almost nowhere else in America.",
+      "The conventional water problem is discharge. The Boise River is a relatively small receiving water for a growing city, and phosphorus limits are strict enough that the utility has invested heavily in advanced nutrient removal and in recycled water to keep flow out of the river altogether. Meanwhile a dense pre-existing irrigation canal network runs through the developing valley and has to be engineered around rather than replaced.",
+    ],
+    hiringFocus: [
+      {
+        role: "Nutrient removal process engineers",
+        why: "Strict phosphorus limits on a small receiving river make advanced treatment the utility's central technical challenge.",
+      },
+      {
+        role: "Water reuse & recycled water engineers",
+        why: "Keeping flow out of the river has made reuse a core part of the compliance strategy.",
+      },
+      {
+        role: "Geothermal & aquifer management engineers",
+        why: "A direct-use geothermal district system makes injection and thermal balance a local specialism.",
+      },
+      {
+        role: "Collection system & growth planning engineers",
+        why: "Rapid valley growth requires conveyance and capacity extended ahead of development.",
+      },
+    ],
+    licensure:
+      "Idaho licenses through the Board of Licensure of Professional Engineers and Professional Land Surveyors, with comity on an NCEES record the normal individual route and a certificate of authorization required for firms. The Department of Environmental Quality certifies operators by class and reviews plans for public water and wastewater systems, while the Department of Water Resources administers water rights, which govern both surface diversions and geothermal use.",
   },
   {
     slug: "providence-ri",
@@ -1320,6 +2376,38 @@ export const WATER_CITIES: WaterCity[] = [
       "Lead service line replacement",
       "Scituate Reservoir watershed protection",
     ],
+    agencies: [
+      "Narragansett Bay Commission",
+      "Providence Water Supply Board",
+      "Rhode Island Department of Environmental Management",
+      "Rhode Island Department of Health",
+      "Rhode Island Infrastructure Bank",
+      "Coastal Resources Management Council",
+    ],
+    marketDetail: [
+      "The bay sets the wastewater agenda. Low oxygen conditions in the upper bay led to seasonal nitrogen limits well beyond conventional secondary treatment, so the region's plants operate advanced nutrient removal and are judged on measured bay response rather than on permit compliance alone. That gives local process engineers experience with nitrogen removal that many larger markets lack.",
+      "Alongside it, a deep storage tunnel system built to control combined sewer overflows has been extended in phases across the urban core, concentrating tunneling, drop shaft and pump station expertise locally. Drinking water comes from a large protected reservoir supplying most of the state through aging transmission mains, which makes source protection and transmission condition the supply-side priorities.",
+    ],
+    hiringFocus: [
+      {
+        role: "Nitrogen removal process engineers",
+        why: "Seasonal bay nitrogen limits require advanced treatment beyond conventional secondary standards.",
+      },
+      {
+        role: "Tunnel & deep conveyance engineers",
+        why: "A phased storage tunnel program has concentrated underground hydraulic expertise in the region.",
+      },
+      {
+        role: "Transmission main & source protection engineers",
+        why: "A single reservoir supplying most of the state makes transmission condition a statewide reliability question.",
+      },
+      {
+        role: "Coastal & receiving water engineers",
+        why: "Discharge design is judged against measured bay conditions, linking process work to environmental monitoring.",
+      },
+    ],
+    licensure:
+      "Rhode Island licenses through the Board of Registration for Professional Engineers, with comity on an NCEES record the standard route, and most engineers working the wider market also hold Massachusetts or Connecticut registration. The environmental management department certifies wastewater operators and the health department certifies drinking water operators, both by class, and coastal work adds a separate state permitting body.",
   },
   {
     slug: "buffalo-ny",
@@ -1337,6 +2425,38 @@ export const WATER_CITIES: WaterCity[] = [
       "Lead service line replacement (aging housing stock)",
       "Niagara River & Lake Erie intake protection",
     ],
+    agencies: [
+      "Buffalo Sewer Authority",
+      "Buffalo Water",
+      "New York State Department of Environmental Conservation",
+      "New York State Department of Health",
+      "Erie County Department of Environment and Planning",
+      "Great Lakes Commission",
+    ],
+    marketDetail: [
+      "Buffalo's overflow control plan leans on green infrastructure more heavily than most, because the city has land available where denser cities do not and because storage alone would be unaffordable. That makes surface stormwater design, vacant lot conversion and the modeling needed to prove capture performance a much larger share of the local water engineering workload than the plan's size alone would suggest.",
+      "Lake Erie and the Niagara supply the drinking water, which makes source quality generally good but intake reliability, ice and seasonal algal conditions real operational concerns. The buried network is old, the freeze-thaw climate is hard on it, and lead service line replacement adds a sustained distribution program on top of an already heavy rehabilitation need.",
+    ],
+    hiringFocus: [
+      {
+        role: "Stormwater & green infrastructure engineers",
+        why: "Green approaches carry an unusually large share of the region's overflow control plan.",
+      },
+      {
+        role: "Hydraulic modelers",
+        why: "Demonstrating capture performance from distributed green infrastructure is a modeling problem first.",
+      },
+      {
+        role: "Distribution renewal & lead service line engineers",
+        why: "An old network under replacement obligations makes prioritized renewal a sustained program.",
+      },
+      {
+        role: "Collection system rehabilitation engineers",
+        why: "Freeze-thaw damage and infiltration in an aging combined system keep rehabilitation continuously funded.",
+      },
+    ],
+    licensure:
+      "New York licenses through the State Education Department's Office of the Professions, and most out-of-state PEs transfer by comity on an NCEES record. The Department of Health certifies water treatment and distribution operators and the Department of Environmental Conservation certifies wastewater operators, both by grade, and because the source is a Great Lake, the interstate compact on withdrawals forms part of the regulatory context.",
   },
 ];
 
