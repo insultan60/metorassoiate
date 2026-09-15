@@ -760,6 +760,38 @@ export const CEI_CITIES: CeiCity[] = [
       "Nashville International taxiway materials testing",
       "Cumberland River bridge inspection",
     ],
+    agencies: [
+      "TDOT Region 3",
+      "Nashville DOT & Multimodal Infrastructure",
+      "Metro Water Services",
+      "Metropolitan Nashville Airport Authority",
+      "Williamson County Highway Department",
+      "WeGo Public Transit",
+    ],
+    marketDetail: [
+      "Most inspection work in Middle Tennessee is roadway widening and interchange construction carried out while the road stays open. That pushes the emphasis onto inspectors who can judge acceptance inside a lane closure and document it properly before traffic goes back, and onto resident engineers comfortable making decisions without stopping the operation. Night work is common and the paperwork still has to be right in the morning.",
+      "The region's limestone geology shows up in the inspection record more than people expect. Excavations find voids and soft seams that were not in the boring logs, which turns a routine subgrade acceptance into a design question and puts the inspector in the position of raising it early. Utility conflicts in the older core do the same, so documentation of changed conditions is a large part of the job here.",
+    ],
+    hiringFocus: [
+      {
+        role: "Roadway inspectors for staged construction",
+        why: "Widening under live traffic means acceptance decisions have to be made and recorded inside short closures.",
+      },
+      {
+        role: "Resident engineers",
+        why: "Owners expect a single point of judgment on site who can resolve issues without pausing the work.",
+      },
+      {
+        role: "Materials testing technicians",
+        why: "Concrete and asphalt acceptance runs continuously across a large regional program.",
+      },
+      {
+        role: "Office engineers & documentation specialists",
+        why: "Karst surprises and utility conflicts generate changed-condition records that carry claims exposure.",
+      },
+    ],
+    licensure:
+      "Tennessee licenses engineers through the Board of Architectural and Engineering Examiners, but for CEI the credentials that decide hiring are technician certifications rather than the PE. TDOT maintains its own qualification requirements for inspection and materials personnel, NICET levels are widely used to grade inspectors, and bridge inspection team leaders must meet federal National Bridge Inspection Standards experience and training requirements.",
   },
   {
     slug: "portland-or",
@@ -777,6 +809,38 @@ export const CEI_CITIES: CeiCity[] = [
       "PDX airport terminal materials testing",
       "Portland seismic culvert inspection",
     ],
+    agencies: [
+      "ODOT Region 1",
+      "Portland Bureau of Transportation",
+      "Multnomah County Transportation Division",
+      "TriMet",
+      "Port of Portland",
+      "Portland Bureau of Environmental Services",
+    ],
+    marketDetail: [
+      "Inspection in Portland is dominated by work on existing structures. Seismic retrofit of river crossings, bridge rehabilitation and roadway reconstruction all mean inspectors are verifying work carried out on assets that are still carrying load, where the sequence of operations is as important to safety as the finished product. Understanding the staging and knowing when it has been departed from is the core skill.",
+      "The environment adds its own inspection burden. Erosion and sediment control, stormwater treatment installation and in-water work windows are inspected and documented against permit conditions that carry real consequences if breached, and a long wet season compresses when certain operations can happen at all. Transit construction adds work inside an operating system with its own access and protection rules.",
+    ],
+    hiringFocus: [
+      {
+        role: "Bridge & structural inspectors",
+        why: "Seismic retrofit and rehabilitation of in-service crossings make verification of existing structures the region's core inspection work.",
+      },
+      {
+        role: "Erosion & stormwater compliance inspectors",
+        why: "Permit conditions on sediment and in-water work are enforced strictly and documented continuously.",
+      },
+      {
+        role: "Resident engineers for staged work",
+        why: "Work on load-carrying assets makes construction sequencing a safety matter requiring on-site judgment.",
+      },
+      {
+        role: "Materials testing technicians",
+        why: "A compressed dry season concentrates paving and concrete acceptance into a shorter working window.",
+      },
+    ],
+    licensure:
+      "Oregon licenses engineers through the State Board of Examiners for Engineering and Land Surveying, but CEI hiring turns on technician credentials. ODOT relies on the multi-state Western Alliance for Quality Transportation Construction qualification program for materials sampling and testing, ACI certification is standard for concrete, and bridge inspection team leaders must satisfy federal National Bridge Inspection Standards requirements.",
   },
   {
     slug: "las-vegas-nv",
@@ -794,6 +858,38 @@ export const CEI_CITIES: CeiCity[] = [
       "Harry Reid apron inspection",
       "Las Vegas Convention Center loop oversight",
     ],
+    agencies: [
+      "NDOT District 1",
+      "Regional Transportation Commission of Southern Nevada",
+      "Clark County Public Works",
+      "Clark County Regional Flood Control District",
+      "Harry Reid International Airport",
+      "Las Vegas Valley Water District",
+    ],
+    marketDetail: [
+      "Construction in southern Nevada runs on a calendar dictated by heat. Paving and concrete placement are scheduled around temperature limits that push work into nights and shoulder seasons, and acceptance testing has to account for curing conditions that would be unusual elsewhere. Inspectors who understand how the materials behave at these temperatures catch problems that a checklist alone will not.",
+      "The other defining feature is the flood control system. Detention basins, lined channels and box culverts are built to regional criteria and inspected against them, which is a different body of knowledge from roadway work and is required continuously as the valley expands. Resort corridor and airport projects add heavily staged construction around operations that never pause.",
+    ],
+    hiringFocus: [
+      {
+        role: "Materials testing technicians",
+        why: "High-temperature placement and curing make concrete and asphalt acceptance technically demanding here.",
+      },
+      {
+        role: "Drainage & flood control inspectors",
+        why: "Regional detention and channel criteria form their own inspection discipline distinct from roadway work.",
+      },
+      {
+        role: "Roadway inspectors for night operations",
+        why: "Heat and traffic push much of the work into short overnight windows requiring on-the-spot acceptance.",
+      },
+      {
+        role: "Resident engineers",
+        why: "Staged work around continuously operating facilities requires a single decision maker on site.",
+      },
+    ],
+    licensure:
+      "Nevada licenses engineers by branch through the State Board of Professional Engineers and Land Surveyors, which matters for anyone sealing engineering work, though most CEI roles turn on technician credentials instead. NDOT uses the multi-state Western Alliance qualification program for materials testing, ACI certification is standard for concrete, and bridge inspection team leaders must meet federal National Bridge Inspection Standards requirements.",
   },
   {
     slug: "columbus-oh",
@@ -811,6 +907,38 @@ export const CEI_CITIES: CeiCity[] = [
       "John Glenn airport apron inspection",
       "Columbus bridge & culvert inspection",
     ],
+    agencies: [
+      "ODOT District 6",
+      "Columbus Department of Public Service",
+      "Franklin County Engineer",
+      "Columbus Department of Public Utilities",
+      "Columbus Regional Airport Authority",
+      "Central Ohio Transit Authority",
+    ],
+    marketDetail: [
+      "Central Ohio has an unusual amount of inspection work attached to site development rather than to highways, because large industrial and residential construction on former farmland brings its own roads, utilities, grading and stormwater systems that a public owner will eventually adopt. Inspectors here spend more time on acceptance of infrastructure built by private developers than they would in a mature metro.",
+      "The public program runs alongside it. Urban freeway reconstruction is carried out in stages under traffic, and the region's sewer compliance work puts inspection into trenches, on lining operations and across green infrastructure installations scattered through neighborhoods. Heavy clay subgrades and freeze-thaw make earthwork and pavement acceptance decisions consequential rather than routine.",
+    ],
+    hiringFocus: [
+      {
+        role: "Site development & utility inspectors",
+        why: "Infrastructure built by developers and adopted by public owners needs acceptance inspection at high volume.",
+      },
+      {
+        role: "Roadway inspectors for staged construction",
+        why: "Urban freeway reconstruction under traffic makes sequencing and short-window acceptance routine.",
+      },
+      {
+        role: "Underground & pipeline inspectors",
+        why: "Sewer compliance work puts inspection into trenches, lining operations and shaft construction.",
+      },
+      {
+        role: "Materials testing technicians",
+        why: "Clay subgrades and freeze-thaw make earthwork and pavement acceptance consequential rather than routine.",
+      },
+    ],
+    licensure:
+      "Ohio licenses engineers through the State Board of Registration for Professional Engineers and Surveyors, but CEI hiring rests on technician qualifications. ODOT maintains its own prequalification for inspection and testing personnel, ACI certification is standard for concrete work, and bridge inspection team leaders must satisfy federal National Bridge Inspection Standards experience and training requirements.",
   },
   {
     slug: "salt-lake-city-ut",
@@ -828,6 +956,38 @@ export const CEI_CITIES: CeiCity[] = [
       "Mountain View Corridor bridge inspection",
       "UTA FrontRunner utility inspection",
     ],
+    agencies: [
+      "UDOT Region 2",
+      "Utah Transit Authority",
+      "Salt Lake City Engineering Division",
+      "Salt Lake City International Airport",
+      "Salt Lake County Public Works",
+      "Salt Lake City Department of Public Utilities",
+    ],
+    marketDetail: [
+      "UDOT has leaned harder than most state agencies on alternative delivery, which changes what inspection means. On design-build and similar contracts the owner's representative is verifying that a contractor-led design is being built as approved rather than checking against a fully detailed set of owner drawings, and that requires people who can read intent, judge equivalence and hold a line on quality without a prescriptive document to point at.",
+      "The physical work is concentrated in a narrow corridor between the mountains and the lake, so reconstruction happens under traffic in constrained right of way, and the airport's rebuild has run for years as a staged operation around live flights. Seismic detailing on structures gets particular inspection attention given the fault along the valley's edge.",
+    ],
+    hiringFocus: [
+      {
+        role: "Inspectors experienced in alternative delivery",
+        why: "Design-build contracts require verifying contractor-led design intent rather than checking against owner drawings.",
+      },
+      {
+        role: "Structural & bridge inspectors",
+        why: "Seismic detailing on structures in an active fault zone receives close inspection attention.",
+      },
+      {
+        role: "Resident engineers",
+        why: "Constrained corridor reconstruction under traffic needs a single point of judgment on site.",
+      },
+      {
+        role: "Materials testing technicians",
+        why: "Concrete and asphalt acceptance runs continuously across a sustained regional program.",
+      },
+    ],
+    licensure:
+      "Utah licenses engineers through the Division of Professional Licensing, though most CEI roles are graded on technician credentials. UDOT relies on the multi-state Western Alliance qualification program for materials sampling and testing, ACI certification is standard for concrete, and bridge inspection team leaders must meet federal National Bridge Inspection Standards requirements. Alternative delivery experience is often weighed as heavily as any certificate.",
   },
   {
     slug: "kansas-city-mo",
@@ -845,6 +1005,38 @@ export const CEI_CITIES: CeiCity[] = [
       "Missouri River bridge inspection",
       "Kansas City streetcar extension oversight",
     ],
+    agencies: [
+      "MoDOT Kansas City District",
+      "Kansas City Public Works",
+      "Johnson County Public Works",
+      "Kansas City Aviation Department",
+      "KCATA",
+      "Kansas Department of Transportation",
+    ],
+    marketDetail: [
+      "Inspection in this metro means working to two states' specifications. A project on one side of the line follows a different materials manual, certification regime and documentation format from a project a few miles away, and inspectors who are qualified under both are usable on more of the market. Firms staff deliberately around that fact rather than treating it as an inconvenience.",
+      "The work itself is dominated by bridges and by reconstruction. Two rivers give the region a large crossing inventory well into its service life, terminal and airside construction has been a sustained program, and a long-running sewer compliance effort puts inspection underground on lining, shaft and trench work. Freeze-thaw shortens pavement life and keeps resurfacing and repair acceptance continuous.",
+    ],
+    hiringFocus: [
+      {
+        role: "Inspectors qualified in both Missouri and Kansas",
+        why: "A bi-state metro runs two materials manuals and two certification regimes across the same market.",
+      },
+      {
+        role: "Bridge inspectors & NBIS team leaders",
+        why: "A large aging crossing inventory over two rivers sustains inspection and rehabilitation work.",
+      },
+      {
+        role: "Underground & pipeline inspectors",
+        why: "Sewer compliance work puts inspection into trench, lining and shaft operations continuously.",
+      },
+      {
+        role: "Materials testing technicians",
+        why: "Freeze-thaw damage keeps pavement repair and resurfacing acceptance in constant demand.",
+      },
+    ],
+    licensure:
+      "Missouri and Kansas license engineers through separate boards, and for CEI the parallel split matters more: each state DOT runs its own technician certification and prequalification for materials sampling, testing and inspection. ACI certification is portable across both, and bridge inspection team leaders must satisfy federal National Bridge Inspection Standards requirements regardless of which side of the line the structure sits on.",
   },
   {
     slug: "indianapolis-in",
@@ -862,6 +1054,38 @@ export const CEI_CITIES: CeiCity[] = [
       "Indianapolis International apron oversight",
       "White River bridge inspection",
     ],
+    agencies: [
+      "INDOT Greenfield District",
+      "Indianapolis Department of Public Works",
+      "Citizens Energy Group",
+      "Indianapolis Airport Authority",
+      "Hamilton County Highway Department",
+      "IndyGo",
+    ],
+    marketDetail: [
+      "The largest sustained inspection workload in this region has been underground. A deep tunnel program and the consolidation sewers, drop shafts and pump stations feeding it put inspectors on shaft sinking, tunnel lining, confined space operations and concrete placement in conditions that surface construction never involves, and the people who have done it are a recognized local group.",
+      "Above ground the work is interstate reconstruction carried out in stages under traffic, plus the arterial and utility construction that follows suburban growth north of the city. Flat terrain means drainage tolerances are tight and small grade errors matter, so line and grade verification carries more weight here than in a region with natural fall to absorb mistakes.",
+    ],
+    hiringFocus: [
+      {
+        role: "Tunnel & underground inspectors",
+        why: "A deep tunnel program requires inspection of shaft, lining and confined space work outside ordinary experience.",
+      },
+      {
+        role: "Roadway inspectors for staged construction",
+        why: "Interstate reconstruction under traffic makes sequencing and short-window acceptance routine.",
+      },
+      {
+        role: "Survey & grade verification technicians",
+        why: "Flat terrain leaves no tolerance for grade error in drainage-critical construction.",
+      },
+      {
+        role: "Materials testing technicians",
+        why: "Concrete and asphalt acceptance runs continuously across the highway and utility programs.",
+      },
+    ],
+    licensure:
+      "Indiana licenses engineers through the State Board of Registration for Professional Engineers, but CEI roles turn on technician certification. INDOT runs its own certified technician program covering materials sampling, testing and inspection categories, ACI certification is standard for concrete, and bridge inspection team leaders must meet federal National Bridge Inspection Standards experience and training requirements.",
   },
   {
     slug: "milwaukee-wi",
@@ -879,6 +1103,38 @@ export const CEI_CITIES: CeiCity[] = [
       "Mitchell International taxiway inspection",
       "Milwaukee harbor utility inspection",
     ],
+    agencies: [
+      "WisDOT Southeast Region",
+      "Milwaukee Department of Public Works",
+      "Milwaukee Metropolitan Sewerage District",
+      "Milwaukee County Department of Transportation",
+      "Port Milwaukee",
+      "Milwaukee County Transit System",
+    ],
+    marketDetail: [
+      "Wisconsin runs one of the more structured technician certification systems in the country, administered through a state program that grades inspectors and testers by specific discipline. That formalizes CEI careers here more than in states where qualification is looser, and it means a candidate's file of certifications is read closely and matched to the categories a project requires.",
+      "The work is freeway reconstruction and water infrastructure. An early-built interstate system is being rebuilt segment by segment under traffic, lakefront and river structures carry heavy maintenance obligations, and the regional wet weather program keeps inspection on tunnel, conveyance and green infrastructure construction. A short construction season compresses the year and makes scheduling acceptance testing a real logistical problem.",
+    ],
+    hiringFocus: [
+      {
+        role: "Certified highway technicians",
+        why: "A structured state certification program means inspectors are matched to projects by specific graded categories.",
+      },
+      {
+        role: "Bridge inspectors & NBIS team leaders",
+        why: "Freeze-thaw and lakefront exposure shorten structure life and keep inspection continuous.",
+      },
+      {
+        role: "Underground & conveyance inspectors",
+        why: "The regional wet weather program puts inspection on tunnel, sewer and green infrastructure construction.",
+      },
+      {
+        role: "Resident engineers",
+        why: "A short season and staged freeway reconstruction concentrate decision-making pressure on site.",
+      },
+    ],
+    licensure:
+      "Wisconsin licenses engineers through the Department of Safety and Professional Services, but CEI hiring is driven by the state's highway technician certification program, which qualifies inspectors and testers in specific graded disciplines. ACI certification is standard for concrete, and bridge inspection team leaders must satisfy federal National Bridge Inspection Standards experience and training requirements.",
   },
   {
     slug: "richmond-va",
@@ -896,6 +1152,38 @@ export const CEI_CITIES: CeiCity[] = [
       "Richmond International apron inspection",
       "GRTC Pulse corridor utility inspection",
     ],
+    agencies: [
+      "VDOT Richmond District",
+      "Richmond Department of Public Works",
+      "Chesterfield County Transportation",
+      "Henrico County Department of Public Works",
+      "Richmond Department of Public Utilities",
+      "GRTC Transit System",
+    ],
+    marketDetail: [
+      "Virginia runs its own certification schools for construction materials and inspection rather than relying purely on national programs, so an inspector's qualifications here are checked against a state-specific list. That makes the credential file the first thing a hiring manager looks at, and it means an experienced inspector arriving from another state usually has certification work to do before being billable.",
+      "The work is interchange and corridor construction at a major freight crossroads, plus a steady flow of suburban roadway and utility work in the surrounding counties. Environmental inspection carries unusual weight because Chesapeake Bay obligations make erosion, sediment and stormwater installation subject to documented compliance rather than general good practice.",
+    ],
+    hiringFocus: [
+      {
+        role: "State-certified materials & inspection technicians",
+        why: "Virginia's own certification schools set the qualification list that hiring here is matched against.",
+      },
+      {
+        role: "Erosion & stormwater compliance inspectors",
+        why: "Bay watershed obligations make sediment and treatment installation a documented compliance requirement.",
+      },
+      {
+        role: "Roadway & interchange inspectors",
+        why: "A major freight crossroads keeps interchange and corridor construction continuously funded.",
+      },
+      {
+        role: "Resident engineers",
+        why: "Staged construction under traffic requires on-site authority to accept work and resolve conflicts.",
+      },
+    ],
+    licensure:
+      "Virginia licenses engineers through the Board for Architects, Professional Engineers, Land Surveyors, Certified Interior Designers and Landscape Architects, but CEI hiring rests on VDOT's own certification program for materials and inspection personnel. Erosion and sediment control and stormwater management carry separate state certifications, and bridge inspection team leaders must meet federal National Bridge Inspection Standards requirements.",
   },
   {
     slug: "baltimore-md",
@@ -913,6 +1201,38 @@ export const CEI_CITIES: CeiCity[] = [
       "BWI airfield apron inspection",
       "Baltimore harbor tunnel utility inspection",
     ],
+    agencies: [
+      "MDOT State Highway Administration District 4",
+      "Maryland Transportation Authority",
+      "Baltimore City Department of Transportation",
+      "MDOT Maryland Transit Administration",
+      "Baltimore City Department of Public Works",
+      "Maryland Port Administration",
+    ],
+    marketDetail: [
+      "The defining feature of CEI work in Baltimore is how many owners there are. A state highway district, a toll authority, a transit administration, a port administration and a city department all let construction in the same metro, each with its own documentation regime and inspection expectations. An inspector's value here is partly a matter of whose systems they already know, and firms staff accordingly.",
+      "The work is weighted toward structures and toward buried infrastructure. Harbor crossings and their approaches carry continuous inspection and rehabilitation obligations, and the city's very old water and sewer network means trench, lining and tunneling inspection is a steady workload where poor records of what is already underground make changed conditions routine.",
+    ],
+    hiringFocus: [
+      {
+        role: "Bridge & tunnel inspectors",
+        why: "Harbor crossings under several owners run continuous inspection and rehabilitation programs.",
+      },
+      {
+        role: "Underground & utility inspectors",
+        why: "An exceptionally old buried network makes trench, lining and changed-condition documentation constant.",
+      },
+      {
+        role: "Office engineers & documentation specialists",
+        why: "Multiple owners with different records regimes make documentation a senior, owner-specific skill.",
+      },
+      {
+        role: "Materials testing technicians",
+        why: "Structure rehabilitation and roadway work keep concrete and asphalt acceptance continuous.",
+      },
+    ],
+    licensure:
+      "Maryland licenses engineers through the State Board for Professional Engineers, though CEI hiring turns on technician credentials. MDOT's highway administration maintains its own certification and prequalification for materials and inspection personnel, ACI certification is standard for concrete, and bridge inspection team leaders must satisfy federal National Bridge Inspection Standards requirements across every owner in the metro.",
   },
   {
     slug: "new-orleans-la",
@@ -930,6 +1250,38 @@ export const CEI_CITIES: CeiCity[] = [
       "Louis Armstrong apron resident engineering",
       "Port of New Orleans utility inspection",
     ],
+    agencies: [
+      "LADOTD District 02",
+      "Sewerage and Water Board of New Orleans",
+      "US Army Corps of Engineers New Orleans District",
+      "Coastal Protection and Restoration Authority",
+      "Port of New Orleans",
+      "New Orleans Regional Transit Authority",
+    ],
+    marketDetail: [
+      "A large share of inspection here is on flood protection and drainage infrastructure rather than highways, which puts inspectors on levee construction, floodwall placement, pump station work and deep foundations in soft ground. Federal projects bring their own quality management framework and documentation expectations, which differ from state highway practice enough to be a distinct skill.",
+      "The soils make everything a verification problem. Pile driving records, settlement monitoring and the behavior of excavations in compressible ground are central to acceptance, and what is found in the trench frequently differs from what was assumed in design. Inspectors who can recognize and document that early are what protects both the schedule and the eventual claim position.",
+    ],
+    hiringFocus: [
+      {
+        role: "Geotechnical & deep foundation inspectors",
+        why: "Soft compressible soils make pile records and settlement monitoring central to acceptance.",
+      },
+      {
+        role: "Flood protection & levee inspectors",
+        why: "Levee, floodwall and pump station construction is a large, continuing share of regional work.",
+      },
+      {
+        role: "Federal project quality inspectors",
+        why: "Corps projects run their own quality management framework distinct from state highway practice.",
+      },
+      {
+        role: "Office engineers & documentation specialists",
+        why: "Frequent differing site conditions make changed-condition records a claims-critical function.",
+      },
+    ],
+    licensure:
+      "Louisiana licenses engineers through the Professional Engineering and Land Surveying Board, and firms need a certificate of authorization, but CEI roles turn mainly on technician certification. LADOTD maintains its own qualification requirements for materials and inspection personnel, federal projects add their own quality management qualifications, and bridge inspection team leaders must meet National Bridge Inspection Standards requirements.",
   },
   {
     slug: "louisville-ky",
@@ -947,6 +1299,38 @@ export const CEI_CITIES: CeiCity[] = [
       "Louisville Muhammad Ali apron inspection",
       "I-65 Ohio River corridor inspection",
     ],
+    agencies: [
+      "KYTC District 5",
+      "Louisville Metro Public Works",
+      "Louisville and Jefferson County Metropolitan Sewer District",
+      "Transit Authority of River City",
+      "Louisville Regional Airport Authority",
+      "Indiana Department of Transportation",
+    ],
+    marketDetail: [
+      "River crossings and the interchange where three interstates meet give this region a concentration of complex structural inspection. Work is carried out in stages over water and under live interstate traffic, which means inspectors have to accept work in short windows, and access for inspection is itself an engineered arrangement rather than something assumed.",
+      "Because the metro spans the Ohio, projects fall under two state transportation cabinets with separate specifications and certification programs, and an inspector qualified in both is usable across the whole market. The sewer district's tunnel and separation program adds a continuing underground inspection workload, complicated by karst conditions that produce differing site conditions in excavation.",
+    ],
+    hiringFocus: [
+      {
+        role: "Bridge inspectors & NBIS team leaders",
+        why: "River crossings and an aging structure inventory keep complex structural inspection continuous.",
+      },
+      {
+        role: "Inspectors qualified in Kentucky and Indiana",
+        why: "A metro spanning two states means dual certification widens what an inspector can be staffed on.",
+      },
+      {
+        role: "Underground & tunnel inspectors",
+        why: "The sewer district's tunnel and separation program sustains trench, shaft and lining inspection.",
+      },
+      {
+        role: "Office engineers & documentation specialists",
+        why: "Karst-driven differing site conditions generate records that carry real claims exposure.",
+      },
+    ],
+    licensure:
+      "Kentucky licenses engineers through the State Board of Licensure for Professional Engineers and Land Surveyors, but CEI hiring rests on technician qualifications. The Transportation Cabinet runs its own certification for materials sampling, testing and inspection, Indiana maintains a parallel program on the other side of the river, and bridge inspection team leaders must satisfy federal National Bridge Inspection Standards requirements.",
   },
   {
     slug: "oklahoma-city-ok",
@@ -964,6 +1348,38 @@ export const CEI_CITIES: CeiCity[] = [
       "North Canadian River bridge inspection",
       "OKC streetcar corridor utility inspection",
     ],
+    agencies: [
+      "ODOT Division 4",
+      "Oklahoma Turnpike Authority",
+      "Oklahoma City Public Works",
+      "Oklahoma City Water Utilities Trust",
+      "Will Rogers International Airport",
+      "EMBARK",
+    ],
+    marketDetail: [
+      "Two very different owners carry most of the construction here: the state transportation department and a turnpike authority that funds and builds its own corridors. Their specifications and documentation expectations differ, and because the turnpike program runs on its own revenue rather than the state cycle, it provides inspection work on a schedule of its own. Inspectors who have worked both are usable across more of the market.",
+      "The city's voter-approved capital programs supply the rest, and they are unusually varied: streets, drainage, parks, transit and public buildings rather than a single highway pipeline. That suits inspectors who can move between disciplines. Expansive clay subgrades make earthwork acceptance genuinely consequential, because a subgrade signed off wet will show up in the pavement within a few seasons.",
+    ],
+    hiringFocus: [
+      {
+        role: "Roadway & turnpike inspectors",
+        why: "A state department and a self-funding turnpike authority run parallel programs with different specifications.",
+      },
+      {
+        role: "Earthwork & materials testing technicians",
+        why: "Expansive clay makes subgrade acceptance a decision with visible consequences in the finished pavement.",
+      },
+      {
+        role: "Municipal construction inspectors",
+        why: "Locally funded capital programs cover streets, drainage, parks and buildings rather than one discipline.",
+      },
+      {
+        role: "Resident engineers",
+        why: "Owners here expect a single point of judgment on site through construction rather than periodic visits.",
+      },
+    ],
+    licensure:
+      "Oklahoma licenses engineers through the State Board of Licensure for Professional Engineers and Land Surveyors, with firms requiring a certificate of authorization, but CEI hiring turns on technician credentials. ODOT maintains its own qualification requirements for materials and inspection personnel, ACI certification is standard for concrete, and bridge inspection team leaders must meet federal National Bridge Inspection Standards requirements.",
   },
   {
     slug: "charleston-sc",
@@ -981,6 +1397,38 @@ export const CEI_CITIES: CeiCity[] = [
       "Boeing campus utility inspection",
       "Charleston International apron resident engineering",
     ],
+    agencies: [
+      "SCDOT District 6",
+      "Charleston County Transportation Development",
+      "City of Charleston Department of Public Service",
+      "South Carolina Ports Authority",
+      "Charleston Water System",
+      "Berkeley County Public Works",
+    ],
+    marketDetail: [
+      "Inspection in the Lowcountry is shaped by ground that will not hold and water that will not drain. Pile driving records, ground improvement verification and settlement monitoring are central to acceptance on most structures, and excavations in high groundwater need dewatering that is itself inspected. What the borings predicted and what the contractor finds diverge often enough that documenting it is routine rather than exceptional.",
+      "Coastal permitting adds a second inspection regime on top of the construction one. Erosion and sediment control, in-water work restrictions and critical area conditions are enforced with documentation requirements that carry real consequences, and hurricane season imposes securing and demobilization obligations on open sites that have to be verified rather than assumed.",
+    ],
+    hiringFocus: [
+      {
+        role: "Geotechnical & deep foundation inspectors",
+        why: "Soft soils make pile records, ground improvement and settlement monitoring central to acceptance.",
+      },
+      {
+        role: "Erosion & coastal permit compliance inspectors",
+        why: "Coastal zone and sediment conditions are enforced with their own documentation requirements.",
+      },
+      {
+        role: "Roadway & freight corridor inspectors",
+        why: "Port-driven heavy-load construction sustains pavement, bridge and connector inspection work.",
+      },
+      {
+        role: "Office engineers & documentation specialists",
+        why: "Frequent differing site conditions make changed-condition records a claims-critical function.",
+      },
+    ],
+    licensure:
+      "South Carolina licenses engineers through the Board of Registration for Professional Engineers and Surveyors, but CEI hiring rests on technician qualifications. SCDOT maintains its own certification for materials sampling, testing and inspection, the state environmental agency certifies stormwater and erosion inspectors separately, and bridge inspection team leaders must satisfy federal National Bridge Inspection Standards requirements.",
   },
   {
     slug: "newark-nj",
@@ -998,6 +1446,38 @@ export const CEI_CITIES: CeiCity[] = [
       "Port Newark-Elizabeth utility inspection",
       "NJ Transit rail corridor oversight",
     ],
+    agencies: [
+      "NJDOT",
+      "Port Authority of NY & NJ",
+      "NJ TRANSIT",
+      "New Jersey Turnpike Authority",
+      "Newark Department of Engineering",
+      "Passaic Valley Sewerage Commission",
+    ],
+    marketDetail: [
+      "Almost every large project in this corridor is built inside something that is still running. Airport terminals, rail lines, toll roads and port facilities cannot be closed, so construction happens in night windows and staged possessions, and the inspector's job is to accept work quickly enough that the facility reopens on time while still documenting it properly. Access itself is often the constraint on when inspection can happen at all.",
+      "The ownership mix compounds it. A bi-state port authority, a state transportation department, a turnpike authority, a transit agency and a city all let work here, each with its own specifications and records regime. Contaminated ground on former industrial sites adds soil management and disposal verification to a significant share of excavation work.",
+    ],
+    hiringFocus: [
+      {
+        role: "Inspectors for night and staged possessions",
+        why: "Facilities that cannot close push construction into short windows requiring immediate acceptance decisions.",
+      },
+      {
+        role: "Rail & transit construction inspectors",
+        why: "Work inside an operating rail system requires track access, protection and testing knowledge.",
+      },
+      {
+        role: "Environmental & contaminated soil inspectors",
+        why: "Legacy industrial ground makes soil characterization and disposal verification part of excavation work.",
+      },
+      {
+        role: "Office engineers & documentation specialists",
+        why: "Several owners with different records regimes make documentation an owner-specific senior skill.",
+      },
+    ],
+    licensure:
+      "New Jersey licenses engineers through the State Board of Professional Engineers and Land Surveyors, but CEI hiring rests on technician credentials and owner prequalification. NJDOT maintains its own certification for materials and inspection personnel, the bi-state port authority and transit agency run their own approval processes, and bridge inspection team leaders must meet federal National Bridge Inspection Standards requirements.",
   },
   {
     slug: "san-francisco-ca",
@@ -1015,6 +1495,38 @@ export const CEI_CITIES: CeiCity[] = [
       "SFO runway safety area materials testing",
       "San Francisco seawall inspection",
     ],
+    agencies: [
+      "Caltrans District 4",
+      "San Francisco Municipal Transportation Agency",
+      "San Francisco Public Works",
+      "BART",
+      "San Francisco Public Utilities Commission",
+      "Port of San Francisco",
+    ],
+    marketDetail: [
+      "Public works inspection in California carries an administrative load that surprises people arriving from other states. Certified payroll and labor compliance, disadvantaged business participation reporting and environmental commitments made during approval are all tracked as part of construction administration, so the office engineering side of a CEI team is proportionally larger here and the records are audited rather than filed.",
+      "The construction itself is retrofit and reconstruction in a dense, seismically active city. Structures are strengthened while carrying load, utilities are found where no record showed them, and transit work happens inside an operating system. Inspectors who can judge acceptance on existing structures, rather than only on new work built to a clean drawing, are the scarcest people in this market.",
+    ],
+    hiringFocus: [
+      {
+        role: "Office engineers & compliance specialists",
+        why: "Labor compliance, participation reporting and environmental commitments are audited parts of construction administration.",
+      },
+      {
+        role: "Structural & seismic retrofit inspectors",
+        why: "Strengthening structures that remain in service requires judgment about existing conditions rather than new work.",
+      },
+      {
+        role: "Transit construction inspectors",
+        why: "Building inside an operating rail system requires access, protection and testing knowledge.",
+      },
+      {
+        role: "Materials testing technicians",
+        why: "Caltrans and local agencies both require independent assurance testing on their own schedules.",
+      },
+    ],
+    licensure:
+      "California licenses engineers through the Board for Professional Engineers, Land Surveyors and Geologists and does not grant straightforward comity, which matters for anyone sealing work. For inspection roles the credentials are technician-level: Caltrans maintains its own materials qualification and independent assurance requirements, ACI certification is standard, and bridge inspection team leaders must meet federal National Bridge Inspection Standards requirements.",
   },
   {
     slug: "san-diego-ca",
@@ -1032,6 +1544,38 @@ export const CEI_CITIES: CeiCity[] = [
       "Coronado Bridge inspection",
       "San Diego border infrastructure utility inspection",
     ],
+    agencies: [
+      "Caltrans District 11",
+      "San Diego Engineering & Capital Projects",
+      "San Diego Association of Governments",
+      "San Diego County Department of Public Works",
+      "San Diego County Water Authority",
+      "Port of San Diego",
+    ],
+    marketDetail: [
+      "Terrain drives the inspection work. Canyon crossings, retaining structures and heavily graded sites mean earthwork verification, compaction testing and slope construction acceptance are a much larger share of the job than in a flat metro, and a grading error found late is expensive to correct. Geotechnical observation and construction inspection overlap here more than they do elsewhere.",
+      "The other distinguishing factor is the range of owners. A Caltrans district, a regional planning agency delivering transit capital, a county, a city, a water authority and a port all let construction, and each brings its own documentation expectations. California's public works compliance requirements, from certified payroll to environmental commitments, apply across all of them and make office engineering a substantial part of every team.",
+    ],
+    hiringFocus: [
+      {
+        role: "Earthwork & grading inspectors",
+        why: "Canyon terrain makes compaction, slope construction and grading verification a central inspection activity.",
+      },
+      {
+        role: "Office engineers & compliance specialists",
+        why: "State public works compliance requirements are audited and apply across every owner in the region.",
+      },
+      {
+        role: "Structural & bridge inspectors",
+        why: "Canyon crossings and an aging structure inventory sustain structural inspection demand.",
+      },
+      {
+        role: "Materials testing technicians",
+        why: "Independent assurance testing is required on its own schedule alongside contractor quality control.",
+      },
+    ],
+    licensure:
+      "California licenses engineers through the Board for Professional Engineers, Land Surveyors and Geologists without straightforward comity, though most CEI roles turn on technician credentials instead. Caltrans maintains its own materials qualification and independent assurance requirements, ACI certification is standard for concrete, and bridge inspection team leaders must satisfy federal National Bridge Inspection Standards requirements.",
   },
   {
     slug: "san-antonio-tx",
@@ -1049,6 +1593,38 @@ export const CEI_CITIES: CeiCity[] = [
       "San Antonio International apron materials testing",
       "US 281 corridor bridge inspection",
     ],
+    agencies: [
+      "TxDOT San Antonio District",
+      "San Antonio Public Works",
+      "San Antonio Water System",
+      "Bexar County Public Works",
+      "VIA Metropolitan Transit",
+      "San Antonio River Authority",
+    ],
+    marketDetail: [
+      "Work over the aquifer recharge zone is inspected against an approved protection plan as well as the construction specification, which means spill containment, materials handling and sequencing carry regulatory weight they would not elsewhere in Texas. An inspector who does not know those requirements can sign off work that later has to be undone, and owners here check for that experience specifically.",
+      "The rest of the market is interstate capacity work, arterial construction following growth, and a sustained water utility program covering mains, reuse distribution and treatment. Heat limits when concrete and asphalt can be placed, which pushes operations into nights and shoulder seasons and makes curing conditions part of the acceptance judgment rather than a footnote.",
+    ],
+    hiringFocus: [
+      {
+        role: "Inspectors with recharge zone protection experience",
+        why: "Work over the aquifer is inspected against an approved protection plan with real regulatory consequences.",
+      },
+      {
+        role: "Materials testing technicians",
+        why: "High-temperature placement makes curing conditions part of concrete and asphalt acceptance.",
+      },
+      {
+        role: "Utility & pipeline inspectors",
+        why: "A sustained water utility program keeps main, reuse and treatment construction inspection continuous.",
+      },
+      {
+        role: "Roadway inspectors for staged construction",
+        why: "Interstate capacity work under traffic requires acceptance decisions inside short closures.",
+      },
+    ],
+    licensure:
+      "Texas licenses engineers through the Board of Professional Engineers and Land Surveyors, with separate firm registration, though CEI roles mainly require technician credentials. TxDOT maintains its own certification for materials sampling, testing and inspection, ACI certification is standard for concrete, and bridge inspection team leaders must meet federal National Bridge Inspection Standards requirements.",
   },
   {
     slug: "austin-tx",
@@ -1066,6 +1642,38 @@ export const CEI_CITIES: CeiCity[] = [
       "MoPac corridor resident engineering",
       "Colorado River bridge inspection",
     ],
+    agencies: [
+      "TxDOT Austin District",
+      "Central Texas Regional Mobility Authority",
+      "City of Austin Public Works",
+      "Austin Water",
+      "Capital Metro",
+      "Travis County Transportation and Natural Resources",
+    ],
+    marketDetail: [
+      "Austin has two transportation owners building at once: the state district and a regional mobility authority funding its own tolled corridors. They run separate programs with separate specifications, and the authority's projects frequently use alternative delivery, which changes inspection from checking against owner drawings to verifying that a contractor-led design is being built as approved.",
+      "Local environmental rules add an inspection layer that is unusually prescriptive for Texas. Water quality controls, impervious cover limits and tree and critical environmental feature protections are conditions of approval that are inspected and enforced during construction, so an inspector's familiarity with the city's requirements matters as much as their materials certifications on site development work.",
+    ],
+    hiringFocus: [
+      {
+        role: "Inspectors experienced in alternative delivery",
+        why: "Tolled corridor projects often use design-build, requiring verification of contractor-led design intent.",
+      },
+      {
+        role: "Environmental & water quality inspectors",
+        why: "Local watershed rules are conditions of approval enforced and documented during construction.",
+      },
+      {
+        role: "Roadway inspectors for staged construction",
+        why: "Rebuilding the region's main corridor under traffic makes short-window acceptance routine.",
+      },
+      {
+        role: "Materials testing technicians",
+        why: "Heat-limited placement windows make curing conditions part of the acceptance judgment.",
+      },
+    ],
+    licensure:
+      "Texas licenses engineers through the Board of Professional Engineers and Land Surveyors, with firm registration required separately, though CEI roles rest on technician credentials. TxDOT certification covers materials sampling, testing and inspection, the regional mobility authority runs its own prequalification, and bridge inspection team leaders must satisfy federal National Bridge Inspection Standards requirements.",
   },
   {
     slug: "jacksonville-fl",
@@ -1083,6 +1691,38 @@ export const CEI_CITIES: CeiCity[] = [
       "Jacksonville International apron materials testing",
       "Jacksonville utility & drainage inspection",
     ],
+    agencies: [
+      "FDOT District 2",
+      "City of Jacksonville Public Works",
+      "Jacksonville Transportation Authority",
+      "JAXPORT",
+      "JEA",
+      "Florida Department of Environmental Protection",
+    ],
+    marketDetail: [
+      "Florida runs the most formalized inspection qualification system of any state, with a construction training and qualification program that certifies technicians in specific areas and is a hard requirement on state-funded work. An inspector here is hired against that list, and getting qualified takes time, which makes already-qualified people the constraint on how fast a CEI team can be staffed up.",
+      "The work itself is coastal and heavy. Port-driven pavement and structures carry high loads, drainage and pump station construction is constant in a low, flat, high-water-table city, and dewatering verification is part of nearly every deep excavation. Hurricane season imposes securing obligations on open sites that have to be inspected rather than assumed.",
+    ],
+    hiringFocus: [
+      {
+        role: "State-qualified CEI technicians",
+        why: "Florida's construction qualification program is a hard requirement, making already-certified inspectors the staffing constraint.",
+      },
+      {
+        role: "Drainage & underground inspectors",
+        why: "Low elevation and high groundwater make conveyance, pump station and dewatering inspection constant.",
+      },
+      {
+        role: "Bridge inspectors & NBIS team leaders",
+        why: "Coastal structures in a corrosive environment carry continuous inspection and repair obligations.",
+      },
+      {
+        role: "Materials testing technicians",
+        why: "Heavy-load port pavement and structural concrete require sustained acceptance testing.",
+      },
+    ],
+    licensure:
+      "Florida licenses engineers through the Board of Professional Engineers, but CEI hiring is governed by the state's construction training and qualification program, which certifies technicians in specific inspection and testing areas and is required on state-funded work. Bridge inspection team leaders must additionally meet federal National Bridge Inspection Standards experience and training requirements.",
   },
   {
     slug: "orlando-fl",
@@ -1100,6 +1740,38 @@ export const CEI_CITIES: CeiCity[] = [
       "International Drive utility inspection",
       "Central Florida GreeneWay bridge inspection",
     ],
+    agencies: [
+      "FDOT District 5",
+      "Central Florida Expressway Authority",
+      "Orange County Public Works",
+      "City of Orlando Transportation Engineering",
+      "Greater Orlando Aviation Authority",
+      "LYNX",
+    ],
+    marketDetail: [
+      "Central Florida has an unusual concentration of owners building at once: a state district, a regional expressway authority with its own toll-funded program, county and city departments and an aviation authority. The expressway authority in particular runs continuously and to its own standards, which gives inspectors here a second qualification pathway alongside the state program and makes dual familiarity valuable.",
+      "Ground conditions keep inspection honest. Limestone under sand means excavations occasionally find voids that no boring predicted, and a high water table makes dewatering a documented part of most deep work. Tourism corridor projects are staged around continuous visitor traffic, so acceptance often has to happen inside narrow overnight windows.",
+    ],
+    hiringFocus: [
+      {
+        role: "State-qualified CEI technicians",
+        why: "Florida's construction qualification program gates who can be billed on state-funded work.",
+      },
+      {
+        role: "Inspectors familiar with expressway authority standards",
+        why: "A toll-funded regional program runs continuously to its own specifications alongside the state district.",
+      },
+      {
+        role: "Geotechnical & dewatering inspectors",
+        why: "Karst voids and a high water table make excavation verification a recurring technical judgment.",
+      },
+      {
+        role: "Roadway inspectors for night operations",
+        why: "Tourism corridor staging pushes work into narrow overnight windows requiring immediate acceptance.",
+      },
+    ],
+    licensure:
+      "Florida licenses engineers through the Board of Professional Engineers, but CEI hiring is driven by the state's construction training and qualification program, which certifies technicians by specific area and is required on state-funded work. The regional expressway authority maintains its own prequalification, and bridge inspection team leaders must meet federal National Bridge Inspection Standards requirements.",
   },
   {
     slug: "pittsburgh-pa",
@@ -1117,6 +1789,38 @@ export const CEI_CITIES: CeiCity[] = [
       "Pittsburgh International apron materials testing",
       "Monongahela River bridge inspection",
     ],
+    agencies: [
+      "PennDOT District 11-0",
+      "Allegheny County Department of Public Works",
+      "Pittsburgh Department of Mobility and Infrastructure",
+      "ALCOSAN",
+      "Pittsburgh Regional Transit",
+      "Pennsylvania Turnpike Commission",
+    ],
+    marketDetail: [
+      "Pittsburgh's structure inventory is large, old and split across three owners, which makes bridge inspection the base load of the regional CEI market rather than a specialty within it. Team leader qualification takes years to accumulate, hands-on rehabilitation inspection requires judgment about deterioration that a checklist cannot supply, and the supply of qualified people is consistently short of the inventory's needs.",
+      "Terrain complicates the construction being inspected. Hillside sites mean retaining structures, rock excavation and slope work on ordinary roadway projects, access for inspection is frequently an engineered arrangement, and historic mine workings under parts of the county produce differing site conditions in deep excavation. The regional sewer program adds tunnel and trench inspection on top.",
+    ],
+    hiringFocus: [
+      {
+        role: "NBIS-qualified bridge inspection team leaders",
+        why: "A very large aging inventory under three owners runs a mandated inspection cycle that outstrips qualified supply.",
+      },
+      {
+        role: "Geotechnical & slope inspectors",
+        why: "Hillside construction, rock excavation and retaining structures are routine rather than exceptional here.",
+      },
+      {
+        role: "Underground & tunnel inspectors",
+        why: "The regional sewer program sustains shaft, tunnel and trench inspection work.",
+      },
+      {
+        role: "Materials testing technicians",
+        why: "State certification programs for asphalt and concrete gate who can perform acceptance testing.",
+      },
+    ],
+    licensure:
+      "Pennsylvania licenses engineers through the State Registration Board for Professional Engineers, Land Surveyors and Geologists, but CEI hiring rests on technician certification. PennDOT relies on a state center of excellence program to certify asphalt and concrete technicians, maintains its own inspection qualification requirements, and bridge inspection team leaders must satisfy federal National Bridge Inspection Standards experience and training requirements.",
   },
   {
     slug: "cincinnati-oh",
@@ -1134,6 +1838,38 @@ export const CEI_CITIES: CeiCity[] = [
       "Ohio River bridge inspection",
       "Cincinnati utility & sewer inspection",
     ],
+    agencies: [
+      "ODOT District 8",
+      "Metropolitan Sewer District of Greater Cincinnati",
+      "Hamilton County Engineer",
+      "Cincinnati Department of Transportation and Engineering",
+      "Cincinnati/Northern Kentucky International Airport",
+      "Kentucky Transportation Cabinet District 6",
+    ],
+    marketDetail: [
+      "The Ohio River makes this a three-state inspection market. Projects on the corridor fall under Ohio, Kentucky or Indiana specifications depending on where they sit, each with its own certification program and documentation format, and inspectors qualified in more than one are usable across far more of the regional pipeline than those with a single state's credentials.",
+      "The construction is hillside and underground. Roadway projects routinely involve rock excavation, retaining structures and slope stabilization that need close observation, and the regional sewer program puts inspection into deep trench, tunnel and stream restoration work. Differing site conditions are common enough in this terrain that changed-condition documentation is a core part of the job rather than an occasional event.",
+    ],
+    hiringFocus: [
+      {
+        role: "Multi-state certified inspectors",
+        why: "A tri-state corridor means projects fall under three certification programs and three specification sets.",
+      },
+      {
+        role: "Geotechnical & slope inspectors",
+        why: "Rock excavation, retaining structures and slope work are routine parts of hillside roadway construction.",
+      },
+      {
+        role: "Underground & stream restoration inspectors",
+        why: "The sewer compliance program puts inspection into trench, tunnel and restored channel construction.",
+      },
+      {
+        role: "Office engineers & documentation specialists",
+        why: "Frequent differing site conditions make changed-condition records a claims-critical function.",
+      },
+    ],
+    licensure:
+      "Ohio licenses engineers through the State Board of Registration for Professional Engineers and Surveyors, but CEI hiring turns on technician credentials. ODOT maintains its own prequalification for inspection and testing personnel, Kentucky and Indiana run parallel programs on their sides of the river, and bridge inspection team leaders must meet federal National Bridge Inspection Standards requirements everywhere.",
   },
   {
     slug: "cleveland-oh",
@@ -1151,6 +1887,38 @@ export const CEI_CITIES: CeiCity[] = [
       "Cuyahoga River bridge inspection",
       "Cleveland water main utility inspection",
     ],
+    agencies: [
+      "ODOT District 12",
+      "Northeast Ohio Regional Sewer District",
+      "Cuyahoga County Department of Public Works",
+      "City of Cleveland Division of Engineering and Construction",
+      "Greater Cleveland Regional Transit Authority",
+      "Cleveland Water",
+    ],
+    marketDetail: [
+      "The region's largest sustained inspection workload is on the sewer district's storage tunnel program, which puts inspectors on shaft sinking, tunnel boring, lining and confined space operations for years at a time. That is specialist work with its own safety regime, and the group of people locally who have done it is well known and not large.",
+      "Above ground, freeze-thaw and a Great Lakes climate shorten the life of everything and compress the construction season into a short window. Bridge decks, joints and pavement need inspection and repair continuously, the Cuyahoga's movable structures have their own mechanical and electrical inspection requirements, and lakefront exposure accelerates corrosion on steel that inspectors have to judge.",
+    ],
+    hiringFocus: [
+      {
+        role: "Tunnel & underground inspectors",
+        why: "A long-running storage tunnel program requires shaft, boring and confined space inspection expertise.",
+      },
+      {
+        role: "Bridge inspectors & NBIS team leaders",
+        why: "An aging inventory including movable structures in a corrosive freeze-thaw climate needs continuous inspection.",
+      },
+      {
+        role: "Materials testing technicians",
+        why: "A short construction season compresses paving and concrete acceptance into a narrow window.",
+      },
+      {
+        role: "Resident engineers",
+        why: "Compressed seasons and staged work concentrate decision-making pressure on the person on site.",
+      },
+    ],
+    licensure:
+      "Ohio licenses engineers through the State Board of Registration for Professional Engineers and Surveyors, though CEI hiring rests on technician qualifications. ODOT maintains prequalification for inspection and testing personnel, the regional sewer district runs its own procurement and safety requirements for underground work, and bridge inspection team leaders must satisfy federal National Bridge Inspection Standards requirements.",
   },
   {
     slug: "st-louis-mo",
@@ -1168,6 +1936,38 @@ export const CEI_CITIES: CeiCity[] = [
       "St. Louis Lambert apron inspection",
       "MetroLink extension utility inspection",
     ],
+    agencies: [
+      "MoDOT St. Louis District",
+      "Metropolitan St. Louis Sewer District",
+      "City of St. Louis Board of Public Service",
+      "St. Louis County Department of Transportation",
+      "Bi-State Development / Metro Transit",
+      "Illinois Department of Transportation",
+    ],
+    marketDetail: [
+      "The metro straddles the Mississippi, so inspectors work to Missouri specifications on one bank and Illinois specifications on the other, with separate certification programs behind each. Qualification in both widens what a person can be staffed on considerably, and firms working the whole region plan their inspector rosters around that split rather than around geography alone.",
+      "The sewer district's overflow program is the most reliable source of inspection work in the region, putting people on trench, lining, shaft and treatment plant construction over a horizon measured in decades. Alongside it, an aging river crossing inventory and a large inherited arterial network keep bridge inspection and roadway reconstruction acceptance continuously funded.",
+    ],
+    hiringFocus: [
+      {
+        role: "Inspectors certified in Missouri and Illinois",
+        why: "A metro spanning two states means dual qualification determines how much of the market a person can cover.",
+      },
+      {
+        role: "Underground & pipeline inspectors",
+        why: "A decades-long sewer program sustains trench, lining and shaft inspection work.",
+      },
+      {
+        role: "Bridge inspectors & NBIS team leaders",
+        why: "Major river crossings with long service lives keep structural inspection continuous.",
+      },
+      {
+        role: "Materials testing technicians",
+        why: "Roadway reconstruction across a large inherited network needs sustained acceptance testing.",
+      },
+    ],
+    licensure:
+      "Missouri licenses engineers through the Board for Architects, Professional Engineers, Professional Land Surveyors and Professional Landscape Architects, and Illinois through its own board, but CEI hiring turns on technician credentials rather than the PE. Each state transportation department runs its own certification and prequalification for materials sampling, testing and inspection, ACI certification is portable across both, and bridge inspection team leaders must meet federal National Bridge Inspection Standards requirements on either bank.",
   },
   {
     slug: "raleigh-nc",
@@ -1185,6 +1985,38 @@ export const CEI_CITIES: CeiCity[] = [
       "RDU airport apron resident engineering",
       "Raleigh bridge & culvert inspection",
     ],
+    agencies: [
+      "NCDOT Division 5",
+      "City of Raleigh Engineering Services",
+      "Wake County",
+      "Raleigh Water",
+      "GoTriangle",
+      "Raleigh-Durham Airport Authority",
+    ],
+    marketDetail: [
+      "A large share of inspection in the Triangle is on infrastructure built by private developers and then adopted by a public owner. Streets, water and sewer mains, and stormwater facilities are inspected to municipal standards during construction so the locality can take them over afterward, which is a high-volume, dispersed kind of work quite different from sitting on one highway project.",
+      "The public program adds loop and arterial construction that has run continuously as the region grew. Environmental inspection carries real weight because reservoir nutrient rules make erosion, sediment and stormwater facility installation subject to measured compliance rather than general good practice, and those conditions are enforced during construction rather than checked at the end.",
+    ],
+    hiringFocus: [
+      {
+        role: "Site development & utility acceptance inspectors",
+        why: "Infrastructure built by developers and adopted by public owners needs inspection at high volume across many sites.",
+      },
+      {
+        role: "Erosion & stormwater compliance inspectors",
+        why: "Reservoir nutrient rules make sediment and treatment installation a measured, enforced requirement.",
+      },
+      {
+        role: "Roadway inspectors",
+        why: "Sustained loop and arterial construction keeps highway inspection work continuously funded.",
+      },
+      {
+        role: "Materials testing technicians",
+        why: "High construction volume across public and private work requires steady acceptance testing capacity.",
+      },
+    ],
+    licensure:
+      "North Carolina licenses engineers through the Board of Examiners for Engineers and Surveyors, with firms licensed separately, but CEI hiring turns on technician credentials. NCDOT runs its own certification program for construction materials sampling, testing and inspection, erosion control carries separate state certification, and bridge inspection team leaders must meet federal National Bridge Inspection Standards requirements.",
   },
   {
     slug: "washington-dc",
@@ -1202,6 +2034,38 @@ export const CEI_CITIES: CeiCity[] = [
       "Reagan National apron materials testing",
       "DC water & sewer utility inspection",
     ],
+    agencies: [
+      "District Department of Transportation",
+      "Maryland State Highway Administration",
+      "VDOT Northern Virginia District",
+      "WMATA",
+      "DC Water",
+      "Federal Highway Administration Eastern Federal Lands",
+    ],
+    marketDetail: [
+      "This is the only American metro where a routine commute crosses three separate transportation jurisdictions, and inspectors here work to whichever set of specifications and certifications applies on a given side of the line. Qualification in more than one is close to a practical necessity for anyone building a career across the region, and firms staff explicitly around it.",
+      "Federal land ownership adds a further layer. Work on park land and in the monumental core carries design and construction conditions that are enforced by a federal agency rather than a local one, and security requirements can govern access, sequencing and even who may be on site. Deep tunnel construction for the water utility and transit work inside an operating rail system round out the technically demanding end.",
+    ],
+    hiringFocus: [
+      {
+        role: "Multi-jurisdiction certified inspectors",
+        why: "Three transportation jurisdictions in one metro make dual or triple certification a practical necessity.",
+      },
+      {
+        role: "Tunnel & underground inspectors",
+        why: "A large water utility tunnel program requires shaft, boring and confined space inspection expertise.",
+      },
+      {
+        role: "Transit construction inspectors",
+        why: "Work inside an operating rail system requires access, protection and testing knowledge.",
+      },
+      {
+        role: "Federal project inspectors",
+        why: "Park land and monumental core projects carry federal conditions and security requirements on site access.",
+      },
+    ],
+    licensure:
+      "The District, Maryland and Virginia each license engineers separately and each transportation agency runs its own technician certification for materials and inspection, so working the full metro means holding several. ACI certification is portable, bridge inspection team leaders must meet federal National Bridge Inspection Standards requirements, and federal projects add clearance requirements independent of all of it.",
   },
   {
     slug: "hartford-ct",
@@ -1219,6 +2083,38 @@ export const CEI_CITIES: CeiCity[] = [
       "Connecticut River bridge inspection",
       "Hartford utility & drainage inspection",
     ],
+    agencies: [
+      "ConnDOT District 1",
+      "Metropolitan District Commission",
+      "Hartford Department of Public Works",
+      "Connecticut Airport Authority",
+      "CTtransit",
+      "Capitol Region Council of Governments",
+    ],
+    marketDetail: [
+      "Central Connecticut's inspection workload is dominated by replacing elevated interstate structures that have reached the end of their service lives. That work is staged over months in a constrained river corridor with traffic maintained throughout, which puts a premium on inspectors who understand demolition and erection sequencing and can judge when the contractor has departed from an approved staging plan.",
+      "A short construction season compresses everything. Paving, concrete and coating operations have narrow temperature windows, so acceptance testing has to be scheduled tightly and cold weather protection is inspected rather than assumed. The regional water authority's combined sewer program adds a steady underground inspection workload across the older member towns.",
+    ],
+    hiringFocus: [
+      {
+        role: "Structural & bridge inspectors",
+        why: "Replacing elevated interstate structures makes demolition and erection sequencing the region's core inspection skill.",
+      },
+      {
+        role: "Resident engineers for staged work",
+        why: "Long staged operations in a constrained corridor require a single point of judgment on site.",
+      },
+      {
+        role: "Materials testing technicians",
+        why: "A short season with narrow temperature windows makes acceptance scheduling and cold weather protection critical.",
+      },
+      {
+        role: "Underground & sewer inspectors",
+        why: "The regional combined sewer program sustains trench and conveyance inspection across member towns.",
+      },
+    ],
+    licensure:
+      "Connecticut licenses engineers through the State Board of Examiners for Professional Engineers and Land Surveyors, but CEI roles rest on technician credentials. ConnDOT maintains its own qualification requirements for materials and inspection personnel, ACI certification is standard, and bridge inspection team leaders must satisfy federal National Bridge Inspection Standards experience and training requirements.",
   },
   {
     slug: "albuquerque-nm",
@@ -1236,6 +2132,38 @@ export const CEI_CITIES: CeiCity[] = [
       "Albuquerque Sunport apron materials testing",
       "Big I interchange bridge inspection",
     ],
+    agencies: [
+      "NMDOT District 3",
+      "Albuquerque Metropolitan Arroyo Flood Control Authority",
+      "City of Albuquerque Municipal Development",
+      "Albuquerque Bernalillo County Water Utility Authority",
+      "Federal Highway Administration Central Federal Lands",
+      "Mid-Region Council of Governments",
+    ],
+    marketDetail: [
+      "A large amount of land in New Mexico is federally managed or tribally held, so highway and infrastructure projects here more often involve federal lands agencies and tribal governments as project partners than they do in most states. That brings a different approval and inspection framework, with its own documentation expectations and consultation requirements, and experience with it is genuinely differentiating.",
+      "Locally, the regional flood control authority builds and inspects arroyo channels, grade control structures and detention basins to its own criteria, which is a body of knowledge separate from roadway work. Arid-climate construction brings its own acceptance issues: dust control, moisture conditioning of soils that start bone dry, and curing concrete in low humidity and high solar exposure.",
+    ],
+    hiringFocus: [
+      {
+        role: "Drainage & flood control inspectors",
+        why: "The regional authority builds channels and grade control structures to criteria distinct from roadway work.",
+      },
+      {
+        role: "Federal & tribal lands project inspectors",
+        why: "Federally managed and tribally held land brings separate approval and consultation frameworks.",
+      },
+      {
+        role: "Earthwork & materials testing technicians",
+        why: "Moisture conditioning of very dry soils and curing in low humidity are real acceptance problems here.",
+      },
+      {
+        role: "Roadway inspectors",
+        why: "Interstate and arterial construction through the metro sustains steady highway inspection demand.",
+      },
+    ],
+    licensure:
+      "New Mexico licenses engineers through the State Board of Licensure for Professional Engineers and Professional Surveyors, with firm registration required, but CEI roles turn on technician credentials. NMDOT maintains its own qualification for materials and inspection personnel, ACI certification is standard, and bridge inspection team leaders must meet federal National Bridge Inspection Standards requirements. Federal lands projects add their own contracting and qualification rules.",
   },
   {
     slug: "birmingham-al",
@@ -1253,6 +2181,38 @@ export const CEI_CITIES: CeiCity[] = [
       "Cahaba River bridge inspection",
       "Birmingham resurfacing resident engineering",
     ],
+    agencies: [
+      "ALDOT East Central Region",
+      "Jefferson County Department of Environmental Services",
+      "Birmingham Department of Transportation",
+      "Birmingham Water Works Board",
+      "Birmingham-Shuttlesworth International Airport",
+      "Jefferson County Roads and Transportation",
+    ],
+    marketDetail: [
+      "Interstate reconstruction through the center of the city has been the region's defining inspection assignment, carried out in stages with traffic maintained and involving substantial structural demolition and erection. Work of that kind rewards inspectors who can read a staging plan and recognize when reality has diverged from it, because the consequences of a missed sequence are immediate.",
+      "The county sewer program supplies the steadier workload, weighted toward rehabilitation rather than new construction because of the cost pressure the system operates under. That means inspection of lining, spot repair, manhole rehabilitation and flow control rather than open-cut replacement, which is a different technical skill set. Karst geology and steep terrain make excavation and slope work a recurring inspection concern.",
+    ],
+    hiringFocus: [
+      {
+        role: "Structural & bridge inspectors",
+        why: "Staged interstate reconstruction involves demolition and erection sequences requiring close verification.",
+      },
+      {
+        role: "Sewer rehabilitation inspectors",
+        why: "Cost pressure favors lining and repair over replacement, which is a distinct inspection specialism.",
+      },
+      {
+        role: "Geotechnical & slope inspectors",
+        why: "Karst conditions and steep terrain make excavation and slope work a recurring technical judgment.",
+      },
+      {
+        role: "Materials testing technicians",
+        why: "Concrete and asphalt acceptance runs continuously across the highway program.",
+      },
+    ],
+    licensure:
+      "Alabama licenses engineers through the Board of Licensure for Professional Engineers and Land Surveyors, with a certificate of authorization required for firms, but CEI hiring rests on technician credentials. ALDOT maintains its own certification for materials sampling, testing and inspection, ACI certification is standard, and bridge inspection team leaders must satisfy federal National Bridge Inspection Standards requirements.",
   },
   {
     slug: "memphis-tn",
@@ -1270,6 +2230,38 @@ export const CEI_CITIES: CeiCity[] = [
       "Memphis International apron resident engineering",
       "FedEx World Hub site inspection",
     ],
+    agencies: [
+      "TDOT Region 4",
+      "City of Memphis Division of Engineering",
+      "Shelby County Department of Public Works",
+      "Memphis-Shelby County Airport Authority",
+      "Memphis Light, Gas and Water",
+      "Arkansas Department of Transportation",
+    ],
+    marketDetail: [
+      "Memphis sits where three states meet, so a regional inspector's certifications and specification knowledge need to cover more than one transportation department. The Mississippi crossings in particular are jointly consequential structures, and inspection on them carries the additional weight of their status as lifeline routes in a seismically active zone.",
+      "Freight construction supplies the volume. Intermodal yards, distribution facilities and the pavement serving them are built to carry loads that ordinary roadway construction never sees, which makes subgrade preparation and pavement acceptance decisions unusually consequential. Flat terrain and a high water table put dewatering verification into most deep excavation work.",
+    ],
+    hiringFocus: [
+      {
+        role: "Bridge inspectors & NBIS team leaders",
+        why: "Major river crossings that are lifeline routes in a seismic zone carry heightened inspection significance.",
+      },
+      {
+        role: "Multi-state certified inspectors",
+        why: "A tri-state metro means projects fall under more than one transportation department's specifications.",
+      },
+      {
+        role: "Heavy pavement & earthwork inspectors",
+        why: "Freight loading makes subgrade and pavement acceptance decisions unusually consequential.",
+      },
+      {
+        role: "Underground & dewatering inspectors",
+        why: "Flat terrain with a high water table puts dewatering verification into most deep excavation.",
+      },
+    ],
+    licensure:
+      "Tennessee licenses engineers through the Board of Architectural and Engineering Examiners, but CEI hiring turns on technician credentials. TDOT maintains its own qualification requirements for materials and inspection personnel, Mississippi and Arkansas run parallel programs on their sides of the metro, and bridge inspection team leaders must meet federal National Bridge Inspection Standards requirements.",
   },
   {
     slug: "omaha-ne",
@@ -1287,6 +2279,38 @@ export const CEI_CITIES: CeiCity[] = [
       "Omaha streetcar corridor utility inspection",
       "Platte River bridge inspection",
     ],
+    agencies: [
+      "Nebraska DOT District 2",
+      "Omaha Public Works",
+      "Papio-Missouri River Natural Resources District",
+      "Metropolitan Utilities District",
+      "Omaha Airport Authority",
+      "Iowa Department of Transportation",
+    ],
+    marketDetail: [
+      "The city's combined sewer overflow program is unusually large for the population paying for it, and much of the work is separation and rehabilitation within existing streets rather than greenfield construction. That puts inspectors into congested underground corridors where records of what is already buried are incomplete, so utility conflict documentation is a routine part of the job.",
+      "The metro also crosses the Missouri into Iowa, which means two transportation departments, two certification programs and two sets of specifications. Flood risk management work along the river adds levee and bank stabilization inspection, and loess soils behave unpredictably when saturated, making earthwork acceptance a matter of judgment rather than a table lookup.",
+    ],
+    hiringFocus: [
+      {
+        role: "Underground & utility conflict inspectors",
+        why: "Sewer separation in congested streets with incomplete records makes conflict documentation routine.",
+      },
+      {
+        role: "Inspectors certified in Nebraska and Iowa",
+        why: "A metro spanning the Missouri means two transportation departments and two certification programs.",
+      },
+      {
+        role: "Earthwork & geotechnical inspectors",
+        why: "Loess soils behave unpredictably when wet, making compaction and slope acceptance a judgment call.",
+      },
+      {
+        role: "Levee & flood protection inspectors",
+        why: "River flood risk work adds levee and bank stabilization inspection to the regional workload.",
+      },
+    ],
+    licensure:
+      "Nebraska licenses engineers through the Board of Engineers and Architects, with a certificate of authorization required for firms, but CEI roles rest on technician credentials. The state transportation department runs its own certification for materials and inspection personnel, Iowa maintains a parallel program, and bridge inspection team leaders must satisfy federal National Bridge Inspection Standards requirements.",
   },
   {
     slug: "boise-id",
@@ -1304,6 +2328,38 @@ export const CEI_CITIES: CeiCity[] = [
       "Boise River bridge inspection",
       "Treasure Valley resident engineering",
     ],
+    agencies: [
+      "ITD District 3",
+      "Ada County Highway District",
+      "City of Boise Public Works",
+      "Valley Regional Transit",
+      "Boise Airport",
+      "Idaho Department of Environmental Quality",
+    ],
+    marketDetail: [
+      "Local road construction across the metro is let and inspected by a single countywide highway district rather than by each city, which concentrates a large share of the region's inspection work under one owner with one set of standards. Familiarity with that district's specifications and submittal process is worth more here than the equivalent experience would be in a metro with a dozen separate municipal owners.",
+      "Growth supplies the volume, and much of it is new construction rather than reconstruction, so inspectors spend more time on subdivision streets, utility extension and new arterial work than on rehabilitation. The irrigation canal network running through developing land has to be protected and crossed carefully, which adds an inspection concern most markets do not have.",
+    ],
+    hiringFocus: [
+      {
+        role: "Roadway inspectors familiar with county highway district standards",
+        why: "A single countywide owner concentrates local road work under one specification and submittal process.",
+      },
+      {
+        role: "Site development & utility inspectors",
+        why: "Rapid growth makes subdivision street and utility extension acceptance the highest-volume work.",
+      },
+      {
+        role: "Irrigation & canal crossing inspectors",
+        why: "A live canal network running through developing land must be protected and crossed under its own rules.",
+      },
+      {
+        role: "Materials testing technicians",
+        why: "High new-construction volume requires sustained earthwork, concrete and asphalt acceptance testing.",
+      },
+    ],
+    licensure:
+      "Idaho licenses engineers through the Board of Licensure of Professional Engineers and Professional Land Surveyors, with a certificate of authorization required for firms, but CEI roles turn on technician credentials. The state transportation department relies on the multi-state Western Alliance qualification program for materials testing, the county highway district maintains its own standards, and bridge inspection team leaders must meet federal National Bridge Inspection Standards requirements.",
   },
   {
     slug: "providence-ri",
@@ -1321,6 +2377,38 @@ export const CEI_CITIES: CeiCity[] = [
       "Providence River bridge inspection",
       "RIDOT statewide bridge inventory inspection",
     ],
+    agencies: [
+      "RIDOT",
+      "Narragansett Bay Commission",
+      "Providence Department of Public Works",
+      "Rhode Island Airport Corporation",
+      "Rhode Island Public Transit Authority",
+      "Rhode Island Infrastructure Bank",
+    ],
+    marketDetail: [
+      "Rhode Island has organized a sustained statewide program around replacing and rehabilitating a structure inventory in poor condition, and that makes bridge work the dominant inspection activity in the market. Because the state is small, a single agency lets most of it, so an inspector's relationship with that agency's processes and personnel matters more here than in a state with many districts.",
+      "The bay's storage tunnel program supplies the underground workload, with shaft, boring and lining inspection running in phases across the urban core. A short construction season and coastal exposure compress schedules and accelerate corrosion, so protective coating inspection and cold weather concrete protection are recurring rather than occasional concerns.",
+    ],
+    hiringFocus: [
+      {
+        role: "NBIS-qualified bridge inspection team leaders",
+        why: "A statewide structure replacement program built on a deteriorated inventory dominates the market.",
+      },
+      {
+        role: "Tunnel & underground inspectors",
+        why: "A phased storage tunnel program requires shaft, boring and lining inspection expertise.",
+      },
+      {
+        role: "Coating & corrosion inspectors",
+        why: "Coastal exposure makes protective coating application and verification a recurring requirement.",
+      },
+      {
+        role: "Materials testing technicians",
+        why: "A short season with cold weather protection requirements makes acceptance scheduling tight.",
+      },
+    ],
+    licensure:
+      "Rhode Island licenses engineers through the Board of Registration for Professional Engineers, and most engineers working the wider market also hold Massachusetts or Connecticut registration. For CEI the credentials are technician-level: the state transportation department maintains its own qualification requirements, ACI certification is standard, and bridge inspection team leaders must satisfy federal National Bridge Inspection Standards requirements.",
   },
   {
     slug: "buffalo-ny",
@@ -1338,6 +2426,38 @@ export const CEI_CITIES: CeiCity[] = [
       "Peace Bridge inspection",
       "Buffalo utility & sewer inspection",
     ],
+    agencies: [
+      "NYSDOT Region 5",
+      "New York State Thruway Authority",
+      "City of Buffalo Department of Public Works",
+      "Erie County Department of Public Works",
+      "Niagara Frontier Transportation Authority",
+      "Buffalo Sewer Authority",
+    ],
+    marketDetail: [
+      "Western New York's inspection workload is driven by an aging highway and structure inventory built largely in one era and now reaching replacement together. Deck rehabilitation, joint replacement and structural repair are continuous, and a corrosive environment of lake-effect snow and heavy salt use means inspectors are judging deterioration as much as verifying new work.",
+      "The season is the constraint. A narrow window for paving, concrete and coating operations compresses the program into a few months, making acceptance testing capacity and cold weather protection inspection genuine scheduling problems. The sewer authority's green infrastructure program adds distributed surface construction inspection scattered across many small sites rather than concentrated on one job.",
+    ],
+    hiringFocus: [
+      {
+        role: "Bridge inspectors & NBIS team leaders",
+        why: "A corrosive climate and an inventory reaching replacement together keep structural inspection continuous.",
+      },
+      {
+        role: "Coating & corrosion inspectors",
+        why: "Heavy salt exposure makes protective coating application and verification a recurring requirement.",
+      },
+      {
+        role: "Materials testing technicians",
+        why: "A short season compresses paving and concrete acceptance into a narrow, congested window.",
+      },
+      {
+        role: "Stormwater & green infrastructure inspectors",
+        why: "A distributed green infrastructure program spreads inspection across many small scattered sites.",
+      },
+    ],
+    licensure:
+      "New York licenses engineers through the State Education Department's Office of the Professions, but CEI hiring rests on technician credentials and agency prequalification. NYSDOT and the Thruway Authority each maintain their own qualification requirements for materials and inspection personnel, ACI certification is standard, and bridge inspection team leaders must meet federal National Bridge Inspection Standards requirements.",
   },
 ];
 
