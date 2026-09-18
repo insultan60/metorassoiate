@@ -121,12 +121,12 @@ export default function TermsPage() {
 
             <Rule />
 
-            <H2>6. No Guarantee of Employment or Placement</H2>
+            <H2>6. No Assurance of Employment</H2>
             <P>
-              Submitting information or applying through our website does not guarantee employment,
-              placement, an interview, or any particular outcome. Any staffing guarantees, replacement
-              terms, or fees are governed solely by a separate written agreement between Metro
-              Associates and the applicable client.
+              Submitting information or applying through our website does not constitute an offer of
+              employment, an interview invitation, or a commitment to any particular outcome. All
+              staffing terms, fee arrangements, and candidate commitments are governed solely by a
+              separate written agreement between Metro Associates and the applicable client.
             </P>
 
             <Rule />

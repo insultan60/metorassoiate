@@ -35,6 +35,16 @@ const SPECIALTIES = [
     label: "Bridge & Structural",
     blurb: "Bridge design, high-rise & seismic retrofit",
   },
+  {
+    slug: "transportation-recruiter",
+    label: "Transportation Engineering",
+    blurb: "DOT programs, highway design & transit planning",
+  },
+  {
+    slug: "project-management-recruiter",
+    label: "Project Management",
+    blurb: "AEC program directors, PMs & owner's reps",
+  },
 ] as const;
 
 export default function OtherSpecialties({ exclude }: { exclude: string }) {

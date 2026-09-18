@@ -37,6 +37,8 @@ const DISCIPLINES = [
   { label: "Water & Wastewater", href: "/water-wastewater-recruiter" },
   { label: "CEI & Inspection", href: "/cei-inspection-recruiter" },
   { label: "Municipal Engineering", href: "/municipal-engineering-recruiter" },
+  { label: "Transportation Engineering", href: "/transportation-recruiter" },
+  { label: "Project Management", href: "/project-management-recruiter" },
 ];
 
 const LOCATIONS = [

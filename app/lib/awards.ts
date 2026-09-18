@@ -39,7 +39,9 @@ export type Discipline =
   | "cei-inspection-recruiter"
   | "mep-engineering-recruiter"
   | "municipal-engineering-recruiter"
-  | "water-wastewater-recruiter";
+  | "water-wastewater-recruiter"
+  | "transportation-recruiter"
+  | "project-management-recruiter";
 
 export type AwardProgram = {
   name: string;
