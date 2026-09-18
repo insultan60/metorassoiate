@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import HubFaqs from "../components/HubFaqs";
+import ServiceModels from "../components/ServiceModels";
 import Image from "next/image";
 import Link from "next/link";
 import {
@@ -25,9 +26,9 @@ const TICKER = [
 ];
 
 export const metadata: Metadata = {
-  title: "Civil Engineering Recruiters, Nationwide | Metro Associates",
+  title: "Civil Engineering Recruiters & Staffing | Metro Associates",
   description:
-    "National civil engineering recruiters. We place licensed PEs, project managers and technical leads on state DOT, federal and private capital programs.",
+    "Civil engineering recruiters, staffing and executive headhunters. We place licensed PEs, project managers and technical leads on DOT and capital programs.",
   keywords: [
     "civil engineering recruiter",
     "civil engineering staffing agency",
@@ -40,9 +41,9 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: "/civil-engineering-recruiter" },
   openGraph: {
-    title: "Civil Engineering Recruiters, Nationwide | Metro Associates",
+    title: "Civil Engineering Recruiters & Staffing | Metro Associates",
     description:
-      "National civil engineering recruiters. We place licensed PEs, project managers and technical leads on state DOT, federal and private capital programs.",
+      "Civil engineering recruiters, staffing and executive headhunters. We place licensed PEs, project managers and technical leads on DOT and capital programs.",
     url: `${SITE_URL}/civil-engineering-recruiter`,
     siteName: "Metro Associates",
     type: "website",
@@ -167,6 +168,8 @@ export default function NationalRecruiterPage() {
           </div>
         </div>
       </section>
+
+      <ServiceModels segment="civil-engineering-recruiter" />
 
       {/* Cities directory */}
       <section className="relative border-t border-navy-950/10 blueprint-light py-24 sm:py-28">

@@ -297,6 +297,49 @@ export const GENERAL_FAQS: FaqItem[] = [
   },
 ];
 
+/* Hiring FAQs — the commercial set, written for the person paying the fee.
+ *
+ * Everything else in this file answers a question about engineering. This
+ * group answers questions about buying a search, which is the gap the
+ * keyword work kept landing on: cost of using a staffing agency, contingency
+ * against retained, agency against in-house, how long a fill takes, what a
+ * headhunter is. Those are employer queries with low volume and high value,
+ * and nothing on this site addressed any of them.
+ *
+ * The rule about checkable content still applies, and it bites hardest here.
+ * No fee percentage is published, because fees are quoted per search and a
+ * number invented to match a query is a number a client will later quote
+ * back. What can be stated is the mechanism, which is industry-wide and
+ * verifiable, plus the two facts this site already publishes elsewhere: the
+ * employer pays, and average time to fill runs two to four weeks.
+ */
+export const HIRING_FAQS: FaqItem[] = [
+  {
+    q: "How much does it cost to hire an engineer through a recruiter?",
+    a: "Two things set it: the fee model, and the first-year base salary the fee is calculated against. Contingency search in the United States is quoted as a percentage of that base and is owed only when a hire starts. Retained search is a flat fee billed in stages across the search. We quote per search rather than publishing a rate, because a PE role in a thin market and a designer role in a deep one are not the same piece of work. What does not vary is who pays: the employer, never the engineer.",
+  },
+  {
+    q: "What is the difference between a recruiter, a staffing agency and a headhunter?",
+    a: "Mostly the engagement, not the work. Staffing agency usually describes placing people at volume, often on contract, sometimes with the agency holding the payroll. Headhunter, or executive search, means approaching people who are not applying anywhere, normally for senior roles. Placement agency is the same idea again, generally for permanent hires. Recruiter covers all of it. On an engineering desk the label matters less than whether the person running the search can read a resume and tell you what the license, the seal and the project history actually mean.",
+  },
+  {
+    q: "Contingency or retained: which fits an engineering search?",
+    a: "Contingency means the fee falls due only on a hire, and the role may be open to more than one firm at once. Retained means the client commits to the search and the fee is billed in stages, which buys exclusivity and, in practice, a deeper map of who is out there. Most engineering hiring in the United States runs on contingency. Retained earns its keep where the pool is small enough that the search is almost entirely direct approach: practice leaders, chief engineers, public works directors.",
+  },
+  {
+    q: "How long does it take to fill an engineering role?",
+    a: "Our average time to fill runs two to four weeks from kickoff to signed offer, and what moves it is licensure and geography rather than seniority. A role that needs a seal in a state the candidate is not yet licensed in waits on comity, which is weeks rather than days. Start dates then follow notice, which in this industry is usually another two to four weeks. A search that stalls past that is normally a compensation band problem, not a sourcing one.",
+  },
+  {
+    q: "When is an outside recruiter better than hiring in-house?",
+    a: "They solve different problems. In-house recruiting is cheaper per hire once volume is steady, and it owns the employer brand. An outside desk is worth paying for when the hire is rare rather than repeated, when the people who can do the job are not applying to anything, or when the search has to stay confidential from a current employer. A firm making three site civil hires a year does not need a permanent recruiter to do it; a firm staffing a district-wide program does.",
+  },
+  {
+    q: "Can we hire contract or outsourced engineers instead of permanent staff?",
+    a: "For work with an end date, yes. Construction-phase and inspection staffing is contracted for the length of a program, which is how CEI is hired across the industry, and we recruit it that way. Design and leadership hiring here is predominantly permanent, and we would rather say that than quote a contract rate for a seat you will still need in two years.",
+  },
+];
+
 /* ------------------------------------------------------------------
    One page per group.
    ------------------------------------------------------------------
@@ -319,6 +362,7 @@ export const GENERAL_FAQS: FaqItem[] = [
 
 export type FaqGroupId =
   | "working-with-metro-associates"
+  | "hiring-through-a-recruiter"
   | "civil-engineering"
   | "mep-engineering"
   | "bridge-structural"
@@ -345,6 +389,14 @@ export const FAQ_GROUPS: FaqGroup[] = [
     blurb: "What we cover, where we work, who pays, and how a search actually starts.",
     href: null,
     faqs: GENERAL_FAQS,
+  },
+  {
+    id: "hiring-through-a-recruiter",
+    title: "Hiring through a recruiter",
+    blurb:
+      "What a search costs and who pays, contingency against retained, how long a fill takes, and when an outside desk beats hiring in-house.",
+    href: null,
+    faqs: HIRING_FAQS,
   },
   {
     id: "civil-engineering",

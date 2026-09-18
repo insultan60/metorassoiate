@@ -18,10 +18,11 @@ import { listJobs } from "../lib/jobs";
 export const revalidate = 3600;
 
 export const metadata: Metadata = {
-  title: fitTitle("Engineering Jobs"),
+  title: fitTitle("Engineering Jobs Hiring Now"),
   description: fitDescription([
-    "Live engineering roles we are recruiting for across the United States:",
-    "civil, MEP, structural, water and municipal.",
+    "Engineering jobs hiring now across the United States:",
+    "civil, MEP, structural, water, municipal and construction inspection.",
+    "Candidates never pay a fee.",
   ]),
   alternates: { canonical: `${SITE_URL}/jobs` },
 };

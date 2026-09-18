@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import HubFaqs from "../components/HubFaqs";
+import ServiceModels from "../components/ServiceModels";
 import Image from "next/image";
 import Link from "next/link";
 import {
@@ -30,9 +31,9 @@ const TICKER = [
 ];
 
 export const metadata: Metadata = {
-  title: "Bridge & Structural Recruiters | Metro Associates",
+  title: "Bridge & Structural Staffing Agency | Metro Associates",
   description:
-    "National bridge and structural engineering recruiters. Design engineers, load-rating specialists and inspection leads for bridge programs nationwide.",
+    "Bridge and structural engineering recruiters and headhunters. Design PEs and SEs, load rating specialists and inspection leads, placed nationwide.",
   keywords: [
     "bridge engineering recruiter",
     "structural engineering recruiter",
@@ -43,9 +44,9 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: "/bridge-structural-recruiter" },
   openGraph: {
-    title: "Bridge & Structural Recruiters | Metro Associates",
+    title: "Bridge & Structural Staffing Agency | Metro Associates",
     description:
-      "National bridge and structural engineering recruiters. Design engineers, load-rating specialists and inspection leads for bridge programs nationwide.",
+      "Bridge and structural engineering recruiters and headhunters. Design PEs and SEs, load rating specialists and inspection leads, placed nationwide.",
     url: `${SITE_URL}/bridge-structural-recruiter`,
     siteName: "Metro Associates",
     type: "website",
@@ -100,23 +101,23 @@ const ROLES = [
 
 const WHY = [
   {
-    title: "Bridge & Structural Recruiters | Metro Associates",
+    title: "National Talent Pipeline",
     body: "Access to a vast database of 50,000+ pre-vetted engineering professionals.",
   },
   {
-    title: "Bridge & Structural Recruiters | Metro Associates",
+    title: "Multi-State Licensing Expertise",
     body: "We understand NCEES comity and the complexities of multi-state PE licensure.",
   },
   {
-    title: "Bridge & Structural Recruiters | Metro Associates",
+    title: "Passive Candidate Acquisition",
     body: "Our recruiters reach high-performers who are not actively on job boards.",
   },
   {
-    title: "Bridge & Structural Recruiters | Metro Associates",
+    title: "Whole Structural Teams",
     body: "From a single PE to an entire bridge or vertical-building structural team for a multi-year program.",
   },
   {
-    title: "Bridge & Structural Recruiters | Metro Associates",
+    title: "Design Code & NBIS Fluency",
     body: "Fluency in AASHTO LRFD, ASCE 7 seismic and wind design, NBIS inspection standards, and state DOT bridge requirements.",
   },
 ];
@@ -241,6 +242,8 @@ export default function BridgeStructuralRecruiterPage() {
           </div>
         </div>
       </section>
+
+      <ServiceModels segment="bridge-structural-recruiter" />
 
       {/* Skills & software — the specific tools and certifications we screen
           candidates against, beyond licensure. */}

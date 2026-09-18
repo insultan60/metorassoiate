@@ -3,15 +3,16 @@ import Image from "next/image";
 import { IconPhone, IconMail, IconPin } from "../components/Icons";
 import ContactForm from "../components/ContactForm";
 import { HeaderBackdrop } from "../components/HeaderBackdrop";
+import HubFaqs from "../components/HubFaqs";
 import { PHONE, PHONE_HREF, EMAIL, OFFICE_METROS } from "../lib/site";
 
 export const metadata: Metadata = {
-  title: "Contact Metro Associates | Engineering Recruiters",
+  title: "Contact Engineering Recruiters | Metro Associates",
   description:
     // Eight, matching the eight offices actually listed on this page. It read
     // "nine" while showing and naming eight, which is the kind of small
     // inaccuracy a buyer checking the firm out will notice.
-    "Talk to an engineering recruiter about a role you need filled, or your own next move. Eight US offices, placements nationwide.",
+    "Request engineering staffing help or talk to a recruiter about your own next move. Eight US offices, placements nationwide, employer-paid fees.",
 };
 
 /* Derived from the canonical list in lib/site.ts, which the Organization
@@ -149,6 +150,14 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
+
+      {/* The questions a buyer asks before filling this form in: what it
+          costs, who pays, how long it takes. Titles only, answers on the
+          group page, per the rule in lib/hubFaqs. */}
+      <HubFaqs
+        group="hiring-through-a-recruiter"
+        heading="Before you send it: what a search costs and how it runs"
+      />
     </main>
   );
 }

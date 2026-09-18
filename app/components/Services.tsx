@@ -7,36 +7,48 @@ import {
   IconBolt,
 } from "./Icons";
 
+/* The six cards used to be capability adjectives: "Top Talent",
+ * "Innovation", "Valuable Extension". Three of the six were about diversity
+ * and inclusion and none of them named a service, so the only block on this
+ * site headed "services" could not match a search for permanent placement,
+ * executive search or contract staffing.
+ *
+ * The first three now name what a buyer is actually shopping for. The client's
+ * own claims are kept rather than cut: no fee unless the candidate is hired,
+ * diversity and inclusion, responsiveness, the extension-of-your-team line.
+ * They have been consolidated into the last three cards instead of being
+ * spread thinly across all six.
+ */
 const SERVICES = [
   {
     icon: IconUsers,
-    title: "Experienced Team",
-    body: "Rely on the expertise of our experienced team of recruitment professionals who place the best talent.",
+    title: "Direct Hire & Permanent Placement",
+    body: "Permanent engineering hires onto your own payroll, from EIT designers to licensed PEs and project managers. There is absolutely no fee unless the candidate is hired.",
   },
   {
     icon: IconTarget,
-    title: "Top Talent",
-    body: "We specialize in getting top talent from your competitors, senior technical and intelligence recruiter professionals.",
+    title: "Executive Search & Headhunting",
+    body: "Confidential approaches to practice leaders, chief engineers and public works directors: the people who run the work and are not applying anywhere.",
+  },
+  {
+    icon: IconLayers,
+    title: "Contract & Project Staffing",
+    body: "Inspection and construction-phase teams staffed for the length of a program, qualified against the agency's own approved list before anyone reaches you.",
+  },
+  {
+    icon: IconSpark,
+    title: "Experienced Recruiting Team",
+    body: "Rely on the expertise of our experienced team of recruitment professionals, who reach senior technical talent your competitors are trying to keep.",
   },
   {
     icon: IconGlobe,
     title: "Diversity & Inclusion",
-    body: "Elevating the importance of diversity and inclusion in the workplace. There is absolutely no fee unless the candidate is hired.",
-  },
-  {
-    icon: IconSpark,
-    title: "Innovation",
-    body: "Priority attention whenever you need us, with diversity and inclusion behind every innovation we bring.",
-  },
-  {
-    icon: IconLayers,
-    title: "Valuable Extension",
-    body: "We are a valuable extension of your team, created by joining diverse and inclusive team resources.",
+    body: "Elevating the importance of diversity and inclusion in the workplace, and harnessing the differences of your people with the ones that will excel.",
   },
   {
     icon: IconBolt,
     title: "Responsive Service",
-    body: "Quick, responsive service. Harness the differences of your people with the ones that will excel.",
+    body: "Quick, responsive service and priority attention whenever you need us. We work as a valuable extension of your team rather than a vendor at arm's length.",
   },
 ];
 

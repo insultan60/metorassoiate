@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import HubFaqs from "../components/HubFaqs";
+import ServiceModels from "../components/ServiceModels";
 import Link from "next/link";
 import {
   IconArrow, IconCheck, IconGlobe, IconShield, IconTarget, IconLayers,
@@ -27,9 +28,9 @@ const TICKER = [
 ];
 
 export const metadata: Metadata = {
-  title: "AEC & Infrastructure Project Management Recruiters | Metro Associates",
+  title: "Project Management Recruiters, AEC | Metro Associates",
   description:
-    "National project management recruiters for the AEC and infrastructure sectors, including civil, water/wastewater, transportation, and construction. Very successful experience recruiting program directors, PMs, and owner's representatives nationwide.",
+    "AEC and infrastructure project management recruiters. Program directors, capital PMs, construction managers and owner's representatives, nationwide.",
   keywords: [
     "AEC project management recruiter",
     "infrastructure project manager recruiter",
@@ -43,9 +44,9 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: "/project-management-recruiter" },
   openGraph: {
-    title: "AEC & Infrastructure Project Management Recruiters | Metro Associates",
+    title: "Project Management Recruiters, AEC | Metro Associates",
     description:
-      "National project management recruiters for the AEC and infrastructure sectors, including civil, water/wastewater, transportation, and construction. Very successful experience recruiting program directors, PMs, and owner's representatives nationwide.",
+      "AEC and infrastructure project management recruiters. Program directors, capital PMs, construction managers and owner's representatives, nationwide.",
     url: `${SITE_URL}/project-management-recruiter`,
     siteName: "Metro Associates",
     type: "website",
@@ -237,6 +238,8 @@ export default function ProjectManagementRecruiterPage() {
         </div>
       </section>
 
+      <ServiceModels segment="project-management-recruiter" />
+
       {/* Skills & software */}
       <section className="relative border-t border-navy-950/10 blueprint-light py-24 sm:py-28">
         <div className="container-x">
@@ -344,7 +347,7 @@ export default function ProjectManagementRecruiterPage() {
       <ClientAwards discipline="project-management-recruiter" />
 
       <OtherSpecialties exclude="project-management-recruiter" />
-      <HubFaqs group="civil-engineering-recruiter" heading="AEC project management recruiting: common questions" />
+      <HubFaqs group="hiring-through-a-recruiter" heading="Hiring through a recruiter: common questions" />
     </main>
   );
 }

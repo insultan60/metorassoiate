@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import HubFaqs from "../components/HubFaqs";
+import ServiceModels from "../components/ServiceModels";
 import Link from "next/link";
 import {
   IconArrow, IconCheck, IconGlobe, IconShield, IconTarget, IconLayers,
@@ -29,9 +30,9 @@ const TICKER = [
 ];
 
 export const metadata: Metadata = {
-  title: "CEI & Inspection Recruiters | Metro Associates",
+  title: "CEI Inspection Staffing & Recruiters | Metro Associates",
   description:
-    "National CEI recruiters placing resident engineers, DOT-qualified inspectors and construction engineering inspection staff on public programs.",
+    "CEI staffing for construction programs. DOT-qualified inspectors, resident engineers and QA/QC leads, recruited by district and by letting schedule.",
   keywords: [
     "CEI recruiter",
     "construction inspection recruiter",
@@ -44,9 +45,9 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: "/cei-inspection-recruiter" },
   openGraph: {
-    title: "CEI & Inspection Recruiters | Metro Associates",
+    title: "CEI Inspection Staffing & Recruiters | Metro Associates",
     description:
-      "National CEI recruiters placing resident engineers, DOT-qualified inspectors and construction engineering inspection staff on public programs.",
+      "CEI staffing for construction programs. DOT-qualified inspectors, resident engineers and QA/QC leads, recruited by district and by letting schedule.",
     url: `${SITE_URL}/cei-inspection-recruiter`,
     siteName: "Metro Associates",
     type: "website",
@@ -108,23 +109,23 @@ const SALARIES = [
 
 const WHY = [
   {
-    title: "CEI & Inspection Recruiters | Metro Associates",
+    title: "National Talent Pipeline",
     body: "Access to a vast database of 50,000+ pre-vetted engineering professionals.",
   },
   {
-    title: "CEI & Inspection Recruiters | Metro Associates",
+    title: "Credentials Verified First",
     body: "NICET, ACI, DOT, and bridge-inspection credentials confirmed before a candidate reaches you.",
   },
   {
-    title: "CEI & Inspection Recruiters | Metro Associates",
+    title: "Passive Candidate Acquisition",
     body: "Our recruiters reach high-performers who are not actively on job boards.",
   },
   {
-    title: "CEI & Inspection Recruiters | Metro Associates",
+    title: "Whole CEI Field Teams",
     body: "From a single inspector to an entire CEI field team for a multi-year DOT program.",
   },
   {
-    title: "CEI & Inspection Recruiters | Metro Associates",
+    title: "DOT Specification Fluency",
     body: "Fluency in AASHTO, NBIS bridge-inspection standards, and state DOT construction specifications.",
   },
 ];
@@ -243,6 +244,8 @@ export default function CeiInspectionRecruiterPage() {
           </div>
         </div>
       </section>
+
+      <ServiceModels segment="cei-inspection-recruiter" />
 
       {/* Skills & certifications */}
       <section className="relative border-t border-navy-950/10 blueprint-light py-24 sm:py-28">

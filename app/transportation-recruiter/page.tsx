@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import HubFaqs from "../components/HubFaqs";
+import ServiceModels from "../components/ServiceModels";
 import Link from "next/link";
 import {
   IconArrow, IconCheck, IconGlobe, IconShield, IconTarget, IconLayers,
@@ -27,9 +28,9 @@ const TICKER = [
 ];
 
 export const metadata: Metadata = {
-  title: "Transportation Engineering Recruiters, Nationwide | Metro Associates",
+  title: "Transportation Engineering Staffing | Metro Associates",
   description:
-    "National transportation engineering recruiters with proven AEC and infrastructure sector experience. We place licensed PEs, DOT program managers, and transportation planners across all 50 states.",
+    "Transportation engineering recruiters and DOT staffing. Licensed PEs, highway and traffic engineers, planners and program directors, in all 50 states.",
   keywords: [
     "transportation engineering recruiter",
     "transportation engineer staffing agency",
@@ -43,9 +44,9 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: "/transportation-recruiter" },
   openGraph: {
-    title: "Transportation Engineering Recruiters, Nationwide | Metro Associates",
+    title: "Transportation Engineering Staffing | Metro Associates",
     description:
-      "National transportation engineering recruiters with proven AEC and infrastructure sector experience. We place licensed PEs, DOT program managers, and transportation planners across all 50 states.",
+      "Transportation engineering recruiters and DOT staffing. Licensed PEs, highway and traffic engineers, planners and program directors, in all 50 states.",
     url: `${SITE_URL}/transportation-recruiter`,
     siteName: "Metro Associates",
     type: "website",
@@ -235,6 +236,8 @@ export default function TransportationRecruiterPage() {
         </div>
       </section>
 
+      <ServiceModels segment="transportation-recruiter" />
+
       {/* Skills & software */}
       <section className="relative border-t border-navy-950/10 blueprint-light py-24 sm:py-28">
         <div className="container-x">
@@ -342,7 +345,7 @@ export default function TransportationRecruiterPage() {
       <ClientAwards discipline="transportation-recruiter" />
 
       <OtherSpecialties exclude="transportation-recruiter" />
-      <HubFaqs group="civil-engineering-recruiter" heading="Transportation engineering recruiting: common questions" />
+      <HubFaqs group="civil-engineering" heading="Transportation engineering recruiting: common questions" />
     </main>
   );
 }

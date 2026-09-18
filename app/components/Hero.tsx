@@ -73,12 +73,16 @@ export default function Hero() {
             </span>
           </div>
 
+          {/* The H1 carries both halves of the vocabulary this site is
+              searched with. Search Console has "civil engineering recruiters"
+              at 504 impressions and "civil engineering staffing" at 429, and
+              the word staffing appeared nowhere in a heading on this page. */}
           <h1 className="display mt-6 text-[12.5vw] leading-[0.92] text-white sm:text-6xl lg:text-[5.2rem]">
-            Specialized
+            Engineering
             <br />
-            engineering
+            recruiting &amp;
             <br />
-            recruiting.
+            staffing.
           </h1>
 
           <p className="mt-6 flex items-center gap-3 text-2xl font-bold text-amber-500 sm:text-3xl">
@@ -88,7 +92,8 @@ export default function Hero() {
 
           <p className="mt-7 max-w-2xl text-lg leading-8 text-ink-200 text-pretty">
             Tired of endless searches for the right engineering talent? Metro
-            Associates transforms your hiring process, with results you can
+            Associates is a specialist engineering staffing agency and search
+            firm, and we transform your hiring process with results you can
             count on. We help companies across the United States hire
             qualified, experienced technical, engineering, and licensed
             professionals.

@@ -6,6 +6,7 @@ import { JsonLd } from "../../components/JsonLd";
 import { breadcrumbSchema, fitTitle, fitDescription } from "../../lib/seo";
 import { SITE_URL } from "../../lib/site";
 import { listJobs, getJob, jobExcerpt, employmentType } from "../../lib/jobs";
+import { deskForJob, marketForJob } from "../../lib/jobRouting";
 
 /* One page per live role.
  *
@@ -65,6 +66,12 @@ export default async function JobPage({
     .slice(0, 4);
 
   const type = employmentType(job.jobType);
+
+  /* The desk this role sits on, and the market page covering it. Both are
+     derived from the ATS title and location, so a role posted tomorrow is
+     routed without anyone maintaining a mapping. */
+  const desk = deskForJob(job.title);
+  const market = marketForJob(desk, job.city, job.state);
 
   /* Republished rather than copied. The portal's own markup carries a
      postalCode field populated with the state name, which is not a postal
@@ -180,6 +187,26 @@ export default async function JobPage({
               >
                 {"Apply for this role →"}
               </a>
+            </div>
+
+            {/* Out of the job and into the pages that cover this work.
+                Without these two links a job page is a dead end: it points at
+                the index and the ATS and nowhere else on the site. */}
+            <div className="mt-10 flex max-w-3xl flex-col gap-3 border-t border-navy-950/10 pt-8 sm:flex-row sm:flex-wrap">
+              <Link
+                href={`/${desk.segment}`}
+                className="mono-label inline-flex border border-navy-950/20 px-5 py-3 text-[10px] text-navy-950 transition-colors hover:border-amber-500 hover:bg-amber-500"
+              >
+                {`Our ${desk.label} desk →`}
+              </Link>
+              {market && (
+                <Link
+                  href={market.href}
+                  className="mono-label inline-flex border border-navy-950/20 px-5 py-3 text-[10px] text-navy-950 transition-colors hover:border-amber-500 hover:bg-amber-500"
+                >
+                  {`${market.label} →`}
+                </Link>
+              )}
             </div>
           </div>
         </section>

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import HubFaqs from "../components/HubFaqs";
+import ServiceModels from "../components/ServiceModels";
 import Image from "next/image";
 import Link from "next/link";
 import {
@@ -27,9 +28,9 @@ const TICKER = [
 ];
 
 export const metadata: Metadata = {
-  title: "MEP Engineering Recruiters, Nationwide | Metro Associates",
+  title: "MEP Engineering Recruiters & Staffing | Metro Associates",
   description:
-    "National MEP recruiters placing mechanical, electrical and plumbing PEs and commissioning specialists on data center, healthcare and life-science work.",
+    "MEP staffing agency and engineering headhunters placing mechanical, electrical, plumbing and commissioning PEs on data center, healthcare and lab work.",
   keywords: [
     "MEP engineering recruiter",
     "MEP staffing agency",
@@ -42,9 +43,9 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: "/mep-engineering-recruiter" },
   openGraph: {
-    title: "MEP Engineering Recruiters, Nationwide | Metro Associates",
+    title: "MEP Engineering Recruiters & Staffing | Metro Associates",
     description:
-      "National MEP recruiters placing mechanical, electrical and plumbing PEs and commissioning specialists on data center, healthcare and life-science work.",
+      "MEP staffing agency and engineering headhunters placing mechanical, electrical, plumbing and commissioning PEs on data center, healthcare and lab work.",
     url: `${SITE_URL}/mep-engineering-recruiter`,
     siteName: "Metro Associates",
     type: "website",
@@ -169,6 +170,8 @@ export default function MepNationalRecruiterPage() {
           </div>
         </div>
       </section>
+
+      <ServiceModels segment="mep-engineering-recruiter" />
 
       {/* Cities directory */}
       <section className="relative border-t border-navy-950/10 blueprint-light py-24 sm:py-28">

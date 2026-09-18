@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import HubFaqs from "../components/HubFaqs";
+import ServiceModels from "../components/ServiceModels";
 import Link from "next/link";
 import {
   IconArrow, IconCheck, IconGlobe, IconShield, IconTarget, IconLayers,
@@ -29,9 +30,9 @@ const TICKER = [
 ];
 
 export const metadata: Metadata = {
-  title: "Municipal Engineering Recruiters | Metro Associates",
+  title: "Municipal Engineering Staffing | Metro Associates",
   description:
-    "National municipal engineering recruiters. City and county engineers, public works leadership and capital program managers for local agencies.",
+    "Municipal engineering recruiters and public works executive search. City and county engineers, public works directors and capital program managers.",
   keywords: [
     "municipal engineering recruiter",
     "municipal engineer staffing agency",
@@ -44,9 +45,9 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: "/municipal-engineering-recruiter" },
   openGraph: {
-    title: "Municipal Engineering Recruiters | Metro Associates",
+    title: "Municipal Engineering Staffing | Metro Associates",
     description:
-      "National municipal engineering recruiters. City and county engineers, public works leadership and capital program managers for local agencies.",
+      "Municipal engineering recruiters and public works executive search. City and county engineers, public works directors and capital program managers.",
     url: `${SITE_URL}/municipal-engineering-recruiter`,
     siteName: "Metro Associates",
     type: "website",
@@ -105,23 +106,23 @@ const SALARIES = [
 
 const WHY = [
   {
-    title: "Municipal Engineering Recruiters | Metro Associates",
+    title: "National Talent Pipeline",
     body: "Access to a vast database of 50,000+ pre-vetted engineering professionals.",
   },
   {
-    title: "Municipal Engineering Recruiters | Metro Associates",
+    title: "Multi-State Licensing Expertise",
     body: "We understand NCEES comity and the complexities of multi-state PE licensure.",
   },
   {
-    title: "Municipal Engineering Recruiters | Metro Associates",
+    title: "Passive Candidate Acquisition",
     body: "Our recruiters reach high-performers who are not actively on job boards.",
   },
   {
-    title: "Municipal Engineering Recruiters | Metro Associates",
+    title: "One Engineer to a Department",
     body: "From a single city engineer to an entire public works department build-out.",
   },
   {
-    title: "Municipal Engineering Recruiters | Metro Associates",
+    title: "Procurement & Funding Cycles",
     body: "Fluency in municipal procurement, capital-plan funding cycles, and grant-compliant hiring timelines.",
   },
 ];
@@ -239,6 +240,8 @@ export default function MunicipalEngineeringRecruiterPage() {
           </div>
         </div>
       </section>
+
+      <ServiceModels segment="municipal-engineering-recruiter" />
 
       {/* Skills & software */}
       <section className="relative border-t border-navy-950/10 blueprint-light py-24 sm:py-28">
