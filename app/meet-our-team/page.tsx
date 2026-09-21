@@ -9,7 +9,8 @@ import TeamCard from "../components/TeamCard";
 export const metadata: Metadata = {
   title: "Meet the Team | Metro Associates Recruiters",
   description:
-    "The recruiters behind our placements, who they specialise in, the disciplines they cover, and how to reach them directly.",
+    "The recruiters behind our placements, who they specialize in, the disciplines they cover, and how to reach them directly.",
+  alternates: { canonical: "/meet-our-team" },
 };
 
 /* Pinned explicitly rather than left to infer from the getJobFolderTeam()

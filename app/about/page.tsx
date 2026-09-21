@@ -22,6 +22,7 @@ export const metadata: Metadata = {
   title: "About Metro Associates | Engineering Recruiters",
   description:
     "Who we are, how we recruit, and why engineering firms and public agencies use us to fill licensed and technical roles across the United States.",
+  alternates: { canonical: "/about" },
 };
 
 // `href` is only set for disciplines that have a real landing page to send

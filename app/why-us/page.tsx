@@ -17,6 +17,7 @@ export const metadata: Metadata = {
   title: "Why Metro Associates | Engineering Recruiting",
   description:
     "What we do differently: a vetted national pipeline, multi-state licensure fluency, and recruiters who understand DOT and infrastructure delivery.",
+  alternates: { canonical: "/why-us" },
 };
 
 const REASONS = [

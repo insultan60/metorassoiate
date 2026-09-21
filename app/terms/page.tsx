@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   title: "Terms & Conditions | Metro Associates",
   description:
     "The terms and conditions governing your use of the Metro Associates, LLC website, communications, and recruiting, staffing, and consulting services.",
+  alternates: { canonical: "/terms" },
 };
 
 function H2({ children }: { children: React.ReactNode }) {

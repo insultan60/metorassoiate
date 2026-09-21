@@ -4,6 +4,7 @@ import { HeaderBackdrop } from "../components/HeaderBackdrop";
 export const metadata: Metadata = {
   title: "Videos | Metro Associates | DOT & Infrastructure Staffing",
   description: "Watch our latest job openings and hiring updates from Metro Associates.",
+  alternates: { canonical: "/videos" },
 };
 
 /* TikTok job-ad clips (@patricknovick225) — add new video IDs here as

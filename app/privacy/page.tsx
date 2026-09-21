@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   title: "Privacy Policy | Metro Associates",
   description:
     "How Metro Associates, LLC collects, uses, stores and safeguards your personal information across our website and recruiting services.",
+  alternates: { canonical: "/privacy" },
 };
 
 // Small presentational helpers so the long policy stays readable and consistent.

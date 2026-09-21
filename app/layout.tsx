@@ -31,9 +31,17 @@ export const metadata: Metadata = {
     "civil engineering recruiters",
     "construction inspection staffing",
   ],
-  alternates: {
-    canonical: "/",
-  },
+  /* No `alternates.canonical` here, deliberately.
+   *
+   * Metadata in a root layout is inherited by every page that does not set
+   * its own, so `canonical: "/"` here made /about, /contact, /privacy,
+   * /terms, /videos, /why-us and /meet-our-team each declare the homepage as
+   * their canonical. That is an instruction to Google to drop them as
+   * duplicates of the homepage, which it follows.
+   *
+   * Every page now sets its own. A page that forgets emits no canonical tag,
+   * and Google works it out from the URL, which is the failure mode we want
+   * rather than the page disowning itself. */
   openGraph: {
     title: "Metro Associates | DOT & Infrastructure Staffing",
     description:

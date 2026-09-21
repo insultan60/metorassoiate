@@ -13,6 +13,7 @@ export const metadata: Metadata = {
     // "nine" while showing and naming eight, which is the kind of small
     // inaccuracy a buyer checking the firm out will notice.
     "Request engineering staffing help or talk to a recruiter about your own next move. Eight US offices, placements nationwide, employer-paid fees.",
+  alternates: { canonical: "/contact" },
 };
 
 /* Derived from the canonical list in lib/site.ts, which the Organization
@@ -109,7 +110,7 @@ export default function ContactPage() {
               Our branch locations
             </h2>
             <p className="mt-4 text-slate text-pretty">
-              Nine U.S. offices, with recruiters who know each regional market.
+              Eight U.S. offices, with recruiters who know each regional market.
             </p>
           </div>
 

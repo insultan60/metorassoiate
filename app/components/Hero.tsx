@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { IconArrow, IconCheck, IconStar } from "./Icons";
 import { CAREERS_URL } from "../lib/site";
 
@@ -26,15 +25,32 @@ export default function Hero() {
       id="top"
       className="relative isolate flex min-h-[94vh] flex-col justify-center overflow-hidden pt-28"
     >
-      {/* Full-bleed background image + overlays */}
+      {/* Full-bleed background image + overlays.
+       *
+       * A plain <img> against three pre-sized files, not next/image.
+       *
+       * Through the optimizer this one photo needed eight transforms (640 to
+       * 3840) generated on demand, and every deployment starts that cache
+       * empty. The first visitor after a deploy pays for the transform at the
+       * width their screen asks for, and when that failed the whole hero
+       * rendered as alt text while narrow viewports, whose smaller widths had
+       * already been generated, looked fine.
+       *
+       * The optimizer earns its keep on photos whose dimensions vary. It earns
+       * very little here: one fixed background sitting behind a 95%-to-15%
+       * navy gradient and a grid overlay. So the variants are built once, at
+       * three sizes, and served as static files. No transform, nothing to cold
+       * start, and a phone still gets 78KB rather than the full 269KB. */}
       <div className="absolute inset-0 -z-10">
-        <Image
-          src="/interchange-sunset.jpg"
-          alt="Aerial view of a U.S. highway interchange at sunset: the infrastructure Metro Associates staffs"
-          fill
-          priority
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src="/hero-interchange-1920.jpg"
+          srcSet="/hero-interchange-960.jpg 960w, /hero-interchange-1440.jpg 1440w, /hero-interchange-1920.jpg 1920w"
           sizes="100vw"
-          className="object-cover"
+          alt="Aerial view of a U.S. highway interchange at sunset: the infrastructure Metro Associates staffs"
+          fetchPriority="high"
+          decoding="async"
+          className="absolute inset-0 h-full w-full object-cover"
         />
         {/* darken left for text legibility, keep skyline visible on the right */}
         <div className="absolute inset-0 bg-gradient-to-r from-navy-950/95 via-navy-950/65 to-navy-950/15" />
