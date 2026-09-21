@@ -102,6 +102,14 @@ export default async function CityPage({ params }: { params: Promise<{ city: str
       path,
       areaCity: c.city,
       areaState: c.state,
+      /* Split on "&" so "Pasadena & Glendale" reaches the schema as two
+         cities, which is how they are searched for, then keep only the ones
+         that actually are cities. The visible copy can say "Ventura County"
+         and "the South Bay"; areaServed declaring them City would be telling
+         a parser something untrue about a region and an abbreviation. */
+      alsoServes: c.submarkets
+        ?.flatMap((s) => s.name.split(" & ").map((n) => n.trim()))
+        .filter((n) => !n.startsWith("the ") && !n.endsWith(" County")),
     }),
     breadcrumbSchema([
       { name: "Home", path: "/" },
@@ -314,6 +322,39 @@ export default async function CityPage({ params }: { params: Promise<{ city: str
                 <p className="mt-4 text-lg leading-8 text-slate text-pretty">{c.licensure}</p>
               </div>
             )}
+          </div>
+        </section>
+      )}
+
+      {/* Communities covered from this desk.
+          Named because Search Console shows them arriving as their own
+          queries with nothing to land on, and because a page each would be
+          fifty more thin URLs on a site with 111 already uncrawled. */}
+      {c.submarkets && c.submarkets.length > 0 && (
+        <section className="relative border-t border-navy-950/10 bg-paper py-24 sm:py-28">
+          <div className="container-x">
+            <div className="max-w-2xl">
+              <span className="mono-label text-amber-500">{"//"} Also covered from {c.city}</span>
+              <h2 className="display mt-5 text-4xl text-navy-950 sm:text-5xl text-balance">
+                Communities we recruit for around {c.city}
+              </h2>
+              <p className="mt-4 text-lg leading-8 text-slate text-pretty">
+                Searches run out of this desk, with the local work that
+                distinguishes each one. Same recruiters, same {c.abbr} licensure
+                requirements, different engineering problem.
+              </p>
+            </div>
+
+            <div className="mt-12 grid gap-px overflow-hidden border border-navy-950/10 bg-navy-950/10 sm:grid-cols-2 lg:grid-cols-3">
+              {c.submarkets.map((s) => (
+                <article key={s.name} className="flex flex-col bg-white p-7">
+                  <h3 className="text-[17px] font-bold leading-snug text-navy-950">{s.name}</h3>
+                  <p className="mt-2.5 text-[15px] leading-7 text-slate-500 text-pretty">
+                    {s.note}
+                  </p>
+                </article>
+              ))}
+            </div>
           </div>
         </section>
       )}

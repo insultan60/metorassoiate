@@ -106,6 +106,10 @@ export function serviceSchema(opts: {
   path: string;
   areaCity: string;
   areaState: string;
+  /* Surrounding communities the metro's desk covers, named in areaServed so
+     the schema says the same thing the visible copy does. Only the towns
+     already written into the page, never an invented catchment. */
+  alsoServes?: string[];
 }) {
   return {
     "@context": "https://schema.org",
@@ -117,6 +121,7 @@ export function serviceSchema(opts: {
     provider: { "@id": `${SITE_URL}/#organization` },
     areaServed: [
       { "@type": "City", name: opts.areaCity },
+      ...(opts.alsoServes ?? []).map((name) => ({ "@type": "City", name })),
       { "@type": "State", name: opts.areaState },
     ],
     serviceType: opts.serviceName,

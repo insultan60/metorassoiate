@@ -50,6 +50,7 @@ export type EngagementSet = {
 
 /** Keyed by route segment, so every discipline page can find its own set. */
 export type EngagementSegment =
+  | "infrastructure-recruiter"
   | "civil-engineering-recruiter"
   | "mep-engineering-recruiter"
   | "bridge-structural-recruiter"
@@ -60,6 +61,26 @@ export type EngagementSegment =
   | "project-management-recruiter";
 
 export const ENGAGEMENT_MODELS: Record<EngagementSegment, EngagementSet> = {
+  "infrastructure-recruiter": {
+    heading: "Infrastructure staffing, program search and construction-phase teams",
+    intro:
+      "A capital program does not hire one kind of engineer. It hires a different kind at each phase, and what decides the engagement is whether the need outlasts the program that created it.",
+    models: [
+      {
+        title: "Direct hire and permanent placement",
+        body: "Design leads, project engineers and licensed PEs hired onto your payroll across roadway, structures, water and site work. On publicly funded work the filter that predicts performance is whose standards someone has already delivered under, because that is what shortens review.",
+      },
+      {
+        title: "Executive search and headhunting",
+        body: "Program directors, infrastructure practice leaders and the people who hold an agency relationship. Approached one at a time and in confidence, because a market where everyone has sat across the same table notices an open posting immediately.",
+      },
+      {
+        title: "Construction-phase and contract teams",
+        body: "Inspection and construction management staffed to the length of a contract, which is how the industry procures CEI. Everything upstream of the letting is recruited permanently, and we will say when a program does not justify a permanent seat.",
+      },
+    ],
+  },
+
   "civil-engineering-recruiter": {
     heading: "Civil engineering staffing, headhunting and direct placement",
     intro:

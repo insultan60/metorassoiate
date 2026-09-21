@@ -57,6 +57,11 @@ const routes: Array<{
   // list, so the only way Google could find it was by following a link.
   { path: "/videos", changeFrequency: "weekly", priority: 0.6 },
   { path: "/contact", changeFrequency: "monthly", priority: 0.7 },
+  /* The umbrella hub. Priority above a discipline hub because it is the only
+     page carrying the program-level vocabulary ("infrastructure recruiter",
+     "infrastructure recruitment agency"), which Search Console shows arriving
+     at 230+ impressions against nothing to land on. */
+  { path: "/infrastructure-recruiter", changeFrequency: "monthly", priority: 0.85 },
   { path: "/civil-engineering-recruiter", changeFrequency: "monthly", priority: 0.8 },
   ...CITIES.map((c) => ({
     path: `/civil-engineering-recruiter/${c.slug}`,

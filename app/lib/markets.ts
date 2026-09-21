@@ -90,8 +90,18 @@ export function nearbyMarkets<T extends MarketLink>(
 }
 
 /** The same city on the other discipline hubs. */
+/* The same city on the other hubs.
+ *
+ * Presence-checked rather than assumed. The five hubs carried an identical
+ * fifty-slug list, so linking blind was safe right up until the first market
+ * that exists on one hub and not the others (Riverside, added to civil for
+ * Inland Empire demand that has no MEP or CEI equivalent). Linking blind
+ * there would have produced four 404s on every such page, which is the one
+ * kind of internal link worse than none. */
 export function siblingDisciplines(currentHub: HubSegment, slug: string) {
-  return HUBS.filter((h) => h.segment !== currentHub).map((h) => ({
+  return HUBS.filter(
+    (h) => h.segment !== currentHub && HUB_DATA[h.segment].some((c) => c.slug === slug),
+  ).map((h) => ({
     ...h,
     href: `/${h.segment}/${slug}`,
   }));

@@ -31,6 +31,7 @@ const NAV = [
  *
  * A sitemap is a hint. Internal links are the argument. */
 const DISCIPLINES = [
+  { label: "Infrastructure", href: "/infrastructure-recruiter" },
   { label: "Civil Engineering", href: "/civil-engineering-recruiter" },
   { label: "MEP Engineering", href: "/mep-engineering-recruiter" },
   { label: "Bridge & Structural", href: "/bridge-structural-recruiter" },

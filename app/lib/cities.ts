@@ -36,6 +36,19 @@ export interface City {
   hiringFocus?: { role: string; why: string }[];
   /** Licensure and prequalification as they bite in this state. */
   licensure?: string;
+
+  /* Surrounding communities this metro's desk actually covers.
+   *
+   * Search Console shows real demand from towns with no page and no prospect
+   * of earning one: Moreno Valley at 82 impressions, Calexico 78, Lancaster
+   * 67, Glendale 62, Corona 55, Pasadena 54, Oceanside 51, Thousand Oaks 50,
+   * all of them with zero clicks because nothing on the site names them.
+   *
+   * A page each would be fifty-odd more thin URLs on a site where 111 are
+   * already sitting uncrawled. Naming them on the metro page that genuinely
+   * serves them, with a line about what the work there actually is, answers
+   * the query without adding a URL. */
+  submarkets?: { name: string; note: string }[];
 }
 
 export const CITIES: City[] = [
@@ -113,6 +126,28 @@ export const CITIES: City[] = [
     ],
     licensure:
       "California is one of the few states where a civil PE from elsewhere cannot simply transfer in: the state adds its own Seismic Principles and Engineering Surveying examinations on top of the national PE, and comity applicants still have to sit them. It is worth planning around when recruiting out of state, an otherwise ideal candidate may be months away from being able to seal drawings. Consultant work additionally runs through Caltrans and county prequalification.",
+    submarkets: [
+      {
+        name: "Pasadena & Glendale",
+        note: "San Gabriel Valley work where an older street grid, seismic retrofit obligations and constrained right of way shape most projects.",
+      },
+      {
+        name: "Lancaster & Palmdale",
+        note: "Antelope Valley roadway, drainage and utility extension work, where the engineering problem is distance and new development rather than congestion.",
+      },
+      {
+        name: "Thousand Oaks & Ventura County",
+        note: "Hillside grading, fire-rebuild infrastructure and coastal drainage, on a separate set of county and city approvals from Los Angeles.",
+      },
+      {
+        name: "Long Beach & the South Bay",
+        note: "Port-adjacent freight corridors, goods movement and heavy-load pavement design, plus the utility relocations that come with them.",
+      },
+      {
+        name: "Santa Clarita & the SCV",
+        note: "Master-planned development north of the city, where site civil, flood control and interchange capacity move together.",
+      },
+    ],
   },
   {
     slug: "chicago-il",
@@ -1424,6 +1459,24 @@ export const CITIES: City[] = [
     ],
     licensure:
       "California licenses through the Board for Professional Engineers, Land Surveyors and Geologists, and the state requires its own seismic principles and engineering surveying examinations in addition to the national exams, so an out-of-state PE does not transfer by comity alone. Given how much local work is slope and foundation driven, the separate California geotechnical engineer authority is worth confirming for any candidate expected to seal that analysis.",
+    submarkets: [
+      {
+        name: "Oceanside & North County",
+        note: "Coastal rail corridor, bluff stabilization and the I-5 north improvements, with beach management as its own recurring scope.",
+      },
+      {
+        name: "Chula Vista & the South Bay",
+        note: "Border-adjacent freight routes, new community development and the drainage that comes with building out remaining flat land.",
+      },
+      {
+        name: "El Centro & Calexico",
+        note: "Imperial Valley work under the same Caltrans district: port-of-entry access, agricultural drainage and geothermal-area infrastructure.",
+      },
+      {
+        name: "Escondido & inland North County",
+        note: "Water conveyance and storage inland of the coast, alongside roadway work through terrain that constrains alignment.",
+      },
+    ],
   },
   {
     slug: "san-antonio-tx",
@@ -2306,6 +2359,93 @@ export const CITIES: City[] = [
     ],
     licensure:
       "New York licenses through the State Education Department's Office of the Professions, and most out-of-state PEs transfer by comity on an NCEES record. The gate that bites harder in practice is agency prequalification: NYSDOT and the Thruway Authority each maintain their own consultant arrangements, and for a border metro, familiarity with federal facility requirements can matter alongside the state license.",
+  },
+
+  /* Riverside, added after the others.
+   *
+   * The Inland Empire generates more search demand than several metros that
+   * already had pages here — Moreno Valley, Riverside, Corona and Perris
+   * between them — and every one of those queries was landing on nothing,
+   * because the nearest page was Los Angeles, which is a different Caltrans
+   * district and a different kind of work.
+   *
+   * Civil only, on purpose. The demand is civil: the queries are all some
+   * form of "civil engineering recruiters in <town>". There is no matching
+   * MEP, water, CEI or municipal signal, so this slug exists on one hub
+   * rather than five, which is why siblingDisciplines now checks before it
+   * links. */
+  {
+    slug: "riverside-ca",
+    city: "Riverside",
+    state: "California",
+    abbr: "CA",
+    region: "the Inland Empire",
+    dot: "Caltrans District 8",
+    marketNote:
+      "Across the Inland Empire, we place the roadway, drainage and grade-separation engineers who deliver Riverside and San Bernardino county programs, in a market whose growth is driven by freight rather than by downtown development.",
+    localPrograms: [
+      "I-15 Express Lanes and corridor improvements",
+      "SR-91 corridor widening and interchange work",
+      "Mid County Parkway, a new east-west corridor",
+      "Riverside County grade separation program on the BNSF and UP lines",
+      "Metrolink Perris Valley Line and station area work",
+    ],
+    agencies: [
+      "Caltrans District 8",
+      "Riverside County Transportation Commission",
+      "Riverside County Transportation Department",
+      "Riverside County Flood Control and Water Conservation District",
+      "City of Riverside Public Works",
+      "Western Riverside Council of Governments",
+      "Eastern Municipal Water District",
+      "Western Municipal Water District",
+    ],
+    marketDetail: [
+      "The Inland Empire's civil work is shaped by freight. The region became Southern California's warehousing floor because it had the land, and the engineering consequence is a steady pipeline of large-footprint site development: mass grading, truck circulation, heavy pavement sections, and drainage for roofs and yards measured in tens of acres. A site civil engineer here spends more time on grading and hydrology for distribution facilities than on anything a coastal metro would recognize as typical.",
+      "The second driver is where road meets rail. Two transcontinental freight lines run through the county at grade, and the response has been a sustained program of grade separations alongside corridor widening on I-15, SR-91 and I-215. That work is structures, retaining walls, utility relocation and staging under live traffic, which is a different discipline mix from the interchange work further west, and it is why roadway and structures engineers with construction-phase experience are the ones local firms compete over.",
+    ],
+    hiringFocus: [
+      {
+        role: "Site development & grading engineers",
+        why: "Warehouse and distribution projects arrive at a scale where grading, pavement and yard drainage are the project rather than a supporting sheet.",
+      },
+      {
+        role: "Drainage & flood control engineers",
+        why: "Santa Ana River watershed requirements and county flood control standards put hydrology on nearly every approval path.",
+      },
+      {
+        role: "Grade separation & structures engineers",
+        why: "A long-running separation program competes for the same small pool of engineers who have staged structural work under live rail and traffic.",
+      },
+      {
+        role: "Roadway & interchange engineers",
+        why: "Corridor widening on I-15, SR-91 and I-215 runs continuously, and District 8 experience shortens review noticeably.",
+      },
+    ],
+    licensure:
+      "California adds its own seismic principles and engineering surveying examinations on top of the national exams, so an out-of-state PE does not transfer by comity alone and a start date has to allow for it. Locally the practical gate is often prequalification rather than licensure: Caltrans District 8 and the county each work through their own consultant arrangements, and a candidate who has already delivered under them is worth more to a firm bidding here than the same resume from a coastal district.",
+    submarkets: [
+      {
+        name: "Moreno Valley",
+        note: "Distribution and logistics development at a scale that makes grading, heavy pavement and yard drainage the core of the civil scope.",
+      },
+      {
+        name: "Corona",
+        note: "SR-91 corridor work and the interchange improvements feeding it, plus infill site development against constrained right of way.",
+      },
+      {
+        name: "Perris",
+        note: "March Inland Port and the Perris Valley rail corridor, where freight access and roadway improvements move together.",
+      },
+      {
+        name: "Temecula & Murrieta",
+        note: "I-15 corridor growth on the south county line, with interchange capacity and local circulation the recurring engineering problem.",
+      },
+      {
+        name: "San Bernardino & Ontario",
+        note: "The rest of Caltrans District 8, where airport-adjacent logistics and I-10 corridor work drive the same discipline mix.",
+      },
+    ],
   },
 ];
 

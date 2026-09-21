@@ -24,6 +24,14 @@ import { CITIES } from "../lib/cities";
  * budgets for.
  */
 const DISCIPLINES: { label: string; href: string; body: string }[] = [
+  /* First, and deliberately: it is the umbrella the other six sit under, and
+     the only page carrying program-level language. Linking it from the
+     homepage is also what makes it one click deep rather than two. */
+  {
+    label: "Infrastructure",
+    href: "/infrastructure-recruiter",
+    body: "Capital programs staffed across every phase, from planning through construction inspection and asset management.",
+  },
   {
     label: "Civil Engineering",
     href: "/civil-engineering-recruiter",

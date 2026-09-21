@@ -6,6 +6,11 @@ import { IconArrow } from "./Icons";
 // from any one of them.
 const SPECIALTIES = [
   {
+    slug: "infrastructure-recruiter",
+    label: "Infrastructure",
+    blurb: "Capital programs across every phase and owner",
+  },
+  {
     slug: "civil-engineering-recruiter",
     label: "Civil Engineering",
     blurb: "Transportation, infrastructure & municipal projects",
