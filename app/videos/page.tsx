@@ -19,6 +19,7 @@ export const metadata: Metadata = {
 const YOUTUBE_VIDEOS = [
   { id: "ptUCw1_pjig", title: "Senior Refrigeration & Utilities Manager" },
   { id: "b6lp9i9w9PQ", title: "Process Engineer, food manufacturing in Virginia" },
+  { id: "fPi4M7brMLw", title: "Director of Land Development, Tucson" },
 ];
 
 /* TikTok job-ad clips (@patricknovick225) — add new video IDs here as
