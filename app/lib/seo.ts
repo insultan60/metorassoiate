@@ -83,6 +83,23 @@ export const ORG = {
     "National staffing and executive search firm for civil, transportation (DOT), MEP, water, structural and municipal engineering, placing licensed PEs, inspectors and construction leaders across fifty US metros.",
 };
 
+/* The default social card.
+ *
+ * A page-level `openGraph` object REPLACES the root layout's rather than
+ * merging into it, so every page that sets its own og:title silently loses
+ * the layout's og:image. Eleven pages were doing exactly that: all eight
+ * discipline hubs, the infrastructure hub, the awards index and the salary
+ * guide, every one of them shared without a card image. Restating it here
+ * once means a page only has to spread it in. */
+export const OG_IMAGE = [
+  {
+    url: "/og.jpg",
+    width: 1200,
+    height: 630,
+    alt: "Metro Associates, engineering staffing and recruiting",
+  },
+];
+
 export function organizationSchema() {
   return { "@context": "https://schema.org", ...ORG };
 }

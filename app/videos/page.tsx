@@ -1,11 +1,25 @@
 import type { Metadata } from "next";
 import { HeaderBackdrop } from "../components/HeaderBackdrop";
+import YouTubeFacade from "../components/YouTubeFacade";
 
 export const metadata: Metadata = {
   title: "Videos | Metro Associates | DOT & Infrastructure Staffing",
-  description: "Watch our latest job openings and hiring updates from Metro Associates.",
+  description:
+    "Job openings and hiring updates on video from Metro Associates: role walk-throughs on YouTube and short job ads on TikTok.",
   alternates: { canonical: "/videos" },
 };
+
+/* YouTube role walk-throughs — add new ones here as Patrick shares them.
+ *
+ * Titles are written here rather than pulled from YouTube's oEmbed, which is
+ * how the TikTok clips below get theirs. The uploads carry working titles
+ * ("... 1080p caption") and a placeholder channel name, and neither belongs
+ * on the page. An explicit title also means a video being renamed on YouTube
+ * cannot silently change what this page says. */
+const YOUTUBE_VIDEOS = [
+  { id: "ptUCw1_pjig", title: "Senior Refrigeration & Utilities Manager" },
+  { id: "b6lp9i9w9PQ", title: "Process Engineer, food manufacturing in Virginia" },
+];
 
 /* TikTok job-ad clips (@patricknovick225) — add new video IDs here as
    Patrick shares more. */
@@ -59,13 +73,34 @@ export default async function VideosPage() {
         <div className="container-x relative">
           <div className="flex items-center gap-3">
             <span className="h-2 w-2 animate-blink bg-amber-500" />
-            <span className="mono-label text-amber-400">{"//"} On TikTok</span>
+            <span className="mono-label text-amber-400">{"//"} On video</span>
           </div>
           <h1 className="display mt-5 text-4xl text-white sm:text-5xl">
             Job Openings, <span className="text-brand-500">On Video</span>
           </h1>
 
-          <div className="mt-14 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          {/* YouTube first: these are the longer walk-throughs, 16:9, and they
+              carry the roles worth the most. The TikTok wall below is the
+              short-form version of the same job. */}
+          <div className="mt-14">
+            <h2 className="mono-label text-ink-300">{"//"} Role walk-throughs</h2>
+            <div className="mt-6 grid grid-cols-1 gap-8 lg:grid-cols-2">
+              {YOUTUBE_VIDEOS.map((v) => (
+                <figure key={v.id}>
+                  <div className="relative aspect-video overflow-hidden border border-white/10 bg-navy-950">
+                    <YouTubeFacade videoId={v.id} title={v.title} />
+                  </div>
+                  <figcaption className="mt-3">
+                    <p className="text-sm font-semibold leading-snug text-white">{v.title}</p>
+                    <p className="mt-1 text-xs text-ink-300">YouTube · Metro Associates</p>
+                  </figcaption>
+                </figure>
+              ))}
+            </div>
+          </div>
+
+          <h2 className="mono-label mt-16 text-ink-300">{"//"} Short clips on TikTok</h2>
+          <div className="mt-6 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {videos.map((v) => (
               <a
                 key={v.id}

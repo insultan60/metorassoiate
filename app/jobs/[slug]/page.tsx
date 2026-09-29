@@ -3,7 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { HeaderBackdrop } from "../../components/HeaderBackdrop";
 import { JsonLd } from "../../components/JsonLd";
-import { breadcrumbSchema, fitTitle, fitDescription } from "../../lib/seo";
+import { breadcrumbSchema, fitDescription, pickTitle } from "../../lib/seo";
 import { SITE_URL } from "../../lib/site";
 import { listJobs, getJob, jobExcerpt, employmentType } from "../../lib/jobs";
 import { deskForJob, marketForJob } from "../../lib/jobRouting";
@@ -42,12 +42,37 @@ export async function generateMetadata({
   if (!job) return { title: "Job not found | Metro Associates" };
 
   const where = job.location ? ` in ${job.location}` : "";
+
+  /* The city has to survive the 60-character cut.
+   *
+   * fitTitle was being handed "<long role title> - <city>", blowing the cap,
+   * and truncating from the right, which ate the city. Two postings of the
+   * same role in different metros then shared a title byte for byte. The
+   * candidates below give up the brand first, then trim the role, so the
+   * thing that distinguishes the two pages is the last thing to go. */
+  const cityPart = job.city ? ` - ${job.city}` : "";
+  const roomForRole = 60 - cityPart.length;
+  const shortRole =
+    job.title.length > roomForRole
+      ? job.title.slice(0, job.title.lastIndexOf(" ", roomForRole - 2)).trimEnd() + "…"
+      : job.title;
+
+  /* Same problem one field down: the excerpt was a whole clause, so when it
+     did not fit, fitDescription dropped all of it and left a 63-character
+     description. Trimmed to the space actually left instead. */
+  const lead = `We are recruiting a ${job.title}${where}.`;
+  const room = 157 - lead.length;
+  const excerpt = jobExcerpt(job.descriptionHtml, 40);
+  const tail =
+    excerpt.length > room ? excerpt.slice(0, excerpt.lastIndexOf(" ", room - 1)).trimEnd() + "…" : excerpt;
+
   return {
-    title: fitTitle(`${job.title}${job.city ? ` - ${job.city}` : ""}`),
-    description: fitDescription([
-      `We are recruiting a ${job.title}${where}.`,
-      jobExcerpt(job.descriptionHtml, 18),
+    title: pickTitle([
+      `${job.title}${cityPart} | Metro Associates`,
+      `${job.title}${cityPart}`,
+      `${shortRole}${cityPart}`,
     ]),
+    description: room > 45 ? `${lead} ${tail}` : fitDescription([lead]),
     alternates: { canonical: `${SITE_URL}/jobs/${job.slug}` },
   };
 }

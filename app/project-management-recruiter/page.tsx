@@ -10,6 +10,7 @@ import { HeaderBackdrop } from "../components/HeaderBackdrop";
 import { CAREERS_URL, APPLY_URL, SITE_URL } from "../lib/site";
 import OtherSpecialties from "../components/OtherSpecialties";
 import ClientAwards from "../components/ClientAwards";
+import { OG_IMAGE } from "../lib/seo";
 
 /* Project management recruiting hub — mirrors the layout of other discipline hubs.
    Targets AEC program directors, infrastructure project managers, construction
@@ -50,6 +51,7 @@ export const metadata: Metadata = {
     url: `${SITE_URL}/project-management-recruiter`,
     siteName: "Metro Associates",
     type: "website",
+    images: OG_IMAGE,
   },
 };
 

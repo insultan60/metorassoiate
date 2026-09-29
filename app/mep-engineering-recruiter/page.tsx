@@ -13,6 +13,7 @@ import {
 } from "../lib/mep";
 import OtherSpecialties from "../components/OtherSpecialties";
 import ClientAwards from "../components/ClientAwards";
+import { OG_IMAGE } from "../lib/seo";
 
 // Short phrases for the scrolling ticker bar — same treatment as the
 // civil-engineering-recruiter hero, scoped to this page's discipline.
@@ -49,6 +50,7 @@ export const metadata: Metadata = {
     url: `${SITE_URL}/mep-engineering-recruiter`,
     siteName: "Metro Associates",
     type: "website",
+    images: OG_IMAGE,
   },
 };
 

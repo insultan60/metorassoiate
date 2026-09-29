@@ -6,7 +6,7 @@ import HubFaqs from "../components/HubFaqs";
 import ServiceModels from "../components/ServiceModels";
 import OtherSpecialties from "../components/OtherSpecialties";
 import { IconArrow, IconCheck } from "../components/Icons";
-import { breadcrumbSchema } from "../lib/seo";
+import { breadcrumbSchema, OG_IMAGE } from "../lib/seo";
 import { SITE_URL, CAREERS_URL, APPLY_URL } from "../lib/site";
 import { CITIES } from "../lib/cities";
 
@@ -34,7 +34,7 @@ import { CITIES } from "../lib/cities";
 export const metadata: Metadata = {
   title: "Infrastructure Recruiters & Staffing | Metro Associates",
   description:
-    "Infrastructure recruiters and staffing for US capital programs: planning, design, construction inspection and program leadership for DOT, water and transit work.",
+    "Infrastructure recruiters and staffing for US capital programs: planning, design, inspection and program leadership on DOT, water and transit work.",
   keywords: [
     "infrastructure recruiter",
     "infrastructure recruitment agency",
@@ -47,10 +47,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Infrastructure Recruiters & Staffing | Metro Associates",
     description:
-      "Infrastructure recruiters and staffing for US capital programs: planning, design, construction inspection and program leadership for DOT, water and transit work.",
+      "Infrastructure recruiters and staffing for US capital programs: planning, design, inspection and program leadership on DOT, water and transit work.",
     url: `${SITE_URL}/infrastructure-recruiter`,
     siteName: "Metro Associates",
     type: "website",
+    images: OG_IMAGE,
   },
 };
 

@@ -11,6 +11,7 @@ import { CAREERS_URL, APPLY_URL, SITE_URL } from "../lib/site";
 import { MUNICIPAL_CITIES } from "../lib/municipalEngineering";
 import OtherSpecialties from "../components/OtherSpecialties";
 import ClientAwards from "../components/ClientAwards";
+import { OG_IMAGE } from "../lib/seo";
 
 /* National hub — same treatment as civil-engineering-recruiter/ and
    mep-engineering-recruiter/: this page plus a per-metro [city]/page.tsx for
@@ -51,6 +52,7 @@ export const metadata: Metadata = {
     url: `${SITE_URL}/municipal-engineering-recruiter`,
     siteName: "Metro Associates",
     type: "website",
+    images: OG_IMAGE,
   },
 };
 

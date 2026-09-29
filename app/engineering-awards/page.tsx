@@ -5,7 +5,7 @@ import { IconArrow } from "../components/Icons";
 import AwardMark from "../components/AwardMark";
 import { AWARD_PROGRAMS, AWARD_ORGS, ACEC_STATES, ACEC_METRO, ENR_REGIONS } from "../lib/awards";
 import { SITE_URL } from "../lib/site";
-import { ORG } from "../lib/seo";
+import { ORG, OG_IMAGE } from "../lib/seo";
 
 /* The award landscape, in one place.
  *
@@ -39,6 +39,7 @@ export const metadata: Metadata = {
       "The award programs the engineering firms we staff compete in, national and state by state.",
     url: `${SITE_URL}/engineering-awards`,
     type: "website",
+    images: OG_IMAGE,
   },
 };
 

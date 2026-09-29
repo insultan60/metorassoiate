@@ -12,7 +12,7 @@ import { MUNICIPAL_SALARIES } from "../lib/municipalEngineering";
 import { WATER_SALARIES } from "../lib/waterWastewater";
 import { BRIDGE_SALARIES } from "../lib/bridgeStructural";
 import { SITE_URL } from "../lib/site";
-import { ORG } from "../lib/seo";
+import { ORG, OG_IMAGE } from "../lib/seo";
 
 /* Every role we place, and what it pays — the whole set on one page.
  *
@@ -107,6 +107,7 @@ export const metadata: Metadata = {
     description: `${TOTAL_ROLES} engineering and infrastructure titles with US compensation ranges by seniority.`,
     url: `${SITE_URL}/index_themall_awards`,
     type: "website",
+    images: OG_IMAGE,
   },
 };
 
