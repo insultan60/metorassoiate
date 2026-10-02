@@ -217,7 +217,8 @@ export default function WaterWastewaterRecruiterPage() {
             <div>
               <span className="mono-label text-amber-500">{"//"} National expertise</span>
               <h2 className="display mt-5 text-4xl text-navy-950 sm:text-5xl">
-                National water &amp; wastewater <span className="text-brand-500">recruiting</span>
+                National water treatment &amp; wastewater{" "}
+                <span className="text-brand-500">recruiting</span>
               </h2>
               <p className="mt-6 text-lg leading-8 text-slate text-pretty">
                 Metro Associates provides specialized staffing on a national
@@ -248,6 +249,80 @@ export default function WaterWastewaterRecruiterPage() {
       </section>
 
       <ServiceModels segment="water-wastewater-recruiter" />
+
+      {/* Treatment and the environmental side.
+       *
+       * Search Console has "water treatment recruiters" and "environmental
+       * engineering recruiters in los angeles" arriving at this page, and
+       * until now the page used treatment-plant language exactly once and
+       * never in a heading. The content is not filler written around a
+       * keyword: which process a plant runs is the thing that decides whether
+       * an engineer's experience transfers, and it is the first question this
+       * desk asks on a brief. */}
+      <section className="relative border-t border-navy-950/10 bg-paper py-24 sm:py-28">
+        <div className="container-x">
+          <div className="max-w-3xl">
+            <span className="mono-label text-amber-500">{"//"} Treatment &amp; environmental</span>
+            <h2 className="display mt-5 text-4xl text-navy-950 sm:text-5xl text-balance">
+              What a water treatment recruiter screens for
+            </h2>
+            <p className="mt-6 text-lg leading-8 text-slate text-pretty">
+              Treatment is where this market is won or lost. The permit, not
+              the construction schedule, sets what the engineering has to
+              prove, and the process a plant actually runs decides whether a
+              candidate&apos;s experience transfers at all. Two process
+              engineers with the same job title are not interchangeable across
+              these three.
+            </p>
+          </div>
+
+          <div className="mt-14 grid gap-px overflow-hidden border border-navy-950/10 bg-navy-950/10 lg:grid-cols-3">
+            <article className="flex flex-col bg-white p-8">
+              <h3 className="text-xl font-bold text-navy-950">
+                Water treatment plants
+              </h3>
+              <p className="mt-2.5 text-[15px] leading-7 text-slate-500 text-pretty">
+                Conventional filtration, membranes, ozone and granular
+                activated carbon are different design problems and different
+                plants to operate. A designer whose work has all been
+                conventional treatment does not step into a membrane retrofit
+                without a run-up, which is why a brief that says only
+                &ldquo;water treatment&rdquo; is the one most likely to produce
+                the wrong shortlist.
+              </p>
+            </article>
+
+            <article className="flex flex-col bg-white p-8">
+              <h3 className="text-xl font-bold text-navy-950">
+                Wastewater treatment plants
+              </h3>
+              <p className="mt-2.5 text-[15px] leading-7 text-slate-500 text-pretty">
+                Activated sludge, membrane bioreactors, nutrient removal and
+                digestion each carry their own process knowledge, and the
+                discharge permit decides which of them a project is really
+                about. Tightening nutrient limits in particular turn a plant
+                upgrade into a process problem rather than a hydraulic one, and
+                the engineers who have solved that are a smaller group than the
+                job title suggests.
+              </p>
+            </article>
+
+            <article className="flex flex-col bg-white p-8">
+              <h3 className="text-xl font-bold text-navy-950">
+                Environmental engineering
+              </h3>
+              <p className="mt-2.5 text-[15px] leading-7 text-slate-500 text-pretty">
+                Permitting, compliance reporting, remediation and stormwater
+                quality sit alongside treatment and are recruited separately,
+                because the work is regulatory as much as technical. The same
+                program that needs a process engineer usually needs someone who
+                can carry the permit through the state agency, and firms rarely
+                find both in one person.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
 
       {/* Skills & software */}
       <section className="relative border-t border-navy-950/10 blueprint-light py-24 sm:py-28">

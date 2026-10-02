@@ -71,10 +71,18 @@ export default async function CeiCityPage({ params }: { params: Promise<{ city: 
   const faqs = ceiFaqs(c);
   const flagshipProgram = c.localPrograms[0];
 
+  /* One of these four says "construction staffing" outright, because that is
+     how the work is bought even though the industry calls it CEI internally.
+     "construction staffing dc metro" is the largest city-level query in
+     Search Console at 102 impressions, and the word "staffing" appeared on
+     these pages only as "staffing solutions". Four variants, not one line
+     added to all fifty: a block repeated byte for byte across a vertical is
+     what got these pages filtered the first time. */
   const introPara1 = pickVariant(`${c.slug}:cei:intro1`, [
     `Metro Associates is a leading CEI recruiter providing specialized staffing solutions across ${c.city} and ${c.region}. We help firms hire certified inspectors, resident engineers, and QA/QC specialists across materials testing, bridge inspection, and contract administration, for projects reviewed under ${c.authority} and beyond.`,
     `Metro Associates runs a dedicated CEI search practice across ${c.city} and ${c.region}, connecting firms with certified inspectors, resident engineers, and QA/QC specialists reviewed under ${c.authority}.`,
     `We're a specialized CEI recruiter for ${c.city} and ${c.region}, placing certified inspectors, resident engineers, and QA/QC specialists across materials testing, bridge inspection, and contract administration.`,
+    `Construction staffing in the ${c.city} metro, on the inspection side of the work. Metro Associates places certified inspectors, resident engineers and QA/QC specialists on programs reviewed under ${c.authority}, staffed to the length of the construction contract rather than to a headcount plan.`,
   ]);
   const introPara2 = pickVariant(`${c.slug}:cei:intro2`, [
     `From highway megaprojects to bridge replacement and transit construction, we match certification-verified talent to the field, safety, and documentation demands of complex construction programs.`,

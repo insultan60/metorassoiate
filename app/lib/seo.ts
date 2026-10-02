@@ -386,9 +386,24 @@ export function ceiFaqs(c: {
     `Yes. Every candidate's NICET, ACI materials-testing, and NBIS bridge-inspection credentials are confirmed before they reach you, matched against ${c.authority}'s construction and inspection standards.`,
     `Yes. NICET, ACI materials-testing, and NBIS bridge-inspection credentials are verified before any candidate reaches you, matched to ${c.authority}'s inspection standards.`,
   ]);
+  /* "Construction staffing" in the buyer's words.
+   *
+   * The industry calls this CEI; the people buying it search for construction
+   * staffing, and "construction staffing dc metro" is the largest city-level
+   * query in Search Console at 102 impressions. The intro paragraph carries
+   * the phrase on about a quarter of these pages by design, so this question
+   * puts it on all fifty, and the answer varies with the metro's own review
+   * authority rather than being one line pasted across a vertical. */
+  const staffingAnswer = pickVariant(`${c.city}:cei:5`, [
+    `Yes, on the inspection and construction-management side of it. Inspectors, senior inspectors and office engineers are staffed to the length of the construction contract, because that is how ${c.authority} procures the work. Resident engineers and QA/QC leads are usually hired permanently instead, since they carry program after program rather than a single letting.`,
+    `Yes. Construction staffing here means CEI: certified inspectors and office engineers for the duration of a contract, plus permanent resident engineers and QA/QC leads. Credentials are checked against ${c.authority}'s own approved list before anyone reaches you, because a certification accepted in a neighboring state is not automatically accepted here.`,
+    `Yes. We staff construction-phase teams in ${c.city} to the contract rather than to a headcount plan: inspectors and office engineers for a program's duration, and resident engineers hired permanently where a firm is running ${c.authority} work continuously.`,
+  ]);
+
   return [
     { q: `Do you place CEI and construction inspectors in ${c.city}, ${c.abbr}?`, a: placeAnswer },
     { q: `What CEI roles do you recruit for in ${c.city}?`, a: rolesAnswer },
+    { q: `Do you provide construction staffing in the ${c.city} metro?`, a: staffingAnswer },
     { q: `How quickly can you fill a CEI position in ${c.city}?`, a: speedAnswer },
     { q: `Do you verify NICET, ACI, and bridge-inspection certifications?`, a: authorityAnswer },
   ];
