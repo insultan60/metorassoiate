@@ -10,7 +10,7 @@ import { APPLY_URL } from "../lib/site";
  *
  * It used to be "View All Jobs" pointing at the portal, which meant the single
  * most clicked job link on every page of the site sent the visitor to another
- * domain - and left /jobs reachable only from the homepage section and from
+ * domain - and left /careers reachable only from the homepage section and from
  * the job pages themselves, with nothing in the nav or footer pointing at it.
  * Our own page carries the same roles with search, filters and the JobPosting
  * markup, so it is the one worth linking.
@@ -22,7 +22,7 @@ const NAV_LINKS = [
   { label: "Why Us", href: "/why-us", external: false },
   { label: "Meet Our Team", href: "/meet-our-team", external: false },
   { label: "Videos", href: "/videos", external: false },
-  { label: "Careers", href: "/jobs", external: false },
+  { label: "Careers", href: "/careers", external: false },
   { label: "Apply Jobs", href: APPLY_URL, external: true },
 ];
 

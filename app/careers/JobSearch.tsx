@@ -117,7 +117,7 @@ export function JobSearch({ jobs }: Props) {
   const row = (j: JobSummary) => (
     <li key={j.slug}>
       <Link
-        href={`/jobs/${j.slug}`}
+        href={`/careers/${j.slug}`}
         className="group flex flex-col gap-2 py-5 sm:flex-row sm:items-baseline sm:justify-between sm:gap-8"
       >
         <span className="text-[17px] font-bold leading-snug text-navy-950 group-hover:text-amber-600">

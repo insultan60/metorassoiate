@@ -28,7 +28,7 @@ export async function GET() {
   const urls = jobs
     .map(
       (j) =>
-        `  <url>\n    <loc>${SITE_URL}/jobs/${j.slug}</loc>\n  </url>`,
+        `  <url>\n    <loc>${SITE_URL}/careers/${j.slug}</loc>\n  </url>`,
     )
     .join("\n");
 

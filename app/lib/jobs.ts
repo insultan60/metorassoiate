@@ -23,7 +23,7 @@ import { CAREERS_URL, JOB_FEED_URL } from "./site";
  *
  * Checked before switching: the feed's 28 job ids are exactly the portal's 28,
  * and the slugs computed from the feed titles are identical to the slugs the
- * scraper produced for all 28 — so no /jobs URL changed and nothing needed a
+ * scraper produced for all 28 — so no role URL changed and nothing needed a
  * redirect.
  *
  * WHAT THE FEED DOES NOT CARRY

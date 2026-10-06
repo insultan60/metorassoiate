@@ -21,15 +21,15 @@ export const SITE_URL = "https://www.metroassoc.com";
    structured data on detail pages.
 
    app/lib/jobs.ts reads the listing and each role's JSON-LD from CAREERS_URL,
-   so the /jobs mirror follows automatically. */
+   so the /careers mirror follows automatically. */
 export const CAREERS_URL =
   "https://jobs.metroassoc.com/portals/3a7f6fd3-7cf7-447c-a20f-2354eb2031df";
 export const APPLY_URL =
   "https://jobs.metroassoc.com/portals/3a7f6fd3-7cf7-447c-a20f-2354eb2031df/apply";
 
-/* Top Echelon's "Careers Page XML Feed" — the structured source behind /jobs.
+/* Top Echelon's "Careers Page XML Feed" — the structured source behind /careers.
    This is the feed the ATS offers for building a careers page on your own
-   site, which is exactly what /jobs is, and its licence note limits it to
+   site, which is exactly what /careers is, and its licence note limits it to
    that: publishing these jobs on a third-party board or other job posting
    venue is forbidden.
 

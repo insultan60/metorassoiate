@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     "civil, MEP, structural, water, municipal and construction inspection.",
     "Candidates never pay a fee.",
   ]),
-  alternates: { canonical: `${SITE_URL}/jobs` },
+  alternates: { canonical: `${SITE_URL}/careers` },
 };
 
 export default async function JobsPage() {
@@ -41,7 +41,7 @@ export default async function JobsPage() {
         data={[
           breadcrumbSchema([
             { name: "Home", path: "/" },
-            { name: "Jobs", path: "/jobs" },
+            { name: "Careers", path: "/careers" },
           ]),
         ]}
       />

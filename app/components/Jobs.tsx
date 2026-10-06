@@ -4,7 +4,7 @@ import { IconArrow } from "./Icons";
 import { APPLY_URL } from "../lib/site";
 
 // The categories of roles Metro regularly recruits for. These are role TYPES,
-// not specific live postings. The live ones are at /jobs, read from the Top
+// not specific live postings. The live ones are at /careers, read from the Top
 // Echelon portal hourly (see lib/jobs).
 const ROLE_TYPES = [
   "Licensed Professional Engineers (PEs)",
@@ -76,7 +76,7 @@ export default function Jobs() {
                 engagement with it, belonged to that domain rather than this
                 one. */}
             <Link
-              href="/jobs"
+              href="/careers"
               className="group inline-flex items-center gap-2 bg-amber-500 px-7 py-4 text-sm font-bold uppercase tracking-wide text-navy-950 transition-colors hover:bg-amber-400"
             >
               Browse Open Roles

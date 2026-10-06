@@ -73,7 +73,7 @@ export async function generateMetadata({
       `${shortRole}${cityPart}`,
     ]),
     description: room > 45 ? `${lead} ${tail}` : fitDescription([lead]),
-    alternates: { canonical: `${SITE_URL}/jobs/${job.slug}` },
+    alternates: { canonical: `${SITE_URL}/careers/${job.slug}` },
   };
 }
 
@@ -112,7 +112,7 @@ export default async function JobPage({
       sameAs: SITE_URL,
     },
     directApply: false,
-    url: `${SITE_URL}/jobs/${job.slug}`,
+    url: `${SITE_URL}/careers/${job.slug}`,
     ...(job.datePosted ? { datePosted: job.datePosted } : {}),
     ...(job.reference
       ? { identifier: { "@type": "PropertyValue", name: "Metro Associates", value: job.reference } }
@@ -142,8 +142,8 @@ export default async function JobPage({
           jobSchema,
           breadcrumbSchema([
             { name: "Home", path: "/" },
-            { name: "Jobs", path: "/jobs" },
-            { name: job.title, path: `/jobs/${job.slug}` },
+            { name: "Careers", path: "/careers" },
+            { name: job.title, path: `/careers/${job.slug}` },
           ]),
         ]}
       />
@@ -161,7 +161,7 @@ export default async function JobPage({
           />
           <div className="container-x relative">
             <nav aria-label="Breadcrumb" className="mono-label text-[10px] text-white/45">
-              <Link href="/jobs" className="hover:text-amber-400">
+              <Link href="/careers" className="hover:text-amber-400">
                 Jobs
               </Link>
               <span className="px-2 text-white/25">/</span>
@@ -246,7 +246,7 @@ export default async function JobPage({
                 {related.map((r) => (
                   <li key={r.slug}>
                     <Link
-                      href={`/jobs/${r.slug}`}
+                      href={`/careers/${r.slug}`}
                       className="group flex flex-col gap-2 py-5 sm:flex-row sm:items-baseline sm:justify-between sm:gap-8"
                     >
                       <span className="text-[17px] font-bold leading-snug text-navy-950 group-hover:text-amber-600">
@@ -260,7 +260,7 @@ export default async function JobPage({
                 ))}
               </ul>
               <Link
-                href="/jobs"
+                href="/careers"
                 className="mono-label mt-8 inline-flex border border-navy-950/20 px-6 py-3.5 text-[10px] text-navy-950 transition-colors hover:border-amber-500 hover:bg-amber-500"
               >
                 {"All open roles →"}

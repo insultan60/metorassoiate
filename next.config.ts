@@ -61,12 +61,24 @@ async function redirects() {
     { source: "/about-us", destination: "/about", permanent: true },
     { source: "/home", destination: "/", permanent: true },
 
-    /* /jobs and /jobs/* are NOT redirected any more. This site hosts its own
-       job pages again (app/jobs), so sending those URLs to the portal would
-       now redirect away from the very pages meant to receive them. An old
-       WordPress job slug that no longer matches a live role falls through to
-       a 404, which is what Google asks for on an expired posting - better
-       than a redirect that implies the role still exists somewhere. */
+    /* The careers section moved from /jobs to /careers.
+     *
+     * Both URLs were indexed - the index plus 28 role pages - and the role
+     * slugs are unchanged, so this is a straight one-to-one move and every old
+     * URL has an exact destination. 301 rather than a 404 for that reason:
+     * there is a real equivalent for each one, and the rankings those pages
+     * had should follow them.
+     *
+     * The wildcard is deliberately narrow. ":slug" matches a single segment,
+     * so it claims /jobs/<role> and nothing deeper, and an invented /jobs/x
+     * lands on /careers/x which 404s honestly instead of being swept to the
+     * index - the same reasoning that replaced the old catch-alls with 410s
+     * in proxy.ts.
+     *
+     * These must stay as long as the old URLs have any inbound links or sit in
+     * Google's index, which in practice means indefinitely. */
+    { source: "/jobs", destination: "/careers", permanent: true },
+    { source: "/jobs/:slug", destination: "/careers/:slug", permanent: true },
 
     // Orphaned old WP pages/posts with no equivalent on the new site.
     { source: "/elementor-5338", destination: "/", permanent: true },

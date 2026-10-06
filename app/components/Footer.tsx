@@ -3,7 +3,7 @@ import Logo from "./Logo";
 import { IconPhone, IconMail, IconPin } from "./Icons";
 import { APPLY_URL } from "../lib/site";
 
-/* "Careers" points at /jobs for the same reason it does in the navbar: the
+/* "Careers" points at /careers for the same reason it does in the navbar: the
    portal link used to be the only job link in the site chrome, so our own
    careers page had nothing in the footer pointing at it either. */
 const NAV = [
@@ -13,7 +13,7 @@ const NAV = [
   { label: "Salary Guide", href: "/index_themall_awards", external: false },
   { label: "Client Awards", href: "/engineering-awards", external: false },
   { label: "FAQ", href: "/faq", external: false },
-  { label: "Careers", href: "/jobs", external: false },
+  { label: "Careers", href: "/careers", external: false },
   { label: "Apply Jobs", href: APPLY_URL, external: true },
 ];
 
