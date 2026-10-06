@@ -115,7 +115,33 @@ export default function Hero() {
             professionals.
           </p>
 
-          <div className="mt-9 flex flex-col gap-3 sm:flex-row">
+          {/* Trust statement.
+              Two things a candidate decides on before anything else: whether
+              this will cost them, and whether it is their field. Both already
+              appear in HIGHLIGHTS, but those sit below the buttons - past the
+              point someone has already chosen to click or leave. This says it
+              where it gets read, and the list below stays as it was.
+
+              Styled as hero copy rather than a badge: no panel, no border, no
+              background. A box here would read as an advert, which is the one
+              thing a trust statement cannot afford to look like. */}
+          <div className="mt-8 max-w-2xl">
+            <p className="text-[21px] font-bold leading-[1.35] text-amber-400 sm:text-2xl">
+              Always 100% Free for Job Seekers
+            </p>
+            <p className="mt-1.5 text-[17px] font-medium leading-[1.35] text-white text-pretty sm:text-lg">
+              Metro Associates focuses exclusively on{" "}
+              <strong className="font-bold">
+                engineering, architecture, and construction
+              </strong>{" "}
+              careers.
+            </p>
+          </div>
+
+          {/* 36px down to 20px: the trust statement adds height above the fold,
+              and the gap it needs from the buttons is smaller than the gap a
+              paragraph needed. */}
+          <div className="mt-5 flex flex-col gap-3 sm:flex-row">
             <a
               href="#services"
               className="group inline-flex items-center justify-center gap-2 bg-amber-500 px-7 py-4 text-sm font-bold uppercase tracking-wide text-navy-950 transition-colors hover:bg-amber-400"
