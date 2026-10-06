@@ -27,6 +27,23 @@ export const CAREERS_URL =
 export const APPLY_URL =
   "https://jobs.metroassoc.com/portals/3a7f6fd3-7cf7-447c-a20f-2354eb2031df/apply";
 
+/* Top Echelon's "Careers Page XML Feed" — the structured source behind /jobs.
+   This is the feed the ATS offers for building a careers page on your own
+   site, which is exactly what /jobs is, and its licence note limits it to
+   that: publishing these jobs on a third-party board or other job posting
+   venue is forbidden.
+
+   Note the portal id here (98b4920e...) differs from the one in CAREERS_URL
+   (3a7f6fd3...). Both are aliases for the same portal — verified serving
+   byte-identical pages and the same 28 job ids, and a job id resolves under
+   either — so apply links stay on the CAREERS_URL id to keep one portal id
+   across the site.
+
+   Public, not a secret: it is fetched unauthenticated and the ATS prints it
+   in the admin UI for pasting into a website. */
+export const JOB_FEED_URL =
+  "https://bb3api.topechelon.com/api/v1/cp_xml_feed/98b4920e-874e-4ce2-b4d8-d7e203321579";
+
 export const PHONE = "+1 312-500-1878";
 export const PHONE_HREF = "tel:+13125001878";
 export const EMAIL = "patrick@metroassoc.com";

@@ -1,6 +1,38 @@
-import { CAREERS_URL } from "./site";
+import { CAREERS_URL, JOB_FEED_URL } from "./site";
 
-/* Live jobs, read from the Top Echelon portal.
+/* Live jobs, read from the Top Echelon careers-page XML feed.
+ *
+ * WHY A FEED AND NOT THE PORTAL HTML
+ *
+ * This used to parse the portal's rendered job table: `<tr>` rows, a
+ * `title-link` anchor, `chiclet-loc`, and job type read out of the first and
+ * second `jobTable-meta` cells by position. Every one of those is a styling
+ * decision belonging to a third party, and a restyle would have emptied the
+ * whole jobs section — on a build that still succeeded, because the parse
+ * degrades to an empty list rather than throwing.
+ *
+ * Top Echelon publishes the same 28 roles as an XML feed intended for exactly
+ * this ("Build a Careers Page on Your Website"). It carries the title,
+ * description, city, state, country, posting date, job id and type flags as
+ * named fields, so nothing here depends on how the portal looks.
+ *
+ * The descriptions now arrive with the listing, so nothing a page actually
+ * needs depends on a second request. A detail page still makes one, but only
+ * to pick up the human reference described below, and it renders in full
+ * without it.
+ *
+ * Checked before switching: the feed's 28 job ids are exactly the portal's 28,
+ * and the slugs computed from the feed titles are identical to the slugs the
+ * scraper produced for all 28 — so no /jobs URL changed and nothing needed a
+ * redirect.
+ *
+ * WHAT THE FEED DOES NOT CARRY
+ *
+ * Remote type ("On-Site") and the human reference ("FL232-2745162") exist only
+ * in the portal's HTML. Both are still read from there, but as best-effort
+ * enrichment: if that markup changes they go quietly missing and every page
+ * still renders in full from the feed. The difference from before is that
+ * these are now the optional extras rather than the load-bearing parse.
  *
  * WHY THESE PAGES EXIST
  *
@@ -132,101 +164,167 @@ export function employmentType(jobType: string): string | null {
   return null;
 }
 
-/** All jobs currently on the portal. Empty if it cannot be read. */
-export async function listJobs(): Promise<JobSummary[]> {
-  let html: string;
+/* The feed gives the state as a two-letter code; the pages have always shown
+   the full name ("Other roles in Connecticut", and the state headings on the
+   jobs index), so it is expanded back here. Falls through to whatever the feed
+   said if it is ever something other than a US state, which keeps a Canadian
+   or overseas posting readable instead of blank. */
+const STATE_NAMES: Record<string, string> = {
+  AL: "Alabama", AK: "Alaska", AZ: "Arizona", AR: "Arkansas", CA: "California",
+  CO: "Colorado", CT: "Connecticut", DE: "Delaware", DC: "District of Columbia",
+  FL: "Florida", GA: "Georgia", HI: "Hawaii", ID: "Idaho", IL: "Illinois",
+  IN: "Indiana", IA: "Iowa", KS: "Kansas", KY: "Kentucky", LA: "Louisiana",
+  ME: "Maine", MD: "Maryland", MA: "Massachusetts", MI: "Michigan",
+  MN: "Minnesota", MS: "Mississippi", MO: "Missouri", MT: "Montana",
+  NE: "Nebraska", NV: "Nevada", NH: "New Hampshire", NJ: "New Jersey",
+  NM: "New Mexico", NY: "New York", NC: "North Carolina", ND: "North Dakota",
+  OH: "Ohio", OK: "Oklahoma", OR: "Oregon", PA: "Pennsylvania",
+  RI: "Rhode Island", SC: "South Carolina", SD: "South Dakota", TN: "Tennessee",
+  TX: "Texas", UT: "Utah", VT: "Vermont", VA: "Virginia", WA: "Washington",
+  WV: "West Virginia", WI: "Wisconsin", WY: "Wyoming", PR: "Puerto Rico",
+};
+
+function expandState(code: string): string {
+  const key = code.trim().toUpperCase();
+  return STATE_NAMES[key] ?? code.trim();
+}
+
+/** Text of one XML element, CDATA unwrapped. Empty string when absent. */
+function field(xml: string, name: string): string {
+  const m = xml.match(new RegExp(`<${name}>([\\s\\S]*?)</${name}>`));
+  if (!m) return "";
+  const raw = m[1].replace(/^\s*<!\[CDATA\[/, "").replace(/\]\]>\s*$/, "");
+  return raw.trim();
+}
+
+function isYes(xml: string, name: string): boolean {
+  return field(xml, name).toLowerCase() === "yes";
+}
+
+/* The portal's own vocabulary, rebuilt from the feed's three booleans so the
+   chips read exactly as they did when they were scraped out of the table. */
+function jobTypeFrom(xml: string): string {
+  if (isYes(xml, "directhire")) return "Direct Hire";
+  if (isYes(xml, "contract")) return "Contract";
+  if (isYes(xml, "temptoperm")) return "Contract to Hire";
+  return "";
+}
+
+/* Remote type lives only in the portal's markup. Best effort: one request,
+   cached like everything else, and an empty map if anything about it changed.
+   Nothing downstream treats a missing value as an error. */
+async function remoteTypes(): Promise<Map<string, string>> {
+  const out = new Map<string, string>();
   try {
     const res = await fetch(CAREERS_URL, {
       next: { revalidate: REVALIDATE },
       headers: { "User-Agent": "metroassoc.com job sync" },
     });
+    if (!res.ok) return out;
+    const html = await res.text();
+    for (const row of html.match(/<tr>[\s\S]*?<\/tr>/g) ?? []) {
+      const id = row.match(/href="[^"]*\/jobs\/([a-f0-9-]+)"/)?.[1];
+      if (!id) continue;
+      const metas = [...row.matchAll(/class="jobTable-meta"[^>]*>([\s\S]*?)<\/td>/g)].map((m) =>
+        tidy(stripTags(m[1])),
+      );
+      if (metas[1]) out.set(id, metas[1]);
+    }
+  } catch {
+    /* leave it empty */
+  }
+  return out;
+}
+
+/** All jobs currently on the portal. Empty if the feed cannot be read. */
+export async function listJobs(): Promise<JobSummary[]> {
+  let xml: string;
+  try {
+    const res = await fetch(JOB_FEED_URL, {
+      next: { revalidate: REVALIDATE },
+      headers: { "User-Agent": "metroassoc.com job sync" },
+    });
     if (!res.ok) return [];
-    html = await res.text();
+    xml = await res.text();
   } catch {
     return [];
   }
 
-  const rows = html.match(/<tr>[\s\S]*?<\/tr>/g) ?? [];
+  const remote = await remoteTypes();
   const jobs: JobSummary[] = [];
 
-  for (const row of rows) {
-    const link = row.match(
-      /<a[^>]+class="title-link"[^>]+href="[^"]*\/jobs\/([a-f0-9-]+)"[^>]*>([\s\S]*?)<\/a>/,
-    );
-    if (!link) continue;
+  for (const [, block] of xml.matchAll(/<job>([\s\S]*?)<\/job>/g)) {
+    const id = field(block, "jobid");
+    const title = tidy(decodeEntities(field(block, "positiontitle")));
+    if (!id || !title) continue;
 
-    const id = link[1];
-    const title = tidy(stripTags(link[2]));
-    if (!title) continue;
+    const city = tidy(decodeEntities(field(block, "city")));
+    const state = expandState(decodeEntities(field(block, "state")));
 
-    const loc = tidy(stripTags(row.match(/class="chiclet-loc"[^>]*>([\s\S]*?)<\//)?.[1] ?? ""));
-    const metas = [...row.matchAll(/class="jobTable-meta"[^>]*>([\s\S]*?)<\/td>/g)].map((m) =>
-      tidy(stripTags(m[1])),
-    );
-
-    const comma = loc.lastIndexOf(",");
     jobs.push({
       id,
       slug: jobSlug(title, id),
       title,
-      location: loc,
-      city: comma > 0 ? loc.slice(0, comma).trim() : loc,
-      state: comma > 0 ? loc.slice(comma + 1).trim() : "",
-      jobType: metas[0] ?? "",
-      remoteType: metas[1] ?? "",
+      location: [city, state].filter(Boolean).join(", "),
+      city,
+      state,
+      jobType: jobTypeFrom(block),
+      remoteType: remote.get(id) ?? "",
     });
   }
 
   return jobs;
 }
 
-/** One job, read from its own JSON-LD. Null if it is gone from the portal. */
+/** One job from the same feed. Null if it is gone from the portal. */
 export async function getJob(slug: string): Promise<JobDetail | null> {
+  let xml: string;
+  try {
+    const res = await fetch(JOB_FEED_URL, {
+      next: { revalidate: REVALIDATE },
+      headers: { "User-Agent": "metroassoc.com job sync" },
+    });
+    if (!res.ok) return null;
+    xml = await res.text();
+  } catch {
+    return null;
+  }
+
   const summary = (await listJobs()).find((j) => j.slug === slug);
   if (!summary) return null;
 
+  const block =
+    [...xml.matchAll(/<job>([\s\S]*?)<\/job>/g)]
+      .map((m) => m[1])
+      .find((b) => field(b, "jobid") === summary.id) ?? "";
+
+  const datePosted = field(block, "dateposted") || null;
   const url = `${CAREERS_URL}/jobs/${summary.id}`;
-  let html: string;
+
+  /* The human reference ("FL232-2745162") is printed on the portal page and
+     nowhere in the feed. Worth one request for the page a candidate might
+     quote it from, but not worth failing over: the feed's job id already
+     backs the schema identifier. */
+  let reference: string | null = null;
   try {
     const res = await fetch(url, {
       next: { revalidate: REVALIDATE },
       headers: { "User-Agent": "metroassoc.com job sync" },
     });
-    if (!res.ok) return null;
-    html = await res.text();
-  } catch {
-    return null;
-  }
-
-  let data: Record<string, unknown> = {};
-  const block = html.match(
-    /<script type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/,
-  )?.[1];
-  if (block) {
-    try {
-      data = JSON.parse(block) as Record<string, unknown>;
-    } catch {
-      data = {};
+    if (res.ok) {
+      const html = await res.text();
+      reference =
+        stripTags(html.match(/<strong>ID<\/strong><span>([\s\S]*?)<\/span>/)?.[1] ?? "") || null;
     }
+  } catch {
+    /* fall through to the id below */
   }
-
-  const rawDescription =
-    typeof data.description === "string"
-      ? data.description
-      : html.match(/class="job-description"[^>]*>([\s\S]*?)<\/p>\s*<\//)?.[1] ?? "";
-
-  const identifier = data.identifier as { value?: string } | undefined;
-  const reference =
-    stripTags(
-      html.match(/<strong>ID<\/strong><span>([\s\S]*?)<\/span>/)?.[1] ?? "",
-    ) || null;
 
   return {
     ...summary,
-    title: typeof data.title === "string" ? tidy(data.title) : summary.title,
-    descriptionHtml: sanitizeHtml(rawDescription),
-    datePosted: typeof data.datePosted === "string" ? data.datePosted : null,
-    reference: reference ?? (identifier?.value ?? null),
+    descriptionHtml: sanitizeHtml(field(block, "description")),
+    datePosted,
+    reference: reference ?? summary.id,
     applyUrl: url,
   };
 }
