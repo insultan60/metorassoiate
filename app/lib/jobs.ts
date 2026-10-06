@@ -5,11 +5,16 @@ import { CAREERS_URL } from "./site";
  * WHY THESE PAGES EXIST
  *
  * Thirty-nine engineering roles, each several hundred words of specific,
- * regularly-refreshed writing about real work in real metros, currently live
- * only on careers.topechelon.com. Every topical and freshness signal that
- * content produces accrues to that domain rather than to this one, while this
- * site links out to it. Mirroring the roles here puts the substance on the
- * domain that is trying to rank for it.
+ * regularly-refreshed writing about real work in real metros, living on the
+ * hosted portal (jobs.metroassoc.com since Oct 2026; careers.topechelon.com
+ * before that). Every topical and freshness signal that content produces
+ * accrues to the portal's host rather than to this one, while this site links
+ * out to it. Mirroring the roles here puts the substance on the domain that is
+ * trying to rank for it.
+ *
+ * Moving the portal onto our own subdomain does not change that. A subdomain
+ * is a separate host as far as search is concerned, and the pages are still
+ * rendered by the ATS. The branding is the win; the mirror is still the SEO.
  *
  * The portal already publishes valid JobPosting structured data on each job
  * page, so this is not a case of adding markup that was missing. It is a case

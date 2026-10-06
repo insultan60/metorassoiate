@@ -4,11 +4,28 @@
  *  the cause of Search Console's "Page with redirect" pile-up. */
 export const SITE_URL = "https://www.metroassoc.com";
 
-/** External careers portal (Top Echelon). CAREERS_URL browses all jobs; APPLY_URL is the application form. */
+/* Careers portal. CAREERS_URL browses all jobs; APPLY_URL is the application
+   form. Still Top Echelon's portal and the same portal id, but served on our
+   own jobs.metroassoc.com rather than careers.topechelon.com.
+
+   Every "View all openings" and "Apply" button on the site reads from these
+   two constants, and on the old host each one handed a candidate to a domain
+   with someone else's name on it at the moment they decided to act. It also
+   means the destination is ours to redirect if the ATS is ever replaced,
+   instead of a vendor URL baked into every hub page.
+
+   Top Echelon's custom domain is additive: careers.topechelon.com still
+   serves the identical portal with no redirect and no canonical pointing
+   here, so nothing moves until these constants change. Verified before
+   switching — both hosts 200, same portal id, same job ids, same JobPosting
+   structured data on detail pages.
+
+   app/lib/jobs.ts reads the listing and each role's JSON-LD from CAREERS_URL,
+   so the /jobs mirror follows automatically. */
 export const CAREERS_URL =
-  "https://careers.topechelon.com/portals/3a7f6fd3-7cf7-447c-a20f-2354eb2031df";
+  "https://jobs.metroassoc.com/portals/3a7f6fd3-7cf7-447c-a20f-2354eb2031df";
 export const APPLY_URL =
-  "https://careers.topechelon.com/portals/3a7f6fd3-7cf7-447c-a20f-2354eb2031df/apply";
+  "https://jobs.metroassoc.com/portals/3a7f6fd3-7cf7-447c-a20f-2354eb2031df/apply";
 
 export const PHONE = "+1 312-500-1878";
 export const PHONE_HREF = "tel:+13125001878";
