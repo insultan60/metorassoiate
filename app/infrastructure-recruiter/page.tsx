@@ -1,3 +1,4 @@
+import { CandidateTrust } from "../components/CandidateTrust";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { HeaderBackdrop } from "../components/HeaderBackdrop";
@@ -7,7 +8,7 @@ import ServiceModels from "../components/ServiceModels";
 import OtherSpecialties from "../components/OtherSpecialties";
 import { IconArrow, IconCheck } from "../components/Icons";
 import { breadcrumbSchema, OG_IMAGE } from "../lib/seo";
-import { SITE_URL, CAREERS_URL, APPLY_URL } from "../lib/site";
+import { SITE_URL, APPLY_URL } from "../lib/site";
 import { CITIES } from "../lib/cities";
 
 /* The umbrella hub.
@@ -206,6 +207,7 @@ export default function InfrastructureRecruiterPage() {
               that staffs all four.
             </p>
 
+            <CandidateTrust />
             <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
               <Link
                 href="/contact"
@@ -214,14 +216,12 @@ export default function InfrastructureRecruiterPage() {
                 Request Talent
                 <IconArrow className="h-4.5 w-4.5 transition-transform group-hover:translate-x-1" />
               </Link>
-              <a
-                href={CAREERS_URL}
-                target="_blank"
-                rel="noopener noreferrer"
+              <Link
+                href="/careers"
                 className="inline-flex items-center justify-center gap-2 border border-white/20 px-7 py-4 text-sm font-bold uppercase tracking-wide text-white transition-colors hover:border-amber-500 hover:text-amber-400"
               >
                 Search Jobs
-              </a>
+              </Link>
               <a
                 href={APPLY_URL}
                 target="_blank"

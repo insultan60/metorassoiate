@@ -1,3 +1,4 @@
+import { CandidateTrust } from "../components/CandidateTrust";
 import type { Metadata } from "next";
 import HubFaqs from "../components/HubFaqs";
 import ServiceModels from "../components/ServiceModels";
@@ -7,7 +8,7 @@ import {
   IconArrow, IconCheck, IconGlobe, IconShield, IconTarget, IconLayers,
   IconClipboard, IconPin, IconStar,
 } from "../components/Icons";
-import { CAREERS_URL, APPLY_URL, SITE_URL } from "../lib/site";
+import { APPLY_URL, SITE_URL } from "../lib/site";
 import { CITIES, EXPERTISE, SKILLS, ROLES, SALARIES, WHY } from "../lib/cities";
 import OtherSpecialties from "../components/OtherSpecialties";
 import ClientAwards from "../components/ClientAwards";
@@ -92,14 +93,15 @@ export default function NationalRecruiterPage() {
               to rural infrastructure expansions, we help firms hire licensed PEs,
               project managers, and technical specialists.
             </p>
+            <CandidateTrust />
             <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
               <Link href="/contact" className="group inline-flex items-center justify-center gap-2 bg-amber-500 px-7 py-4 text-sm font-bold uppercase tracking-wide text-navy-950 transition-colors hover:bg-amber-400">
                 Request Talent
                 <IconArrow className="h-4.5 w-4.5 transition-transform group-hover:translate-x-1" />
               </Link>
-              <a href={CAREERS_URL} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 border border-white/20 px-7 py-4 text-sm font-bold uppercase tracking-wide text-white transition-colors hover:border-amber-500 hover:text-amber-400">
+              <Link href="/careers" className="inline-flex items-center justify-center gap-2 border border-white/20 px-7 py-4 text-sm font-bold uppercase tracking-wide text-white transition-colors hover:border-amber-500 hover:text-amber-400">
                 Search Jobs
-              </a>
+              </Link>
               <a href={APPLY_URL} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 border border-white/20 px-7 py-4 text-sm font-bold uppercase tracking-wide text-white transition-colors hover:border-amber-500 hover:text-amber-400">
                 Submit Resume
               </a>

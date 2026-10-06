@@ -1,3 +1,4 @@
+import { CandidateTrust } from "../components/CandidateTrust";
 import type { Metadata } from "next";
 import { HeaderBackdrop } from "../components/HeaderBackdrop";
 import { JsonLd } from "../components/JsonLd";
@@ -67,6 +68,11 @@ export default async function JobsPage() {
                 ? `${jobs.length} live roles across civil, MEP, structural, water and municipal engineering. Every one is a real search we are running now, not an advert for a pipeline.`
                 : "Our live roles are listed on our careers portal."}
             </p>
+
+            {/* The page a job seeker is most likely to land on from a search,
+                and the one where "does this cost me anything?" is the first
+                question. It is answered before the list rather than after it. */}
+            <CandidateTrust />
           </div>
         </section>
 

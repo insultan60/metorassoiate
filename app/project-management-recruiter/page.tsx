@@ -1,3 +1,4 @@
+import { CandidateTrust } from "../components/CandidateTrust";
 import type { Metadata } from "next";
 import HubFaqs from "../components/HubFaqs";
 import ServiceModels from "../components/ServiceModels";
@@ -7,7 +8,7 @@ import {
   IconClipboard, IconStar,
 } from "../components/Icons";
 import { HeaderBackdrop } from "../components/HeaderBackdrop";
-import { CAREERS_URL, APPLY_URL, SITE_URL } from "../lib/site";
+import { APPLY_URL, SITE_URL } from "../lib/site";
 import OtherSpecialties from "../components/OtherSpecialties";
 import ClientAwards from "../components/ClientAwards";
 import { OG_IMAGE } from "../lib/seo";
@@ -157,6 +158,7 @@ export default function ProjectManagementRecruiterPage() {
               and project management. We fill senior and executive PM roles in all 50 states.
             </p>
 
+            <CandidateTrust />
             <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
               <Link
                 href="/contact"
@@ -165,9 +167,9 @@ export default function ProjectManagementRecruiterPage() {
                 Request Talent
                 <IconArrow className="h-4.5 w-4.5 transition-transform group-hover:translate-x-1" />
               </Link>
-              <a href={CAREERS_URL} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 border border-white/20 px-7 py-4 text-sm font-bold uppercase tracking-wide text-white transition-colors hover:border-amber-500 hover:text-amber-400">
+              <Link href="/careers" className="inline-flex items-center justify-center gap-2 border border-white/20 px-7 py-4 text-sm font-bold uppercase tracking-wide text-white transition-colors hover:border-amber-500 hover:text-amber-400">
                 Search Jobs
-              </a>
+              </Link>
               <a href={APPLY_URL} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 border border-white/20 px-7 py-4 text-sm font-bold uppercase tracking-wide text-white transition-colors hover:border-amber-500 hover:text-amber-400">
                 Submit Resume
               </a>

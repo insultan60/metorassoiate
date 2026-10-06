@@ -1,6 +1,6 @@
+import Link from "next/link";
 import Image from "next/image";
 import { IconArrow, IconCheck } from "./Icons";
-import { CAREERS_URL } from "../lib/site";
 import CountUp from "./CountUp";
 import YouTubeFacade from "./YouTubeFacade";
 
@@ -164,17 +164,15 @@ export default function About() {
             <span className="border-b-2 border-amber-500 pb-1">Explore our services</span>
             <IconArrow className="h-4.5 w-4.5 text-amber-500 transition-transform group-hover:translate-x-1" />
           </a>
-          <a
-            href={CAREERS_URL}
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            href="/careers"
             className="group inline-flex items-center gap-2 text-sm font-bold uppercase tracking-wide text-slate hover:text-navy-950"
           >
             <span className="border-b-2 border-navy-950/20 pb-1 group-hover:border-amber-500">
               Explore open jobs
             </span>
             <IconArrow className="h-4.5 w-4.5 text-amber-500 transition-transform group-hover:translate-x-1" />
-          </a>
+          </Link>
         </div>
       </div>
     </section>

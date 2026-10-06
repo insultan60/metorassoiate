@@ -1,3 +1,4 @@
+import { CandidateTrust } from "../components/CandidateTrust";
 import type { Metadata } from "next";
 import Image from "next/image";
 import { HeaderBackdrop } from "../components/HeaderBackdrop";
@@ -11,7 +12,6 @@ import {
   IconUsers,
   IconArrow,
 } from "../components/Icons";
-import { CAREERS_URL } from "../lib/site";
 
 export const metadata: Metadata = {
   title: "Why Metro Associates | Engineering Recruiting",
@@ -80,6 +80,7 @@ export default function WhyUsPage() {
                 programs demand.
               </p>
 
+              <CandidateTrust />
               <div className="mt-9 flex flex-col gap-3 sm:flex-row">
                 <Link
                   href="/#contact"
@@ -88,14 +89,12 @@ export default function WhyUsPage() {
                   Request Talent
                   <IconArrow className="h-4.5 w-4.5 transition-transform group-hover:translate-x-1" />
                 </Link>
-                <a
-                  href={CAREERS_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <Link
+                  href="/careers"
                   className="inline-flex items-center justify-center gap-2 border border-white/20 px-7 py-4 text-sm font-bold uppercase tracking-wide text-white transition-colors hover:border-amber-500 hover:text-amber-400"
                 >
                   Search Jobs
-                </a>
+                </Link>
               </div>
             </div>
 

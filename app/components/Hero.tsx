@@ -1,5 +1,5 @@
+import Link from "next/link";
 import { IconArrow, IconCheck, IconStar } from "./Icons";
-import { CAREERS_URL } from "../lib/site";
 
 const HIGHLIGHTS = [
   "45+ years of placements",
@@ -64,10 +64,8 @@ export default function Hero() {
 
       <div className="container-x relative w-full pb-14">
         <div className="max-w-3xl animate-fade-up">
-          <a
-            href={CAREERS_URL}
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            href="/careers"
             className="group mb-6 inline-flex items-center gap-3 border border-amber-500/40 bg-amber-500/10 px-4 py-2.5 backdrop-blur-sm transition-colors hover:border-amber-500 hover:bg-amber-500/20"
           >
             <span className="relative flex h-2 w-2 shrink-0">
@@ -80,7 +78,7 @@ export default function Hero() {
               10 Professional Engineers / All Disciplines
             </span>
             <IconArrow className="h-3.5 w-3.5 shrink-0 text-amber-500 transition-transform group-hover:translate-x-1" />
-          </a>
+          </Link>
 
           <div className="flex items-center gap-3">
             <span className="h-2 w-2 animate-blink bg-amber-500" />

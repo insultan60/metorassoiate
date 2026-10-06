@@ -1,3 +1,4 @@
+import { CandidateTrust } from "../../components/CandidateTrust";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -5,7 +6,7 @@ import RelatedMarkets from "../../components/RelatedMarkets";
 import CityWiderMarket from "../../components/CityWiderMarket";
 import {
   IconArrow, IconBridge } from "../../components/Icons";
-import { CAREERS_URL, APPLY_URL, SITE_URL } from "../../lib/site";
+import { APPLY_URL, SITE_URL } from "../../lib/site";
 import {
   CITIES, getCity } from "../../lib/cities";
 import { HeaderBackdrop } from "../../components/HeaderBackdrop";
@@ -143,6 +144,7 @@ export default async function CityPage({ params }: { params: Promise<{ city: str
               {c.marketNote}
             </p>
 
+            <CandidateTrust />
             <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
               <Link
                 href="/contact"
@@ -151,14 +153,12 @@ export default async function CityPage({ params }: { params: Promise<{ city: str
                 Request Talent
                 <IconArrow className="h-4.5 w-4.5 transition-transform group-hover:translate-x-1" />
               </Link>
-              <a
-                href={CAREERS_URL}
-                target="_blank"
-                rel="noopener noreferrer"
+              <Link
+                href="/careers"
                 className="inline-flex items-center justify-center gap-2 border border-white/20 px-7 py-4 text-sm font-bold uppercase tracking-wide text-white transition-colors hover:border-amber-500 hover:text-amber-400"
               >
                 Search Jobs
-              </a>
+              </Link>
               <a
                 href={APPLY_URL}
                 target="_blank"
