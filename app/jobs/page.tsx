@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { HeaderBackdrop } from "../components/HeaderBackdrop";
 import { JsonLd } from "../components/JsonLd";
 import { breadcrumbSchema, fitTitle, fitDescription } from "../lib/seo";
 import { CAREERS_URL, APPLY_URL, SITE_URL } from "../lib/site";
 import { listJobs } from "../lib/jobs";
+import { JobSearch } from "./JobSearch";
 
 /* The jobs index.
  *
@@ -30,14 +30,9 @@ export const metadata: Metadata = {
 export default async function JobsPage() {
   const jobs = await listJobs();
 
-  /* Group by state so a reader scanning for their own market finds it, and
-     so the page has structure rather than being thirty-nine equal rows. */
-  const byState = new Map<string, typeof jobs>();
-  for (const j of jobs) {
-    const key = j.state || "Other";
-    byState.set(key, [...(byState.get(key) ?? []), j]);
-  }
-  const states = [...byState.keys()].sort();
+  /* Grouping, searching and sorting all live in JobSearch. The jobs are still
+     fetched and rendered here on the server, so the list is in the HTML for a
+     crawler that runs no JavaScript; the client only hides rows. */
 
   return (
     <>
@@ -95,34 +90,7 @@ export default async function JobsPage() {
         ) : (
           <section className="border-t border-navy-950/10 bg-paper py-16 sm:py-20">
             <div className="container-x">
-              {states.map((state) => (
-                <div key={state} className="mb-14 last:mb-0">
-                  <div className="flex items-baseline gap-4">
-                    <h2 className="display text-2xl text-navy-950 sm:text-3xl">{state}</h2>
-                    <span className="mono-label text-[10px] text-slate-500">
-                      {`${byState.get(state)!.length} ${byState.get(state)!.length === 1 ? "role" : "roles"}`}
-                    </span>
-                  </div>
-
-                  <ul className="mt-6 divide-y divide-navy-950/10 border-t border-navy-950/10">
-                    {byState.get(state)!.map((j) => (
-                      <li key={j.slug}>
-                        <Link
-                          href={`/jobs/${j.slug}`}
-                          className="group flex flex-col gap-2 py-5 sm:flex-row sm:items-baseline sm:justify-between sm:gap-8"
-                        >
-                          <span className="text-[17px] font-bold leading-snug text-navy-950 group-hover:text-amber-600">
-                            {j.title}
-                          </span>
-                          <span className="mono-label shrink-0 text-[10px] text-slate-500">
-                            {[j.city, j.jobType, j.remoteType].filter(Boolean).join("  ·  ")}
-                          </span>
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
+              <JobSearch jobs={jobs} />
             </div>
           </section>
         )}

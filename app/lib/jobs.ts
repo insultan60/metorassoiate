@@ -77,11 +77,15 @@ export type JobSummary = {
   state: string;
   jobType: string;
   remoteType: string;
+  /* On the summary rather than only the detail because the feed carries it for
+     every role in the one response. Under the old scraper this was a per-job
+     page fetch, so the index could not sort or show a date without twenty-eight
+     extra requests; now it costs nothing. */
+  datePosted: string | null;
 };
 
 export type JobDetail = JobSummary & {
   descriptionHtml: string;
-  datePosted: string | null;
   reference: string | null;
   applyUrl: string;
 };
@@ -270,6 +274,7 @@ export async function listJobs(): Promise<JobSummary[]> {
       state,
       jobType: jobTypeFrom(block),
       remoteType: remote.get(id) ?? "",
+      datePosted: field(block, "dateposted") || null,
     });
   }
 
@@ -298,7 +303,6 @@ export async function getJob(slug: string): Promise<JobDetail | null> {
       .map((m) => m[1])
       .find((b) => field(b, "jobid") === summary.id) ?? "";
 
-  const datePosted = field(block, "dateposted") || null;
   const url = `${CAREERS_URL}/jobs/${summary.id}`;
 
   /* The human reference ("FL232-2745162") is printed on the portal page and
@@ -323,7 +327,6 @@ export async function getJob(slug: string): Promise<JobDetail | null> {
   return {
     ...summary,
     descriptionHtml: sanitizeHtml(field(block, "description")),
-    datePosted,
     reference: reference ?? summary.id,
     applyUrl: url,
   };
