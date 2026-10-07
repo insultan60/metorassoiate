@@ -16,6 +16,17 @@ export const metadata: Metadata = {
  * ("... 1080p caption") and a placeholder channel name, and neither belongs
  * on the page. An explicit title also means a video being renamed on YouTube
  * cannot silently change what this page says. */
+/* The firm-wide careers video, kept out of the role list below.
+ *
+ * It is not a walk-through of one opening, so filing it among them would
+ * have meant captioning it as a role it is not, and burying the one video
+ * that explains who Metro is among three that assume you already know. It
+ * runs once, wider, above the grid. */
+const FEATURED_VIDEO = {
+  id: "jZeZwPC0eEA",
+  title: "Careers at Metro Associates: engineering and infrastructure",
+};
+
 const YOUTUBE_VIDEOS = [
   { id: "UeVXo4WaCfY", title: "Traffic Engineer, Chicago area" },
   { id: "ptUCw1_pjig", title: "Senior Refrigeration & Utilities Manager" },
@@ -85,6 +96,21 @@ export default async function VideosPage() {
               carry the roles worth the most. The TikTok wall below is the
               short-form version of the same job. */}
           <div className="mt-14">
+            <h2 className="mono-label text-ink-300">{"//"} Start here</h2>
+            <figure className="mt-6 max-w-3xl">
+              <div className="relative aspect-video overflow-hidden border border-white/10 bg-navy-950">
+                <YouTubeFacade videoId={FEATURED_VIDEO.id} title={FEATURED_VIDEO.title} />
+              </div>
+              <figcaption className="mt-3">
+                <p className="text-sm font-semibold leading-snug text-white">
+                  {FEATURED_VIDEO.title}
+                </p>
+                <p className="mt-1 text-xs text-ink-300">YouTube · Metro Associates</p>
+              </figcaption>
+            </figure>
+          </div>
+
+          <div className="mt-16">
             <h2 className="mono-label text-ink-300">{"//"} Role walk-throughs</h2>
             <div className="mt-6 grid grid-cols-1 gap-8 lg:grid-cols-2">
               {YOUTUBE_VIDEOS.map((v) => (
