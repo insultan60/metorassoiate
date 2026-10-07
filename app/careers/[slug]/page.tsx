@@ -118,13 +118,19 @@ export default async function JobPage({
       ? { identifier: { "@type": "PropertyValue", name: "Metro Associates", value: job.reference } }
       : {}),
     ...(type ? { employmentType: type } : {}),
-    ...(job.city
+    /* A location is required for Google to accept the posting at all, and
+       the feed does not always carry both halves of one. One current role
+       comes through with state MA and an empty city, and gating the whole
+       block on the city threw away the state we did have, which left an
+       incomplete JobPosting that Google rejects outright. Either part is
+       enough to emit a valid address, so emit whichever arrived. */
+    ...(job.city || job.state
       ? {
           jobLocation: {
             "@type": "Place",
             address: {
               "@type": "PostalAddress",
-              addressLocality: job.city,
+              ...(job.city ? { addressLocality: job.city } : {}),
               ...(job.state ? { addressRegion: job.state } : {}),
               addressCountry: "US",
             },
