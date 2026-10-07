@@ -2,6 +2,7 @@
 
 import { useMemo, useState } from "react";
 import Link from "next/link";
+import { IconArrow, IconPin } from "../components/Icons";
 import type { JobSummary } from "../lib/jobs";
 
 /* The careers page's search, filters and sort.
@@ -114,22 +115,65 @@ export function JobSearch({ jobs }: Props) {
     setSort("recent");
   }
 
-  const row = (j: JobSummary) => (
-    <li key={j.slug}>
+  /* One role, as a card.
+   *
+   * Was a full-width row: title on the left, every other fact on the right in
+   * 10px mono, separated by hairlines. At 28 roles that reads as one wall of
+   * near-identical lines, and the two things a candidate actually sorts on,
+   * the job type and whether it is on-site, were the smallest text on the
+   * page. A card gives each role its own edges and lets those two facts sit at
+   * the top where they are read first.
+   *
+   * showState is false in the grouped view, where the state is already the
+   * heading above the grid, and true in the flat filtered list, where the
+   * cards come from everywhere and the city alone would be ambiguous.
+   */
+  const card = (j: JobSummary, showState: boolean) => (
+    <li key={j.slug} className="group relative">
       <Link
         href={`/careers/${j.slug}`}
-        className="group flex flex-col gap-2 py-5 sm:flex-row sm:items-baseline sm:justify-between sm:gap-8"
+        className="flex h-full flex-col border border-navy-950/15 bg-white p-6 transition-colors duration-200 hover:border-amber-500"
       >
-        <span className="text-[17px] font-bold leading-snug text-navy-950 group-hover:text-amber-600">
+        {/* Amber edge on hover: the accent the buttons already use, and it
+            marks the active card without shifting the layout. */}
+        <span
+          className="absolute inset-y-0 left-0 w-[3px] bg-amber-500 opacity-0 transition-opacity duration-200 group-hover:opacity-100"
+          aria-hidden
+        />
+
+        <div className="flex flex-wrap items-center gap-x-3 gap-y-2">
+          {j.jobType && (
+            <span className="mono-label border border-navy-950/15 px-2 py-1 text-[9px] text-navy-950">
+              {j.jobType}
+            </span>
+          )}
+          {j.remoteType && (
+            <span className="mono-label text-[9px] text-slate-500">{j.remoteType}</span>
+          )}
+        </div>
+
+        <h3 className="mt-5 text-[17px] font-bold leading-snug text-navy-950 transition-colors group-hover:text-amber-600">
           {j.title}
-        </span>
-        <span className="mono-label shrink-0 text-[10px] text-slate-500">
-          <span title={monthYear(j.datePosted)}>
-            {[j.city, j.jobType, j.remoteType, posted(j.datePosted)]
-              .filter(Boolean)
-              .join("  ·  ")}
+        </h3>
+
+        {(j.city || showState) && (
+          <p className="mt-3 flex items-start gap-2 text-sm leading-6 text-slate">
+            <IconPin className="mt-0.5 h-4 w-4 shrink-0 text-amber-500" />
+            {[j.city, showState ? j.state : null].filter(Boolean).join(", ")}
+          </p>
+        )}
+
+        {/* mt-auto pins the footer to the bottom edge, so a short title and a
+            long one still produce cards of the same height in a row. */}
+        <div className="mt-auto flex items-end justify-between gap-3 pt-6">
+          <span className="mono-label text-[9px] text-slate-500" title={monthYear(j.datePosted)}>
+            {posted(j.datePosted)}
           </span>
-        </span>
+          <span className="mono-label flex shrink-0 items-center gap-1.5 text-[9px] text-navy-950 opacity-0 transition-opacity duration-200 group-hover:opacity-100">
+            View role
+            <IconArrow className="h-3 w-3" />
+          </span>
+        </div>
       </Link>
     </li>
   );
@@ -259,8 +303,8 @@ export function JobSearch({ jobs }: Props) {
           </button>
         </div>
       ) : filtering ? (
-        <ul className="divide-y divide-navy-950/10 border-t border-navy-950/10 pt-0">
-          {results.map(row)}
+        <ul className="grid grid-cols-1 gap-5 pt-10 sm:grid-cols-2 xl:grid-cols-3">
+          {results.map((j) => card(j, true))}
         </ul>
       ) : (
         <div className="pt-10">
@@ -272,8 +316,8 @@ export function JobSearch({ jobs }: Props) {
                   {`${list.length} ${list.length === 1 ? "role" : "roles"}`}
                 </span>
               </div>
-              <ul className="mt-6 divide-y divide-navy-950/10 border-t border-navy-950/10">
-                {list.map(row)}
+              <ul className="mt-6 grid grid-cols-1 gap-5 sm:grid-cols-2 xl:grid-cols-3">
+                {list.map((j) => card(j, false))}
               </ul>
             </div>
           ))}
