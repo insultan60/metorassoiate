@@ -17,6 +17,7 @@ export const metadata: Metadata = {
  * on the page. An explicit title also means a video being renamed on YouTube
  * cannot silently change what this page says. */
 const YOUTUBE_VIDEOS = [
+  { id: "UeVXo4WaCfY", title: "Traffic Engineer, Chicago area" },
   { id: "ptUCw1_pjig", title: "Senior Refrigeration & Utilities Manager" },
   { id: "b6lp9i9w9PQ", title: "Process Engineer, food manufacturing in Virginia" },
   { id: "fPi4M7brMLw", title: "Director of Land Development, Tucson" },
