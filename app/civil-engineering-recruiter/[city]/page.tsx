@@ -381,6 +381,35 @@ export default async function CityPage({ params }: { params: Promise<{ city: str
         </div>
       </section>
 
+      {/* Relocating.
+          A candidate taking a role in another metro has one practical
+          question this site answers nowhere, which is where they are going
+          to live. Rendered only for the cities that have someone real to
+          point at, so the other forty-nine pages are untouched. */}
+      {c.relocation && (
+        <section className="relative border-t border-navy-950/10 bg-paper py-16 sm:py-20">
+          <div className="container-x">
+            <div className="max-w-2xl">
+              <span className="mono-label text-amber-500">
+                {"//"} Relocating to {c.city}
+              </span>
+              <p className="mt-5 text-lg leading-8 text-slate text-pretty">
+                {c.relocation.note}{" "}
+                <a
+                  href={c.relocation.href}
+                  target="_blank"
+                  rel="noopener"
+                  className="font-bold text-navy-950 underline decoration-amber-500 decoration-2 underline-offset-4 transition-colors hover:text-amber-600"
+                >
+                  {c.relocation.name}
+                </a>
+                .
+              </p>
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* Closing CTA and related markets. The "why partner with us"
           grid that used to head this section was the same 88 words on
           all fifty city pages and is still on the hub page. */}

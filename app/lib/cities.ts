@@ -37,6 +37,11 @@ export interface City {
   /** Licensure and prequalification as they bite in this state. */
   licensure?: string;
 
+  /* A local resource for candidates moving to this metro for a role.
+     Optional and rare: only set where there is a real person to point at,
+     so the other cities render exactly as before. */
+  relocation?: { name: string; href: string; note: string };
+
   /* Surrounding communities this metro's desk actually covers.
    *
    * Search Console shows real demand from towns with no page and no prospect
@@ -105,6 +110,12 @@ export const CITIES: City[] = [
       "Seismic retrofit and bridge rehabilitation",
       "LAX modernization and automated people-mover works",
     ],
+    relocation: {
+      name: "Andrew Liberty",
+      href: "https://andrewliberty.com/",
+      note:
+        "Engineers we place in Los Angeles are often relocating from another state, and housing is the one part of that move we do not handle. For residential real estate across the LA basin, see",
+    },
     agencies: [
       "Caltrans District 7",
       "LA Metro",
