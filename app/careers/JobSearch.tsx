@@ -79,6 +79,14 @@ export function JobSearch({ jobs }: Props) {
   const [remoteType, setRemoteType] = useState(ANY);
   const [sort, setSort] = useState<"recent" | "title">("recent");
 
+  /* List is the default because it is the one the client chose. The cards
+     are kept rather than dropped: they are the better read on a phone, where
+     the row's right-hand meta column wraps under the title anyway, and they
+     are what makes the job type and the on-site flag legible at a glance.
+     Letting the visitor pick costs one piece of state and settles an
+     argument that has no single right answer. */
+  const [view, setView] = useState<"list" | "cards">("list");
+
   // Built from the data rather than hardcoded, so a new job type or a first
   // remote role appears in the filter without anyone editing a list here.
   const options = useMemo(() => {
@@ -129,6 +137,36 @@ export function JobSearch({ jobs }: Props) {
     setRemoteType(ANY);
     setSort("recent");
   }
+
+  /* One role, as a row. The original treatment and the default.
+     Scans fastest when you already know what you are looking for: the titles
+     line up in a single column and the eye runs down them. */
+  const row = (j: JobSummary, showState: boolean) => (
+    <li key={j.slug}>
+      <Link
+        href={`/careers/${j.slug}`}
+        className="group flex flex-col gap-2 py-5 sm:flex-row sm:items-baseline sm:justify-between sm:gap-8"
+      >
+        <span className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
+          {isNew(j.datePosted) && (
+            <span className="mono-label shrink-0 bg-amber-500 px-2 py-0.5 text-[9px] text-navy-950">
+              New
+            </span>
+          )}
+          <span className="text-[17px] font-bold leading-snug text-navy-950 group-hover:text-amber-600">
+            {j.title}
+          </span>
+        </span>
+        <span className="mono-label shrink-0 text-[10px] text-slate-500">
+          <span title={monthYear(j.datePosted)}>
+            {[j.city, showState ? j.state : null, j.jobType, j.remoteType, posted(j.datePosted)]
+              .filter(Boolean)
+              .join("  ·  ")}
+          </span>
+        </span>
+      </Link>
+    </li>
+  );
 
   /* One role, as a card.
    *
@@ -295,6 +333,24 @@ export function JobSearch({ jobs }: Props) {
               <option value="title">Title A-Z</option>
             </select>
 
+            <div className="flex items-center border border-navy-950/20">
+              {(["list", "cards"] as const).map((v) => (
+                <button
+                  key={v}
+                  type="button"
+                  onClick={() => setView(v)}
+                  aria-pressed={view === v}
+                  className={`mono-label px-3 py-2 text-[10px] transition-colors ${
+                    view === v
+                      ? "bg-amber-500 text-navy-950"
+                      : "text-navy-950 hover:bg-navy-950/5"
+                  }`}
+                >
+                  {v === "list" ? "List" : "Cards"}
+                </button>
+              ))}
+            </div>
+
             {filtering && (
               <button
                 type="button"
@@ -323,9 +379,15 @@ export function JobSearch({ jobs }: Props) {
           </button>
         </div>
       ) : filtering ? (
-        <ul className="grid grid-cols-1 gap-5 pt-10 sm:grid-cols-2 xl:grid-cols-3">
-          {results.map((j) => card(j, true))}
-        </ul>
+        view === "list" ? (
+          <ul className="divide-y divide-navy-950/10 border-t border-navy-950/10 pt-0">
+            {results.map((j) => row(j, true))}
+          </ul>
+        ) : (
+          <ul className="grid grid-cols-1 gap-5 pt-10 sm:grid-cols-2 xl:grid-cols-3">
+            {results.map((j) => card(j, true))}
+          </ul>
+        )
       ) : (
         <div className="pt-10">
           {grouped.map(([stateName, list]) => (
@@ -336,9 +398,15 @@ export function JobSearch({ jobs }: Props) {
                   {`${list.length} ${list.length === 1 ? "role" : "roles"}`}
                 </span>
               </div>
-              <ul className="mt-6 grid grid-cols-1 gap-5 sm:grid-cols-2 xl:grid-cols-3">
-                {list.map((j) => card(j, false))}
-              </ul>
+              {view === "list" ? (
+                <ul className="mt-6 divide-y divide-navy-950/10 border-t border-navy-950/10">
+                  {list.map((j) => row(j, false))}
+                </ul>
+              ) : (
+                <ul className="mt-6 grid grid-cols-1 gap-5 sm:grid-cols-2 xl:grid-cols-3">
+                  {list.map((j) => card(j, false))}
+                </ul>
+              )}
             </div>
           ))}
         </div>
