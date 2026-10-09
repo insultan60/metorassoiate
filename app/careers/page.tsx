@@ -16,7 +16,7 @@ import { JobSearch } from "./JobSearch";
  * this site a section, not a build.
  */
 
-export const revalidate = 3600;
+export const revalidate = 300;
 
 export const metadata: Metadata = {
   title: fitTitle("Engineering Jobs Hiring Now"),

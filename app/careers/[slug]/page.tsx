@@ -24,7 +24,7 @@ import { deskForJob, marketForJob } from "../../lib/jobRouting";
  * immediately instead of waiting for one.
  */
 
-export const revalidate = 3600;
+export const revalidate = 300;
 export const dynamicParams = true;
 
 export async function generateStaticParams() {

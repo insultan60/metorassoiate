@@ -66,7 +66,12 @@ import { CAREERS_URL, JOB_FEED_URL } from "./site";
  * third party changed a class name.
  */
 
-const REVALIDATE = 3600; // an hour; these change daily at most
+/* Five minutes. The board turns over faster than it looks: a third of the
+   roles on it were posted inside the last week, and a candidate who sees a
+   role advertised elsewhere and comes here to apply should not be told it
+   does not exist. The feed is one 160KB request, so re-reading it twelve
+   times an hour costs nothing worth counting. */
+const REVALIDATE = 300;
 
 export type JobSummary = {
   id: string;

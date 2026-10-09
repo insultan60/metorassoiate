@@ -20,7 +20,7 @@ import { listJobs } from "../lib/jobs";
  * <lastmod> is the posting date, which is the one date we actually know. No
  * <changefreq> or <priority>: Google ignores both.
  */
-export const revalidate = 3600;
+export const revalidate = 300;
 
 export async function GET() {
   const jobs = await listJobs();

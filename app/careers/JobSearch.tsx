@@ -54,6 +54,21 @@ function posted(iso: string | null): string {
   return `Posted ${months} ${months === 1 ? "month" : "months"} ago`;
 }
 
+/* A third of this board turns over inside a week, and the default view is
+   grouped by state rather than by date, so the roles posted today sit
+   wherever the alphabet puts them. The chip is what makes them findable
+   without reordering the page out from under someone scanning for their own
+   market. Seven days because that is the window in which a candidate still
+   expects to be early. */
+const NEW_DAYS = 7;
+
+function isNew(iso: string | null): boolean {
+  if (!iso) return false;
+  const d = new Date(iso);
+  if (Number.isNaN(d.getTime())) return false;
+  return (Date.now() - d.getTime()) / 86_400_000 <= NEW_DAYS;
+}
+
 const selectClass =
   "w-full appearance-none border border-navy-950/20 bg-white px-4 py-3 text-sm text-navy-950 outline-none transition-colors focus:border-amber-500";
 
@@ -142,6 +157,11 @@ export function JobSearch({ jobs }: Props) {
         />
 
         <div className="flex flex-wrap items-center gap-x-3 gap-y-2">
+          {isNew(j.datePosted) && (
+            <span className="mono-label bg-amber-500 px-2 py-1 text-[9px] text-navy-950">
+              New
+            </span>
+          )}
           {j.jobType && (
             <span className="mono-label border border-navy-950/15 px-2 py-1 text-[9px] text-navy-950">
               {j.jobType}
