@@ -141,3 +141,23 @@ export function jobsForMarketPage(
 export function jobsForHub(jobs: JobSummary[], segment: string): JobSummary[] {
   return jobs.filter((j) => deskForJob(j.title).segment === segment);
 }
+
+/** Live roles in a state, on the desk this page belongs to.
+ *
+ * Same fallback as marketForJob: desks without their own city pages land on
+ * civil, so a bridge role in Connecticut appears on the Connecticut civil
+ * page rather than nowhere. This is what gives the roles in towns too small
+ * to have a page of their own somewhere to be listed.
+ */
+export function jobsForState(
+  jobs: JobSummary[],
+  segment: string,
+  stateName: string
+): JobSummary[] {
+  const want = stateName.trim().toLowerCase();
+  return jobs.filter((j) => {
+    if (!j.state || j.state.trim().toLowerCase() !== want) return false;
+    const desk = deskForJob(j.title);
+    return (desk.hasCityPages ? desk.segment : CIVIL.segment) === segment;
+  });
+}

@@ -1,5 +1,6 @@
 import type { NextConfig } from "next";
 import { CITIES } from "./app/lib/cities";
+import { getState } from "./app/lib/states";
 
 // 301 redirects for legacy URLs indexed by Google on the previous site, so
 // visitors and crawlers never land on a 404. Precise old->new city mappings
@@ -38,8 +39,15 @@ async function redirects() {
     const key = c.state.toLowerCase().replace(/[^a-z]+/g, "-");
     if (!primaryCityByState.has(key)) primaryCityByState.set(key, c.slug);
   }
+  /* Where a state has a page of its own now, the legacy state URL goes to
+     it rather than to the largest city in the state. A search for a
+     Connecticut recruiter was landing on a page about Hartford, which is the
+     mismatch these pages exist to fix. States without a page keep the old
+     behaviour, so this list fills in as the pages are written. */
   const stateRedirects = [...primaryCityByState].flatMap(([state, slug]) => {
-    const destination = `/civil-engineering-recruiter/${slug}`;
+    const destination = getState(state)
+      ? `/civil-engineering-recruiter/${state}`
+      : `/civil-engineering-recruiter/${slug}`;
     return [
       { source: `/civil-engineering-recruiter-${state}`, destination, permanent: true },
       { source: `/${state}-civil-engineering-recruiter`, destination, permanent: true },

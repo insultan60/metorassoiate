@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import { SITE_URL } from "./lib/site";
 import { CITIES } from "./lib/cities";
+import { STATES } from "./lib/states";
 import { MEP_CITIES } from "./lib/mep";
 import { WATER_CITIES } from "./lib/waterWastewater";
 import { CEI_CITIES } from "./lib/ceiInspection";
@@ -63,6 +64,13 @@ const routes: Array<{
      at 230+ impressions against nothing to land on. */
   { path: "/infrastructure-recruiter", changeFrequency: "monthly", priority: 0.85 },
   { path: "/civil-engineering-recruiter", changeFrequency: "monthly", priority: 0.8 },
+  /* State pages sit above the city pages and below the hub, and are priced
+     accordingly: broader than a city, narrower than the national hub. */
+  ...STATES.map((st) => ({
+    path: `/civil-engineering-recruiter/${st.slug}`,
+    changeFrequency: "weekly" as const,
+    priority: 0.75,
+  })),
   ...CITIES.map((c) => ({
     path: `/civil-engineering-recruiter/${c.slug}`,
     changeFrequency: "monthly" as const,
