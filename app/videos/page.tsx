@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { HeaderBackdrop } from "../components/HeaderBackdrop";
 import YouTubeFacade from "../components/YouTubeFacade";
+import { JsonLd } from "../components/JsonLd";
+import { SITE_URL } from "../lib/site";
 
 export const metadata: Metadata = {
   title: "Videos | Metro Associates | DOT & Infrastructure Staffing",
@@ -25,14 +27,81 @@ export const metadata: Metadata = {
 const FEATURED_VIDEO = {
   id: "jZeZwPC0eEA",
   title: "Careers at Metro Associates: engineering and infrastructure",
+  description:
+    "An overview of engineering, architecture and construction careers at Metro Associates, and what working with our recruiters involves.",
+  uploadDate: "2026-10-07T07:20:58-07:00",
+  duration: "PT33S",
 };
 
 const YOUTUBE_VIDEOS = [
-  { id: "UeVXo4WaCfY", title: "Traffic Engineer, Chicago area" },
-  { id: "ptUCw1_pjig", title: "Senior Refrigeration & Utilities Manager" },
-  { id: "b6lp9i9w9PQ", title: "Process Engineer, food manufacturing in Virginia" },
-  { id: "fPi4M7brMLw", title: "Director of Land Development, Tucson" },
+  {
+    id: "UeVXo4WaCfY",
+    title: "Traffic Engineer, Chicago area",
+    description:
+      "A walk-through of an open traffic engineer search in the Chicago area.",
+    uploadDate: "2026-10-07T04:03:06-07:00",
+    duration: "PT29S",
+  },
+  {
+    id: "ptUCw1_pjig",
+    title: "Senior Refrigeration & Utilities Manager",
+    description:
+      "A walk-through of an open senior refrigeration and utilities manager search.",
+    uploadDate: "2026-09-25T11:21:40-07:00",
+    duration: "PT39S",
+  },
+  {
+    id: "b6lp9i9w9PQ",
+    title: "Process Engineer, food manufacturing in Virginia",
+    description:
+      "A walk-through of an open process engineer search in food manufacturing in Virginia.",
+    uploadDate: "2026-09-27T00:59:15-07:00",
+    duration: "PT49S",
+  },
+  {
+    id: "fPi4M7brMLw",
+    title: "Director of Land Development, Tucson",
+    description:
+      "A walk-through of an open director of land development search in Tucson.",
+    uploadDate: "2026-09-29T05:47:20-07:00",
+    duration: "PT26S",
+  },
 ];
+
+/* VideoObject for the five YouTube videos.
+ *
+ * Without this the videos are invisible as video results and the Videos
+ * report in Search Console has nothing to say about a page whose entire
+ * purpose is video. The facade is the reason: the page ships a thumbnail and
+ * a play button rather than an iframe, which is right for performance and
+ * leaves a crawler no player to recognise. The markup is what tells it.
+ *
+ * uploadDate and duration are read off each video once and written down here
+ * rather than fetched. They are required fields, an incomplete VideoObject is
+ * worse than none because it reports as an error, and the alternative was a
+ * YouTube Data API key and a quota in the request path for two values that
+ * never change for a given video. Replace a video and these are what need
+ * updating with it. */
+function videoSchema(v: {
+  id: string;
+  title: string;
+  description: string;
+  uploadDate: string;
+  duration: string;
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    name: v.title,
+    description: v.description,
+    thumbnailUrl: [`https://i.ytimg.com/vi/${v.id}/maxresdefault.jpg`],
+    uploadDate: v.uploadDate,
+    duration: v.duration,
+    embedUrl: `https://www.youtube.com/embed/${v.id}`,
+    url: `${SITE_URL}/videos`,
+    publisher: { "@id": `${SITE_URL}/#organization` },
+  };
+}
 
 /* TikTok job-ad clips (@patricknovick225) — add new video IDs here as
    Patrick shares more. */
@@ -78,6 +147,9 @@ export default async function VideosPage() {
 
   return (
     <main>
+      <JsonLd
+        data={[FEATURED_VIDEO, ...YOUTUBE_VIDEOS].map(videoSchema)}
+      />
       <section className="relative isolate overflow-hidden blueprint-shade pt-32 pb-20 sm:pt-36 lg:pt-40">
         <HeaderBackdrop />
         <div className="pointer-events-none absolute -left-40 top-24 h-96 w-96 rounded-full bg-brand-500/20 blur-[110px]" />
