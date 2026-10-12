@@ -105,6 +105,33 @@ export default function Navbar() {
         </button>
       </nav>
 
+      {/* The job-seeker line, in the header so it is on every page.
+          It already leads the homepage hero and sits on 263 other pages, but
+          only below the fold on most of them, and a candidate arriving on a
+          city page from a search never scrolls far enough to meet it. Here it
+          is the first thing under the navigation on every page of the site.
+
+          Amber rather than another navy band: the header is transparent over
+          the hero until you scroll, so a dark strip would have disappeared
+          into the photograph on exactly the page that matters most.
+
+          Linked to /careers because the people it reassures are the people
+          looking for the jobs, and a reassurance they cannot act on is a
+          wasted thirty pixels. The second clause is hidden on narrow screens,
+          where it would wrap and double the height of the bar, which the page
+          padding below has no room for. */}
+      <Link
+        href="/careers"
+        className="block bg-amber-500 transition-colors hover:bg-amber-400"
+      >
+        <p className="container-x flex items-center justify-center gap-2 py-1.5 text-center text-[11px] font-bold leading-tight text-navy-950 sm:text-xs">
+          <span>Always 100% Free for Job Seekers</span>
+          <span className="hidden text-navy-950/70 sm:inline">
+            {"·"} Engineering, architecture and construction careers
+          </span>
+        </p>
+      </Link>
+
       {/* Mobile drawer */}
       <div
         className={`overflow-hidden border-t border-white/10 bg-navy-900 transition-[max-height] duration-300 xl:hidden ${
