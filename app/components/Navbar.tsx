@@ -115,6 +115,11 @@ export default function Navbar() {
           the hero until you scroll, so a dark strip would have disappeared
           into the photograph on exactly the page that matters most.
 
+          Solid at the top of the page, where it is doing its job, and
+          translucent once you scroll, where it is a band following you down
+          the page and should weigh less. The lighter amber-400 carries navy
+          text at both opacities, which amber-500 at 70% did not.
+
           Linked to /careers because the people it reassures are the people
           looking for the jobs, and a reassurance they cannot act on is a
           wasted thirty pixels. The second clause is hidden on narrow screens,
@@ -122,11 +127,15 @@ export default function Navbar() {
           padding below has no room for. */}
       <Link
         href="/careers"
-        className="block bg-amber-500 transition-colors hover:bg-amber-400"
+        className={`block transition-colors duration-300 ${
+          scrolled
+            ? "bg-amber-400/70 backdrop-blur-md hover:bg-amber-400/85"
+            : "bg-amber-400 hover:bg-amber-300"
+        }`}
       >
         <p className="container-x flex items-center justify-center gap-2 py-1.5 text-center text-[11px] font-bold leading-tight text-navy-950 sm:text-xs">
           <span>Always 100% Free for Job Seekers</span>
-          <span className="hidden text-navy-950/70 sm:inline">
+          <span className="hidden text-navy-950/60 sm:inline">
             {"·"} Engineering, architecture and construction careers
           </span>
         </p>
