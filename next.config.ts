@@ -55,7 +55,7 @@ async function redirects() {
     ];
   });
 
-  return [
+  const base = [
     // NOTE: www<->apex canonicalization is handled at the Vercel domain level,
     // NOT here. A host-based redirect in this config conflicts with Vercel's
     // domain redirect and causes an infinite loop (ERR_TOO_MANY_REDIRECTS).
@@ -125,6 +125,30 @@ async function redirects() {
        or state we actually have a page for. Only slugs with no destination
        reach the proxy. */
   ];
+
+  /* Every redirect above is emitted twice, once with a trailing slash, and a
+     generic collapse closes the list.
+
+     WHY
+
+     Next normalises a trailing slash with its own 308 before it looks at this
+     list, so /privacy-policy-2/ was answering twice: once to strip the slash
+     and once to reach /privacy. Crawl Stats counted both. Across the hundred
+     or so legacy URLs Google still requests, that was 143 redirect responses
+     to reach 102 destinations, and 41 of them bought nothing.
+
+     skipTrailingSlashRedirect hands that normalisation to us, which is what
+     lets a slashed legacy URL match its own rule and resolve in one hop. The
+     catch-all at the end keeps every other slashed URL behaving exactly as it
+     did, in one hop rather than through Next. It uses :path+ rather than
+     :path* so the root is left alone; / must not redirect to itself.
+
+     Tested before and after: /privacy-policy-2/ went from two hops to one,
+     /about/ stayed at one, / stayed at zero. */
+  return [
+    ...base.flatMap((r) => [r, { ...r, source: `${r.source}/` }]),
+    { source: "/:path+/", destination: "/:path+", permanent: true },
+  ];
 }
 
 // JobFolder-approved recruiter photos are served from JOBFOLDER_API_URL
@@ -141,6 +165,10 @@ const jobfolderImagePattern = (() => {
 })();
 
 const nextConfig: NextConfig = {
+  /* Trailing-slash normalisation is handled in the redirect list above rather
+     than by Next, so a legacy URL with a slash reaches its destination in one
+     hop instead of two. See the note there. */
+  skipTrailingSlashRedirect: true,
   images: {
     remotePatterns: [
       {
