@@ -4,6 +4,9 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import RelatedMarkets from "../../components/RelatedMarkets";
 import CityWiderMarket from "../../components/CityWiderMarket";
+import { OpenRoles } from "../../components/OpenRoles";
+import { listJobs } from "../../lib/jobs";
+import { jobsForMarketPage } from "../../lib/jobRouting";
 import {
   IconArrow, IconCompass } from "../../components/Icons";
 import { APPLY_URL, SITE_URL } from "../../lib/site";
@@ -63,10 +66,18 @@ export async function generateMetadata({ params }: { params: Promise<{ city: str
   };
 }
 
+/* These pages now carry live roles, so they can no longer be built once and
+   served until the next deploy. Fifteen minutes: the jobs feed itself is
+   re-read every five, and a market page does not need to be fresher than the
+   quarter hour. */
+export const revalidate = 900;
+
 export default async function MunicipalCityPage({ params }: { params: Promise<{ city: string }> }) {
   const { city: slug } = await params;
   const c = getMunicipalCity(slug);
   if (!c) notFound();
+
+  const openRoles = jobsForMarketPage(await listJobs(), "municipal-engineering-recruiter", c.slug);
 
   const path = `/municipal-engineering-recruiter/${c.slug}`;
   const faqs = municipalFaqs(c);
@@ -307,6 +318,8 @@ export default async function MunicipalCityPage({ params }: { params: Promise<{ 
           </div>
         </section>
       )}
+
+      <OpenRoles jobs={openRoles} where={`${c.city}, ${c.abbr}`} />
 
       <CityWiderMarket hub="municipal-engineering-recruiter" city={c} />
 

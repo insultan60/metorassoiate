@@ -1,4 +1,5 @@
 import { CITIES } from "./cities";
+import type { JobSummary } from "./jobs";
 
 /* Which desk a live job belongs to, and which market page covers it.
  *
@@ -114,4 +115,29 @@ export function marketForJob(
     href: `/${segment}/${match.slug}`,
     label: `${label.charAt(0).toUpperCase()}${label.slice(1)} recruiting in ${match.city}, ${match.abbr}`,
   };
+}
+
+/* The same routing read backwards: which live roles a market or hub page
+ * covers.
+ *
+ * marketForJob already decides where a job belongs. Asking it the question in
+ * reverse, rather than writing a second matcher, is what keeps the two
+ * directions honest: a job that links out to the Phoenix civil page is
+ * exactly a job the Phoenix civil page lists, and there is no way for the two
+ * to disagree as the classifier changes.
+ */
+export function jobsForMarketPage(
+  jobs: JobSummary[],
+  segment: string,
+  citySlug: string
+): JobSummary[] {
+  const href = `/${segment}/${citySlug}`;
+  return jobs.filter(
+    (j) => marketForJob(deskForJob(j.title), j.city, j.state)?.href === href
+  );
+}
+
+/** Live roles on a desk, wherever they are. For the hub pages. */
+export function jobsForHub(jobs: JobSummary[], segment: string): JobSummary[] {
+  return jobs.filter((j) => deskForJob(j.title).segment === segment);
 }
