@@ -37,6 +37,12 @@ const DISCIPLINES = [
   { label: "Infrastructure", href: "/infrastructure-recruiter" },
   { label: "Civil Engineering", href: "/civil-engineering-recruiter" },
   { label: "MEP Engineering", href: "/mep-engineering-recruiter" },
+  /* The three trades inside MEP, which is what people search for. The MEP
+     hub above covers all three at once and therefore ranks for none of
+     them. */
+  { label: "Mechanical Engineering", href: "/mechanical-engineer-recruiter" },
+  { label: "Electrical Engineering", href: "/electrical-engineer-recruiter" },
+  { label: "Plumbing & Fire Protection", href: "/plumbing-fire-protection-recruiter" },
   { label: "Bridge & Structural", href: "/bridge-structural-recruiter" },
   { label: "Water & Wastewater", href: "/water-wastewater-recruiter" },
   { label: "CEI & Inspection", href: "/cei-inspection-recruiter" },

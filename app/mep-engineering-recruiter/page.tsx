@@ -2,6 +2,7 @@ import { CandidateTrust } from "../components/CandidateTrust";
 import type { Metadata } from "next";
 import HubFaqs from "../components/HubFaqs";
 import { OpenRoles } from "../components/OpenRoles";
+import { DISCIPLINES } from "../lib/disciplines";
 import { listJobs } from "../lib/jobs";
 import { jobsForHub } from "../lib/jobRouting";
 import ServiceModels from "../components/ServiceModels";
@@ -333,6 +334,41 @@ export default async function MepNationalRecruiterPage() {
       <HubFaqs group="mep-engineering" heading="MEP engineering recruiting: common questions" />
 
       <OpenRoles jobs={openRoles} where="MEP engineering" />
+      {/* The three trades underneath this hub. This page covers all of them
+          at once, which is how it ends up ranking for the collective noun and
+          for none of the three jobs people actually search for. */}
+      <section className="relative border-t border-navy-950/10 bg-paper py-20 sm:py-24">
+        <div className="container-x">
+          <div className="max-w-2xl">
+            <span className="mono-label text-amber-500">{"//"} By discipline</span>
+            <h2 className="display mt-5 text-4xl text-navy-950 sm:text-5xl">
+              The three desks inside MEP
+            </h2>
+            <p className="mt-5 text-slate text-pretty">
+              Different licences, different software and different shortages.
+              Each desk has its own page.
+            </p>
+          </div>
+          <ul className="mt-10 grid gap-4 sm:grid-cols-3">
+            {DISCIPLINES.map((d) => (
+              <li key={d.slug}>
+                <Link
+                  href={`/${d.slug}`}
+                  className="group flex h-full flex-col border border-navy-950/10 bg-white p-6 transition-colors hover:border-amber-500 hover:bg-mist"
+                >
+                  <span className="text-[17px] font-bold leading-snug text-navy-950 group-hover:text-amber-600">
+                    {d.name}
+                  </span>
+                  <span className="mono-label mt-3 text-[9px] text-slate-500">
+                    {d.roles.length} titles
+                  </span>
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
     </main>
   );
 }

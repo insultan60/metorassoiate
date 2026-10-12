@@ -2,6 +2,7 @@ import type { MetadataRoute } from "next";
 import { SITE_URL } from "./lib/site";
 import { CITIES } from "./lib/cities";
 import { STATES } from "./lib/states";
+import { DISCIPLINES } from "./lib/disciplines";
 import { MEP_CITIES } from "./lib/mep";
 import { WATER_CITIES } from "./lib/waterWastewater";
 import { CEI_CITIES } from "./lib/ceiInspection";
@@ -64,6 +65,12 @@ const routes: Array<{
      at 230+ impressions against nothing to land on. */
   { path: "/infrastructure-recruiter", changeFrequency: "monthly", priority: 0.85 },
   { path: "/civil-engineering-recruiter", changeFrequency: "monthly", priority: 0.8 },
+  /* The MEP trade desks, priced with the other discipline hubs. */
+  ...DISCIPLINES.map((d) => ({
+    path: `/${d.slug}`,
+    changeFrequency: "weekly" as const,
+    priority: 0.8,
+  })),
   /* State pages sit above the city pages and below the hub, and are priced
      accordingly: broader than a city, narrower than the national hub. */
   ...STATES.map((st) => ({
