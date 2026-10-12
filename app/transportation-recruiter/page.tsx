@@ -1,6 +1,9 @@
 import { CandidateTrust } from "../components/CandidateTrust";
 import type { Metadata } from "next";
 import HubFaqs from "../components/HubFaqs";
+import { OpenRoles } from "../components/OpenRoles";
+import { listJobs } from "../lib/jobs";
+import { jobsForHub } from "../lib/jobRouting";
 import ServiceModels from "../components/ServiceModels";
 import Link from "next/link";
 import {
@@ -131,7 +134,13 @@ const WHY = [
 
 const WHY_ICONS = [IconGlobe, IconShield, IconTarget, IconLayers, IconClipboard];
 
-export default function TransportationRecruiterPage() {
+/* Carries live roles now, so it cannot be built once and served until the
+   next deploy. Fifteen minutes; the feed itself is re-read every five. */
+export const revalidate = 900;
+
+export default async function TransportationRecruiterPage() {
+  const openRoles = jobsForHub(await listJobs(), "transportation-recruiter");
+
   return (
     <main>
       {/* Hero */}
@@ -350,6 +359,7 @@ export default function TransportationRecruiterPage() {
 
       <OtherSpecialties exclude="transportation-recruiter" />
       <HubFaqs group="civil-engineering" heading="Transportation engineering recruiting: common questions" />
+      <OpenRoles jobs={openRoles} where="transportation" />
     </main>
   );
 }

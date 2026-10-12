@@ -1,6 +1,9 @@
 import { CandidateTrust } from "../components/CandidateTrust";
 import type { Metadata } from "next";
 import HubFaqs from "../components/HubFaqs";
+import { OpenRoles } from "../components/OpenRoles";
+import { listJobs } from "../lib/jobs";
+import { jobsForHub } from "../lib/jobRouting";
 import ServiceModels from "../components/ServiceModels";
 import Link from "next/link";
 import {
@@ -132,7 +135,13 @@ const WHY = [
 
 const WHY_ICONS = [IconGlobe, IconShield, IconTarget, IconLayers, IconClipboard];
 
-export default function MunicipalEngineeringRecruiterPage() {
+/* Carries live roles now, so it cannot be built once and served until the
+   next deploy. Fifteen minutes; the feed itself is re-read every five. */
+export const revalidate = 900;
+
+export default async function MunicipalEngineeringRecruiterPage() {
+  const openRoles = jobsForHub(await listJobs(), "municipal-engineering-recruiter");
+
   return (
     <main>
       {/* Hero — no stock photo fits this discipline without being misleading,
@@ -393,6 +402,7 @@ export default function MunicipalEngineeringRecruiterPage() {
       <OtherSpecialties exclude="municipal-engineering-recruiter" />
       <HubFaqs group="municipal-engineering" heading="Municipal engineering recruiting: common questions" />
 
+      <OpenRoles jobs={openRoles} where="municipal engineering" />
     </main>
   );
 }

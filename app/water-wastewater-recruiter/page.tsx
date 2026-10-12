@@ -1,6 +1,9 @@
 import { CandidateTrust } from "../components/CandidateTrust";
 import type { Metadata } from "next";
 import HubFaqs from "../components/HubFaqs";
+import { OpenRoles } from "../components/OpenRoles";
+import { listJobs } from "../lib/jobs";
+import { jobsForHub } from "../lib/jobRouting";
 import ServiceModels from "../components/ServiceModels";
 import Link from "next/link";
 import {
@@ -135,7 +138,13 @@ const WHY = [
 
 const WHY_ICONS = [IconGlobe, IconShield, IconTarget, IconLayers, IconClipboard];
 
-export default function WaterWastewaterRecruiterPage() {
+/* Carries live roles now, so it cannot be built once and served until the
+   next deploy. Fifteen minutes; the feed itself is re-read every five. */
+export const revalidate = 900;
+
+export default async function WaterWastewaterRecruiterPage() {
+  const openRoles = jobsForHub(await listJobs(), "water-wastewater-recruiter");
+
   return (
     <main>
       {/* Hero — no stock photo fits this discipline without being misleading,
@@ -471,6 +480,7 @@ export default function WaterWastewaterRecruiterPage() {
       <OtherSpecialties exclude="water-wastewater-recruiter" />
       <HubFaqs group="water-wastewater" heading="Water & wastewater recruiting: common questions" />
 
+      <OpenRoles jobs={openRoles} where="water and wastewater" />
     </main>
   );
 }

@@ -1,6 +1,9 @@
 import { CandidateTrust } from "../components/CandidateTrust";
 import type { Metadata } from "next";
 import HubFaqs from "../components/HubFaqs";
+import { OpenRoles } from "../components/OpenRoles";
+import { listJobs } from "../lib/jobs";
+import { jobsForHub } from "../lib/jobRouting";
 import ServiceModels from "../components/ServiceModels";
 import Image from "next/image";
 import Link from "next/link";
@@ -55,7 +58,13 @@ export const metadata: Metadata = {
 
 const WHY_ICONS = [IconGlobe, IconShield, IconTarget, IconLayers, IconClipboard];
 
-export default function NationalRecruiterPage() {
+/* Carries live roles now, so it cannot be built once and served until the
+   next deploy. Fifteen minutes; the feed itself is re-read every five. */
+export const revalidate = 900;
+
+export default async function NationalRecruiterPage() {
+  const openRoles = jobsForHub(await listJobs(), "civil-engineering-recruiter");
+
   return (
     <main>
       {/* Hero — same treatment as the homepage hero (components/Hero.tsx):
@@ -321,6 +330,7 @@ export default function NationalRecruiterPage() {
       <OtherSpecialties exclude="civil-engineering-recruiter" />
       <HubFaqs group="civil-engineering" heading="Civil engineering recruiting: common questions" />
 
+      <OpenRoles jobs={openRoles} where="civil engineering" />
     </main>
   );
 }

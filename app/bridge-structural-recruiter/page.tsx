@@ -1,6 +1,9 @@
 import { CandidateTrust } from "../components/CandidateTrust";
 import type { Metadata } from "next";
 import HubFaqs from "../components/HubFaqs";
+import { OpenRoles } from "../components/OpenRoles";
+import { listJobs } from "../lib/jobs";
+import { jobsForHub } from "../lib/jobRouting";
 import ServiceModels from "../components/ServiceModels";
 import Image from "next/image";
 import Link from "next/link";
@@ -127,7 +130,13 @@ const WHY = [
 
 const WHY_ICONS = [IconGlobe, IconShield, IconTarget, IconLayers, IconClipboard];
 
-export default function BridgeStructuralRecruiterPage() {
+/* Carries live roles now, so it cannot be built once and served until the
+   next deploy. Fifteen minutes; the feed itself is re-read every five. */
+export const revalidate = 900;
+
+export default async function BridgeStructuralRecruiterPage() {
+  const openRoles = jobsForHub(await listJobs(), "bridge-structural-recruiter");
+
   return (
     <main>
       {/* Hero — same treatment as the civil/MEP hubs: full-bleed photo,
@@ -359,6 +368,7 @@ export default function BridgeStructuralRecruiterPage() {
       <OtherSpecialties exclude="bridge-structural-recruiter" />
       <HubFaqs group="bridge-structural" heading="Bridge & structural recruiting: common questions" />
 
+      <OpenRoles jobs={openRoles} where="bridge and structural" />
     </main>
   );
 }

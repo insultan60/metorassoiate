@@ -1,6 +1,9 @@
 import { CandidateTrust } from "../components/CandidateTrust";
 import type { Metadata } from "next";
 import HubFaqs from "../components/HubFaqs";
+import { OpenRoles } from "../components/OpenRoles";
+import { listJobs } from "../lib/jobs";
+import { jobsForHub } from "../lib/jobRouting";
 import ServiceModels from "../components/ServiceModels";
 import Image from "next/image";
 import Link from "next/link";
@@ -57,7 +60,13 @@ export const metadata: Metadata = {
 
 const WHY_ICONS = [IconGlobe, IconShield, IconTarget, IconLayers, IconClipboard];
 
-export default function MepNationalRecruiterPage() {
+/* Carries live roles now, so it cannot be built once and served until the
+   next deploy. Fifteen minutes; the feed itself is re-read every five. */
+export const revalidate = 900;
+
+export default async function MepNationalRecruiterPage() {
+  const openRoles = jobsForHub(await listJobs(), "mep-engineering-recruiter");
+
   return (
     <main>
       {/* Hero — same treatment as the homepage/civil hero: full-bleed photo,
@@ -323,6 +332,7 @@ export default function MepNationalRecruiterPage() {
       <OtherSpecialties exclude="mep-engineering-recruiter" />
       <HubFaqs group="mep-engineering" heading="MEP engineering recruiting: common questions" />
 
+      <OpenRoles jobs={openRoles} where="MEP engineering" />
     </main>
   );
 }
