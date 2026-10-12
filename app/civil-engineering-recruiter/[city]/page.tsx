@@ -5,6 +5,7 @@ import { notFound } from "next/navigation";
 import RelatedMarkets from "../../components/RelatedMarkets";
 import CityWiderMarket from "../../components/CityWiderMarket";
 import { OpenRoles } from "../../components/OpenRoles";
+import { STATES } from "../../lib/states";
 import { listJobs } from "../../lib/jobs";
 import { jobsForMarketPage } from "../../lib/jobRouting";
 import {
@@ -78,6 +79,7 @@ export default async function CityPage({ params }: { params: Promise<{ city: str
   if (!c) notFound();
 
   const openRoles = jobsForMarketPage(await listJobs(), "civil-engineering-recruiter", c.slug);
+  const stateMarket = STATES.find((st) => st.abbr === c.abbr);
 
   const path = `/civil-engineering-recruiter/${c.slug}`;
   const faqs = civilFaqs(c);
@@ -371,6 +373,25 @@ export default async function CityPage({ params }: { params: Promise<{ city: str
       )}
 
       <OpenRoles jobs={openRoles} where={`${c.city}, ${c.abbr}`} />
+
+      {/* Up to the state page, where one exists. The city pages are the
+          children in this hierarchy and nothing pointed upward from them. */}
+      {stateMarket && (
+        <section className="relative border-t border-navy-950/10 bg-paper py-12">
+          <div className="container-x">
+            <Link
+              href={`/civil-engineering-recruiter/${stateMarket.slug}`}
+              className="group inline-flex items-center gap-3 text-lg font-bold text-navy-950 transition-colors hover:text-amber-600"
+            >
+              <span className="mono-label text-[10px] text-amber-600">
+                {stateMarket.abbr}
+              </span>
+              Recruiting across all of {stateMarket.state}
+              <IconArrow className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+            </Link>
+          </div>
+        </section>
+      )}
 
       <CityWiderMarket hub="civil-engineering-recruiter" city={c} />
 

@@ -13,6 +13,7 @@ import {
 } from "../components/Icons";
 import { APPLY_URL, SITE_URL } from "../lib/site";
 import { CITIES, EXPERTISE, SKILLS, ROLES, SALARIES, WHY } from "../lib/cities";
+import { STATES } from "../lib/states";
 import OtherSpecialties from "../components/OtherSpecialties";
 import ClientAwards from "../components/ClientAwards";
 import { OG_IMAGE } from "../lib/seo";
@@ -183,6 +184,47 @@ export default async function NationalRecruiterPage() {
       </section>
 
       <ServiceModels segment="civil-engineering-recruiter" />
+
+      {/* States directory.
+          The state pages went up with nothing linking to them, reachable only
+          from the sitemap and from redirects, which is the fastest way to have
+          a page crawled and then left out of the index. This is their parent
+          link, and it sits above the city grid because that is the order of
+          the hierarchy: national hub, state, metro. */}
+      {STATES.length > 0 && (
+        <section className="relative border-t border-navy-950/10 bg-paper py-20 sm:py-24">
+          <div className="container-x">
+            <div className="max-w-2xl">
+              <span className="mono-label text-amber-500">{"//"} Markets by state</span>
+              <h2 className="display mt-5 text-4xl text-navy-950 sm:text-5xl">
+                Civil engineering recruiting by state
+              </h2>
+              <p className="mt-5 text-slate text-pretty">
+                Where we cover a whole state rather than a single metro, the
+                state page carries the owners, the licensure and the roles open
+                anywhere inside it.
+              </p>
+            </div>
+            <ul className="mt-10 flex flex-wrap gap-3">
+              {STATES.map((st) => (
+                <li key={st.slug}>
+                  <Link
+                    href={`/civil-engineering-recruiter/${st.slug}`}
+                    className="group inline-flex items-center gap-3 border border-navy-950/10 bg-white px-5 py-4 transition-colors hover:border-amber-500 hover:bg-mist"
+                  >
+                    <span className="mono-label text-[10px] text-amber-600">
+                      {st.abbr}
+                    </span>
+                    <span className="text-[15px] font-bold text-navy-950">
+                      {st.state}
+                    </span>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
+      )}
 
       {/* Cities directory */}
       <section className="relative border-t border-navy-950/10 blueprint-light py-24 sm:py-28">
