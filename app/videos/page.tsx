@@ -35,6 +35,14 @@ const FEATURED_VIDEO = {
 
 const YOUTUBE_VIDEOS = [
   {
+    id: "7nR8p4NyXwI",
+    title: "Senior Mechanical Systems Engineer, thermal energy storage",
+    description:
+      "A walk-through of an open senior mechanical systems engineer search covering thermal energy storage and chilled-water cooling for data centers.",
+    uploadDate: "2026-10-13T13:17:23-07:00",
+    duration: "PT36S",
+  },
+  {
     id: "UeVXo4WaCfY",
     title: "Traffic Engineer, Chicago area",
     description:
