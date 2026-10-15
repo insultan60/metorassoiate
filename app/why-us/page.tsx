@@ -12,6 +12,9 @@ import {
   IconUsers,
   IconArrow,
 } from "../components/Icons";
+import { JsonLd } from "../components/JsonLd";
+import { breadcrumbSchema } from "../lib/seo";
+import { SITE_URL } from "../lib/site";
 
 export const metadata: Metadata = {
   title: "Why Metro Associates | Engineering Recruiting",
@@ -56,6 +59,24 @@ const REASONS = [
 export default function WhyUsPage() {
   return (
     <main>
+      <JsonLd
+        data={[
+          {
+            "@context": "https://schema.org",
+            "@type": "AboutPage",
+            "@id": `${SITE_URL}/why-us#webpage`,
+            name: "Why Metro Associates",
+            description: "What we do differently: a vetted national pipeline, multi-state licensure fluency, and recruiters who understand DOT and infrastructure delivery.",
+            url: `${SITE_URL}/why-us`,
+            isPartOf: { "@id": `${SITE_URL}/#website` },
+            about: { "@id": `${SITE_URL}/#organization` },
+          },
+          breadcrumbSchema([
+            { name: "Home", path: "/" },
+            { name: "Why Us", path: "/why-us" },
+          ]),
+        ]}
+      />
       {/* Hero */}
       <section className="relative isolate overflow-hidden blueprint-shade pt-32 pb-16 sm:pt-36 lg:pt-40">
         <HeaderBackdrop />

@@ -14,7 +14,8 @@ import { HeaderBackdrop } from "../components/HeaderBackdrop";
 import { APPLY_URL, SITE_URL } from "../lib/site";
 import OtherSpecialties from "../components/OtherSpecialties";
 import ClientAwards from "../components/ClientAwards";
-import { OG_IMAGE } from "../lib/seo";
+import { OG_IMAGE, deskServiceSchema, breadcrumbSchema } from "../lib/seo";
+import { JsonLd } from "../components/JsonLd";
 
 /* Transportation engineering recruiting hub — mirrors the layout of
    civil-engineering-recruiter/ and water-wastewater-recruiter/.
@@ -143,6 +144,19 @@ export default async function TransportationRecruiterPage() {
 
   return (
     <main>
+      <JsonLd
+        data={[
+          deskServiceSchema({
+            serviceName: "Transportation Engineering Recruiting",
+            description: "Transportation engineering recruiters and DOT staffing. Licensed PEs, highway and traffic engineers, planners and program directors, in all 50 states.",
+            path: "/transportation-recruiter",
+          }),
+          breadcrumbSchema([
+            { name: "Home", path: "/" },
+            { name: "Transportation Recruiter", path: "/transportation-recruiter" },
+          ]),
+        ]}
+      />
       {/* Hero */}
       <section className="relative isolate overflow-hidden blueprint-shade pt-32 pb-16 sm:pt-36 lg:pt-40">
         <HeaderBackdrop />

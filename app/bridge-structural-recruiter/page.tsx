@@ -15,7 +15,8 @@ import { APPLY_URL, SITE_URL } from "../lib/site";
 import { BRIDGE_SALARIES as SALARIES } from "../lib/bridgeStructural";
 import OtherSpecialties from "../components/OtherSpecialties";
 import ClientAwards from "../components/ClientAwards";
-import { OG_IMAGE } from "../lib/seo";
+import { OG_IMAGE, deskServiceSchema, breadcrumbSchema } from "../lib/seo";
+import { JsonLd } from "../components/JsonLd";
 
 /* DEMO PAGE — a single static page, not a per-city buildout like
    civil-engineering-recruiter/ or mep-engineering-recruiter/. If this
@@ -139,6 +140,19 @@ export default async function BridgeStructuralRecruiterPage() {
 
   return (
     <main>
+      <JsonLd
+        data={[
+          deskServiceSchema({
+            serviceName: "Bridge and Structural Engineering Recruiting",
+            description: "Bridge and structural engineering recruiters and headhunters. Design PEs and SEs, load rating specialists and inspection leads, placed nationwide.",
+            path: "/bridge-structural-recruiter",
+          }),
+          breadcrumbSchema([
+            { name: "Home", path: "/" },
+            { name: "Bridge & Structural Recruiter", path: "/bridge-structural-recruiter" },
+          ]),
+        ]}
+      />
       {/* Hero — same treatment as the civil/MEP hubs: full-bleed photo,
           gradient overlays, floating stat badge, ticker. */}
       <section className="relative isolate overflow-hidden pt-32 pb-16 sm:pt-36 lg:pt-40">

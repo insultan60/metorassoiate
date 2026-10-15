@@ -4,7 +4,9 @@ import { IconPhone, IconMail, IconPin } from "../components/Icons";
 import ContactForm from "../components/ContactForm";
 import { HeaderBackdrop } from "../components/HeaderBackdrop";
 import HubFaqs from "../components/HubFaqs";
-import { PHONE, PHONE_HREF, EMAIL, OFFICE_METROS } from "../lib/site";
+import { PHONE, PHONE_HREF, EMAIL, OFFICE_METROS, SITE_URL } from "../lib/site";
+import { JsonLd } from "../components/JsonLd";
+import { breadcrumbSchema } from "../lib/seo";
 
 export const metadata: Metadata = {
   title: "Contact Engineering Recruiters | Metro Associates",
@@ -29,6 +31,24 @@ const OFFICES = OFFICE_METROS.map((o) => ({
 export default function ContactPage() {
   return (
     <main>
+      <JsonLd
+        data={[
+          {
+            "@context": "https://schema.org",
+            "@type": "ContactPage",
+            "@id": `${SITE_URL}/contact#webpage`,
+            name: "Contact Engineering Recruiters",
+            description: "Request engineering staffing help or talk to a recruiter about your own next move. Eight US offices, placements nationwide, employer-paid fees.",
+            url: `${SITE_URL}/contact`,
+            isPartOf: { "@id": `${SITE_URL}/#website` },
+            about: { "@id": `${SITE_URL}/#organization` },
+          },
+          breadcrumbSchema([
+            { name: "Home", path: "/" },
+            { name: "Contact", path: "/contact" },
+          ]),
+        ]}
+      />
       {/* Hero + form */}
       <section className="relative isolate overflow-hidden blueprint-shade pt-32 pb-20 sm:pt-36 lg:pt-40">
         <HeaderBackdrop />

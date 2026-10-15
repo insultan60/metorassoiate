@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { IconArrow } from "../components/Icons";
+import { JsonLd } from "../components/JsonLd";
+import { breadcrumbSchema } from "../lib/seo";
+import { SITE_URL } from "../lib/site";
 
 export const metadata: Metadata = {
   title: "Terms & Conditions | Metro Associates",
@@ -34,6 +37,24 @@ function Rule() {
 export default function TermsPage() {
   return (
     <main>
+      <JsonLd
+        data={[
+          {
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            "@id": `${SITE_URL}/terms#webpage`,
+            name: "Terms & Conditions",
+            description: "The terms and conditions governing your use of the Metro Associates, LLC website, communications, and recruiting, staffing, and consulting services.",
+            url: `${SITE_URL}/terms`,
+            isPartOf: { "@id": `${SITE_URL}/#website` },
+            about: { "@id": `${SITE_URL}/#organization` },
+          },
+          breadcrumbSchema([
+            { name: "Home", path: "/" },
+            { name: "Terms", path: "/terms" },
+          ]),
+        ]}
+      />
       {/* Hero */}
       <section className="relative overflow-hidden blueprint-shade pt-32 pb-16 sm:pt-36 lg:pt-40">
         <div className="pointer-events-none absolute -left-40 top-24 h-96 w-96 rounded-full bg-brand-500/20 blur-[110px]" />

@@ -16,7 +16,8 @@ import { CITIES, EXPERTISE, SKILLS, ROLES, SALARIES, WHY } from "../lib/cities";
 import { STATES } from "../lib/states";
 import OtherSpecialties from "../components/OtherSpecialties";
 import ClientAwards from "../components/ClientAwards";
-import { OG_IMAGE } from "../lib/seo";
+import { OG_IMAGE, deskServiceSchema, breadcrumbSchema } from "../lib/seo";
+import { JsonLd } from "../components/JsonLd";
 
 // Short phrases for the scrolling ticker bar — same treatment as the
 // homepage hero (components/Hero.tsx), scoped to this page's discipline.
@@ -68,6 +69,19 @@ export default async function NationalRecruiterPage() {
 
   return (
     <main>
+      <JsonLd
+        data={[
+          deskServiceSchema({
+            serviceName: "Civil Engineering Recruiting",
+            description: "Civil engineering recruiters, staffing and executive headhunters. We place licensed PEs, project managers and technical leads on DOT and capital programs.",
+            path: "/civil-engineering-recruiter",
+          }),
+          breadcrumbSchema([
+            { name: "Home", path: "/" },
+            { name: "Civil Engineering Recruiter", path: "/civil-engineering-recruiter" },
+          ]),
+        ]}
+      />
       {/* Hero — same treatment as the homepage hero (components/Hero.tsx):
           full-bleed photo, gradient overlays, floating stat badge, ticker. */}
       <section className="relative isolate overflow-hidden pt-32 pb-16 sm:pt-36 lg:pt-40">

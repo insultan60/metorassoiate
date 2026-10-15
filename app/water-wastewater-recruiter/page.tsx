@@ -15,7 +15,8 @@ import { APPLY_URL, SITE_URL } from "../lib/site";
 import { WATER_CITIES } from "../lib/waterWastewater";
 import OtherSpecialties from "../components/OtherSpecialties";
 import ClientAwards from "../components/ClientAwards";
-import { OG_IMAGE } from "../lib/seo";
+import { OG_IMAGE, deskServiceSchema, breadcrumbSchema } from "../lib/seo";
+import { JsonLd } from "../components/JsonLd";
 
 /* National hub — same treatment as civil-engineering-recruiter/ and
    mep-engineering-recruiter/: this page plus a per-metro [city]/page.tsx for
@@ -147,6 +148,19 @@ export default async function WaterWastewaterRecruiterPage() {
 
   return (
     <main>
+      <JsonLd
+        data={[
+          deskServiceSchema({
+            serviceName: "Water and Wastewater Engineering Recruiting",
+            description: "Water and wastewater engineering recruiters and treatment plant staffing. Process engineers, water resources PEs and plant leadership, placed nationwide.",
+            path: "/water-wastewater-recruiter",
+          }),
+          breadcrumbSchema([
+            { name: "Home", path: "/" },
+            { name: "Water & Wastewater Recruiter", path: "/water-wastewater-recruiter" },
+          ]),
+        ]}
+      />
       {/* Hero — no stock photo fits this discipline without being misleading,
           so this reuses the photo-free blueprint hero the [city] sub-pages
           use rather than the photo-hero treatment civil/MEP/bridge get. */}

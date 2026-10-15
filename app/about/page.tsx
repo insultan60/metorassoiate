@@ -16,7 +16,9 @@ import {
   IconArrow,
   IconCheck,
 } from "../components/Icons";
-import { APPLY_URL } from "../lib/site";
+import { APPLY_URL, SITE_URL } from "../lib/site";
+import { JsonLd } from "../components/JsonLd";
+import { breadcrumbSchema } from "../lib/seo";
 
 export const metadata: Metadata = {
   title: "About Metro Associates | Engineering Recruiters",
@@ -64,6 +66,24 @@ const APPROACH = [
 export default function AboutPage() {
   return (
     <main>
+      <JsonLd
+        data={[
+          {
+            "@context": "https://schema.org",
+            "@type": "AboutPage",
+            "@id": `${SITE_URL}/about#webpage`,
+            name: "About Metro Associates",
+            description: "Who we are, how we recruit, and why engineering firms and public agencies use us to fill licensed and technical roles across the United States.",
+            url: `${SITE_URL}/about`,
+            isPartOf: { "@id": `${SITE_URL}/#website` },
+            about: { "@id": `${SITE_URL}/#organization` },
+          },
+          breadcrumbSchema([
+            { name: "Home", path: "/" },
+            { name: "About", path: "/about" },
+          ]),
+        ]}
+      />
       {/* Hero + intro */}
       <section className="relative isolate overflow-hidden blueprint-shade pt-32 pb-16 sm:pt-36 lg:pt-40">
         <HeaderBackdrop />

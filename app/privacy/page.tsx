@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { IconArrow } from "../components/Icons";
+import { JsonLd } from "../components/JsonLd";
+import { breadcrumbSchema } from "../lib/seo";
+import { SITE_URL } from "../lib/site";
 
 export const metadata: Metadata = {
   title: "Privacy Policy | Metro Associates",
@@ -37,6 +40,24 @@ function Rule() {
 export default function PrivacyPage() {
   return (
     <main>
+      <JsonLd
+        data={[
+          {
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            "@id": `${SITE_URL}/privacy#webpage`,
+            name: "Privacy Policy",
+            description: "How Metro Associates, LLC collects, uses, stores and safeguards your personal information across our website and recruiting services.",
+            url: `${SITE_URL}/privacy`,
+            isPartOf: { "@id": `${SITE_URL}/#website` },
+            about: { "@id": `${SITE_URL}/#organization` },
+          },
+          breadcrumbSchema([
+            { name: "Home", path: "/" },
+            { name: "Privacy Policy", path: "/privacy" },
+          ]),
+        ]}
+      />
       {/* Hero */}
       <section className="relative overflow-hidden blueprint-shade pt-32 pb-16 sm:pt-36 lg:pt-40">
         <div className="pointer-events-none absolute -left-40 top-24 h-96 w-96 rounded-full bg-brand-500/20 blur-[110px]" />

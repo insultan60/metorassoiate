@@ -145,6 +145,36 @@ export function serviceSchema(opts: {
   };
 }
 
+/* The desk hubs, which are national rather than tied to one metro.
+ *
+ * serviceSchema above always names a City, because it was written for the
+ * /desk/city pages and every one of those has one. A hub covers the whole
+ * country, so reusing it would have meant either inventing a city or naming
+ * an arbitrary one as if the desk were local to it. areaServed is the
+ * country, and nothing else differs.
+ *
+ * No FAQPage here on purpose: the hubs link to their questions rather than
+ * answering them, because the answers live on the /faq/ group pages. See the
+ * note in components/HubFaqs.tsx — marking up questions whose answers sit on
+ * another URL describes a page that does not exist. */
+export function deskServiceSchema(opts: {
+  serviceName: string;
+  description: string;
+  path: string;
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "@id": `${SITE_URL}${opts.path}#service`,
+    name: opts.serviceName,
+    description: opts.description,
+    url: `${SITE_URL}${opts.path}`,
+    provider: { "@id": `${SITE_URL}/#organization` },
+    areaServed: { "@type": "Country", name: "United States" },
+    serviceType: opts.serviceName,
+  };
+}
+
 export function breadcrumbSchema(items: { name: string; path: string }[]) {
   return {
     "@context": "https://schema.org",

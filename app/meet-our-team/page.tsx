@@ -2,9 +2,12 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { IconArrow } from "../components/Icons";
 import { HeaderBackdrop } from "../components/HeaderBackdrop";
-import { TEAM } from "../lib/team";
+import { TEAM, FALLBACK_LINKEDIN, FALLBACK_LINKEDIN_OWNER } from "../lib/team";
 import { getJobFolderTeam } from "../lib/jobfolderTeam";
 import TeamCard from "../components/TeamCard";
+import { JsonLd } from "../components/JsonLd";
+import { breadcrumbSchema } from "../lib/seo";
+import { SITE_URL } from "../lib/site";
 
 export const metadata: Metadata = {
   title: "Meet the Team | Metro Associates Recruiters",
@@ -27,8 +30,58 @@ export default async function MeetOurTeamPage() {
   // the core static roster — see app/lib/jobfolderTeam.ts.
   const roster = [...TEAM, ...(await getJobFolderTeam())];
 
+  /* Person entities for the firm's own recruiters.
+   *
+   * Only TEAM, not the whole roster. The appended entries are JobFolder
+   * recruiters a JobFolder admin approved for this page; naming them as
+   * Metro's people in `worksFor` would assert an employment relationship
+   * that doesn't exist. They still render, they just aren't claimed.
+   *
+   * sameAs is omitted wherever the profile link is the shared fallback.
+   * lib/team.ts points members without their own LinkedIn at Patrick's, so
+   * emitting it for everyone would tell Google that several different people
+   * are the same person — worse than saying nothing about them. */
+  const people = TEAM.map((m) => ({
+    "@type": "Person",
+    name: m.name,
+    jobTitle: m.role,
+    worksFor: { "@id": `${SITE_URL}/#organization` },
+    ...(m.photo ? { image: `${SITE_URL}${m.photo}` } : {}),
+    ...(m.linkedin &&
+    (m.linkedin !== FALLBACK_LINKEDIN || m.name === FALLBACK_LINKEDIN_OWNER)
+      ? { sameAs: [m.linkedin, ...(m.website ? [m.website] : [])] }
+      : {}),
+  }));
+
   return (
     <main>
+      <JsonLd
+        data={[
+          {
+            "@context": "https://schema.org",
+            "@type": "AboutPage",
+            "@id": `${SITE_URL}/meet-our-team#webpage`,
+            name: "Meet the Team",
+            description:
+              "The recruiters behind our placements, who they specialize in, the disciplines they cover, and how to reach them directly.",
+            url: `${SITE_URL}/meet-our-team`,
+            isPartOf: { "@id": `${SITE_URL}/#website` },
+            about: { "@id": `${SITE_URL}/#organization` },
+            mainEntity: {
+              "@type": "ItemList",
+              itemListElement: people.map((p, i) => ({
+                "@type": "ListItem",
+                position: i + 1,
+                item: p,
+              })),
+            },
+          },
+          breadcrumbSchema([
+            { name: "Home", path: "/" },
+            { name: "Meet Our Team", path: "/meet-our-team" },
+          ]),
+        ]}
+      />
       {/* Hero */}
       <section className="relative isolate overflow-hidden blueprint-shade pt-32 pb-16 sm:pt-36 lg:pt-40">
         <HeaderBackdrop />

@@ -3,6 +3,15 @@
 // Exported so jobfolderTeam.ts has the same fallback for a JobFolder
 // recruiter who hasn't filled in a LinkedIn URL.
 export const FALLBACK_LINKEDIN = "https://www.linkedin.com/in/patricknovick/";
+
+/** Whose profile FALLBACK_LINKEDIN actually is.
+ *
+ * Needed because "is this link the fallback?" and "is this link this
+ * person's?" give different answers for exactly one member. Person schema on
+ * /meet-our-team emits sameAs only for a member whose profile is genuinely
+ * their own, and without this Patrick is excluded along with everyone else
+ * borrowing his URL. */
+export const FALLBACK_LINKEDIN_OWNER = "Patrick Novick";
 const PATRICK_LINKEDIN = FALLBACK_LINKEDIN;
 
 export type Member = {

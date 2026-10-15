@@ -134,8 +134,19 @@ interface TikTokVideo {
 async function getTikTokMeta(id: string): Promise<{ thumbnailUrl: string | null; title: string | null }> {
   const videoUrl = `https://www.tiktok.com/@patricknovick225/video/${id}`;
   try {
+    /* Bounded, because this runs during the build.
+     *
+     * The catch below already degrades to a thumbnail-less card, but it is
+     * only reached if the request actually ends. Without a deadline a
+     * hanging oEmbed just stalls: TikTok stopped responding on 16 Oct 2026
+     * and this page blew Next's 60-second page budget three attempts running,
+     * failing the whole build over a decorative thumbnail.
+     *
+     * Six seconds against three videos fetched in parallel, so the worst case
+     * is one short wait and three plain cards rather than no site. */
     const res = await fetch(`https://www.tiktok.com/oembed?url=${encodeURIComponent(videoUrl)}`, {
       next: { revalidate: 3600 },
+      signal: AbortSignal.timeout(6000),
     });
     if (!res.ok) return { thumbnailUrl: null, title: null };
     const data = (await res.json()) as { thumbnail_url?: string; title?: string };

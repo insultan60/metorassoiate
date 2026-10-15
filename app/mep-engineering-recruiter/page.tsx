@@ -18,7 +18,8 @@ import {
 } from "../lib/mep";
 import OtherSpecialties from "../components/OtherSpecialties";
 import ClientAwards from "../components/ClientAwards";
-import { OG_IMAGE } from "../lib/seo";
+import { OG_IMAGE, deskServiceSchema, breadcrumbSchema } from "../lib/seo";
+import { JsonLd } from "../components/JsonLd";
 
 // Short phrases for the scrolling ticker bar — same treatment as the
 // civil-engineering-recruiter hero, scoped to this page's discipline.
@@ -70,6 +71,19 @@ export default async function MepNationalRecruiterPage() {
 
   return (
     <main>
+      <JsonLd
+        data={[
+          deskServiceSchema({
+            serviceName: "MEP Engineering Recruiting",
+            description: "MEP staffing agency and engineering headhunters placing mechanical, electrical, plumbing and commissioning PEs on data center, healthcare and lab work.",
+            path: "/mep-engineering-recruiter",
+          }),
+          breadcrumbSchema([
+            { name: "Home", path: "/" },
+            { name: "MEP Engineering Recruiter", path: "/mep-engineering-recruiter" },
+          ]),
+        ]}
+      />
       {/* Hero — same treatment as the homepage/civil hero: full-bleed photo,
           gradient overlays, floating stat badge, ticker. */}
       <section className="relative isolate overflow-hidden pt-32 pb-16 sm:pt-36 lg:pt-40">

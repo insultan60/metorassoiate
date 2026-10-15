@@ -15,7 +15,8 @@ import { APPLY_URL, SITE_URL } from "../lib/site";
 import { CEI_CITIES } from "../lib/ceiInspection";
 import OtherSpecialties from "../components/OtherSpecialties";
 import ClientAwards from "../components/ClientAwards";
-import { OG_IMAGE } from "../lib/seo";
+import { OG_IMAGE, deskServiceSchema, breadcrumbSchema } from "../lib/seo";
+import { JsonLd } from "../components/JsonLd";
 
 /* National hub — same treatment as civil-engineering-recruiter/ and
    mep-engineering-recruiter/: this page plus a per-metro [city]/page.tsx for
@@ -147,6 +148,19 @@ export default async function CeiInspectionRecruiterPage() {
 
   return (
     <main>
+      <JsonLd
+        data={[
+          deskServiceSchema({
+            serviceName: "CEI and Construction Inspection Recruiting",
+            description: "CEI staffing for construction programs. DOT-qualified inspectors, resident engineers and QA/QC leads, recruited by district and by letting schedule.",
+            path: "/cei-inspection-recruiter",
+          }),
+          breadcrumbSchema([
+            { name: "Home", path: "/" },
+            { name: "CEI Inspection Recruiter", path: "/cei-inspection-recruiter" },
+          ]),
+        ]}
+      />
       {/* Hero — no stock photo fits this discipline without being misleading,
           so this reuses the photo-free blueprint hero the [city] sub-pages
           use rather than the photo-hero treatment civil/MEP/bridge get. */}

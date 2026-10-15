@@ -14,7 +14,8 @@ import { HeaderBackdrop } from "../components/HeaderBackdrop";
 import { APPLY_URL, SITE_URL } from "../lib/site";
 import OtherSpecialties from "../components/OtherSpecialties";
 import ClientAwards from "../components/ClientAwards";
-import { OG_IMAGE } from "../lib/seo";
+import { OG_IMAGE, deskServiceSchema, breadcrumbSchema } from "../lib/seo";
+import { JsonLd } from "../components/JsonLd";
 
 /* Project management recruiting hub — mirrors the layout of other discipline hubs.
    Targets AEC program directors, infrastructure project managers, construction
@@ -143,6 +144,19 @@ export default async function ProjectManagementRecruiterPage() {
 
   return (
     <main>
+      <JsonLd
+        data={[
+          deskServiceSchema({
+            serviceName: "AEC Project Management Recruiting",
+            description: "AEC and infrastructure project management recruiters. Program directors, capital PMs, construction managers and owner's representatives, nationwide.",
+            path: "/project-management-recruiter",
+          }),
+          breadcrumbSchema([
+            { name: "Home", path: "/" },
+            { name: "Project Management Recruiter", path: "/project-management-recruiter" },
+          ]),
+        ]}
+      />
       {/* Hero */}
       <section className="relative isolate overflow-hidden blueprint-shade pt-32 pb-16 sm:pt-36 lg:pt-40">
         <HeaderBackdrop />
