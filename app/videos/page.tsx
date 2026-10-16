@@ -35,6 +35,14 @@ const FEATURED_VIDEO = {
 
 const YOUTUBE_VIDEOS = [
   {
+    id: "NUT1r1Mrp14",
+    title: "Resident Engineer / Project Manager, northeastern Illinois",
+    description:
+      "A walk-through of an open resident engineer and project manager search covering roadway, highway and bridge construction oversight in northeastern Illinois.",
+    uploadDate: "2026-10-15T17:45:49-07:00",
+    duration: "PT28S",
+  },
+  {
     id: "7nR8p4NyXwI",
     title: "Senior Mechanical Systems Engineer, thermal energy storage",
     description:
