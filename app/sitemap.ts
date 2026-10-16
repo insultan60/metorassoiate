@@ -117,7 +117,13 @@ const routes: Array<{
 export default function sitemap(): MetadataRoute.Sitemap {
   const lastModified = new Date();
   return routes.map(({ path, changeFrequency, priority }) => ({
-    url: `${SITE_URL}${path}`,
+    /* The home route is "/", which would emit SITE_URL with a trailing
+       slash, while app/page.tsx's `canonical: "/"` resolves to SITE_URL
+       without one. The two are the same URL to a crawler, but a sitemap
+       that lists a different string from the page's own canonical is a
+       contradiction we are putting in writing for no reason. Every other
+       path already has no trailing slash, so the root follows them. */
+    url: path === "/" ? SITE_URL : `${SITE_URL}${path}`,
     lastModified,
     changeFrequency,
     priority,
