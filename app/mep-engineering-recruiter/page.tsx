@@ -15,6 +15,7 @@ import {
 import { APPLY_URL, SITE_URL } from "../lib/site";
 import {
   MEP_CITIES, MEP_EXPERTISE, MEP_SKILLS, MEP_ROLES, MEP_SALARIES, MEP_WHY,
+  MEP_SCREENING, MEP_STANDARDS, MEP_STANDARDS_NOTE,
 } from "../lib/mep";
 import OtherSpecialties from "../components/OtherSpecialties";
 import ClientAwards from "../components/ClientAwards";
@@ -270,17 +271,17 @@ export default async function MepNationalRecruiterPage() {
       </section>
 
       {/* Skills */}
-      <section className="relative border-t border-navy-950/10 bg-paper py-24 sm:py-28">
+      <section className="relative border-t border-navy-950/10 blueprint-light py-24 sm:py-28">
         <div className="container-x">
           <div className="max-w-2xl">
-            <span className="mono-label text-amber-500">{"//"} Skills we screen for</span>
+            <span className="mono-label text-amber-500">{"//"} Tools & credentials</span>
             <h2 className="display mt-5 text-4xl text-navy-950 sm:text-5xl">
-              MEP skills & software we recruit for
+              MEP software & licensure we recruit for
             </h2>
             <p className="mt-6 text-lg leading-8 text-slate text-pretty">
-              Every candidate we put forward is screened against the same
-              bar nationwide: the CAD/BIM tools, licensure, and code
-              fluency the role actually demands.
+              The tools and credentials a role asks for, verified before a
+              resume reaches you. What an engineer can do with them is the
+              section below.
             </p>
           </div>
           <div className="mt-12 flex flex-wrap gap-3">
@@ -293,6 +294,60 @@ export default async function MepNationalRecruiterPage() {
                 {s}
               </span>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* The ten competency areas. Numbered rather than chipped: each one
+          carries a sentence a hiring manager can hold us to, which a tag
+          cloud cannot. Two columns so the list reads as a reference rather
+          than a wall. */}
+      <section className="relative border-t border-navy-950/10 bg-paper py-24 sm:py-28">
+        <div className="container-x">
+          <div className="max-w-2xl">
+            <span className="mono-label text-amber-500">{"//"} What we screen for</span>
+            <h2 className="display mt-5 text-4xl text-navy-950 sm:text-5xl">
+              Ten areas every MEP candidate is screened against
+            </h2>
+            <p className="mt-6 text-lg leading-8 text-slate text-pretty">
+              MEP is three disciplines and almost nobody practices all three.
+              Most engineers are deep in one and coordinate with the other
+              two, so we read items two, three and four as which one and how
+              deep, never as a checklist one person should tick end to end.
+            </p>
+          </div>
+
+          <div className="reveal-children mt-14 grid gap-px overflow-hidden border border-navy-950/10 bg-navy-950/10 sm:grid-cols-2">
+            {MEP_SCREENING.map((area, i) => (
+              <div key={area.title} className="bg-paper p-7 sm:p-8">
+                <span className="mono-label text-amber-500">
+                  {String(i + 1).padStart(2, "0")}
+                </span>
+                <h3 className="mt-3 text-lg font-semibold text-navy-950">
+                  {area.title}
+                </h3>
+                <p className="mt-3 text-[15px] leading-7 text-slate text-pretty">
+                  {area.detail}
+                </p>
+              </div>
+            ))}
+          </div>
+
+          {/* The standards underneath the ten. Set apart because adoption is
+              state and local, and that caveat has to travel with the list. */}
+          <div className="mt-12 border border-navy-950/12 bg-white p-7 sm:p-8">
+            <span className="mono-label text-amber-500">{"//"} Technical foundation</span>
+            <ul className="mt-5 flex flex-col gap-2.5">
+              {MEP_STANDARDS.map((std) => (
+                <li key={std} className="flex items-start gap-2.5 text-[15px] leading-7 text-navy-950">
+                  <IconCheck className="mt-2 h-3.5 w-3.5 shrink-0 text-amber-500" />
+                  {std}
+                </li>
+              ))}
+            </ul>
+            <p className="mt-5 border-t border-navy-950/10 pt-5 text-[15px] leading-7 text-slate text-pretty">
+              {MEP_STANDARDS_NOTE}
+            </p>
           </div>
         </div>
       </section>

@@ -2481,6 +2481,89 @@ export const MEP_EXPERTISE = [
 // every MEP city page rather than varying by market: what changes city to
 // city is the *work* (see localPrograms), not which CAD package or code a
 // licensed MEP engineer is expected to know.
+/* The ten competency areas an MEP candidate is screened against.
+ *
+ * Distinct from MEP_SKILLS below, which is the tools-and-credentials list:
+ * Revit, ETAP, a PE license. This is what the engineer can actually do with
+ * them. A resume carrying every piece of software on that list still says
+ * nothing about whether its owner has sized a feeder or answered an RFI.
+ *
+ * MEP is three disciplines, and almost nobody practices all three. Most
+ * engineers are deep in one and coordinate with the other two, so items 2,
+ * 3 and 4 are read as "which one, and how deep", never as a checklist a
+ * single candidate should tick end to end.
+ */
+export interface MepScreeningArea {
+  title: string;
+  detail: string;
+}
+
+export const MEP_SCREENING: MepScreeningArea[] = [
+  {
+    title: "Codes and permitting",
+    detail:
+      "Identifies the building, mechanical, electrical, plumbing, fire and energy codes that apply, and answers plan review comments. Editions and local amendments vary by jurisdiction, so we ask which ones an engineer has actually worked under rather than which they can name.",
+  },
+  {
+    title: "Mechanical and HVAC design",
+    detail:
+      "Runs heating and cooling load calculations, designs ventilation, ductwork and hydronic piping, and selects equipment. Handles humidity, indoor air quality and thermal comfort as design problems rather than afterthoughts.",
+  },
+  {
+    title: "Electrical power and lighting",
+    detail:
+      "Calculates loads and sizes services, feeders, panels and transformers. Designs lighting and emergency power, and works confidently with grounding, voltage drop, short circuit analysis and protective device coordination.",
+  },
+  {
+    title: "Plumbing design",
+    detail:
+      "Designs domestic water, hot water, sanitary drainage, venting and storm drainage. Calculates demand, pressure loss and pipe sizes, and coordinates backflow prevention and any gas systems in scope.",
+  },
+  {
+    title: "Revit, BIM and construction documents",
+    detail:
+      "Produces coordinated models, drawings, equipment schedules, details and specifications. Knows AutoCAD and review tools such as Bluebeam where the employer works in them.",
+  },
+  {
+    title: "Coordination and constructability",
+    detail:
+      "Resolves conflicts with architecture, structure and the other building systems. Thinks in ceiling space, shafts, equipment access, maintenance clearances and how the work actually gets installed.",
+  },
+  {
+    title: "Energy efficiency and system selection",
+    detail:
+      "Compares system options on energy use, operating cost and maintenance burden. Works to the applicable energy code, and knows where heat recovery, high efficiency equipment and electrification earn their place.",
+  },
+  {
+    title: "Controls and building automation",
+    detail:
+      "Writes or reads sequences of operation, control diagrams, sensors, alarms, schedules and equipment interlocks. Understands how the systems behave together, including when something fails.",
+  },
+  {
+    title: "Construction administration and field work",
+    detail:
+      "Reviews shop drawings and equipment submittals, answers RFIs, observes on site, evaluates substitutions and reconciles the drawings against what was actually installed.",
+  },
+  {
+    title: "Commissioning, quality control and delivery",
+    detail:
+      "Checks calculations and drawings, supports startup and functional testing, closes out deficiencies, and explains scope, budget, schedule and design decisions in terms a client follows.",
+  },
+];
+
+/* The technical floor underneath the ten areas above. Named standards rather
+   than a general claim of "code knowledge", because these are the documents a
+   hiring manager will ask about by name in a first interview. Adoption is
+   state and local, which is why the caveat travels with the list. */
+export const MEP_STANDARDS = [
+  "ASHRAE standards for HVAC, ventilation, comfort and energy",
+  "National Electrical Code (NFPA 70)",
+  "The applicable plumbing code, such as the Uniform Plumbing Code",
+];
+
+export const MEP_STANDARDS_NOTE =
+  "Adoption is set by each state and local jurisdiction, including which edition applies and what has been amended. We screen for engineers who verify that for the project in front of them instead of assuming the code they last worked under still governs.";
+
 export const MEP_SKILLS = [
   "Autodesk Revit MEP",
   "AutoCAD MEP",
