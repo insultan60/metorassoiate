@@ -292,7 +292,7 @@ export const GENERAL_FAQS: FaqItem[] = [
     a: "With a conversation about the role rather than a job description. What the drawings actually require, which agency reviews them, whether a seal is needed and in which state, and what the team is short of. Those four answers change the search more than the job title does, and they are the ones a generalist recruiter usually cannot ask.",
   },
   {
-    q: "Is my enquiry confidential if I am currently employed?",
+    q: "Is my inquiry confidential if I am currently employed?",
     a: "Yes. Nothing is submitted anywhere without your explicit agreement on each specific employer, and we do not circulate CVs speculatively. That matters most in engineering, where regional markets are small enough that a client and a current employer often know each other.",
   },
 ];

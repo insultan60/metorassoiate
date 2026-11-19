@@ -169,7 +169,7 @@ export default function ContactForm() {
         <div>
           <h3 className="text-xl font-bold text-white">Thanks, your message has been sent.</h3>
           <p className="mt-2 text-ink-300">
-            We&apos;ve received your enquiry and will be in touch shortly. You can
+            We&apos;ve received your inquiry and will be in touch shortly. You can
             also reach us directly at{" "}
             <a href={`mailto:${EMAIL}`} className="text-amber-400 hover:underline">
               {EMAIL}

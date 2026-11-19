@@ -115,7 +115,7 @@ export async function POST(request: Request) {
 
   const html = `
     <table cellpadding="0" cellspacing="0" style="font-family:Arial,Helvetica,sans-serif;font-size:14px;color:#1a1a1a;line-height:1.6;">
-      <tr><td><strong>New website enquiry</strong></td></tr>
+      <tr><td><strong>New website inquiry</strong></td></tr>
       <tr><td style="padding-top:10px"><strong>Name:</strong> ${esc(name)}</td></tr>
       <tr><td><strong>Email:</strong> ${esc(email)}</td></tr>
       <tr><td><strong>Phone:</strong> ${esc(phone) || "Not provided"}</td></tr>
@@ -128,7 +128,7 @@ export async function POST(request: Request) {
     sender: { email: SENDER_EMAIL, name: SENDER_NAME },
     to: [{ email: TO_EMAIL, name: TO_NAME }],
     replyTo: { email, name: name || email },
-    subject: `Website enquiry: ${name || "New contact"}`,
+    subject: `Website Inquiry: ${name || "New contact"}`,
     htmlContent: html,
   };
 

@@ -84,7 +84,7 @@ export const ORG = {
     },
     {
       "@type": "ContactPoint",
-      name: "Job Seeker Enquiries",
+      name: "Job Seeker Inquiries",
       contactType: "customer support",
       telephone: PHONE,
       areaServed: "US",
