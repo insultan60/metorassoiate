@@ -15,15 +15,15 @@ import { APPLY_URL } from "../lib/site";
  * Our own page carries the same roles with search, filters and the JobPosting
  * markup, so it is the one worth linking.
  *
- * "Apply Jobs" stays external: the general-application form is the ATS's, and
+ * "Apply" stays external: the general-application form is the ATS's, and
  * we do not host an equivalent. */
 const NAV_LINKS = [
   { label: "About", href: "/about", external: false },
   { label: "Why Us", href: "/why-us", external: false },
   { label: "Meet Our Team", href: "/meet-our-team", external: false },
   { label: "Videos", href: "/videos", external: false },
-  { label: "Careers", href: "/careers", external: false },
-  { label: "Apply Jobs", href: APPLY_URL, external: true },
+  { label: "Careers/Jobs", href: "/careers", external: false },
+  { label: "Apply", href: APPLY_URL, external: true },
 ];
 
 export default function Navbar() {
