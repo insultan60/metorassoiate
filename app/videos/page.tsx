@@ -3,6 +3,9 @@ import { HeaderBackdrop } from "../components/HeaderBackdrop";
 import YouTubeFacade from "../components/YouTubeFacade";
 import { JsonLd } from "../components/JsonLd";
 import { SITE_URL } from "../lib/site";
+import { listRecentYouTubeVideos } from "../lib/youtube";
+
+export const revalidate = 3600;
 
 export const metadata: Metadata = {
   title: "Videos | Metro Associates | DOT & Infrastructure Staffing",
@@ -11,13 +14,8 @@ export const metadata: Metadata = {
   alternates: { canonical: "/videos" },
 };
 
-/* YouTube role walk-throughs — add new ones here as Patrick shares them.
- *
- * Titles are written here rather than pulled from YouTube's oEmbed, which is
- * how the TikTok clips below get theirs. The uploads carry working titles
- * ("... 1080p caption") and a placeholder channel name, and neither belongs
- * on the page. An explicit title also means a video being renamed on YouTube
- * cannot silently change what this page says. */
+/* The public YouTube feed below refreshes automatically. The featured video
+ * remains manual so the team can keep its preferred introduction at the top. */
 /* The firm-wide careers video, kept out of the role list below.
  *
  * It is not a walk-through of one opening, so filing it among them would
@@ -33,7 +31,8 @@ const FEATURED_VIDEO = {
   duration: "PT33S",
 };
 
-const YOUTUBE_VIDEOS = [
+/** Existing role walk-throughs remain fixed rather than joining the auto-feed. */
+const ARCHIVE_YOUTUBE_VIDEOS = [
   {
     id: "NUT1r1Mrp14",
     title: "Resident Engineer / Project Manager, northeastern Illinois",
@@ -53,38 +52,34 @@ const YOUTUBE_VIDEOS = [
   {
     id: "UeVXo4WaCfY",
     title: "Traffic Engineer, Chicago area",
-    description:
-      "A walk-through of an open traffic engineer search in the Chicago area.",
+    description: "A walk-through of an open traffic engineer search in the Chicago area.",
     uploadDate: "2026-10-07T04:03:06-07:00",
     duration: "PT29S",
   },
   {
     id: "ptUCw1_pjig",
     title: "Senior Refrigeration & Utilities Manager",
-    description:
-      "A walk-through of an open senior refrigeration and utilities manager search.",
+    description: "A walk-through of an open senior refrigeration and utilities manager search.",
     uploadDate: "2026-09-25T11:21:40-07:00",
     duration: "PT39S",
   },
   {
     id: "b6lp9i9w9PQ",
     title: "Process Engineer, food manufacturing in Virginia",
-    description:
-      "A walk-through of an open process engineer search in food manufacturing in Virginia.",
+    description: "A walk-through of an open process engineer search in food manufacturing in Virginia.",
     uploadDate: "2026-09-27T00:59:15-07:00",
     duration: "PT49S",
   },
   {
     id: "fPi4M7brMLw",
     title: "Director of Land Development, Tucson",
-    description:
-      "A walk-through of an open director of land development search in Tucson.",
+    description: "A walk-through of an open director of land development search in Tucson.",
     uploadDate: "2026-09-29T05:47:20-07:00",
     duration: "PT26S",
   },
 ];
 
-/* VideoObject for the five YouTube videos.
+/* VideoObject for the YouTube videos.
  *
  * Without this the videos are invisible as video results and the Videos
  * report in Search Console has nothing to say about a page whose entire
@@ -92,12 +87,8 @@ const YOUTUBE_VIDEOS = [
  * a play button rather than an iframe, which is right for performance and
  * leaves a crawler no player to recognise. The markup is what tells it.
  *
- * uploadDate and duration are read off each video once and written down here
- * rather than fetched. They are required fields, an incomplete VideoObject is
- * worse than none because it reports as an error, and the alternative was a
- * YouTube Data API key and a quota in the request path for two values that
- * never change for a given video. Replace a video and these are what need
- * updating with it. */
+ * The automatic feed supplies upload dates and durations from YouTube, so the
+ * schema remains current as eligible videos are published. */
 function videoSchema(v: {
   id: string;
   title: string;
@@ -165,18 +156,20 @@ async function getTikTokMeta(id: string): Promise<{ thumbnailUrl: string | null;
 }
 
 export default async function VideosPage() {
-  const videos: TikTokVideo[] = await Promise.all(
-    VIDEO_IDS.map(async (id) => {
-      const meta = await getTikTokMeta(id);
-      return { id, url: `https://www.tiktok.com/@patricknovick225/video/${id}`, ...meta };
-    }),
-  );
+  const [youtubeVideos, videos]: [Awaited<ReturnType<typeof listRecentYouTubeVideos>>, TikTokVideo[]] = await Promise.all([
+    listRecentYouTubeVideos(),
+    Promise.all(
+      VIDEO_IDS.map(async (id) => {
+        const meta = await getTikTokMeta(id);
+        return { id, url: `https://www.tiktok.com/@patricknovick225/video/${id}`, ...meta };
+      }),
+    ),
+  ]);
+  const roleVideos = [...youtubeVideos, ...ARCHIVE_YOUTUBE_VIDEOS];
 
   return (
     <main>
-      <JsonLd
-        data={[FEATURED_VIDEO, ...YOUTUBE_VIDEOS].map(videoSchema)}
-      />
+      <JsonLd data={[FEATURED_VIDEO, ...roleVideos].map(videoSchema)} />
       <section className="relative isolate overflow-hidden blueprint-shade pt-32 pb-20 sm:pt-36 lg:pt-40">
         <HeaderBackdrop />
         <div className="pointer-events-none absolute -left-40 top-24 h-96 w-96 rounded-full bg-brand-500/20 blur-[110px]" />
@@ -212,7 +205,7 @@ export default async function VideosPage() {
           <div className="mt-16">
             <h2 className="mono-label text-ink-300">{"//"} Role walk-throughs</h2>
             <div className="mt-6 grid grid-cols-1 gap-8 lg:grid-cols-2">
-              {YOUTUBE_VIDEOS.map((v) => (
+              {roleVideos.map((v) => (
                 <figure key={v.id}>
                   <div className="relative aspect-video overflow-hidden border border-white/10 bg-navy-950">
                     <YouTubeFacade videoId={v.id} title={v.title} />
