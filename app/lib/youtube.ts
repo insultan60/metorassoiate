@@ -16,7 +16,7 @@ export const YOUTUBE_AUTOMATION_START = "2026-11-22T00:00:00.000Z";
 /** Videos marked #shorts on YouTube are intentionally not shown on the site. */
 const SHORTS_TAG = /(^|\s)#shorts\b/i;
 
-const REVALIDATE_SECONDS = 0 * 60;
+const REVALIDATE_SECONDS = 60 * 60;
 
 export type YouTubeVideo = {
   id: string;
